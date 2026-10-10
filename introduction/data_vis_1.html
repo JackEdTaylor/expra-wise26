@@ -1,0 +1,1236 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Data Visualisation 1 &#8212; ExPra Winter 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=bb6542e3" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/data_vis_1';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://jackedtaylor.github.io/expra-wise25/introduction/data_vis_1.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Visualisation 2" href="data_vis_2.html" />
+    <link rel="prev" title="Data Wrangling 2" href="data_wrangling_2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="ExPra Winter 2025 - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="ExPra Winter 2025 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/schedule.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/reading.html">Reading</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">General Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="empirical_research.html">Empirical Research</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="ethics.html">Ethics and Data Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cogneuro_lang.html">Cog. Neuro. of Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai.html">Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">Literature Search and Reference Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing.html">Scientific Writing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication.html">Scientific Communication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R &amp; Statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_wrangling_1.html">Data Wrangling 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_wrangling_2.html">Data Wrangling 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Visualisation 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_vis_2.html">Data Visualisation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_participate.html">Participate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_analyse.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_feedback.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/conducting.html">Conducting Experimental Sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/analysis.html">Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/posters.html">Posters</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cognitive Brain Imaging</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cbi/meeg.html">Introduction to EEG &amp; MEG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cbi/mri.html">Introduction to (f)MRI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/student-guide.html">ExPra Student Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/gen_ai.html">AI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/CoC.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise25/master?urlpath=tree/lecture/introduction/data_vis_1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/edit/master/lecture/introduction/data_vis_1.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/issues/new?title=Issue%20on%20page%20%2Fintroduction/data_vis_1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/introduction/data_vis_1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Visualisation 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it Out!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ggplot2-canvas">The <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> “Canvas”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-distributions">Plotting Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-distributions-by-group">Comparing Distributions by Group</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-data-visualisation-with-data-wrangling">Combining Data Visualisation with Data Wrangling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-practice">More Practice</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data-visualisation-1">
+<h1>Data Visualisation 1<a class="headerlink" href="#data-visualisation-1" title="Link to this heading">#</a></h1>
+<p>Data visualisation is an incredibly useful skill to develop! It can be an invaluable way to explore your data and present your findings.</p>
+<p>In the first half of this session, we will discuss what makes a good figure.</p>
+<p>In the second half, we will see how we apply these principles of data visualisation in practice, using <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> in R.</p>
+<p>Finally, in <a class="reference external" href="https://jackedtaylor.github.io/expra-wise24/introduction/data_vis_2">Data Visualisation Part 2</a>, we will look at how to make your figures pretty and publication-ready.</p>
+<section id="slides">
+<h2>Slides<a class="headerlink" href="#slides" title="Link to this heading">#</a></h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTmM5VPAZXLXr_WLmzgUvLHCYYWbkjB1IPGWdXLECFVPzSsQMhr0iGk-lsycnkZsTfvDJLL_Q4EWb10/embed?start=false&loop=false" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<h5>
+<a href=https://docs.google.com/presentation/d/144YSoOxCWTq0bMu4qvpOQT9r0X1Y-ogFKCTRhK1i6NI/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/144YSoOxCWTq0bMu4qvpOQT9r0X1Y-ogFKCTRhK1i6NI/export/odp><i class="fa-solid fa-file"></i> Download .odp</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/144YSoOxCWTq0bMu4qvpOQT9r0X1Y-ogFKCTRhK1i6NI/export/pptx><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</a>
+</h5></section>
+<section id="try-it-out">
+<h2>Try it Out!<a class="headerlink" href="#try-it-out" title="Link to this heading">#</a></h2>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h3>
+<p>We will be using <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> for data visualisation in R. This is the most popular package for data visualisation in R, and is extremely flexible.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can import the data we will be using like so:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">exp_dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"https://raw.githubusercontent.com/JackEdTaylor/expra-wise25/master/lecture/_static/data_vis_dat.csv"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This simulated dataset contains scores in a reading task and a memory task from <em>N</em>=67 participants at three times in the day: morning, midday, and evening.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 201 × 4
+   subj_id time    read_score memory_score
+   &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;        &lt;dbl&gt;
+ 1 s01     morning       76.8         67.2
+ 2 s01     midday        95.7         98.4
+ 3 s01     evening       94.3         95.0
+ 4 s02     morning       79.5         54.2
+ 5 s02     midday        97.2         88.5
+ 6 s02     evening       98.1         91.1
+ 7 s03     morning       76.2         69.1
+ 8 s03     midday        91.1         98.2
+ 9 s03     evening       85.2         94.9
+10 s04     morning       89.5         92.5
+# ℹ 191 more rows
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-ggplot2-canvas">
+<h3>The <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> “Canvas”<a class="headerlink" href="#the-ggplot2-canvas" title="Link to this heading">#</a></h3>
+<p>When we create a <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> object, the first function we use is <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code>. The first argument is the dataframe we would like to plot. The second argument contains the <code class="docutils literal notranslate"><span class="pre">aes()</span></code> specifications, which says which variables in the data should be mapped to which aesthetics.</p>
+<p>Let’s see an example, where we say we want to plot reading scores from <code class="docutils literal notranslate"><span class="pre">exp_dat</span></code> on the x axis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/6be9799747393cabae2b556f45bf65a3fc6892c1b51819dd80abf2a5bd6a245a.png"><img alt="../_images/6be9799747393cabae2b556f45bf65a3fc6892c1b51819dd80abf2a5bd6a245a.png" src="../_images/6be9799747393cabae2b556f45bf65a3fc6892c1b51819dd80abf2a5bd6a245a.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>What gives - where is our plot?</p>
+<p>Well, we’ve told <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> what to put on the x axis, but we haven’t said what to actually do with it!</p>
+<p>We’ve created a “blank canvas” - now we need to add plot objects. In <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> these are referred to as <em>Geoms</em>, and we add them with <code class="docutils literal notranslate"><span class="pre">geom_*</span></code> functions.</p>
+</section>
+<section id="plotting-distributions">
+<h3>Plotting Distributions<a class="headerlink" href="#plotting-distributions" title="Link to this heading">#</a></h3>
+<p>We can plot a histogram with the <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> function. We can simply add this to our code from before. <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> will then automatically know that the y axis should contain counts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/b6bbab491b6a95145e51c45fb4b42129b8959a2026b90f65689f2e5ab7fe67a2.png"><img alt="../_images/b6bbab491b6a95145e51c45fb4b42129b8959a2026b90f65689f2e5ab7fe67a2.png" src="../_images/b6bbab491b6a95145e51c45fb4b42129b8959a2026b90f65689f2e5ab7fe67a2.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>Notice that we get a warning from <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> that it is using the default of <code class="docutils literal notranslate"><span class="pre">bins</span> <span class="pre">=</span> <span class="pre">30</span></code> for the <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> function, which means there are a total of 30 bins. It is recommended to pick a number of bins, or a bin width, that makes sense for your data. For example, if we want each bin to have a width of 10, we could write:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/89344f2965dec6f7ad1b354a8a71f746c30f8a80c805ebcd37ca7dedaeb6df4c.png"><img alt="../_images/89344f2965dec6f7ad1b354a8a71f746c30f8a80c805ebcd37ca7dedaeb6df4c.png" src="../_images/89344f2965dec6f7ad1b354a8a71f746c30f8a80c805ebcd37ca7dedaeb6df4c.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>Similarly, we can plot the empirical probability density with the <code class="docutils literal notranslate"><span class="pre">geom_density()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_density</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/00d0c164e2a723f3e68ab30acc51e5ad838fb0176f4500a679cfdcf714bb7d39.png"><img alt="../_images/00d0c164e2a723f3e68ab30acc51e5ad838fb0176f4500a679cfdcf714bb7d39.png" src="../_images/00d0c164e2a723f3e68ab30acc51e5ad838fb0176f4500a679cfdcf714bb7d39.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<section id="check-your-knowledge">
+<h4>Check your Knowledge!<a class="headerlink" href="#check-your-knowledge" title="Link to this heading">#</a></h4>
+<p><strong>a)</strong> Plot the density of memory scores.</p>
+<p><strong>b)</strong> Plot a histogram of memory scores, with a bin width of 5.</p>
+<p><strong>c)</strong> Plot a histogram of memory scores, with 5 bins overall.</p>
+</section>
+<section id="solutions">
+<h4>Solutions<a class="headerlink" href="#solutions" title="Link to this heading">#</a></h4>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_density</span><span class="p">()</span>
+
+<span class="c1"># b</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+
+<span class="c1"># c</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/ab0f9ae3101810f32bcd38005f944e9bd16e972807b49601ae1edefcd9b932c9.png"><img alt="../_images/ab0f9ae3101810f32bcd38005f944e9bd16e972807b49601ae1edefcd9b932c9.png" src="../_images/ab0f9ae3101810f32bcd38005f944e9bd16e972807b49601ae1edefcd9b932c9.png" style="width: 240px; height: 210px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/a977b883b4f083bb1b3cabdd33e8e9ddffb7f5d94960ce1816d4e4c7f6b058b4.png"><img alt="../_images/a977b883b4f083bb1b3cabdd33e8e9ddffb7f5d94960ce1816d4e4c7f6b058b4.png" src="../_images/a977b883b4f083bb1b3cabdd33e8e9ddffb7f5d94960ce1816d4e4c7f6b058b4.png" style="width: 240px; height: 210px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/e34bb062987d39cc583adb508e04219286a1792a5c93b69a6876db03f6533b78.png"><img alt="../_images/e34bb062987d39cc583adb508e04219286a1792a5c93b69a6876db03f6533b78.png" src="../_images/e34bb062987d39cc583adb508e04219286a1792a5c93b69a6876db03f6533b78.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="comparing-distributions-by-group">
+<h3>Comparing Distributions by Group<a class="headerlink" href="#comparing-distributions-by-group" title="Link to this heading">#</a></h3>
+<p>Let’s say we also want to plot the distribution of reading scores for each experimental session separately. We can do this by saying we want the <code class="docutils literal notranslate"><span class="pre">time</span></code> variable (<code class="docutils literal notranslate"><span class="pre">&quot;morning&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;midday&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;evening&quot;</span></code>) to be mapped to the <code class="docutils literal notranslate"><span class="pre">colour</span></code> aesthetic.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_density</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/cf112e9a6c38d76e90efba85ad0d14b436120cddf9ad402449f56f8beb48a080.png"><img alt="../_images/cf112e9a6c38d76e90efba85ad0d14b436120cddf9ad402449f56f8beb48a080.png" src="../_images/cf112e9a6c38d76e90efba85ad0d14b436120cddf9ad402449f56f8beb48a080.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>This shows us that reading scores were poorest in the morning, and best at midday. Other useful ways to compare distributions include the violin plot. A violin plot is a density plot mirrored across zero.</p>
+<p>This time, we want the time of day to be on the <code class="docutils literal notranslate"><span class="pre">x</span></code> axis, and the reading scores to be on the <code class="docutils literal notranslate"><span class="pre">y</span></code> axis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_violin</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/b2b5c15cf9567ca4a1557a71d9cea1be2ab408d7434864c5f6b24a8f11678ccf.png"><img alt="../_images/b2b5c15cf9567ca4a1557a71d9cea1be2ab408d7434864c5f6b24a8f11678ccf.png" src="../_images/b2b5c15cf9567ca4a1557a71d9cea1be2ab408d7434864c5f6b24a8f11678ccf.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>One of the nice things about <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> is that the <code class="docutils literal notranslate"><span class="pre">geom_*</span></code> functions are additive. We can just add geom objects on top of one another. For example, you may want to place a <a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">boxplot</a> on top of a violin plot. You can see the <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> documentation for details on <a class="reference external" href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html#summary-statistics">how to interpret the boxplot</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_violin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/a2fbbe3be52abebd875178e6c805234df78d5218fad9d8a6bbc4c49bf1deb8c7.png"><img alt="../_images/a2fbbe3be52abebd875178e6c805234df78d5218fad9d8a6bbc4c49bf1deb8c7.png" src="../_images/a2fbbe3be52abebd875178e6c805234df78d5218fad9d8a6bbc4c49bf1deb8c7.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>Finally, we can also just create a categorical scatter plot, plotting individual points in the data with <code class="docutils literal notranslate"><span class="pre">geom_point()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/bec1954edf17cb451a728788d2cd2c70fce0c069d9b957550266272892f77e4c.png"><img alt="../_images/bec1954edf17cb451a728788d2cd2c70fce0c069d9b957550266272892f77e4c.png" src="../_images/bec1954edf17cb451a728788d2cd2c70fce0c069d9b957550266272892f77e4c.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>This is sometimes easier to read if we add “jitter” (random noise) to the x axis, rather than plotting all points in a line. We can do this with the <code class="docutils literal notranslate"><span class="pre">position_jitter()</span></code> function. The <code class="docutils literal notranslate"><span class="pre">width</span></code> argument tells <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> how wide we want the jittered points to be. <strong>Note that we have to add <code class="docutils literal notranslate"><span class="pre">height=0</span></code> to avoid the function from also jittering our y values!</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_jitter</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/ca24c4255684ec67f3bf97c3712faefe7e17b7e66ec80602549fd468170c23f4.png"><img alt="../_images/ca24c4255684ec67f3bf97c3712faefe7e17b7e66ec80602549fd468170c23f4.png" src="../_images/ca24c4255684ec67f3bf97c3712faefe7e17b7e66ec80602549fd468170c23f4.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<section id="id1">
+<h4>Check your Knowledge!<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p><strong>a)</strong> Overlay density plots of memory scores for each experimental session. Notice any similarities/differences to the pattern with reading scores?</p>
+<p><strong>b)</strong> Create a categorical scatter plot of memory scores for each session, with a small amount of random jitter, and overly on top of a violin plot.</p>
+</section>
+<section id="id2">
+<h4>Solutions<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memory_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_density</span><span class="p">()</span>
+
+<span class="c1"># b</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_violin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_jitter</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/ee35b79c59a7bef3a57dca2309463b24d2ff265f62ba963634690f799c394ed9.png"><img alt="../_images/ee35b79c59a7bef3a57dca2309463b24d2ff265f62ba963634690f799c394ed9.png" src="../_images/ee35b79c59a7bef3a57dca2309463b24d2ff265f62ba963634690f799c394ed9.png" style="width: 240px; height: 210px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/2e1e47d82db59b17369f8bd6cdb3d015d8db36b106d3e84f682fa6957f096e0f.png"><img alt="../_images/2e1e47d82db59b17369f8bd6cdb3d015d8db36b106d3e84f682fa6957f096e0f.png" src="../_images/2e1e47d82db59b17369f8bd6cdb3d015d8db36b106d3e84f682fa6957f096e0f.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="scatter-plots">
+<h3>Scatter Plots<a class="headerlink" href="#scatter-plots" title="Link to this heading">#</a></h3>
+<p>Let’s look at the relationship between reading scores and memory scores with <code class="docutils literal notranslate"><span class="pre">geom_point()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/f0a2389c61b0a517899587c8c43ec0c13cb3ff1327f5742f3efab1371fa45c72.png"><img alt="../_images/f0a2389c61b0a517899587c8c43ec0c13cb3ff1327f5742f3efab1371fa45c72.png" src="../_images/f0a2389c61b0a517899587c8c43ec0c13cb3ff1327f5742f3efab1371fa45c72.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>This looks like a positive correlation! It seems to say that participants’ reading scores and memory scores are correlated. We can plot this relationship with the <code class="docutils literal notranslate"><span class="pre">geom_smooth()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/b7fd7260acedb72a4dd83a72b8ccc98af4a693a16b7467c2962d6baea77ee8f1.png"><img alt="../_images/b7fd7260acedb72a4dd83a72b8ccc98af4a693a16b7467c2962d6baea77ee8f1.png" src="../_images/b7fd7260acedb72a4dd83a72b8ccc98af4a693a16b7467c2962d6baea77ee8f1.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>This plots a <a class="reference external" href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/loess">LOESS model</a> to predict memory score as a function of reading score - this is a non-linear estimate of the local relationship. The middle blue line shows the estimated relationship, and the 95% confidence interval.</p>
+<p>If we want to fit a simple linear model instead, we can just pass <code class="docutils literal notranslate"><span class="pre">method</span> <span class="pre">=</span> <span class="pre">&quot;lm&quot;</span></code> to the function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"lm"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = 'y ~ x'
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/39ee2a0579d9cc94f4670cfe9696dcbdaf3d38577db19311cecf319d8c106d9e.png"><img alt="../_images/39ee2a0579d9cc94f4670cfe9696dcbdaf3d38577db19311cecf319d8c106d9e.png" src="../_images/39ee2a0579d9cc94f4670cfe9696dcbdaf3d38577db19311cecf319d8c106d9e.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<section id="id3">
+<h4>Check your Knowledge!<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<p><strong>a)</strong> Overlay the linear model estimates from <code class="docutils literal notranslate"><span class="pre">geom_smooth()</span></code> on top of a scatter plot of all points.</p>
+<p><strong>b)</strong> Does this correlation differ by experimental session time? Find a way to plot the scatter plot with linear models fit to each experimental session time separately. What conclusion do you draw from this plot?</p>
+<p><strong>c)</strong> Would you reach the same conclusion with a <code class="docutils literal notranslate"><span class="pre">loess</span></code> model?</p>
+</section>
+<section id="id4">
+<h4>Solutions<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">()</span>
+
+<span class="c1"># b</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">"lm"</span><span class="p">)</span>
+
+<span class="c1"># c</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">"loess"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = 'y ~ x'
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/46ea20368b73e14c3ba6f484a5eddbb3102d2ec2917b7ae89d7f9700259116e3.png"><img alt="../_images/46ea20368b73e14c3ba6f484a5eddbb3102d2ec2917b7ae89d7f9700259116e3.png" src="../_images/46ea20368b73e14c3ba6f484a5eddbb3102d2ec2917b7ae89d7f9700259116e3.png" style="width: 240px; height: 210px;" />
+</a>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = 'y ~ x'
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/717a282e6ee9d66879d7a7a052be8cbdcfa2db2e81ce36f41ddc7ebc2f6cfe34.png"><img alt="../_images/717a282e6ee9d66879d7a7a052be8cbdcfa2db2e81ce36f41ddc7ebc2f6cfe34.png" src="../_images/717a282e6ee9d66879d7a7a052be8cbdcfa2db2e81ce36f41ddc7ebc2f6cfe34.png" style="width: 240px; height: 210px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/9060a40287c861b29dbf4a791397caeb6f7fabd4ec304c25360b04c996ee4a94.png"><img alt="../_images/9060a40287c861b29dbf4a791397caeb6f7fabd4ec304c25360b04c996ee4a94.png" src="../_images/9060a40287c861b29dbf4a791397caeb6f7fabd4ec304c25360b04c996ee4a94.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="combining-data-visualisation-with-data-wrangling">
+<h3>Combining Data Visualisation with Data Wrangling<a class="headerlink" href="#combining-data-visualisation-with-data-wrangling" title="Link to this heading">#</a></h3>
+<p>Let’s have another look at the data. Notice that each participant occurs multiple times - we have one row for each combination of <code class="docutils literal notranslate"><span class="pre">subj_id</span></code> and <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 201 × 4
+   subj_id time    read_score memory_score
+   &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;        &lt;dbl&gt;
+ 1 s01     morning       76.8         67.2
+ 2 s01     midday        95.7         98.4
+ 3 s01     evening       94.3         95.0
+ 4 s02     morning       79.5         54.2
+ 5 s02     midday        97.2         88.5
+ 6 s02     evening       98.1         91.1
+ 7 s03     morning       76.2         69.1
+ 8 s03     midday        91.1         98.2
+ 9 s03     evening       85.2         94.9
+10 s04     morning       89.5         92.5
+# ℹ 191 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s imagine we want to plot the correlation between each participant’s reading scores at different times of day. How would we do this?</p>
+<p>The problem is that the reading scores from all times of day are in the same column - we are in <em>Long Format</em>. We can simply <a class="reference external" href="https://jackedtaylor.github.io/expra-wise24/introduction/data_wrangling_2.html#wide-and-long-data-formatting">pivot our data</a> into <em>Wide Format</em>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="n">id_cols</span><span class="o">=</span><span class="n">subj_id</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">read_score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 67 × 4
+   subj_id morning midday evening
+   &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+ 1 s01        76.8   95.7    94.3
+ 2 s02        79.5   97.2    98.1
+ 3 s03        76.2   91.1    85.2
+ 4 s04        89.5  110.    100. 
+ 5 s05        76.7  101.    103. 
+ 6 s06        73.1   92.7    98.4
+ 7 s07        76.8   99.7    97.0
+ 8 s08        79.6  108.     99.8
+ 9 s09        81.6   99.9    99.9
+10 s10        68.5  102.     93.2
+# ℹ 57 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we pipe this into our plot, we can plot the correlation between participants’ morning and evening reading scores like so:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">exp_dat</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">id_cols</span><span class="o">=</span><span class="n">subj_id</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">read_score</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">morning</span><span class="p">,</span><span class="w"> </span><span class="n">evening</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">"lm"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = 'y ~ x'
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/216472abb5bc06a1f8fea33f7e2df18076ba7f2a19e936d2045cac1f913f28eb.png"><img alt="../_images/216472abb5bc06a1f8fea33f7e2df18076ba7f2a19e936d2045cac1f913f28eb.png" src="../_images/216472abb5bc06a1f8fea33f7e2df18076ba7f2a19e936d2045cac1f913f28eb.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</div>
+<p>This shows that participants’ scores are somewhat correlated. This is related to the idea of test-retest reliability.</p>
+<section id="id5">
+<h4>Check your Knowledge!<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p><strong>a)</strong> Plot the correlation between participants’ morning and midday memory scores.</p>
+<p><strong>b)</strong> Tricky! Plot the correlation between morning scores in the reading test and evening scores in the memory test.</p>
+<p>How would you interpret these results?</p>
+</section>
+<section id="id6">
+<h4>Solutions<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
+<span class="n">exp_dat</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">id_cols</span><span class="o">=</span><span class="n">subj_id</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">memory_score</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">midday</span><span class="p">,</span><span class="w"> </span><span class="n">morning</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">"lm"</span><span class="p">)</span>
+
+<span class="c1"># b</span>
+<span class="n">exp_dat</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">id_cols</span><span class="o">=</span><span class="n">subj_id</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">read_score_morning</span><span class="p">,</span><span class="w"> </span><span class="n">memory_score_evening</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">"lm"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = 'y ~ x'
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = 'y ~ x'
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/27dd4f1ed0a8d7fa8e69f64d39e2ebfa9021de4d0734ca305437347925c29934.png"><img alt="../_images/27dd4f1ed0a8d7fa8e69f64d39e2ebfa9021de4d0734ca305437347925c29934.png" src="../_images/27dd4f1ed0a8d7fa8e69f64d39e2ebfa9021de4d0734ca305437347925c29934.png" style="width: 240px; height: 210px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/cb4e94475e51f008521318745615d94855934ff859e2dc3d70855ba9f74ce1b3.png"><img alt="../_images/cb4e94475e51f008521318745615d94855934ff859e2dc3d70855ba9f74ce1b3.png" src="../_images/cb4e94475e51f008521318745615d94855934ff859e2dc3d70855ba9f74ce1b3.png" style="width: 240px; height: 210px;" />
+</a>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="more-practice">
+<h3>More Practice<a class="headerlink" href="#more-practice" title="Link to this heading">#</a></h3>
+<p>You can find more on the basics of ´ggplot2´ on the PandaR website: <a class="reference external" href="https://pandar.netlify.app/lehre/statistik-ii/grafiken-ggplot2/">Grafiken mit ggplot2</a></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "JackEdTaylor/expra-wise25",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data_wrangling_2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Wrangling 2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data_vis_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Visualisation 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it Out!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ggplot2-canvas">The <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> “Canvas”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-distributions">Plotting Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-distributions-by-group">Comparing Distributions by Group</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-data-visualisation-with-data-wrangling">Combining Data Visualisation with Data Wrangling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-practice">More Practice</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jack Taylor
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

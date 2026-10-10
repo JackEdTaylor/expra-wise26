@@ -1,0 +1,1352 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Analysis &#8212; ExPra Winter 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=bb6542e3" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'demo/demo_analyse';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://jackedtaylor.github.io/expra-wise25/demo/demo_analyse.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Feedback" href="demo_feedback.html" />
+    <link rel="prev" title="Background" href="demo_background.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="ExPra Winter 2025 - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="ExPra Winter 2025 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/schedule.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/reading.html">Reading</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">General Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/empirical_research.html">Empirical Research</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../introduction/ethics.html">Ethics and Data Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/cogneuro_lang.html">Cog. Neuro. of Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/open_science.html">Open Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/ai.html">Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/literature.html">Literature Search and Reference Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/writing.html">Scientific Writing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/communication.html">Scientific Communication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/glm.html">The General Linear Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_wrangling_1.html">Data Wrangling 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_wrangling_2.html">Data Wrangling 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_vis_1.html">Data Visualisation 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_vis_2.html">Data Visualisation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="demo_participate.html">Participate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo_background.html">Background</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo_feedback.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/conducting.html">Conducting Experimental Sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/analysis.html">Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/posters.html">Posters</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cognitive Brain Imaging</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cbi/meeg.html">Introduction to EEG &amp; MEG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cbi/mri.html">Introduction to (f)MRI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/student-guide.html">ExPra Student Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/gen_ai.html">AI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/CoC.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise25/master?urlpath=tree/lecture/demo/demo_analyse.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/edit/master/lecture/demo/demo_analyse.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/issues/new?title=Issue%20on%20page%20%2Fdemo/demo_analyse.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/demo/demo_analyse.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relevant-libraries">1: Load the Relevant Libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-demographic-data">2. Import the Demographic Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-stimuli">3: Import the Stimuli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-raw-data">4: Import the Raw Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-data-together">5: Join the Data Together</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-data">Cleaning Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-accuracies">1: Calculate Accuracies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise-participants">2: Summarise Participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identify-good-participants">3: Identify Good Participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-data">4: Clean Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-frequency-effect">Analysis - Frequency Effect</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-word-averages">1: Calculate Word Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-the-frequency-variable">2: Code the Frequency Variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-frequency-effect">3: Estimate the Frequency Effect</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-snd-effects">Analysis - SND Effects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-item-averages">1: Calculate Item Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-variables">2: Code Variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-lexicality-snd-interaction">3: Estimate the Lexicality × SND Interaction</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="analysis">
+<h1>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h1>
+<p>The main thing we’ll go through today is analysis of the Demo Experiment data. We have data from 8 participants who completed the experiment.</p>
+<p><strong>Before we can start:</strong></p>
+<p><strong>a</strong>) <a class="reference download internal" download="" href="../_downloads/daf706072d40687984ec3fb4396e9315/demo_demog.csv"><span class="xref download myst">Download the demographics data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file, and place it in a directory that makes sense for you (e.g., called “demo_analysis”).</p>
+<p><strong>b</strong>) <a class="reference download internal" download="" href="../_downloads/69790babfb823cc32182d23a72f6612a/demo_stimuli.csv"><span class="xref download myst">Download the stimuli</span></a> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file, and place it in the same demo analysis folder.</p>
+<p><strong>c</strong>) <a class="reference download internal" download="" href="../_downloads/7ede810df4318e8d509dd065b4ba2e7c/demo_data.zip"><span class="xref download myst">Download the raw trials data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p>
+<p><strong>d</strong>) Extract the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file and put it in your demo analysis folder.</p>
+<p><strong>e</strong>) Start a new R script in RStudio, and save the <code class="docutils literal notranslate"><span class="pre">.R</span></code> file to the demo analysis folder.</p>
+<p>After following these instructions, you should have a directory structure that looks something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>demo_analysis
+├─ data
+│  ├─ trials_p171220.csv
+│  ├─ trials_p203530.csv
+│  └─ ...
+├─ analysis.R
+└─ demo_demog.csv
+└─ demo_stimuli.csv
+</pre></div>
+</div>
+<p>Once everyone has completed these steps, we’ll begin…</p>
+<section id="loading-the-data">
+<h2>Loading the Data<a class="headerlink" href="#loading-the-data" title="Link to this heading">#</a></h2>
+<section id="load-the-relevant-libraries">
+<h3>1: Load the Relevant Libraries<a class="headerlink" href="#load-the-relevant-libraries" title="Link to this heading">#</a></h3>
+<p>These are the libraries we’ll use for the analysis. Each library has a comment explaining what we will use it for.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for reading the data into R</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">purrr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for easily importing multiple files</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for wrangling data (e.g., adding/renaming columns)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">  </span><span class="c1"># for visualising data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-the-demographic-data">
+<h3>2. Import the Demographic Data<a class="headerlink" href="#import-the-demographic-data" title="Link to this heading">#</a></h3>
+<p>First, we import the demographics data. This gives us some details about the participants who took part.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">demog</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"demo_demog.csv"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">17</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">7</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> ","
+<span class=" -Color -Color-Red">chr</span> (4): participant_id, gender, dominant_hand, first_language
+<span class=" -Color -Color-Green">dbl</span> (3): age, frame_rate_Hz, total_time_secs
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will print some details about the columns imported. Let’s have a look at the data we imported. We have some missing data, but enough information to report age and gender information.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">demog</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 17 × 7
+   participant_id   age gender dominant_hand first_language frame_rate_Hz
+   &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;                  &lt;dbl&gt;
+ 1 p015270           21 male   right         german                  59.6
+ 2 p063288           20 female right         german                  60.1
+ 3 p072235           34 male   right         german                 119. 
+ 4 p110412           24 female right         german                  <span class=" -Color -Color-Red">NA</span>  
+ 5 p153023           21 female right         german                  59.3
+ 6 p241074           22 female right         german                  60.1
+ 7 p255886           22 female right         german                  60.1
+ 8 p389724           20 female right         german                  60.0
+ 9 p445631           21 female right         german                  <span class=" -Color -Color-Red">NA</span>  
+10 p506691           21 female left          german                  60.0
+11 p532670           22 female right         german                  59.9
+12 p539652           22 male   right         german                  <span class=" -Color -Color-Red">NA</span>  
+13 p551117           21 female right         german                  60.0
+14 p555715           21 female right         german                  60.1
+15 p596865           19 female right         german                 119. 
+16 p697533           25 female right         german                  60.0
+17 p813475           22 female right         german                 117. 
+# ℹ 1 more variable: total_time_secs &lt;dbl&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-the-stimuli">
+<h3>3: Import the Stimuli<a class="headerlink" href="#import-the-stimuli" title="Link to this heading">#</a></h3>
+<p>Next we import the list of stimuli:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"demo_stimuli.csv"</span><span class="p">)</span>
+
+<span class="n">stim</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 × 8
+   item_nr condition text  corr_ans is_practice_trial   snd ZipfSUBTLEX word_len
+     &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;    &lt;lgl&gt;             &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt;
+ 1       1 word      Akze… ralt     FALSE             0.716        2.71        7
+ 2       1 pseudowo… Unwa… lalt     FALSE             0.534       <span class=" -Color -Color-Red">NA</span>           7
+ 3       2 word      Drüc… ralt     FALSE             0.573        3.01        7
+ 4       2 pseudowo… quok… lalt     FALSE             0.551       <span class=" -Color -Color-Red">NA</span>           7
+ 5       3 word      Erwa… ralt     FALSE             0.681        3.95       11
+ 6       3 pseudowo… Exzi… lalt     FALSE             0.532       <span class=" -Color -Color-Red">NA</span>          11
+ 7       4 word      Exor… ralt     FALSE             0.624        2.64       10
+ 8       4 pseudowo… ucin… lalt     FALSE             0.417       <span class=" -Color -Color-Red">NA</span>          10
+ 9       5 word      Fabel ralt     FALSE             0.634        2.6         5
+10       5 pseudowo… Pafel lalt     FALSE             0.552       <span class=" -Color -Color-Red">NA</span>           5
+# ℹ 290 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>This has 8 columns:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">item_nr</span></code> - an ID for each matched pair of words and pseudowords</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> - whether each item is a <code class="docutils literal notranslate"><span class="pre">&quot;word&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;pseudoword&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - the text shown to the participant</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">corr_ans</span></code> - whether the correct answer was to press the left alt key (<code class="docutils literal notranslate"><span class="pre">&quot;lalt&quot;</span></code>) or the right alt key (<code class="docutils literal notranslate"><span class="pre">&quot;ralt&quot;</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snd</span></code> - semantic neighbourhood density, calculated using the fastText model, using the method described by Hendrix &amp; Sun (<a class="reference external" href="https://doi.org/10.1037/xlm0000819">2020</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZipfSUBTLEX</span></code> - a measure of word frequency from a german subtitle corpus: SUBTLEX-DE (Bysbaert et al., <a class="reference external" href="https://doi.org/10.1027/1618-3169/a000123">2011</a>). For more info on the “Zipf” measure, see Brysbaert et al. (<a class="reference external" href="https://doi.org/10.1177/096372141772752">2017</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">word_len</span></code> - number of letters in the word / pseudoword</p></li>
+</ul>
+</section>
+<section id="import-the-raw-data">
+<h3>4: Import the Raw Data<a class="headerlink" href="#import-the-raw-data" title="Link to this heading">#</a></h3>
+<p>Let’s import the experiment data from the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, get a list of all .csv data files</span>
+<span class="n">data_paths</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="s">"data"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="s">".*\\.csv$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="c1"># now, iterate over these with `read_csv()` to import each</span>
+<span class="n">raw_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">map_df</span><span class="p">(</span><span class="n">data_paths</span><span class="p">,</span><span class="w"> </span><span class="n">read_csv</span><span class="p">)</span>
+
+<span class="c1"># print the contents</span>
+<span class="n">raw_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5,270 × 8
+   participant_id item_nr condition  text     is_practice_trial resp  rt_ms
+   &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;lgl&gt;             &lt;chr&gt; &lt;dbl&gt;
+ 1 p015270              3 pseudoword Torrerk  TRUE              ralt   949.
+ 2 p015270              3 word       korrekt  TRUE              ralt   714.
+ 3 p015270              5 pseudoword tobreren TRUE              lalt  1017.
+ 4 p015270              2 word       Mannes   TRUE              lalt   630.
+ 5 p015270              4 word       sagt     TRUE              lalt   711.
+ 6 p015270              1 word       Haie     TRUE              ralt   905.
+ 7 p015270              4 pseudoword segt     TRUE              lalt  1308.
+ 8 p015270              2 pseudoword sanzes   TRUE              lalt   643.
+ 9 p015270              5 word       sicheren TRUE              ralt   703.
+10 p015270              1 pseudoword Bage     TRUE              lalt   762.
+# ℹ 5,260 more rows
+# ℹ 1 more variable: time_so_far_secs &lt;dbl&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This gives us one data frame with all trials in the experiment.</p>
+<p>There are 8 columns of data:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">participant_id</span></code> - a unique ID for each paricipant</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">item_nr</span></code>- the same item ID as in <code class="docutils literal notranslate"><span class="pre">stim</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> - whether the trial showed a <code class="docutils literal notranslate"><span class="pre">&quot;word&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;pseudoword&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - the text that the participant saw</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_practice_trial</span></code> - whether each trial was a practice trial. The first 10 trials for each participant will be practice trials.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resp</span></code> - left alt key (<code class="docutils literal notranslate"><span class="pre">&quot;lalt&quot;</span></code>) or the right alt key (<code class="docutils literal notranslate"><span class="pre">&quot;ralt&quot;</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rt_ms</span></code> - the response time in milliseconds</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_so_far_secs</span></code>  - amount of time, in seconds, that has passed from the start of the experiment</p></li>
+</ul>
+</section>
+<section id="join-the-data-together">
+<h3>5: Join the Data Together<a class="headerlink" href="#join-the-data-together" title="Link to this heading">#</a></h3>
+<p>The easiest way to work with small datasets like this is to just join the dataframes together. This will create some redundancy (e.g., participant ages will be repeated 300 times), but can make things easier to work with.</p>
+<p>Here we use <code class="docutils literal notranslate"><span class="pre">left_join()</span></code> to find add information about participant demographics and features of the stimuli. This identifies columns that the dataframes have in common, and joins them togeher. Notice that we now have one big dataframe with all of the information about every trial.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raw_data</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">left_join</span><span class="p">(</span><span class="n">demog</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">left_join</span><span class="p">(</span><span class="n">stim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(participant_id)`
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_dat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5,270 × 18
+   participant_id item_nr condition  text     is_practice_trial resp  rt_ms
+   &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;lgl&gt;             &lt;chr&gt; &lt;dbl&gt;
+ 1 p015270              3 pseudoword Torrerk  TRUE              ralt   949.
+ 2 p015270              3 word       korrekt  TRUE              ralt   714.
+ 3 p015270              5 pseudoword tobreren TRUE              lalt  1017.
+ 4 p015270              2 word       Mannes   TRUE              lalt   630.
+ 5 p015270              4 word       sagt     TRUE              lalt   711.
+ 6 p015270              1 word       Haie     TRUE              ralt   905.
+ 7 p015270              4 pseudoword segt     TRUE              lalt  1308.
+ 8 p015270              2 pseudoword sanzes   TRUE              lalt   643.
+ 9 p015270              5 word       sicheren TRUE              ralt   703.
+10 p015270              1 pseudoword Bage     TRUE              lalt   762.
+# ℹ 5,260 more rows
+# ℹ 11 more variables: time_so_far_secs &lt;dbl&gt;, age &lt;dbl&gt;, gender &lt;chr&gt;,
+#   dominant_hand &lt;chr&gt;, first_language &lt;chr&gt;, frame_rate_Hz &lt;dbl&gt;,
+#   total_time_secs &lt;dbl&gt;, corr_ans &lt;chr&gt;, snd &lt;dbl&gt;, ZipfSUBTLEX &lt;dbl&gt;,
+#   word_len &lt;dbl&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="cleaning-data">
+<h2>Cleaning Data<a class="headerlink" href="#cleaning-data" title="Link to this heading">#</a></h2>
+<p>Now that we have the data loaded and all in one place, we need to exclude participants and trials that do not meet our exclusion criteria. This can be a useful step for (e.g.,) catching participants who were not paying attention, or removing outliers from your data.</p>
+<p>Before the experiment, I decided to exclude:</p>
+<ul class="simple">
+<li><p>participants who had average accuracies &lt;= 75% (too inaccurate)</p></li>
+<li><p>participants who had median response times &lt;250 ms (too fast)</p></li>
+<li><p>participants who had median response times &gt;1500 ms (too slow)</p></li>
+<li><p>participants whose first language is not German</p></li>
+<li><p>practice trials</p></li>
+<li><p>trials responded to incorrectly (as we are interested in response times only in our analysis)</p></li>
+</ul>
+<section id="calculate-accuracies">
+<h3>1: Calculate Accuracies<a class="headerlink" href="#calculate-accuracies" title="Link to this heading">#</a></h3>
+<p>First, let’s create a column of participant accuracies. Wherever the <code class="docutils literal notranslate"><span class="pre">resp</span></code> column is equal to the <code class="docutils literal notranslate"><span class="pre">corr_ans</span></code> column, we will put a 1. Otherwise, we will put a zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">all_dat</span><span class="p">,</span><span class="w"> </span><span class="n">accuracy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">corr_ans</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">resp</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summarise-participants">
+<h3>2: Summarise Participants<a class="headerlink" href="#summarise-participants" title="Link to this heading">#</a></h3>
+<p>Now, we want to calculate per average response time and accuracy for each participant. Since response time is such a skewed distribution, we will calculate the median for response times.</p>
+<blockquote>
+<div><p>Note: We include <code class="docutils literal notranslate"><span class="pre">first_language</span></code> in <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> so that this is included in the per-participant summary, even though each participant has only one value.</p>
+</div></blockquote>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">participant_avg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all_dat</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># exclude practice trials</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="n">is_practice_trial</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># then, for each participant, record their first language, and</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="w"> </span><span class="n">first_language</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># get their average RT and accuracy</span>
+<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span>
+<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">),</span>
+<span class="w">    </span><span class="n">mean_acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># (often good practice to ungroup)</span>
+<span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span>
+
+<span class="n">participant_avg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 17 × 4
+   participant_id first_language median_rt mean_acc
+   &lt;chr&gt;          &lt;chr&gt;              &lt;dbl&gt;    &lt;dbl&gt;
+ 1 p015270        german              666.    0.903
+ 2 p063288        german              701.    0.95 
+ 3 p072235        german              581.    0.887
+ 4 p110412        german              533.    0.927
+ 5 p153023        german              669.    0.96 
+ 6 p241074        german              757.    0.913
+ 7 p255886        german              841.    0.947
+ 8 p389724        german              768.    0.893
+ 9 p445631        german              781.    0.94 
+10 p506691        german              698.    0.92 
+11 p532670        german              593.    0.92 
+12 p539652        german              697.    0.98 
+13 p551117        german              993.    0.953
+14 p555715        german              712.    0.907
+15 p596865        german              807.    0.947
+16 p697533        german              661.    0.9  
+17 p813475        german              629.    0.937
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="identify-good-participants">
+<h3>3: Identify Good Participants<a class="headerlink" href="#identify-good-participants" title="Link to this heading">#</a></h3>
+<p>Now, we can identify participants which are suitable for our hypotheses. When I originally designed the experiment, I decided to include:</p>
+<ul class="simple">
+<li><p>only participants who had accuracies and response times within our cutoffs</p></li>
+<li><p>only participants whose first language is German</p></li>
+</ul>
+<p>Here, we filter the dataframe of participant averages, and then make not of all the participants who meet our criteria. We store the list of good participants in <code class="docutils literal notranslate"><span class="pre">okay_participants</span></code>.</p>
+<blockquote>
+<div><p>Note: the <code class="docutils literal notranslate"><span class="pre">pull()</span></code> function extracts data from a column, and puts it in a vector for us</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">okay_participants</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">participant_avg</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">mean_acc</span><span class="o">&gt;</span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="o">&gt;=</span><span class="m">250</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="o">&lt;</span><span class="m">1500</span><span class="p">,</span><span class="w"> </span><span class="n">first_language</span><span class="o">==</span><span class="s">"german"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">participant_id</span><span class="p">)</span>
+
+<span class="n">okay_participants</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'p015270'</li><li>'p063288'</li><li>'p072235'</li><li>'p110412'</li><li>'p153023'</li><li>'p241074'</li><li>'p255886'</li><li>'p389724'</li><li>'p445631'</li><li>'p506691'</li><li>'p532670'</li><li>'p539652'</li><li>'p551117'</li><li>'p555715'</li><li>'p596865'</li><li>'p697533'</li><li>'p813475'</li></ol>
+</div></div>
+</div>
+</section>
+<section id="clean-data">
+<h3>4: Clean Data<a class="headerlink" href="#clean-data" title="Link to this heading">#</a></h3>
+<p>Now we:</p>
+<ul class="simple">
+<li><p>apply our participant exclusions</p></li>
+<li><p>exclude trials that were responded to incorrectly</p></li>
+<li><p>exclude practice trials</p></li>
+</ul>
+<p>We store the trials which we will use in the analysis in <code class="docutils literal notranslate"><span class="pre">trials_clean</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trials_clean</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all_dat</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span>
+<span class="w">    </span><span class="c1"># only keep participants that meet inclusion criteria</span>
+<span class="w">    </span><span class="n">participant_id</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">okay_participants</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># only keep correct trials</span>
+<span class="w">    </span><span class="n">accuracy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># remove practice trials</span>
+<span class="w">    </span><span class="c1"># (note: the exclamation mark ! can be read as "is not")</span>
+<span class="w">    </span><span class="o">!</span><span class="n">is_practice_trial</span>
+<span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="analysis-frequency-effect">
+<h2>Analysis - Frequency Effect<a class="headerlink" href="#analysis-frequency-effect" title="Link to this heading">#</a></h2>
+<p>Can we replicate the effect of frequency? Let’s see what the effect of Zipf is on lexical decision response times!</p>
+<section id="calculate-word-averages">
+<h3>1: Calculate Word Averages<a class="headerlink" href="#calculate-word-averages" title="Link to this heading">#</a></h3>
+<p>Here, we calculate the average RT and accuracy for each word. We also make sure that the Zipf values are brought through by including them in the <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> function.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">word_averages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trials_clean</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"word"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">ZipfSUBTLEX</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span>
+<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">),</span>
+<span class="w">    </span><span class="n">mean_acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span>
+
+<span class="n">word_averages</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 150 × 4
+   text        ZipfSUBTLEX median_rt mean_acc
+   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+ 1 Akzente            2.71      607.        1
+ 2 Drücker            3.01      588.        1
+ 3 Erwachsener        3.95      579.        1
+ 4 Exorzisten         2.64      767.        1
+ 5 Fabel              2.6       588.        1
+ 6 Faulpelze          2.74      636.        1
+ 7 Figuren            4.38      534.        1
+ 8 Filigrane          1.9       806.        1
+ 9 Geschicke          2.07      687.        1
+10 Gondel             3.11      751.        1
+# ℹ 140 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>Clearly, accuracy is overall very high, but we have some variability in the response times.</p>
+</section>
+<section id="code-the-frequency-variable">
+<h3>2: Code the Frequency Variable<a class="headerlink" href="#code-the-frequency-variable" title="Link to this heading">#</a></h3>
+<p>Word frequency (<code class="docutils literal notranslate"><span class="pre">ZipfSUBTLEX</span></code>) is stored as a continuous variable. We can fit our model without doing any coding, but then it will be harder to interpret our model intercept. It is often useful to mean-centre variables, so that the model intercept can be interpreted as the grand average (e.g., the average RT overall).</p>
+<p>Let’s calculate mean-centred Zipf frequency, and store in <code class="docutils literal notranslate"><span class="pre">ZipfSUBTLEX_cent</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">word_averages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">word_averages</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">ZipfSUBTLEX_cent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ZipfSUBTLEX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">ZipfSUBTLEX</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="estimate-the-frequency-effect">
+<h3>3: Estimate the Frequency Effect<a class="headerlink" href="#estimate-the-frequency-effect" title="Link to this heading">#</a></h3>
+<p>Now we can fit a linear model to predict average item response times as a function of mean-centred word frequency.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">freq_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">ZipfSUBTLEX_cent</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">word_averages</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">freq_mod</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = median_rt ~ ZipfSUBTLEX_cent, data = word_averages)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-258.26  -82.43  -20.00   54.58  440.96 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       704.978      9.516  74.087  &lt; 2e-16 ***
+ZipfSUBTLEX_cent  -74.860      9.611  -7.789 1.09e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 116.5 on 148 degrees of freedom
+Multiple R-squared:  0.2907,	Adjusted R-squared:  0.2859 
+F-statistic: 60.66 on 1 and 148 DF,  p-value: 1.091e-12
+</pre></div>
+</div>
+</div>
+</div>
+<p>This tells us that the average RT overall was 704.98 ms (<em>SE</em> = 9.5). The <em>t</em> value of 74.09 just reflects that this number is much larger than zero. We would report the overall average RT, but we probably wouldn’t report the <em>t</em> and <em>p</em> values for this, since RT is almost by definition larger than zero.</p>
+<p>The second coefficient is more interesting. The <span class="math notranslate nohighlight">\(\Beta\)</span> = -74.86 (<em>SE</em> = 9.61) tells us that for every one unit of Zipf, RT becomes 74.86 ms faster on average. This effect is significantly different from zero (<em>t</em>(148) = -7.79, <em>p</em> &lt; .001).</p>
+<p>We might also want to report the R<span class="math notranslate nohighlight">\(^2\)</span> value of .29, which means that our model is accounting for an estimated 29% of variance in the data.</p>
+<p>Finally, we might want to make a nice plot of the effect. We will be spending more time on this in a future session, but here is an example, showing the effect of frequency on response time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">word_averages</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">ZipfSUBTLEX</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"lm"</span><span class="p">,</span><span class="w"> </span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Frequency (Zipf in SUBTLEX-DE)"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Median Response Time (ms)"</span>
+<span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/36cbb4c693e67f6465128c50740f1c9b1685836dde5f99b2d64683492d0b6743.png"><img alt="../_images/36cbb4c693e67f6465128c50740f1c9b1685836dde5f99b2d64683492d0b6743.png" src="../_images/36cbb4c693e67f6465128c50740f1c9b1685836dde5f99b2d64683492d0b6743.png" style="width: 210px; height: 180px;" />
+</a>
+</div>
+</div>
+</section>
+</section>
+<section id="analysis-snd-effects">
+<h2>Analysis - SND Effects<a class="headerlink" href="#analysis-snd-effects" title="Link to this heading">#</a></h2>
+<p>The main reason we ran this experiment, though, was to see whether we could replicate the interaction between Lexicality (word / pseudoword) and SND (semantic neighbourhood density).</p>
+<section id="calculate-item-averages">
+<h3>1: Calculate Item Averages<a class="headerlink" href="#calculate-item-averages" title="Link to this heading">#</a></h3>
+<p>As before, we want to calculate average response times for each item. However, we also now want to include the pseudowords, as well as the words.</p>
+<p>We also want to include a step reported by Hendrix and Sun, who excluded items with an average accuracy of 66% or less.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim_averages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trials_clean</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># for every unique stimulus (text shown to the participant),</span>
+<span class="w">  </span><span class="c1"># while also storing condition (lexicality) and SND,</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">condition</span><span class="p">,</span><span class="w"> </span><span class="n">snd</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># get the average RT and accuracy</span>
+<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span>
+<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">),</span>
+<span class="w">    </span><span class="n">mean_acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># remove items with an average accuracy of &lt;=.66</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">mean_acc</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">.</span><span class="m">66</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-variables">
+<h3>2: Code Variables<a class="headerlink" href="#code-variables" title="Link to this heading">#</a></h3>
+<p>Again, we now want to code the variables.</p>
+<p>SND is a continuous variable, so we will mean-centre it (<code class="docutils literal notranslate"><span class="pre">snd_cent</span></code>). (We could also scale it if we wanted stardised coefficients.)</p>
+<p>Lexicality is a categorical variable, which we will deviation-code (<code class="docutils literal notranslate"><span class="pre">dev_lex</span></code>). If we had perfectly equal numbers of words and pseudowords in the data, we could just set this to <code class="docutils literal notranslate"><span class="pre">-0.5</span></code> and <code class="docutils literal notranslate"><span class="pre">0.5</span></code>. However, since we <em>might</em> have unequal numbers, to make sure that the variable is centred on zero, we first dummy code to 0 and 1, and then mean-centre it. As we happen to have equal numbers of stimuli, the values end up being <code class="docutils literal notranslate"><span class="pre">-0.5</span></code> and <code class="docutils literal notranslate"><span class="pre">0.5</span></code> anyway.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim_averages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stim_averages</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">    </span><span class="n">snd_cent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">snd</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">snd</span><span class="p">),</span>
+<span class="w">    </span><span class="n">dum_lex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"word"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="n">dev_lex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dum_lex</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">dum_lex</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
+
+<span class="n">stim_averages</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 × 8
+   text         condition    snd median_rt mean_acc snd_cent dum_lex dev_lex
+   &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+ 1 Abgegöbe     pseudoword 0.614      841.        1   0.0104       0    -<span class=" -Color -Color-Red">0.5</span>
+ 2 Akzente      word       0.716      607.        1   0.113        1     0.5
+ 3 Austerbafer  pseudoword 0.616      809.        1   0.0129       0    -<span class=" -Color -Color-Red">0.5</span>
+ 4 Bünktchen    pseudoword 0.585      995.        1  -<span class=" -Color -Color-Red">0.0180</span>       0    -<span class=" -Color -Color-Red">0.5</span>
+ 5 Cermelen     pseudoword 0.548      673.        1  -<span class=" -Color -Color-Red">0.0556</span>       0    -<span class=" -Color -Color-Red">0.5</span>
+ 6 Drücker      word       0.573      588.        1  -<span class=" -Color -Color-Red">0.0303</span>       1     0.5
+ 7 Durchszelten pseudoword 0.567     1171.        1  -<span class=" -Color -Color-Red">0.0362</span>       0    -<span class=" -Color -Color-Red">0.5</span>
+ 8 Erwachsener  word       0.681      579.        1   0.0776       1     0.5
+ 9 Exorzisten   word       0.624      767.        1   0.0201       1     0.5
+10 Exzingsener  pseudoword 0.532      832.        1  -<span class=" -Color -Color-Red">0.0709</span>       0    -<span class=" -Color -Color-Red">0.5</span>
+# ℹ 290 more rows
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="estimate-the-lexicality-snd-interaction">
+<h2>3: Estimate the Lexicality × SND Interaction<a class="headerlink" href="#estimate-the-lexicality-snd-interaction" title="Link to this heading">#</a></h2>
+<p>Here we fit the model. Note that, unlike with frequency, it’s up to you to interpret this one!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">main_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">dev_lex</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">snd_cent</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stim_averages</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">main_mod</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = median_rt ~ dev_lex * snd_cent, data = stim_averages)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-227.98 -104.34  -41.63   74.04  505.62 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        763.02      13.31  57.310  &lt; 2e-16 ***
+dev_lex            -73.46      26.63  -2.759  0.00616 ** 
+snd_cent            93.35     134.25   0.695  0.48741    
+dev_lex:snd_cent  -735.12     268.50  -2.738  0.00656 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 143.2 on 296 degrees of freedom
+Multiple R-squared:  0.06398,	Adjusted R-squared:  0.05449 
+F-statistic: 6.744 on 3 and 296 DF,  p-value: 0.000205
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, here is a plot showing the effect of SND for each lexicality condition.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim_averages</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">snd</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">condition</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.33</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="c1"># alpha sets point transparency</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"lm"</span><span class="p">,</span><span class="w"> </span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Semantic Neighbourhood Density"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Median Response Time (ms)"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Lexicality"</span>
+<span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/fe54684e5968923447ecd02eed331f7414d9a9925e1db618b465d757af668fff.png"><img alt="../_images/fe54684e5968923447ecd02eed331f7414d9a9925e1db618b465d757af668fff.png" src="../_images/fe54684e5968923447ecd02eed331f7414d9a9925e1db618b465d757af668fff.png" style="width: 210px; height: 180px;" />
+</a>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "JackEdTaylor/expra-wise25",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./demo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="demo_background.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Background</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="demo_feedback.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Feedback</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relevant-libraries">1: Load the Relevant Libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-demographic-data">2. Import the Demographic Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-stimuli">3: Import the Stimuli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-raw-data">4: Import the Raw Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-data-together">5: Join the Data Together</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-data">Cleaning Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-accuracies">1: Calculate Accuracies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise-participants">2: Summarise Participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identify-good-participants">3: Identify Good Participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-data">4: Clean Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-frequency-effect">Analysis - Frequency Effect</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-word-averages">1: Calculate Word Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-the-frequency-variable">2: Code the Frequency Variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-frequency-effect">3: Estimate the Frequency Effect</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-snd-effects">Analysis - SND Effects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-item-averages">1: Calculate Item Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-variables">2: Code Variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-lexicality-snd-interaction">3: Estimate the Lexicality × SND Interaction</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jack Taylor
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

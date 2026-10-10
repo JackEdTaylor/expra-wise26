@@ -1,0 +1,842 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Conducting Experimental Sessions &#8212; ExPra Winter 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=bb6542e3" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/conducting';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://jackedtaylor.github.io/expra-wise25/projects/conducting.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Analysis" href="analysis.html" />
+    <link rel="prev" title="LIFOS" href="lifos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="ExPra Winter 2025 - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="ExPra Winter 2025 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/schedule.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/reading.html">Reading</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">General Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/empirical_research.html">Empirical Research</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../introduction/ethics.html">Ethics and Data Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/cogneuro_lang.html">Cog. Neuro. of Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/open_science.html">Open Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/ai.html">Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/literature.html">Literature Search and Reference Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/writing.html">Scientific Writing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/communication.html">Scientific Communication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/glm.html">The General Linear Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_wrangling_1.html">Data Wrangling 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_wrangling_2.html">Data Wrangling 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_vis_1.html">Data Visualisation 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_vis_2.html">Data Visualisation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_participate.html">Participate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_analyse.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_feedback.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preregistration.html">Preregistration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifos.html">LIFOS</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Conducting Experimental Sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis.html">Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="posters.html">Posters</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cognitive Brain Imaging</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cbi/meeg.html">Introduction to EEG &amp; MEG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cbi/mri.html">Introduction to (f)MRI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/student-guide.html">ExPra Student Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/gen_ai.html">AI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/CoC.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/edit/master/lecture/projects/conducting.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/issues/new?title=Issue%20on%20page%20%2Fprojects/conducting.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/projects/conducting.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Conducting Experimental Sessions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recruiting-participants">1. Recruiting Participants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#screening-and-scheduling">2. Screening and Scheduling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-for-the-experimental-session">3.	Preparing for the Experimental Session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-experimental-session">4.	The Experimental Session</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#greeting-and-consent">4.1 Greeting and Consent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standardized-experimental-procedures">4.2 Standardized Experimental Procedures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">4.3 Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-log-and-data-quality">4.4 Experimental Log and Data Quality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concluding-the-session">4.5 Concluding the Session</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-unexpected-situations">5. Handling Unexpected Situations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thoughts">6. Final Thoughts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">Attribution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimenters-quick-checklist">Experimenter’s Quick Checklist</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <style>
+p:has(+ ul) {
+  margin-bottom: 0.5em;
+}
+p + ul {
+  margin-top: 0.5em;
+}
+p:has(+ ol) {
+  margin-bottom: 0.5em;
+}
+p + ol {
+  margin-top: 0.5em;
+}
+</style>
+<section class="tex2jax_ignore mathjax_ignore" id="conducting-experimental-sessions">
+<h1>Conducting Experimental Sessions<a class="headerlink" href="#conducting-experimental-sessions" title="Link to this heading">#</a></h1>
+<p>As an experimenter, your role is crucial to the success of a study. You’re responsible for creating a positive experience for participants while maintaining the integrity and standardization of the experimental procedure. This ensures the data you collect is reliable and valid.</p>
+<p>This guide will walk you through each stage of running a study—from recruiting participants to concluding the session—with practical advice to help you become a confident and competent experimenter.
+Specifically, this guide covers:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#recruiting-participants"><span class="xref myst">Recruiting Participants</span></a></p></li>
+<li><p><a class="reference internal" href="#screening-and-scheduling"><span class="xref myst">Screening and Scheduling</span></a></p></li>
+<li><p><a class="reference internal" href="#preparing-for-the-experimental-session"><span class="xref myst">Preparing for the Experimental Session</span></a></p></li>
+<li><p><a class="reference internal" href="#the-experimental-session"><span class="xref myst">The Experimental Session</span></a></p></li>
+<li><p><a class="reference internal" href="#handling-unexpecte-situations"><span class="xref myst">Handling Unexpected Situations</span></a></p></li>
+<li><p><a class="reference internal" href="#final-thoughts"><span class="xref myst">Final Thoughts</span></a></p></li>
+</ol>
+<section id="recruiting-participants">
+<h2>1. Recruiting Participants<a class="headerlink" href="#recruiting-participants" title="Link to this heading">#</a></h2>
+<p>Recruitment is the first step in conducting an experiment. Your goal is to attract eligible participants while providing clear and transparent information about the study. Here are several examples of effective methods:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uni-frankfurt.sona-systems.com/Default.aspx?ReturnUrl=%2f">SONA System</a>, many psychology departments use this internal platform. It is a platform that allows researchers to advertise their studies and test students in exchange for monetary reimbursement or course credits (VPM). Participants can browse ongoing studies and choose sessions that fit their schedule.</p></li>
+<li><p>Posting flyers in approved areas around campus.</p></li>
+<li><p>Posting study advertisements in university-specific groups or on departmental social media pages can be an effective and low-cost way to reach potential participants.</p></li>
+</ul>
+<p>Remember to include all essential information in your recruitment materials:</p>
+<ul class="simple">
+<li><p>Purpose of the study (in general terms).</p></li>
+<li><p>What participants will do.</p></li>
+<li><p>Estimated duration.</p></li>
+<li><p>Eligibility criteria (e.g., age, native language, prior participation).</p></li>
+<li><p>Type of compensation (money, course credit, raffle entry).</p></li>
+<li><p>How to sign up or contact you.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information on using SONA for your research, check out these resources from the Institute of Psychology at Goethe University.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.psychologie.uni-frankfurt.de/157444303/VPM">Information on “Versuchspersonenminuten” for psychology students</a></p></li>
+<li><p><a class="reference external" href="https://sgl.uni-frankfurt.de/sona/SONA_Guide_for_researchers.pdf">SONA guide for researchers</a></p></li>
+</ul>
+</div>
+</section>
+<section id="screening-and-scheduling">
+<h2>2. Screening and Scheduling<a class="headerlink" href="#screening-and-scheduling" title="Link to this heading">#</a></h2>
+<p>Once someone expresses interest, check that they meet the eligibility criteria and set up their participation.</p>
+<ul class="simple">
+<li><p><strong>Screening</strong>: This is a crucial step to confirm that a potential participant meets all eligibility requirements, such as age, specific experience, or their prior participation in similar studies. You can do this with a brief online form or a quick phone call. Examples: “Are you between 18–35 years old?” “Have you taken part in a similar memory study in the past 6 months?”</p></li>
+<li><p><strong>Scheduling</strong>: After screening, you will schedule a specific time for the participant to come in. Be flexible and offer a few different time slots to accommodate their schedule. Confirm the time, date, and location (with directions if needed) of the experiment. Send a reminder email a day or two before their appointment.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Always be polite, professional, and responsive in your communication—this sets the tone for the session.</p>
+</div>
+</section>
+<section id="preparing-for-the-experimental-session">
+<h2>3.	Preparing for the Experimental Session<a class="headerlink" href="#preparing-for-the-experimental-session" title="Link to this heading">#</a></h2>
+<p>The experiment should run smoothly and consistently. Preparation reduces stress and mistakes.</p>
+<ul class="simple">
+<li><p><strong>Check the setup</strong>: Test your software, hardware, stimuli, and timing in advance.</p></li>
+<li><p><strong>Have backups</strong>: Print extra consent forms, keep spare pens, and save your task files on more than one computer.</p></li>
+<li><p><strong>Know your protocol</strong>: Rehearse the procedure so you are confident.</p></li>
+</ul>
+</section>
+<section id="the-experimental-session">
+<h2>4.	The Experimental Session<a class="headerlink" href="#the-experimental-session" title="Link to this heading">#</a></h2>
+<p>The session itself must be well-organized and standardized to minimize variability and potential bias.</p>
+<section id="greeting-and-consent">
+<h3>4.1 Greeting and Consent<a class="headerlink" href="#greeting-and-consent" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Greeting</strong>: Greet the participant warmly and thank them for coming. This helps them feel comfortable and respected. Briefly reintroduce yourself and the study.</p></li>
+<li><p><strong>Clarification and Consent</strong>: Provide the participant with a <strong>consent form</strong>. Explain the study’s purpose, the tasks they’ll perform, and their rights as a participant. Emphasize that their participation is voluntary and they can withdraw at any time without penalty. Ensure they read, understand, and sign the form before beginning. Answer questions before they sign.</p></li>
+</ul>
+</section>
+<section id="standardized-experimental-procedures">
+<h3>4.2 Standardized Experimental Procedures<a class="headerlink" href="#standardized-experimental-procedures" title="Link to this heading">#</a></h3>
+<p>Consistency is the foundation of good science. Standardization is key to ensuring that every participant has the same experience, which leads to more reliable data.</p>
+<ul class="simple">
+<li><p><strong>Written protocol</strong>: Use a detailed script that specifies what you say and do from start to finish.</p></li>
+<li><p><strong>Standardized instructions</strong>: Always read instructions verbatim or provide them in writing. This ensures clarity and avoids unintended bias.</p></li>
+<li><p><strong>Automations</strong>: Use software to present stimuli and record responses whenever possible. This reduces the chance of human error and ensures precise timing and data collection.</p></li>
+<li><p><strong>Anticipate questions</strong>: Prepare standard answers for common questions participants might have. If you don’t know an answer, don’t guess—note the question and follow up later.</p></li>
+<li><p><strong>Experimenter training</strong>: If multiple experimenters are involved, train them together. Have them practice the protocol on each other to ensure everyone is on the same page.</p></li>
+<li><p><strong>Randomization</strong>: Make sure each experimenter tests participants in all conditions of the study. This prevents “experimenter effects,” where a specific experimenter’s behaviour might influence the results in one condition more than another.</p></li>
+</ul>
+</section>
+<section id="instructions">
+<h3>4.3 Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>Clear instructions are vital for a good experiment. If participants misunderstand the task, your data will be invalid.</p>
+<ul class="simple">
+<li><p><strong>Clarity and Correctness</strong>: The goal is for all participants to understand the task in the <strong>same way</strong> and to understand it <strong>correctly</strong>.</p></li>
+<li><p><strong>Start from Scratch</strong>: Assume the participant knows nothing about the experiment’s procedures. Start with the basics and build from there.</p></li>
+<li><p><strong>Structure the Instructions</strong>: The instructions should answer three key questions:</p>
+<ol class="arabic simple">
+<li><p>What do I have to do? (e.g., “You will be asked to press the ‘A’ key…”)</p></li>
+<li><p>How do I have to do it? (e.g., “…as quickly as possible when you see a green circle.”)</p></li>
+<li><p>In what order? (e.g., “First, you will complete a practice round, then the main task.”)</p></li>
+</ol>
+</li>
+<li><p><strong>Allow for Questions</strong>: After giving the instructions, ask if they have any questions and encourage them to speak up during the practice round if confused. Leave enough time for them to ask and for you to clarify. This ensures they feel confident before starting.</p></li>
+</ul>
+</section>
+<section id="experimental-log-and-data-quality">
+<h3>4.4 Experimental Log and Data Quality<a class="headerlink" href="#experimental-log-and-data-quality" title="Link to this heading">#</a></h3>
+<p>Accurate documentation is just as important as the data itself.</p>
+<ul class="simple">
+<li><p><strong>Keep a Logbook</strong>: Record participant ID, demographics, date, time, condition, and experimenter. Never use real names in your dataset—use anonymous codes.</p></li>
+<li><p><strong>Comments and Observations</strong>: Include a section in your log for notes on unusual occurrences. This could be anything from a participant who seemed confused or uncooperative to technical issues with the equipment. These notes can be invaluable during data analysis.</p></li>
+<li><p><strong>Data checks</strong>: After each session, verify that the data were saved correctly and back them up immediately.</p></li>
+</ul>
+</section>
+<section id="concluding-the-session">
+<h3>4.5 Concluding the Session<a class="headerlink" href="#concluding-the-session" title="Link to this heading">#</a></h3>
+<p>The final part of the session is just as important as the beginning.</p>
+<ul class="simple">
+<li><p><strong>Post-Study Questions</strong>: Some studies include questionnaires or manipulation checks after the main task.</p></li>
+<li><p><strong>Debriefing</strong>: Explain the true purpose of the study, especially if deception was used. Give participants a chance to ask questions. Provide a debriefing sheet if required by ethics.</p></li>
+<li><p><strong>Compensation</strong>: Provide the agreed-upon compensation, whether it’s money or course credit (VBM). Have them sign a form acknowledging receipt of their payment.</p></li>
+<li><p><strong>Farewell</strong>: Thank the participant again for their time and contribution to your research. A polite and friendly ending increases the likelihood they will participate again.</p></li>
+</ul>
+</section>
+</section>
+<section id="handling-unexpected-situations">
+<h2>5. Handling Unexpected Situations<a class="headerlink" href="#handling-unexpected-situations" title="Link to this heading">#</a></h2>
+<p>Even well-prepared experiments sometimes encounter problems.</p>
+<ul class="simple">
+<li><p><strong>No-shows</strong>: Have a clear policy (e.g., reschedule once, mark as incomplete).</p></li>
+<li><p><strong>Technical failures</strong>: Pause the session, try to fix the issue, and if necessary, reschedule. Document what happened.</p></li>
+<li><p><strong>Participant distress</strong>: If a participant becomes upset, stop the experiment immediately, offer support, and follow ethical guidelines.</p></li>
+</ul>
+</section>
+<section id="final-thoughts">
+<h2>6. Final Thoughts<a class="headerlink" href="#final-thoughts" title="Link to this heading">#</a></h2>
+<p>Being an experimenter is not just about running tasks—it’s about professionalism, ethics, and respect for participants. By preparing carefully, standardizing procedures, and treating participants with courtesy, you not only ensure high-quality data but also uphold the values of psychological science.</p>
+</section>
+<section id="attribution">
+<h2>Attribution:<a class="headerlink" href="#attribution" title="Link to this heading">#</a></h2>
+<p>This guide was adapted in part from <em>Research Methods in Psychology (4th ed.)</em> by Jhangiani, R., Chiang, I., Cuttler, C., &amp; Leighton, D. (2023), available at <a class="reference external" href="https://kpu.pressbooks.pub/psychmethods4e/">https://kpu.pressbooks.pub/psychmethods4e/</a>. Licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</p>
+</section>
+<hr class="docutils" />
+<section id="experimenters-quick-checklist">
+<h2>Experimenter’s Quick Checklist<a class="headerlink" href="#experimenters-quick-checklist" title="Link to this heading">#</a></h2>
+<p><strong>Screening &amp; Scheduling</strong><br />
+<input type="checkbox"> </input> Screen participants for eligibility (form/email/phone).<br />
+<input type="checkbox"> </input> Offer multiple time slots and confirm details (date, time, location).<br />
+<input type="checkbox"> </input> Send reminder 1–2 days before the session.<br />
+<strong>Preparing the Session</strong><br />
+<input type="checkbox"> </input> Test software, equipment, and stimuli.<br />
+<input type="checkbox"> </input> Print consent forms and have pens ready.<br />
+<input type="checkbox"> </input> Prepare experiment log/spreadsheet.<br />
+<input type="checkbox"> </input> Review written protocol and instructions.<br />
+<strong>Greeting &amp; Consent</strong><br />
+<input type="checkbox"> </input> Welcome participant, introduce yourself, thank them.<br />
+<input type="checkbox"> </input> Provide consent form, explain rights, answer questions.<br />
+<input type="checkbox"> </input> Confirm understanding and collect signature.<br />
+<strong>Running the Experiment</strong><br />
+<input type="checkbox"> </input> Follow standardized protocol/script.<br />
+<input type="checkbox"> </input> Deliver clear instructions (what, how, order).<br />
+<input type="checkbox"> </input> Run practice trials and check comprehension.<br />
+<input type="checkbox"> </input> Ensure randomization/counterbalancing is in place.<br />
+<input type="checkbox"> </input> Record participant ID, demographics, condition, date, experimenter.<br />
+<input type="checkbox"> </input> Note unusual events (e.g., confusion, technical issue).<br />
+<strong>Ending the Session</strong><br />
+<input type="checkbox"> </input> Post-study questions (if any).<br />
+<input type="checkbox"> </input> Debrief participant, especially if deception was used.<br />
+<input type="checkbox"> </input> Provide compensation (cash/credit) and receipt if required.<br />
+<input type="checkbox"> </input> Thank participant and offer a polite farewell.<br />
+<strong>After the Session</strong><br />
+<input type="checkbox"> </input> Save and back up data immediately.<br />
+<input type="checkbox"> </input> Check files for completeness.<br />
+<input type="checkbox"> </input> Log notes about any irregularities.</p>
+<hr class="docutils" />
+<p><strong>Acknowledgments</strong>
+This section was contributed by <a class="reference external" href="https://www.psychologie.uni-frankfurt.de/141520797/Dr__Dingrong_Guo?">Dingrong Guo</a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "JackEdTaylor/expra-wise25",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./projects"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lifos.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">LIFOS</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="analysis.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Analysis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recruiting-participants">1. Recruiting Participants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#screening-and-scheduling">2. Screening and Scheduling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-for-the-experimental-session">3.	Preparing for the Experimental Session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-experimental-session">4.	The Experimental Session</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#greeting-and-consent">4.1 Greeting and Consent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standardized-experimental-procedures">4.2 Standardized Experimental Procedures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">4.3 Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-log-and-data-quality">4.4 Experimental Log and Data Quality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concluding-the-session">4.5 Concluding the Session</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-unexpected-situations">5. Handling Unexpected Situations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thoughts">6. Final Thoughts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">Attribution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimenters-quick-checklist">Experimenter’s Quick Checklist</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jack Taylor
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

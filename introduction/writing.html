@@ -1,0 +1,2547 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Scientific Writing &#8212; ExPra Winter 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=bb6542e3" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/writing';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://jackedtaylor.github.io/expra-wise25/introduction/writing.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scientific Communication" href="communication.html" />
+    <link rel="prev" title="Literature Search and Reference Management" href="literature.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="ExPra Winter 2025 - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="ExPra Winter 2025 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/schedule.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/reading.html">Reading</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">General Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="empirical_research.html">Empirical Research</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="ethics.html">Ethics and Data Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cogneuro_lang.html">Cog. Neuro. of Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai.html">Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">Literature Search and Reference Management</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Scientific Writing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication.html">Scientific Communication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_wrangling_1.html">Data Wrangling 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_wrangling_2.html">Data Wrangling 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_vis_1.html">Data Visualisation 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_vis_2.html">Data Visualisation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_participate.html">Participate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_analyse.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_feedback.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/conducting.html">Conducting Experimental Sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/analysis.html">Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/posters.html">Posters</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cognitive Brain Imaging</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cbi/meeg.html">Introduction to EEG &amp; MEG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cbi/mri.html">Introduction to (f)MRI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/student-guide.html">ExPra Student Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/gen_ai.html">AI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/CoC.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise25/master?urlpath=tree/lecture/introduction/writing.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/edit/master/lecture/introduction/writing.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/issues/new?title=Issue%20on%20page%20%2Fintroduction/writing.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/introduction/writing.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Scientific Writing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-tips">Writing Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">1. Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-language">2. Scientific language</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#form">3. Form</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-style">3.1 APA style</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figures-and-tables">3.2 Figures and tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">3.3 References</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-of-ai-tools">4. Use of AI tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-knowledge">Test your Knowledge!</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="scientific-writing">
+<h1>Scientific Writing<a class="headerlink" href="#scientific-writing" title="Link to this heading">#</a></h1>
+<section id="slides">
+<h2>Slides<a class="headerlink" href="#slides" title="Link to this heading">#</a></h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQdghNyEZ37aHNbK_HPqbaf0Mvgx5dTVo8AZcWqY80UbY4GA-brjdibHtTPSoUBgpv-sjSrhEl0jNC7/embed?start=false&loop=false" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<h5>
+<a href=https://docs.google.com/presentation/d/1ANTC4mcfad3qZC8R1mX9_9j0qayJT-bVvVPrMRFWo4w/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/1ANTC4mcfad3qZC8R1mX9_9j0qayJT-bVvVPrMRFWo4w/export/odp><i class="fa-solid fa-file"></i> Download .odp</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/1ANTC4mcfad3qZC8R1mX9_9j0qayJT-bVvVPrMRFWo4w/export/pptx><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</a>
+</h5></section>
+<section id="writing-tips">
+<h2>Writing Tips<a class="headerlink" href="#writing-tips" title="Link to this heading">#</a></h2>
+<p>In this section, we will discuss several general principles of writing scientific articles. We will focus on scientific reports as this is part of your assignment in the Expra, but many principles apply to other types of scientific writing as well (e.g., review papers, meta-analyses, commentaries, etc.).</p>
+<p>Specifically, we will cover:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#contents"><span class="xref myst">Contents:</span></a> What information you should write about and where that information goes.</p></li>
+<li><p><a class="reference internal" href="#scientific-language"><span class="xref myst">Language:</span></a> How to express yourself in a scientific report.</p></li>
+<li><p><a class="reference internal" href="#form"><span class="xref myst">Form:</span></a> How to format your reports.<br />
+3.1 <a class="reference internal" href="#apa-style"><span class="xref myst">APA style:</span></a> Standardized conventions for psychological articles.<br />
+3.2 <a class="reference internal" href="#figures-and-tables"><span class="xref myst">Figures and Tables:</span></a> Standardized guidelines for the creation of figures and tables.<br />
+3.3 <a class="reference internal" href="#references"><span class="xref myst">References:</span></a> How to cite other articles the easiest way.</p></li>
+<li><p><a class="reference internal" href="#use-of-ai-tools"><span class="xref myst">Use of AI tools:</span></a> Rules for using AI tools such as ChatGPT, DeepL, etc.</p></li>
+</ol>
+</section>
+<section id="contents">
+<h2>1. Contents<a class="headerlink" href="#contents" title="Link to this heading">#</a></h2>
+<p>This section is mostly based on an excellent paper by Mensh and Kording (2017) entitled <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1005619">Ten simple rules for structuring papers</a>. It is strongly recommended that you read this paper and follow the rules when writing your reports. You will find a summary of the rules below:</p>
+<p><big><strong>Rule 1: Focus your paper on a central contribution</strong></big></p>
+<p>When you write your paper, you should try to focus it on <strong>one central contribution</strong> your project is making (this can be a theoretical insight, a new method, a criticism of previous research, etc.). Try to make your claim as <strong>simple</strong> as your data and experimental logic allow and clearly communicate it in the <strong>title of your paper</strong> so that it is immediately clear what your paper is showing.</p>
+<p>A <strong>good example</strong> can be found in a paper by Aminoff and Durham (2023) entitled: <em>Scene-selective brain regions respond to embedded objects of a scene</em>. The central contribution is that scene-selective brain regions, which we usually assume to primarily respond to scene images, also respond to single objects. The novelty and relevance of this contribution are immediately apparent (the paper changes the way we think of these brain regions).</p>
+<p>Compare this to a title that only focuses on <strong>what was done</strong> in the project: <em>A comparison of neural responses of scene-selective brain regions to object and scene images</em>. While this gives the readers a good idea of the method that was used in the project, it does not communicate the contribution as clearly (what did they find?) and will not spark the readers’ interest as much.</p>
+<p>Checklist for good paper titles:</p>
+<ul class="simple">
+<li><p>Should be <strong>short</strong> (10-15 words)</p></li>
+<li><p><strong>Avoid abbreviations/jargon</strong></p></li>
+<li><p>No question marks (<strong>provide answers</strong>, not questions!)</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Formulate your title early on during (or even before) writing. This will serve as a reminder to yourself of the contribution you want to make and will guide you while writing.</p>
+</div>
+<p><big><strong>Rule 2: Write for readers who don’t know your work</strong></big></p>
+<p>Your writing should be clear and easy to understand for a <strong>naïve reader</strong> (a psychologist who is not from the specific field your project is located in). This includes defining specific/technical terms, avoiding abbreviations and acronyms (unless common, such as RT or ms) and, maybe most importantly, <strong>making your readers care about your work</strong> (why is it important?).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A good way to test if your writing is easily accessible is to have a fellow student from another Expra group read your manuscript. They should have a good understanding of basic psychological principles but will probably not know much about your specific field. Their feedback can be valuable in determining what parts of your writing need more explanation, justification or context.</p>
+</div>
+<p><big><strong>Rule 3: The context-content-conclusion scheme</strong></big></p>
+<p>Your reports should tell a good “story”. This does not mean that your writing should be lyric (see advice on language below), but your reports should start with a problem (the research question), then work on that problem and finally deliver a conclusion (a solution to that problem). This can be summarized in the context-content-conclusion scheme that can be found in the three major parts of each story: Beginning, Body and Ending. The Beginning sets up the <strong>context</strong> (problem) for the story, the Body provides the <strong>content</strong> of the story and in the Ending, the problem finds its <strong>conclusion</strong>.</p>
+<p>If either part is missing, you will get different responses from your readers. If you tell someone your story and their response is “Why was I told that?”, it indicates that your story did not provide sufficient contextual information in the beginning. If they are sceptical and ask “Why should I believe that?”, it indicates that the content in the Body was not sufficient to convince them. If they simply ask “So what?”, they did not understand the conclusion provided in the Ending.</p>
+<p>The context-content-conclusion scheme should be applied at different levels of your writing:</p>
+<p><strong>Paper level</strong>: Your paper as a whole should follow the context-content-conclusion scheme. Your introduction provides context, your methods &amp; results the content, and your discussion the conclusion. Note that you can also think of this as your paper following a <strong>broad-narrow-broad structure (the “hour-glass structure”)</strong>: The topics you will cover will first be very general at the beginning of your Introduction section, then become increasingly specific throughout your introduction and be most specific and relate to your project only in the Method and Results sections. In your Discussion section, you start specific again (“In this project…”) and then become broader (relation to similar studies and theories, to the field as a whole, applications in everyday life, etc.), ending with a final summarizing conclusion.</p>
+<p><img alt="Image of the hour-glass structure with descriptions of what content is entailed in which part of the hour-glass." src="../_images/Hourglass.png" /></p>
+<p><strong>Paragraph level</strong>: When writing individual paragraphs, you should also try to apply the context-content-conclusion scheme to guide your readers. The first sentence of each paragraph defines the topic (context), the body provides (novel) content and the last sentence provides a conclusion (see example below).</p>
+<p><font color="red">Context:</font>One possible explanation for the counterintuitive effect of X we observe is that […] <font color="blue">Content:</font> Salinger (1951) relates this to […] Similarly, Heller (1961) argues that effect X may be the consequence of […] In contrast, Vonnegut (1963) proposes an alternative view in which effect X is independent of […] <font color="green">Conclusion:</font> In summary, all these accounts suggest that effect X may be reliable and not merely an artifact of our experimental design.</font></p>
+<p><big><strong>Rule 4: Have a clear, logical flow of arguments</strong></big></p>
+<p>Your writing should have both a clear structure (see rule 3 above and rules 6-9 below) and a logical flow of arguments. There are two simple ways to achieve this:</p>
+<p><strong>Avoid zig-zag</strong>: Each subject you cover should be covered only in one place and not, for example, in three different parts of your introduction. This also means that related arguments should not be interrupted by unrelated material (“zig-zag”). Instead, related sentences or paragraphs should be strung together so that the reader is naturally guided through your flow of arguments.</p>
+<p><strong>Use parallelism</strong>: Parallel messages should be communicated with parallel form (i.e., same syntax, same terms for same concepts). It is usually better to sound repetitive than to confuse people with different ways to refer to the same thing. This is especially important when using abbreviations (e.g., for conditions):</p>
+<ul class="simple">
+<li><p><strong>Bad</strong>: “CON stimuli led to slower responses whereas inconsistent stimuli had lower RTs.”</p></li>
+<li><p><strong>Good</strong>: “Participants responded faster to consistent compared to inconsistent stimuli.”</p></li>
+</ul>
+<p><big><strong>Rule 5: Tell a complete story in the abstract</strong></big></p>
+<p>The abstract is a short (usually 200-300 word) summary of your report. After the title (see rule 1), the abstract is the second thing your readers will read, and for many readers it will be the only part of a paper they will ever read! It is therefore extremely important that it is clear, concise and convincing. Ideally, it should tell the complete story of your project while at the same time sparking your readers’ interest and make them want to learn more.</p>
+<p>The context-content-conclusion rule and hourglass structure also apply to the abstract:</p>
+<p><strong>Context</strong>:</p>
+<ul class="simple">
+<li><p>Introduce the <strong>broader field</strong> (1-2 sentences)</p></li>
+<li><p>Narrow down the context to the <strong>specific open question</strong> you want to answer (the “gap”; 1-2 sentences)</p></li>
+<li><p>Justify <strong>why this question matters</strong> (relate back to broader context you started with; 1 sentence)</p></li>
+</ul>
+<p><strong>Content</strong>:</p>
+<ul class="simple">
+<li><p>Summarize the <strong>method/experimental logic</strong> you used to answer your question (“Here we…”; 1-2 sentences)</p></li>
+<li><p>Present the <strong>key results</strong> (2-3 sentences)</p></li>
+</ul>
+<p><strong>Conclusion</strong>:</p>
+<ul class="simple">
+<li><p>Interpret the results and <strong>answer the question</strong> you posed in the beginning (1-2 sentences)</p></li>
+<li><p>Show the <strong>consequences of your findings</strong> (with respect to theories, future studies, etc.; 1-2 sentences)</p></li>
+</ul>
+<p><big><strong>Rule 6: Introduction - Say why your paper matters</strong></big></p>
+<p>The purpose of the Introduction is to identify the <strong>gap in knowledge you seek to fill</strong> and highlight <strong>why it is important</strong>. It should cover the following aspects:</p>
+<ul class="simple">
+<li><p>Introduce the <strong>general topic/field</strong> (short) – Why is it important?</p></li>
+<li><p>Summarize <strong>current knowledge</strong> of the field (findings, theories, models) – What is your study based on?</p></li>
+<li><p>Establish the gap in the current knowledge – What is <strong>still unclear</strong>?</p></li>
+<li><p>Describe your project – What is the <strong>question/goal of your study</strong>?</p></li>
+<li><p>Summarize your design, key results and conclusion – <strong>How is your project “filling the gap”?</strong></p></li>
+</ul>
+<p>In the Introduction, it is especially important to underline your arguments with <strong>relevant citations</strong>. When you make a claim (e.g., “Psychology students are very eager”), you must substantiate it with scientific articles supporting this claim. Claims that are not backed up by scientific evidence are merely opinions that may or may not be true and should be avoided. Additionally, you should ensure that you properly cite relevant work your project is building upon (e.g., related previous studies, a model or theory you are testing). But only cite articles that are directly related to your work! There is no need to impress people with the amount of literature you read, but it is important to show that you know the field and have understood the foundations of your project.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to follow the <strong>hourglass principle</strong> in the introduction: From broad to narrow (or general to specific)!</p>
+</div>
+<p><big><strong>Rule 7: Method - Provide enough detail for a replication</strong></big></p>
+<p>The Method section should contain all information that your readers need to judge whether your experiment is suited to answer your question and to repeat your experiment (remember the replication crisis?).</p>
+<p>The Method section usually has its own subsections:</p>
+<ul class="simple">
+<li><p><strong>Participants</strong>: Who participated in your study (summary of demographic data such as mean age and SD, gender distribution, native language, population from which they were recruited, ethics, etc.)</p></li>
+<li><p><strong>Stimuli/Materials</strong>: Any materials you used while carrying out your study, for example stimuli that participants perceived, devices/software used to display stimuli and collect responses, questionnaires, databases, existing data, etc.</p></li>
+<li><p><strong>Procedure</strong>: What happened when (order of events), participants’ task(s) and instructions, trial structure</p></li>
+<li><p><strong>Design</strong>: Description of experimental factors/manipulations</p></li>
+<li><p><strong>Analysis</strong>: Description of specific analysis strategies (not needed for simple/common analyses)</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Have a look at similar papers (e.g., your supervisor’s) and carefully read the method section. Things that need to be adressed: Assignment to experimental conditions (random?), between- or within-subjects design, counterbalancing of participants and/or stimuli, etc.</p>
+</div>
+<p><big><strong>Rule 8: Results - Series of evidence supporting your claim</strong></big></p>
+<p>When writing your Results section, it is a good idea to structure it into subsections (either only mentally or by using subheadings): Which statistical analysis is testing what aspect of your question(s)? When you have a clear structure, introduce the question each paragraph answers: <em>“We next tested whether…”, “After showing […], we next tested…”, “To ensure that there are no artifacts…”</em>, etc.</p>
+<p>If necessary, you can summarize your method/analysis strategy again as a reminder (e.g., if you are using an unusual design or category names/abbreviations). If possible, give an answer to each question at the end of the paragraph: “<em>We thus conclude that there are no artifacts of…</em>”, “<em>…a significant difference between conditions, indicating that our manipulation achieved the desired effect.</em>”</p>
+<p>In general, it is important to <strong>summarize</strong> both descriptive and test results, and <strong>relate them to your hypotheses:</strong> “<em>In line with the context hypothesis, we found…</em>” or “<em>…were faster which supports the notion of…</em>”.</p>
+<p><big><strong>Rule 9: Discussion - Was the gap filled?</strong></big></p>
+<p>In your discussion section, you summarize your findings, critically relate them back to your hypotheses and the previous research, models or theories they are based on, outline possible limitations and avenues for future research and give your readers a final take-home message:</p>
+<ul class="simple">
+<li><p>Start by <strong>repeating the main question</strong> of your work, <strong>how your project tried to answer it</strong> (1-2 sentences on your method), the <strong>key findings</strong> and whether they <strong>support your hypotheses</strong></p></li>
+<li><p>Highlight the main <strong>contributions</strong> of your work to the gap: <strong>Relate your findings</strong> to previous findings, theories, models, etc.</p></li>
+<li><p>Discuss <strong>potential differences</strong> between your findings and others as well as unexpected results and provide <strong>reasons for these differences</strong> (you can speculate here)</p></li>
+<li><p>Discuss <strong>limitations</strong> of your work (but do not make it look worse than it is!), remaining open questions and <strong>implications</strong> for future studies</p></li>
+<li><p>Show <strong>how your work advances the field</strong> or how it can be <strong>applied</strong> elsewhere (e.g., technology, societal impact)</p></li>
+<li><p>Draw a final <strong>summarizing conclusion</strong> (take-home message)</p></li>
+<li><p>Follow the <strong>hourglass structure</strong> (specific to general) in the discussion</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Discussion section is often critical for the final grade of your report. While much of the rest of your report is more or less determined by the project you are working on, the discussion is your chance to show how much you thought about the project, how well you understood its theoretical foundation and how well you are able to look at it from different angles.</p>
+</div>
+<p><big><strong>Rule 10: Test your paper on naïve readers</strong></big></p>
+<p>A great way to test whether you followed the nine rules above is by having someone else (e.g., a fellow student from another Expra group) read your report and see what they think of it. Below you find typical reactions of your readers and how you can find out what you should work on to avoid these reactions:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Rule</p></th>
+<th class="head"><p>Sign of violation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1. Focus on a central contribution</p></td>
+<td><p>Readers cannot give a 1-sentence summary</p></td>
+</tr>
+<tr class="row-odd"><td><p>2. Write for naïve readers</p></td>
+<td><p>Readers do not “get” the paper</p></td>
+</tr>
+<tr class="row-even"><td><p>3. Use context-content-conclusion scheme</p></td>
+<td><p>Readers ask why something matters</p></td>
+</tr>
+<tr class="row-odd"><td><p>4. Have a clear, logical flow of arguments</p></td>
+<td><p>Readers stumble on small section of text</p></td>
+</tr>
+<tr class="row-even"><td><p>5. Tell a complete story in the abstract</p></td>
+<td><p>Readers cannot give an “elevator pitch” of your work after reading the abstract</p></td>
+</tr>
+<tr class="row-odd"><td><p>6. Introduction: Say why your paper matters</p></td>
+<td><p>Readers show little interest in the paper</p></td>
+</tr>
+<tr class="row-even"><td><p>7. Method: Provide enough detail for a replication</p></td>
+<td><p>Readers can’t recreate your experiment</p></td>
+</tr>
+<tr class="row-odd"><td><p>8. Results: Series of evidence supporting your claim</p></td>
+<td><p>Readers do not agree with your conclusion</p></td>
+</tr>
+<tr class="row-even"><td><p>9. Discussion: Was the gap filled?</p></td>
+<td><p>Readers are left with unanswered criticisms and/or questions on their mind</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="scientific-language">
+<h2>2. Scientific language<a class="headerlink" href="#scientific-language" title="Link to this heading">#</a></h2>
+<p>Scientific writing has the goal to convey information <strong>as precisely and clearly as possible in as much detail as necessary using as few words as possible</strong>. It should be objective and formal, but it should not be unnecessarily complicated or intellectual. Here are a few things to keep in mind:</p>
+<ul>
+<li><p>No colloquial language (e.g., colloquial expressions, abbreviations):<br />
+<strong>Bad</strong>: <em>We don’t think there is much of an effect, the test scores were pretty much the same.</em><br />
+<strong>Good</strong>: <em>We conclude that object size does not affect categorization speed as response times were not significantly correlated with object size.</em></p></li>
+<li><p>Write from your perspective (“We” or “I”) and use active voice if possible:<br />
+<strong>Bad</strong>: <em>Stimuli were manipulated to contain only low-level information.</em><br />
+<strong>Good</strong>: <em>We manipulated stimuli to contain only low-level information.</em></p></li>
+<li><p>Use verb tense consistently:</p>
+<ul class="simple">
+<li><p>Simple past for what you or others did: <em>We conducted an ANOVA… Kim (2015) showed…</em></p></li>
+<li><p>Simple present for conclusions and generalizations: <em>We conclude that font size affects reading speed.</em></p></li>
+</ul>
+</li>
+<li><p>Use clear, precise and objective language:<br />
+<strong>Bad</strong>: <em>Response times were roughly equal.</em><br />
+<strong>Good</strong>: <em>Response times did not differ significantly, t(48)  =  1.04, p = .304.</em></p></li>
+<li><p>Explicitly name variables you are assessing or comparing:<br />
+<strong>Bad</strong>: <em>We found no effect of working memory load.</em><br />
+<strong>Good</strong>: <em>We found no effect of working memory load on response times.</em></p>
+<p><strong>Bad</strong>: <em>Response times were shorter in the low-load condition.</em><br />
+<strong>Good</strong>: <em>Response times were shorter in the low-load compared to the high-load condition.</em></p>
+</li>
+<li><p>Use <strong>consistent terminology</strong> for conditions, abbreviations, etc. in the <strong>text</strong>, <strong>table</strong> and <strong>figures</strong>!</p></li>
+<li><p>Use simple language – no need to sound smart!<br />
+<strong>Bad</strong>: <em>Participants experiencing chronic somnolence due to inadequate nocturnal rest demonstrated significantly diminished vigilance.</em><br />
+<strong>Good</strong>: <em>Participants who were sleep-deprived showed lower attention test scores.</em></p></li>
+<li><p>Avoid overly long sentences – try to break them up into shorter sentences:<br />
+<strong>Bad</strong>: <em>Although the experiment demonstrated that participants who engaged in mindfulness meditation reported lower stress levels and higher attention scores, it is not clear whether these effects would persist over a longer period or in a larger and more diverse population.</em><br />
+<strong>Good</strong>: <em>Participants who engaged in mindfulness meditation reported lower stress levels and higher attention scores. However, it is not clear whether these effects would persist over a longer period. Additionally, the effects require replication in a larger and more diverse population.</em></p></li>
+</ul>
+<p><big><strong>Guide your readers through your text</strong></big></p>
+<p>While writing, consider not only the message you want to convey, but also the <strong>information your readers need</strong> to understand it (see rule 2 above). There should be a clear <em><strong>roter Faden</strong></em> in your work, and <strong>arguments should build on each other</strong>. Certain <strong>key words</strong> make it easier to follow your train of thought:</p>
+<ul class="simple">
+<li><p><em>Here we…</em> to identify your question, method, etc. and distinguish it from previous work</p></li>
+<li><p><em>We found…</em> to identify your results</p></li>
+<li><p><em>We conclude/Our results indicate…</em> to identify your conclusions and interpretations of the data</p></li>
+<li><p><em>We suggest/assume</em>… to identify suggestions (for theories, models or future work) or speculation</p></li>
+<li><p>Connect thoughts with words like <em>however, similarly, surprisingly, in contrast</em>, etc.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="form">
+<h2>3. Form<a class="headerlink" href="#form" title="Link to this heading">#</a></h2>
+<p>There are a number of formal rules that aim to standardize scientific writing and make it easy for readers to read scientific texts and find relevant information. The most important set of rules can be found in the Publication Manual of the American Psychological Association (more commonly referred to as “APA style”). A short overview can be found <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines">here</a>.</p>
+<p>In your reports, you must always follow APA style. We will summarize the most important rules below. In case something is not covered here or you are not sure how to proceed, please refer to the 7th edition of the APA manual (can be found in the <a class="reference external" href="https://ubffm.hds.hebis.de/Search/Results?lookfor=Publication%20Manual%20of%20the%20American%20Psychological%20Association&amp;amp;type=allfields&amp;amp;submit=Suchen">library</a>).</p>
+<section id="apa-style">
+<h3>3.1 APA style<a class="headerlink" href="#apa-style" title="Link to this heading">#</a></h3>
+<p><big><strong>Purpose of APA style</strong></big></p>
+<p>The purpose of APA style is to provide standardized writing conventions for the structure of empirical reports, for referencing other published works and for the creation of figures and tables. It is supposed to create a form that makes information easily accessible by providing mandatory rules for the writing of psychological articles.</p>
+<p><big><strong>APA: Structure of your manuscript</strong></big></p>
+<ol class="arabic simple">
+<li><p>Title page (incl. title, author name(s), contact information, keywords)</p></li>
+<li><p>Abstract</p></li>
+<li><p>Introduction</p></li>
+<li><p>Method</p>
+<ul class="simple">
+<li><p>Participants</p></li>
+<li><p>Materials</p></li>
+<li><p>Procedure</p></li>
+<li><p>Design</p></li>
+<li><p>Analysis</p></li>
+</ul>
+</li>
+<li><p>Results</p></li>
+<li><p>Discussion</p></li>
+<li><p>References</p></li>
+<li><p>Appendix</p></li>
+</ol>
+<p>Note that some subheadings may not be necessary in your project (e.g., the Analysis subsection).</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For your final reports: You must include a signed declaration of originality (<a class="reference external" href="https://www.uni-frankfurt.de/100361739/BSc_MSc_FAQ___April_2021.pdf?#page=4"><em>Eigenständigkeitserklärung</em></a>) at the end of your report!</p>
+</div>
+<p><big><strong>APA: Layout</strong></big></p>
+<ul class="simple">
+<li><p>For your reports: Times New Roman, size 12, double-spaced, left-aligned (no hyphens/manual breaks in words at end of line)</p></li>
+<li><p>Indent first line of each paragraph (except for the abstract) using the TAB key on your keyboard</p></li>
+<li><p>Differentiate <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/paper-format/headings">levels of heading</a> (note that font size is the same as the text!):<br />
+<img alt="Examples for the first three levels of headings in apa format." src="../_images/apa-headings.png" /></p></li>
+<li><p>The introduction has no heading; instead repeat the paper title as the heading</p></li>
+<li><p><a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/paper-format/page-header">Page header</a>: Contains page number and running head (short title)</p></li>
+<li><p><a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/paper-format/title-page">Title page</a>: In addition to APA style, provide your email and student ID number</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Have a look at the <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/paper-format/sample-papers">APA student sample paper and Word template</a></p>
+</div>
+<p><big><strong>APA: Reporting test results</strong></big></p>
+<ul class="simple">
+<li><p>Use italics for letters used as statistical symbols: <em>t</em> test, <em>p</em> value, <em>R²</em>, etc.</p>
+<ul>
+<li><p>But not for Greek letters: α, β, Χ², etc.</p></li>
+</ul>
+</li>
+<li><p>Report exact <em>p</em> values (e.g., <em>p</em> = .019) unless <em>p</em> &lt; .001.</p></li>
+<li><p>Omit the leading zero for values that cannot exceed 1 (e.g., proportions, correlations, <em>p</em> values: <em>r</em> = .54, not <em>r</em> = 0.54).</p></li>
+<li><p>Use a reasonable number of decimals for the metric you are reporting: 147 ms, mean rating 6.51, <em>p</em> = .041</p></li>
+<li><p>For test results, include the test statistic, degrees of freedom, value, <em>p</em> value and effect size:</p>
+<ul>
+<li><p><em>t</em> test: <em>t</em>(52) = 4.8, <em>p</em> &lt; .001</p></li>
+<li><p>ANOVA: <em>F</em>(2,34) = 2.51, <em>p</em> = .003, η² = .04</p></li>
+<li><p>Correlation: <em>r</em>(357) = .42, <em>p</em> &lt; .001</p></li>
+<li><p>Regression coefficient: β = -.34, <em>t</em>(225) = 6.53, <em>p</em> &lt; .001</p></li>
+</ul>
+</li>
+<li><p>Narrative form: “A one-way ANOVA showed that noise had a significant effect on test scores, <em>F</em>(3,27) = 5.94, <em>p</em> = .007, η² = .17. Participants in the low-noise condition yielded higher scores (<em>M</em> = 23.6, <em>SD</em> = 3.1) compared to the medium noise…”</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>More info on <a class="reference external" href="https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf">Numbers and Statistics</a>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="figures-and-tables">
+<h3>3.2 Figures and tables<a class="headerlink" href="#figures-and-tables" title="Link to this heading">#</a></h3>
+<p>Figures (and tables) are among the <strong>most important parts of your paper</strong>! Many readers will read your title, maybe the abstract and then look at your figures before reading the main text. You should therefore invest time into making visually appealing, clear and informative figures.</p>
+<p><strong>Method section:</strong> You can use figures to show…</p>
+<ul class="simple">
+<li><p>(example) stimuli</p></li>
+<li><p>the design of your study</p></li>
+<li><p>an example trial sequence</p></li>
+<li><p>the apparatus used in your study</p></li>
+</ul>
+<p><strong>Results section:</strong></p>
+<ul class="simple">
+<li><p>Use <strong>figures</strong> to visually showcase the <strong>key findings</strong> of your paper</p></li>
+<li><p>Use <strong>tables for large amounts of data</strong> that would be too chaotic in a figure or when the exact values matter</p></li>
+<li><p>Report values in the <strong>text</strong> if it’s just a few numbers (e.g., two <em>t</em> test results do not require a table)</p></li>
+<li><p>Do not report the same data multiple times (i.e., in the text, a figure and/or a table)</p></li>
+</ul>
+<p>APA style also has guidelines for the creation of figures and tables (see below). Keep in mind that figures and tables should (ideally) be <strong>self-explanatory</strong>, therefore it is important to choose a meaningful title and explain data, abbreviations, colours, etc. in the caption.</p>
+<p><big><strong>APA: Figure guidelines</strong></big><br />
+<img alt="This image shows a typical apa formated figure. Blue text fields highlight the different parts like figure number and short title, clearly labelled axes, etc." src="../_images/apa-figure-guidelines.png" /></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>APA <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/figures">figure guidelines</a> and <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-figures">sample figures</a></p>
+</div>
+<p><big><strong>APA: Table guidelines</strong></big><br />
+<img alt="This image shows a typical apa formated table. Blue text fields highlight the different parts like table number and short title, test statistics in italics, etc." src="../_images/apa-table-guidelines.png" /></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>APA <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables">table guidelines</a> and <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables">sample tables</a></p>
+</div>
+<p><big><strong>Use a plot type appropriate for your data</strong></big></p>
+<p align="left">
+  <img alt="Left image: Plot with three colored bars that have the same mean outcome of approximately 50." src="../_static/example-plot-distribution1.png" width="60%">
+</p>
+<p>Here is a little exercise. Look at the plot above and guess what the respective distributions of the data going into each of the three bars look like. If you want, you can copy the plot and draw some data points on it to indicate the distribution.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Click here to see the actual distributions of the data</p>
+<p align="left">
+  <img alt="Left image: Plot with three colored bars that have the same mean outcome of approximately 50." src="../_static/example-plot-distribution2.png" width="60%">
+</p>
+</div>
+<p>As you can hopefully see, bar plots are not the best way to visualize data. Especially the distribution of the data is hard to guess from just a mean and an error bar. An alternative to bar and box plots can be <strong>violin plots</strong> that intuitively show the distribution of the data (where there are more or less data points):</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Click here to see violin plots of the same data</p>
+<p align="left">
+  <img alt="Left image: Plot with three colored bars that have the same mean outcome of approximately 50." src="../_static/example-plot-distribution3.png" width="60%">
+</p>
+</div>
+<p>To create a violin plot in R, you can use the <code>geom_violin()</code> function within the ggplot framework:</p>
+<pre><code style="white-space: pre;">
+ggplot(…) + 
+  geom_violin()
+</code></pre>
+<p>You can then play with visual appearance, layer points on top of the violins, etc.:</p>
+<pre><code style="white-space: pre;">
+ggplot(…) + 
+  geom_violin(colour = "white", fill = "grey", alpha = 0.3) + 
+  geom_point(…)
+</code></pre>
+<div class="dropdown admonition">
+<p class="admonition-title">Click here to see violin plots with data points layered on top of the violins</p>
+<p align="left">
+  <img alt="Left image: Plot with three colored bars that have the same mean outcome of approximately 50." src="../_static/example-plot-distribution4.png" width="60%">
+</p>
+</div>
+<p><big><strong>A personal recommendation</strong></big></p>
+<ul class="simple">
+<li><p><strong>Invest time</strong> into making visually appealing, easy-to-understand and clear result plots!</p></li>
+<li><p>Use <strong>ggplot2</strong> (part of the tidyverse package) for plot creation in R</p></li>
+<li><p>Choose a <strong>plot type</strong> appropriate for your data (e.g., violin plots)</p></li>
+<li><p>Use <strong>colours</strong> that are easy to distinguish (consider colour vision deficiency)</p></li>
+<li><p>Make sure that you <strong>label your data clearly</strong> (axes, legends, lines, etc.)</p></li>
+<li><p>Export your figures with a <strong>high resolution</strong> (at least 300 dpi) or as a vector graphic</p></li>
+</ul>
+<pre><code style="white-space: pre;">
+
+ggplot(df, aes(x,y)) + 
+    geom_violin(colour = "white", fill = "grey", alpha = 0.3) +
+    labs(x = "Treatment", y = "Outcome") +
+    theme_classic() +
+    theme(legend.position = 'none')
+
+# Set the size of your plot to the width and height you want it to be in your report (a width of 16 cm is good for standard A4 pages)
+     
+ggsave(file = “violin_plot_file_name.png", 
+     width = 16, height = 9, units = "cm",  
+     dpi = 300, bg = "white")
+</code></pre>
+</section>
+<hr class="docutils" />
+<section id="references">
+<h3>3.3 References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<p>APA has strict <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines">guidelines</a> for referencing work by others. It is important that you <strong>clearly distinguish between your own thoughts and ideas taken from other sources</strong> and <strong>explicitly name and credit these sources</strong>. A failure to properly cite other work is considered plagiarism!</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Plagiarism in <em>Prüfungsleistungen</em> will make you fail the exam, and in the worst case lead to your exclusion from the university!</p>
+</div>
+<p><big><strong>When to provide a citation</strong></big></p>
+<p>You must provide a citation for (1) <strong>information</strong> taken from other sources (e.g., research findings, statistics, facts, ideas, opinions, interpretations), even if you put the information in your own words, and (2) <strong>tools and materials</strong> you used (e.g., computer software, stimulus sets, graphics, analysis tools, R packages, etc.).</p>
+<p>You <strong>do not need</strong> to provide a citation for information considered <strong>common knowledge</strong> (e.g., “We conducted an ANOVA” does not require a citation because ANOVAs are considered a standard procedure in psychology).</p>
+<p>Note that in 99 % of cases, <strong>citing means paraphrasing, not verbatim quoting!</strong> Use verbatim quotes only if strictly necessary:</p>
+<p><em>Horz and Rohrmann (2020) suggested that psychology is fun.</em><br />
+<em>Previous research shows that students enjoy statistics (Schultze &amp; Schnatz, 2019).</em><br />
+<em>In 2021, Fiebach’s seminal study on computer games showed that…</em><br />
+<em>The authors concluded that the “Expra is the most underrated seminar in the psychology bachelor” (Wiesmann, 2025, p. 47).</em></p>
+<p><big><strong>Do yourself a favour: Use a reference management software!</strong></big></p>
+<p><strong>1. Install software of your choice (we recommend <a class="reference external" href="https://www.zotero.org/">Zotero</a>)</strong><br />
+<img alt="Screenshot of an example Zotero bibliography" src="../_images/zotero-collection.png" /><br />
+You can just drag-and-drop PDFs into your collection. Zotero will automatically search for article information, but it is your job to make sure that all information (author names; year of publication; journal name, volume and issue; page numbers; DOI) is complete and correct!</p>
+<p><strong>2. Install plugin for your text editor</strong><br />
+<img alt="Screenshot of the Zotero plugin in word" src="../_images/zotero-plugin.png" /></p>
+<p><strong>3. Tell Zotero to stick to APA style (7th ed.)</strong><br />
+<img alt="Screenshot of a list of citation styles provided by zotero with the 7th edition of APA higlighted" src="../_images/zotero-apa.png" /><br />
+This dialogue can be found under “Document preferences” and will automatically open when you insert your first citation.</p>
+<p><strong>4. Use Zotero to add in-text citations</strong><br />
+<img alt="Screenshot of the Zotero mask, where you can enter author names or titles to add a in-text citation in word" src="../_images/zotero-citation.png" /><br />
+Click the position in the text where you want to add a citation, then click “Add/Edit Citation”. You can search among publication titles, author names, journal names, etc. If necessary, you can choose several sources you want to cite, arrange them using drag and drop, and even add prefixes and suffixes such as “(see for example Rohrmann, 2012)” by clicking on the respective reference.</p>
+<p><strong>5. When you’re done, add the correctly formatted reference list at the end of your manuscript by clicking “Add/Edit Bibliography”</strong></p>
+<p><img alt="Screenshot of a Bibliography in apa style in word that was produced by the zotero plugin" src="../_images/zotero-bibliography.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Using Zotero consequently while writing will save you a lot of time and stress in the long run. Zotero will automatically format in-text citations and your reference list correctly and keep track of your citations (for example when you delete text). If you have difficulties using Zotero, please ask your teacher for help.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Go to the chapter <a class="reference internal" href="literature.html"><span class="doc">Literature Search and Reference Management</span></a> to learn how to use Zotero for literature management.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="use-of-ai-tools">
+<h2>4. Use of AI tools<a class="headerlink" href="#use-of-ai-tools" title="Link to this heading">#</a></h2>
+<p><big><strong>You are allowed to use AI tools to…</strong></big></p>
+<ul class="simple">
+<li><p>Rephrase and review text (e.g., DeepL Write, Grammarly)</p></li>
+<li><p>Translate text (e.g., DeepL Translate)</p></li>
+<li><p>Search for literature and summarize articles (e.g., Elicit)</p></li>
+<li><p>Brainstorm (e.g., ChatGPT)</p></li>
+<li><p>Write code (e.g., GitHub Copilot)</p></li>
+</ul>
+<p><big><strong>…but note these rules:</strong></big></p>
+<ul class="simple">
+<li><p>Your own contribution must be dominant in the reports: <strong>Having AI write entire reports or parts is not acceptable!</strong></p></li>
+<li><p>You are responsible for your reports – <strong>double check any output</strong> generated by AI!</p></li>
+<li><p>You <strong>cannot use AI tools as a source</strong> for a claim (e.g., “According to ChatGPT (2024)…”)</p></li>
+<li><p>Provide a <strong>list of all AI tools</strong> you used at the end of your report and include a disclaimer on AI use in your <strong>Eigenständigkeitserklärung</strong> (see <span class="xref std std-doc">../general_information/student-guide</span>)</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Follow and test the <strong>10 rules for structuring papers</strong> (Mensh &amp; Kording, 2017)</p></li>
+<li><p>Use <strong>easy, clear and concise language</strong></p></li>
+<li><p>Follow <strong>APA style</strong> (layout, paper structure, etc.)</p></li>
+<li><p>Create <strong>visually appealing, easy to read</strong> and <strong>informative figures</strong> and graphs</p></li>
+<li><p>Use a <strong>reference management software</strong> to identify all sources you used</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>References<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Aminoff, E. M., &amp; Durham, T. (2023). Scene-selective brain regions respond to embedded objects of a scene. <em>Cerebral Cortex</em>, <em>33</em>(9), 5066-5074. <a class="reference external" href="https://doi.org/10.1093/cercor/bhac399">https://doi.org/10.1093/cercor/bhac399</a><br />
+Mensh, B., &amp; Kording, K. (2017). Ten simple rules for structuring papers. <em>PLOS Computational Biology</em>, <em>13</em>(9), e1005619. <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1005619">https://doi.org/10.1371/journal.pcbi.1005619</a></p>
+<hr class="docutils" />
+<p><strong>Acknowledgments</strong><br />
+This section includes content contributed by <a class="reference external" href="https://www.goethe-university-frankfurt.de/120691400/Dr__Sandro_Wiesmann">Sandro Wiesmann</a>.</p>
+</section>
+<section id="test-your-knowledge">
+<h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="IuekrlOVyMkO" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
+#IuekrlOVyMkO {
+   --jq-multiple-choice-bg: #392061;
+   --jq-mc-button-bg: #fafafa;
+   --jq-mc-button-border: #e0e0e0e0;
+   --jq-mc-button-inset-shadow: #555555;
+   --jq-many-choice-bg: #f75c03ff;
+   --jq-numeric-bg: #392061ff;
+   --jq-numeric-input-bg: #c0c0c0;
+   --jq-numeric-input-label: #101010;
+   --jq-numeric-input-shadow: #999999;
+   --jq-string-bg: #4c1a57;
+   --jq-incorrect-color: #c80202;
+   --jq-correct-color: #009113;
+   --jq-text-color: #fafafa;
+   --jq-link-color: #9abafa;
+}
+
+.Quiz {
+    max-width: 600px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+/*    margin-bottom: 15px;*/
+/*    padding-bottom: 4px;*/
+    padding-top: 4px;
+    line-height: 1.1;
+    font-size: 16pt;
+    border-radius: inherit;
+}
+
+.QuizCode {
+    font-size: 14pt;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.QuizCode>pre {
+    padding: 4px;
+}
+
+.Quiz code {
+    background-color: lightgray;
+    color: black;
+}
+
+.Quiz .QuizCode code {
+    background-color: inherit;
+    color: inherit;
+}
+
+
+.Quiz .MCButton code {
+    background-color: inherit;
+    color: inherit;
+}
+
+.MCButton .QuizCode {
+    text-align: left;
+}
+
+
+.Quiz .JQLink {
+    color: var(--jq-link-color) !important;
+    text-decoration: underline;
+}
+
+
+
+.Answer {
+    border-radius: inherit;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 0;
+}
+
+@media only screen and (max-width:480px) {
+    .Answer {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.Feedback {
+    font-size: 16pt;
+    text-align: center;
+/*    min-height: 2em;*/
+}
+
+.Input {
+    align: left;
+    font-size: 20pt;
+}
+
+.Input-text {
+    display: block;
+    margin: 10px;
+    color: inherit;
+    width: unset;
+    min-width: 140px;
+    max-width: 93%;
+    field-sizing: content;
+    background-color: var(--jq-numeric-input-bg);
+    color: var(--jq-text-color);
+    padding: 5px;
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: inherit;
+    line-height: 20pt;
+    border: none;
+    border-radius: 0.2rem;
+    transition: box-shadow 0.1s);
+}
+
+.Input-text:focus {
+    /*outline: none;*/
+    background-color: var(--jq-numeric-input-bg);
+    box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
+}
+
+.MCButton {
+    background: var(--jq-mc-button-bg);
+    border: 1px solid var(--jq-mc-button-border);
+    border-radius: inherit;
+    color: #333333;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MCButton p {
+    color: inherit;
+}
+
+.MultipleChoiceQn {
+    padding: 10px;
+    background: var(--jq-multiple-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.ManyChoiceQn {
+    padding: 10px;
+    background: var(--jq-many-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.NumericQn {
+    background: var(--jq-numeric-bg);
+    border-radius: inherit;
+    color: var(--jq-text-color);
+    padding: 10px;
+}
+
+.NumericQn p {
+    color: inherit;
+}
+
+.StringQn {
+    background: var(--jq-string-bg);
+    border-radius: inherit;
+    color: var(--jq-text-color);
+    padding: 10px;
+}
+
+.StringQn p {
+    color: inherit;
+}
+
+
+.InpLabel {
+    color: var(--jq-numeric-input-label);
+    float: left;
+    font-size: 15pt;
+    line-height: 34px;
+    margin-right: 10px;
+}
+
+.incorrect {
+    color: var(--jq-incorrect-color);
+}
+
+.correct {
+    color: var(--jq-correct-color);
+}
+
+.correctButton {
+    /*
+    background: var(--jq-correct-color);
+   */
+    animation: correct-anim 0.6s ease;
+    animation-fill-mode: forwards;
+    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
+    color: var(--jq-text-color);
+    /*outline: none;*/
+}
+
+.incorrectButton {
+    animation: incorrect-anim 0.8s ease;
+    animation-fill-mode: forwards;
+    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
+    color: var(--jq-text-color);
+    /*outline: none;*/
+}
+
+@keyframes incorrect-anim {
+    100% {
+        background-color: var(--jq-incorrect-color);
+    }
+}
+
+@keyframes correct-anim {
+    100% {
+        background-color: var(--jq-correct-color);
+    }
+}
+</style></div><script type="application/javascript">var questionsIuekrlOVyMkO=[
+    {
+        "question": "Which of the following fonts are recommended according to the APA guidelines?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Times New Roman",
+                "correct": true,
+                "feedback": "Correct: this is a permitted serif font"
+            },
+            {
+                "answer": "Impact",
+                "correct": false,
+                "feedback": "Incorrect: This font is reserved for memes from the 2010s"
+            },
+            {
+                "answer": "Calibri",
+                "correct": true,
+                "feedback": "Correct: this sans serif font is acceptable in APA format"
+            },
+            {
+                "answer": "Arial",
+                "correct": true,
+                "feedback": "Correct: this sans serif font is acceptable in APA format"
+            }
+        ]
+    },
+    {
+        "question": "According to the Context-Content-Conclusion scheme, which section should be the most specific?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The Introduction",
+                "correct": false
+            },
+            {
+                "answer": "The Discussion",
+                "correct": false
+            },
+            {
+                "answer": "The Supplementary Materials",
+                "correct": false
+            },
+            {
+                "answer": "The Results Section",
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "True or False: you should always write in the Passive Voice?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "true",
+                "correct": false,
+                "feedback": "The active voice is often appropriate (see slides for details)"
+            },
+            {
+                "answer": "false",
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "Which of the following sentences is the clearest description of the Methods?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Participants were presented with 50 random stimuli and were asked to rate them on emotional valence.",
+                "correct": false
+            },
+            {
+                "answer": "Participants rated 50 (25 from each condition) randomly selected stimuli on emotional valence.",
+                "correct": true
+            },
+            {
+                "answer": "Participants were presented with 50 stimuli, randomly selected from each condition, and were asked to rate each stimulus on the emotional dimension of valence, one after the other.",
+                "correct": false
+            }
+        ]
+    }
+];
+
+if (typeof Question === 'undefined') {
+// Make a random ID
+function makeid(length) {
+    var result = [];
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+    }
+    return result.join('');
+}
+// Convert LaTeX delimiters and markdown links to HTML
+function jaxify(string) {
+    let mystring = string;
+    let count = 0, count2 = 0;
+    let loc = mystring.search(/([^\\]|^)(\$)/);
+    let loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+    while (loc >= 0 || loc2 >= 0) {
+        if (loc2 >= 0) {
+            mystring = mystring.replace(/([^\\]|^)(\$\$)/, count2 % 2 ? '$1\\]' : '$1\\[');
+            count2++;
+        } else {
+            mystring = mystring.replace(/([^\\]|^)(\$)/, count % 2 ? '$1\\)' : '$1\\(');
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+    }
+    // Replace markdown links
+    mystring = mystring.replace(/<http(.*?)>/g, '<a href="http$1" target="_blank" class="Quiz JQLink">http$1</a>');
+    mystring = mystring.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="Quiz JQLink">$1</a>');
+    return mystring;
+}
+
+// Base class for question types
+class Question {
+    static registry = {};
+    static register(type, cls) {
+        Question.registry[type] = cls;
+    }
+    static create(qa, id, index, options, rootDiv) {
+        const Cls = Question.registry[qa.type];
+        if (!Cls) {
+            console.error(`No question class registered for type "${qa.type}"`);
+            return;
+        }
+        const q = new Cls(qa, id, index, options, rootDiv);
+        q.render();
+    }
+
+    constructor(qa, id, index, options, rootDiv) {
+        this.qa = qa;
+        this.id = id;
+        this.index = index;
+        this.options = options;
+        this.rootDiv = rootDiv;
+        // wrapper
+        this.wrapper = document.createElement('div');
+        this.wrapper.id = `quizWrap${id}`;
+        this.wrapper.className = 'Quiz';
+        this.wrapper.dataset.qnum = index;
+        this.wrapper.style.maxWidth = `${options.maxWidth}px`;
+        rootDiv.appendChild(this.wrapper);
+        // question container
+        this.outerqDiv = document.createElement('div');
+        this.outerqDiv.id = `OuterquizQn${id}${index}`;
+        this.wrapper.appendChild(this.outerqDiv);
+        // question text
+        this.qDiv = document.createElement('div');
+        this.qDiv.id = `quizQn${id}${index}`;
+        if (qa.question) {
+            this.qDiv.innerHTML = jaxify(qa.question);
+            this.outerqDiv.appendChild(this.qDiv);
+        }
+        // code block
+        if (qa.code) {
+            const codeDiv = document.createElement('div');
+            codeDiv.id = `code${id}${index}`;
+            codeDiv.className = 'QuizCode';
+            const pre = document.createElement('pre');
+            const codeEl = document.createElement('code');
+            codeEl.innerHTML = qa.code;
+            pre.appendChild(codeEl);
+            codeDiv.appendChild(pre);
+            this.outerqDiv.appendChild(codeDiv);
+        }
+        // answer container
+        this.aDiv = document.createElement('div');
+        this.aDiv.id = `quizAns${id}${index}`;
+        this.aDiv.className = 'Answer';
+        this.wrapper.appendChild(this.aDiv);
+        // feedback container (append after answers)
+        this.fbDiv = document.createElement('div');
+        this.fbDiv.id = `fb${id}`;
+        this.fbDiv.className = 'Feedback';
+        this.fbDiv.dataset.answeredcorrect = 0;
+    }
+
+    render() {
+        throw new Error('render() not implemented');
+    }
+
+    preserveResponse(val) {
+        if (!this.options.preserveResponses) return;
+        const resp = document.getElementById(`responses${this.rootDiv.id}`);
+        if (!resp) return;
+        const arr = JSON.parse(resp.dataset.responses);
+        arr[this.index] = val;
+        resp.dataset.responses = JSON.stringify(arr);
+        printResponses(resp);
+    }
+
+    typeset(container) {
+        if (typeof MathJax !== 'undefined') {
+            const v = MathJax.version;
+            if (v[0] === '2') {
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+            } else {
+                MathJax.typeset([container]);
+            }
+        }
+    }
+}
+
+// Choose a random subset of an array. Can also be used to shuffle the array
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+}
+
+function printResponses(responsesContainer) {
+    var responses=JSON.parse(responsesContainer.dataset.responses);
+    var stringResponses='<B>IMPORTANT!</B>To preserve this answer sequence for submission, when you have finalized your answers: <ol> <li> Copy the text in this cell below "Answer String"</li> <li> Double click on the cell directly below the Answer String, labeled "Replace Me"</li> <li> Select the whole "Replace Me" text</li> <li> Paste in your answer string and press shift-Enter.</li><li>Save the notebook using the save icon or File->Save Notebook menu item</li></ul><br><br><br><b>Answer String:</b><br> ';
+    console.log(responses);
+    responses.forEach((response, index) => {
+        if (response) {
+            console.log(index + ': ' + response);
+            stringResponses+= index + ': ' + response +"<BR>";
+        }
+    });
+    responsesContainer.innerHTML=stringResponses;
+}
+/* Callback function to determine whether a selected multiple-choice
+   button corresponded to a correct answer and to provide feedback
+   based on the answer */
+function check_mc() {
+    var id = this.id.split('-')[0];
+    //var response = this.id.split('-')[1];
+    //console.log(response);
+    //console.log("In check_mc(), id="+id);
+    //console.log(event.srcElement.id)           
+    //console.log(event.srcElement.dataset.correct)   
+    //console.log(event.srcElement.dataset.feedback)
+
+    var label = event.srcElement;
+    //console.log(label, label.nodeName);
+    var depth = 0;
+    while ((label.nodeName != "LABEL") && (depth < 20)) {
+        label = label.parentElement;
+        console.log(depth, label);
+        depth++;
+    }
+
+
+
+    var answers = label.parentElement.children;
+    //console.log(answers);
+
+    // Split behavior based on multiple choice vs many choice:
+    var fb = document.getElementById("fb" + id);
+
+
+
+    /* Multiple choice (1 answer). Allow for 0 correct
+       answers as an edge case */
+    if (fb.dataset.numcorrect <= 1) {
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            responses[qnum]= response;
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+
+        for (var i = 0; i < answers.length; i++) {
+            var child = answers[i];
+            //console.log(child);
+            child.className = "MCButton";
+        }
+
+
+
+        if (label.dataset.correct == "true") {
+            // console.log("Correct action");
+            if ("feedback" in label.dataset) {
+                fb.innerHTML = jaxify(label.dataset.feedback);
+            } else {
+                fb.innerHTML = "Correct!";
+            }
+            label.classList.add("correctButton");
+
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+
+        } else {
+            if ("feedback" in label.dataset) {
+                fb.innerHTML = jaxify(label.dataset.feedback);
+            } else {
+                fb.innerHTML = "Incorrect -- try again.";
+            }
+            //console.log("Error action");
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+    }
+    else { /* Many choice (more than 1 correct answer) */
+        var reset = false;
+        var feedback;
+         if (label.dataset.correct == "true") {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Correct!";
+            }
+            if (label.dataset.answered <= 0) {
+                if (fb.dataset.answeredcorrect < 0) {
+                    fb.dataset.answeredcorrect = 1;
+                    reset = true;
+                } else {
+                    fb.dataset.answeredcorrect++;
+                }
+                if (reset) {
+                    for (var i = 0; i < answers.length; i++) {
+                        var child = answers[i];
+                        child.className = "MCButton";
+                        child.dataset.answered = 0;
+                    }
+                }
+                label.classList.add("correctButton");
+                label.dataset.answered = 1;
+                fb.className = "Feedback";
+                fb.classList.add("correct");
+
+            }
+        } else {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Incorrect -- try again.";
+            }
+            if (fb.dataset.answeredcorrect > 0) {
+                fb.dataset.answeredcorrect = -1;
+                reset = true;
+            } else {
+                fb.dataset.answeredcorrect--;
+            }
+
+            if (reset) {
+                for (var i = 0; i < answers.length; i++) {
+                    var child = answers[i];
+                    child.className = "MCButton";
+                    child.dataset.answered = 0;
+                }
+            }
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            if (label.dataset.correct == "true") {
+                if (typeof(responses[qnum]) == "object"){
+                    if (!responses[qnum].includes(response))
+                        responses[qnum].push(response);
+                } else{
+                    responses[qnum]= [ response ];
+                }
+            } else {
+                responses[qnum]= response;
+            }
+            console.log(responses);
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End save responses stuff
+
+
+
+        var numcorrect = fb.dataset.numcorrect;
+        var answeredcorrect = fb.dataset.answeredcorrect;
+        if (answeredcorrect >= 0) {
+            fb.innerHTML = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+        } else {
+            fb.innerHTML = feedback + " [" + 0 + "/" + numcorrect + "]";
+        }
+
+
+    }
+
+    if (typeof MathJax != 'undefined') {
+        var version = MathJax.version;
+        console.log('MathJax version', version);
+        if (version[0] == "2") {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        } else if (version[0] == "3") {
+            MathJax.typeset([fb]);
+        }
+    } else {
+        console.log('MathJax not detected');
+    }
+
+}
+
+
+/* Function to produce the HTML buttons for a multiple choice/
+   many choice question  and to update the CSS tags based on
+   the question type */
+function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
+
+    var shuffled;
+    if (shuffle_answers == true) {
+        //console.log(shuffle_answers+" read as true");
+        shuffled = getRandomSubarray(qa.answers, qa.answers.length);
+    } else {
+        //console.log(shuffle_answers+" read as false");
+        shuffled = qa.answers;
+    }
+
+
+    var num_correct = 0;
+
+    shuffled.forEach((item, index, ans_array) => {
+        //console.log(answer);
+
+        // Make label for input element
+        var lab = document.createElement("label");
+        lab.className = "MCButton";
+        lab.id = id + '-' + index;
+        lab.onclick = check_mc;
+
+        // Make input element
+        var inp = document.createElement("input");
+        inp.type = "radio";
+        inp.id = "quizo" + id + index;
+        inp.name = "mcgroup-" + id; // for grouping radios
+        inp.className = "sr-only"; // or "visually-hidden" or whatever you call it
+
+
+        lab.append(inp); // input is now inside the label
+
+        var aSpan = document.createElement('span');
+        if ("answer" in item) {
+            aSpan.innerHTML = jaxify(item.answer);
+        }
+        lab.append(aSpan);
+
+        // Create div for code inside question
+        if ("code" in item) {
+            var codeSpan = document.createElement('span');
+            codeSpan.id = "code" + id + index;
+            codeSpan.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeSpan.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = item.code;
+            lab.append(codeSpan);
+        }
+
+        // Set the data attributes for the answer
+        lab.setAttribute('data-correct', item.correct);
+        if (item.correct) {
+            num_correct++;
+        }
+        if ("feedback" in item) {
+            lab.setAttribute('data-feedback', item.feedback);
+        }
+        lab.setAttribute('data-answered', 0);
+
+        // Only append the label (input is inside)
+        aDiv.append(lab);
+
+
+    });
+
+    if (num_correct > 1) {
+        outerqDiv.className = "ManyChoiceQn";
+    } else {
+        outerqDiv.className = "MultipleChoiceQn";
+    }
+
+    return num_correct;
+
+}
+// Object-oriented wrapper for MC/MANY choice
+class MCQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) { super(qa, id, idx, opts, rootDiv); }
+    render() {
+        //console.log("options.shuffleAnswers " + this.options.shuffleAnswers);
+        const numCorrect = make_mc(
+            this.qa,
+            this.options.shuffleAnswers,
+            this.outerqDiv,
+            this.qDiv,
+            this.aDiv,
+            this.id
+        );
+        if ('answer_cols' in this.qa) {
+            this.aDiv.style.gridTemplateColumns =
+                'repeat(' + this.qa.answer_cols + ', 1fr)';
+        }
+        this.fbDiv.dataset.numcorrect = numCorrect;
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('multiple_choice', MCQuestion);
+Question.register('many_choice', MCQuestion);
+function check_numeric(ths, event) {
+
+    if (event.keyCode === 13) {
+        ths.blur();
+
+        var id = ths.id.split('-')[0];
+
+        var submission = ths.value;
+        if (submission.indexOf('/') != -1) {
+            var sub_parts = submission.split('/');
+            //console.log(sub_parts);
+            submission = sub_parts[0] / sub_parts[1];
+        }
+        //console.log("Reader entered", submission);
+
+        if (("precision" in ths.dataset) && (ths.dataset.precision > 0)) {
+            var precision = ths.dataset.precision;
+            submission = Number(Number(submission).toPrecision(precision));
+        }
+
+
+        //console.log("In check_numeric(), id="+id);
+        //console.log(event.srcElement.id)           
+        //console.log(event.srcElement.dataset.feedback)
+
+        var fb = document.getElementById("fb" + id);
+        fb.style.display = "none";
+        fb.innerHTML = "Incorrect -- try again.";
+
+        var answers = JSON.parse(ths.dataset.answers);
+        //console.log(answers);
+
+        var defaultFB = "Incorrect. Try again.";
+        var correct;
+        var done = false;
+        answers.every(answer => {
+            //console.log(answer.type);
+
+            correct = false;
+            // if (answer.type=="value"){
+            if ('value' in answer) {
+                var value;
+                if ("precision" in ths.dataset) {
+                    value = answer.value.toPrecision(ths.dataset.precision);
+                } else {
+                    value = answer.value;
+                }
+                if (submission == value) {
+                    if ("feedback" in answer) {
+                        fb.innerHTML = jaxify(answer.feedback);
+                    } else {
+                        fb.innerHTML = jaxify("Correct");
+                    }
+                    correct = answer.correct;
+                    //console.log(answer.correct);
+                    done = true;
+                }
+
+                // } else if (answer.type=="range") {
+            } else if ('range' in answer) {
+                console.log(answer.range);
+                console.log(submission, submission >=answer.range[0], submission < answer.range[1])
+                if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
+                    fb.innerHTML = jaxify(answer.feedback);
+                    correct = answer.correct;
+                    console.log(answer.correct);
+                    done = true;
+                }
+            } else if (answer.type == "default") {
+                if ("feedback" in answer) {
+                    defaultFB = answer.feedback;
+                } 
+            }
+            if (done) {
+                return false; // Break out of loop if this has been marked correct
+            } else {
+                return true; // Keep looking for case that includes this as a correct answer
+            }
+        });
+        console.log("done:", done);
+
+        if ((!done) && (defaultFB != "")) {
+            fb.innerHTML = jaxify(defaultFB);
+            //console.log("Default feedback", defaultFB);
+        }
+
+        fb.style.display = "block";
+        if (correct) {
+            ths.className = "Input-text";
+            ths.classList.add("correctButton");
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+        } else {
+            ths.className = "Input-text";
+            ths.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            console.log(submission);
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            //console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            if (submission == ths.value){
+                responses[qnum]= submission;
+            } else {
+                responses[qnum]= ths.value + "(" + submission +")";
+            }
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            console.log('MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([fb]);
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+        // After correct answer, if next JupyterQuiz question exists and has a text input, scroll by current question height
+        if (correct) {
+            // find the current question wrapper
+            var wrapper = ths.closest('.Quiz');
+            if (wrapper) {
+                var nextWrapper = wrapper.nextElementSibling;
+                if (nextWrapper && nextWrapper.classList.contains('Quiz')) {
+                    var nextInput = nextWrapper.querySelector('input.Input-text');
+                    if (nextInput) {
+                        var height = wrapper.getBoundingClientRect().height;
+                        console.log(height);
+                        nextInput.focus();
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+}
+// Object-oriented wrapper for numeric questions
+class NumericQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) {
+        super(qa, id, idx, opts, rootDiv);
+    }
+    render() {
+        make_numeric(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('numeric', NumericQuestion);
+
+function isValid(el, charC) {
+    //console.log("Input char: ", charC);
+    if (charC == 46) {
+        if (el.value.indexOf('.') === -1) {
+            return true;
+        } else if (el.value.indexOf('/') != -1) {
+            var parts = el.value.split('/');
+            if (parts[1].indexOf('.') === -1) {
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
+    } else if (charC == 47) {
+        if (el.value.indexOf('/') === -1) {
+            if ((el.value != "") && (el.value != ".")) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else if (charC == 45) {
+        var edex = el.value.indexOf('e');
+        if (edex == -1) {
+            edex = el.value.indexOf('E');
+        }
+
+        if (el.value == "") {
+            return true;
+        } else if (edex == (el.value.length - 1)) { // If just after e or E
+            return true;
+        } else {
+            return false;
+        }
+    } else if (charC == 101) { // "e"
+        if ((el.value.indexOf('e') === -1) && (el.value.indexOf('E') === -1) && (el.value.indexOf('/') == -1)) {
+            // Prev symbol must be digit or decimal point:
+            if (el.value.slice(-1).search(/\d/) >= 0) {
+                return true;
+            } else if (el.value.slice(-1).search(/\./) >= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else {
+        if (charC > 31 && (charC < 48 || charC > 57))
+            return false;
+    }
+    return true;
+}
+
+function numeric_keypress(evnt) {
+    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
+
+    if (charC == 13) {
+        check_numeric(this, evnt);
+    } else {
+        return isValid(this, charC);
+    }
+}
+
+
+
+
+
+function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
+
+
+
+    //console.log(answer);
+
+
+    outerqDiv.className = "NumericQn";
+    aDiv.style.display = 'block';
+
+    var lab = document.createElement("label");
+    lab.className = "InpLabel";
+    lab.innerHTML = "Type numeric answer here:";
+    aDiv.append(lab);
+
+    var inp = document.createElement("input");
+    inp.type = "text";
+    //inp.id="input-"+id;
+    inp.id = id + "-0";
+    inp.className = "Input-text";
+    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
+    if ("precision" in qa) {
+        inp.setAttribute('data-precision', qa.precision);
+    }
+    aDiv.append(inp);
+    //console.log(inp);
+
+    //inp.addEventListener("keypress", check_numeric);
+    //inp.addEventListener("keypress", numeric_keypress);
+    /*
+    inp.addEventListener("keypress", function(event) {
+        return numeric_keypress(this, event);
+    }
+                        );
+                        */
+    //inp.onkeypress="return numeric_keypress(this, event)";
+    inp.onkeypress = numeric_keypress;
+    inp.onpaste = event => false;
+
+    inp.addEventListener("focus", function (event) {
+        this.value = "";
+        return false;
+    }
+    );
+
+
+}
+// Override show_questions to use object-oriented Question API
+function show_questions(json, container) {
+    // Accept container element or element ID
+    if (typeof container === 'string') {
+        container = document.getElementById(container);
+    }
+    if (!container) {
+        console.error('show_questions: invalid container', container);
+        return;
+    }
+
+    const shuffleQuestions = container.dataset.shufflequestions === 'True';
+    const shuffleAnswers = container.dataset.shuffleanswers === 'True';
+    const preserveResponses = container.dataset.preserveresponses === 'true';
+    const maxWidth = parseInt(container.dataset.maxwidth, 10) || 0;
+    let numQuestions = parseInt(container.dataset.numquestions, 10) || json.length;
+    if (numQuestions > json.length) numQuestions = json.length;
+
+    let questions = json;
+    if (shuffleQuestions || numQuestions < json.length) {
+        questions = getRandomSubarray(json, numQuestions);
+    }
+
+    questions.forEach((qa, index) => {
+        const id = makeid(8);
+        const options = {
+            shuffleAnswers: shuffleAnswers,
+            preserveResponses: preserveResponses,
+            maxWidth: maxWidth
+        };
+        Question.create(qa, id, index, options, container);
+    });
+
+    if (preserveResponses) {
+        const respDiv = document.createElement('div');
+        respDiv.id = 'responses' + container.id;
+        respDiv.className = 'JCResponses';
+        respDiv.dataset.responses = JSON.stringify([]);
+        respDiv.innerHTML = '<b>Select your answers and then follow the directions that will appear here.</b>';
+        container.appendChild(respDiv);
+    }
+
+    // Trigger MathJax typesetting if available
+    if (typeof MathJax != 'undefined') {
+        console.log("MathJax version", MathJax.version);
+        var version = MathJax.version;
+        setTimeout(function(){
+            var version = MathJax.version;
+            console.log('After sleep, MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                if (MathJax.hasOwnProperty('typeset') ) {
+                    MathJax.typeset([container]);
+                } else {
+                    console.log('WARNING: Trying to force load MathJax 3');
+                    window.MathJax = {
+                        tex: {
+                            inlineMath: [['$', '$'], ['\\(', '\\)']]
+                        },
+                        svg: {
+                            fontCache: 'global'
+                        }
+                    };
+
+                    (function () {
+                        var script = document.createElement('script');
+                        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                        script.async = true;
+                        document.head.appendChild(script);
+                    })();
+                }
+            }
+        }, 500);
+if (typeof version == 'undefined') {
+        } else
+        {
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                if (MathJax.hasOwnProperty('typeset') ) {
+                    MathJax.typeset([container]);
+                } else {
+                    console.log('WARNING: Trying to force load MathJax 3');
+                    window.MathJax = {
+                        tex: {
+                            inlineMath: [['$', '$'], ['\\(', '\\)']]
+                        },
+                        svg: {
+                            fontCache: 'global'
+                        }
+                    };
+
+                    (function () {
+                        var script = document.createElement('script');
+                        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                        script.async = true;
+                        document.head.appendChild(script);
+                    })();
+                }
+            } else {
+                console.log("MathJax not found");
+            }
+        }
+    }
+    // if (typeof MathJax !== 'undefined') {
+    //     const v = MathJax.version;
+    //     if (v[0] === '2') {
+    //         MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+    //     } else if (v[0] === '3') {
+    //         MathJax.typeset([container]);
+    //     }
+    // }
+
+    // Prevent link clicks from bubbling up
+    Array.from(container.getElementsByClassName('Link')).forEach(link => {
+        link.addEventListener('click', e => e.stopPropagation());
+    });
+}
+function levenshteinDistance(a, b) {
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
+
+    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+
+    for (let i = 0; i <= a.length; i++) {
+        matrix[0][i] = i;
+    }
+
+    for (let j = 0; j <= b.length; j++) {
+        matrix[j][0] = j;
+    }
+
+    for (let j = 1; j <= b.length; j++) {
+        for (let i = 1; i <= a.length; i++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            matrix[j][i] = Math.min(
+                matrix[j - 1][i] + 1, // Deletion
+                matrix[j][i - 1] + 1, // Insertion
+                matrix[j - 1][i - 1] + cost // Substitution
+            );
+        }
+    }
+    return matrix[b.length][a.length];
+}
+// Object-oriented wrapper for string input questions
+class StringQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) {
+        super(qa, id, idx, opts, rootDiv);
+    }
+    render() {
+        make_string(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('string', StringQuestion);
+
+function check_string(ths, event) {
+    if (event.keyCode === 13) {
+        ths.blur();
+
+        var id = ths.id.split('-')[0];
+        var submission = ths.value.trim();
+        var fb = document.getElementById("fb" + id);
+        fb.style.display = "none";
+        fb.innerHTML = "Incorrect -- try again.";
+
+        var answers = JSON.parse(ths.dataset.answers);
+        var defaultFB = "Incorrect. Try again.";
+        var correct;
+        var done = false;
+
+        // Handle default answer pattern: filter out and capture default feedback
+        var filteredAnswers = [];
+        answers.forEach(answer => {
+            if (answer.type === "default") {
+                defaultFB = answer.feedback;
+            } else {
+                filteredAnswers.push(answer);
+            }
+        });
+        answers = filteredAnswers;
+
+        answers.every(answer => {
+            correct = false;
+
+            let match = false;
+            if (answer.match_case) {
+                match = submission === answer.answer;
+            } else {
+                match = submission.toLowerCase() === answer.answer.toLowerCase();
+            }
+            console.log(submission);
+            console.log(answer.answer);
+            console.log(match);
+
+            if (match) {
+                if ("feedback" in answer) {
+                    fb.innerHTML = jaxify(answer.feedback);
+                } else {
+                    fb.innerHTML = jaxify("Correct");
+                }
+                correct = answer.correct;
+                done = true;
+            } else if (answer.fuzzy_threshold) {
+                var max_length = Math.max(submission.length, answer.answer.length);
+                var ratio;
+                if (answer.match_case) {
+                    ratio = 1- (levenshteinDistance(submission, answer.answer) / max_length);
+                } else {
+                    ratio = 1- (levenshteinDistance(submission.toLowerCase(),
+                                                    answer.answer.toLowerCase()) / max_length);
+                }
+                if (ratio >= answer.fuzzy_threshold) {
+                    if ("feedback" in answer) {
+                        fb.innerHTML = jaxify("(Fuzzy) " + answer.feedback);
+                    } else {
+                        fb.innerHTML = jaxify("Correct");
+                    }
+                    correct = answer.correct;
+                    done = true;
+                }
+
+            }
+
+            if (done) {
+                return false;
+            } else {
+                return true;
+            }
+        });
+
+        if ((!done) && (defaultFB != "")) {
+            fb.innerHTML = jaxify(defaultFB);
+        }
+
+        fb.style.display = "block";
+        if (correct) {
+            ths.className = "Input-text";
+            ths.classList.add("correctButton");
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+        } else {
+            ths.className = "Input-text";
+            ths.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            var qnum = document.getElementById("quizWrap" + id).dataset.qnum;
+            var responses = JSON.parse(responsesContainer.dataset.responses);
+            responses[qnum] = submission;
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([fb]);
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+        // After correct answer, if next JupyterQuiz question exists and has a text input, scroll by current question height
+        if (correct) {
+            var wrapper = ths.closest('.Quiz');
+            if (wrapper) {
+                var nextWrapper = wrapper.nextElementSibling;
+                if (nextWrapper && nextWrapper.classList.contains('Quiz')) {
+                    var nextInput = nextWrapper.querySelector('input.Input-text');
+                    if (nextInput) {
+                        var height = wrapper.getBoundingClientRect().height;
+                        nextInput.focus();
+                    }
+                }
+            }
+        }
+        return false;
+    }
+}
+
+function string_keypress(evnt) {
+    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
+
+    if (charC == 13) {
+        check_string(this, evnt);
+    } 
+}
+
+
+function make_string(qa, outerqDiv, qDiv, aDiv, id) {
+    outerqDiv.className = "StringQn";
+    aDiv.style.display = 'block';
+
+    var lab = document.createElement("label");
+    lab.className = "InpLabel";
+    lab.innerHTML = "Type your answer here:";
+    aDiv.append(lab);
+
+    var inp = document.createElement("input");
+    inp.type = "text";
+    inp.id = id + "-0";
+    inp.className = "Input-text";
+    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
+    // Apply optional input width (approx. number of characters, in em units)
+    if (qa.input_width != null) {
+        inp.style['min-width'] = qa.input_width + 'em';
+    }
+    aDiv.append(inp);
+
+    inp.onkeypress = string_keypress;
+    inp.onpaste = event => false;
+
+    inp.addEventListener("focus", function (event) {
+        this.value = "";
+        return false;
+    });
+}
+/*
+ * Attempt to fetch questions JSON, with timeout and fallback to embedded data.
+ */
+{
+  const controller = new AbortController();
+  const signal = controller.signal;
+  // Abort fetch after 5 seconds
+  setTimeout(() => controller.abort(), 5000);
+  fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise25/master/lecture/introduction/writing_quiz.json", { signal })
+    .then(response => response.json())
+    .then(json => show_questions(json, IuekrlOVyMkO))
+    .catch(err => {
+      console.log("Fetch error or timeout", err);
+      show_questions(questionsIuekrlOVyMkO, IuekrlOVyMkO);
+    });
+}
+}
+</script></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "JackEdTaylor/expra-wise25",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="literature.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Literature Search and Reference Management</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="communication.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Scientific Communication</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-tips">Writing Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">1. Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-language">2. Scientific language</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#form">3. Form</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-style">3.1 APA style</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figures-and-tables">3.2 Figures and tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">3.3 References</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-of-ai-tools">4. Use of AI tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-knowledge">Test your Knowledge!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jack Taylor
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

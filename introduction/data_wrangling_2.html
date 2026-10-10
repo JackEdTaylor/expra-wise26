@@ -1,0 +1,1131 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Data Wrangling 2 &#8212; ExPra Winter 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=bb6542e3" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/data_wrangling_2';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://jackedtaylor.github.io/expra-wise25/introduction/data_wrangling_2.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Visualisation 1" href="data_vis_1.html" />
+    <link rel="prev" title="Data Wrangling 1" href="data_wrangling_1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="ExPra Winter 2025 - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="ExPra Winter 2025 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/schedule.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/reading.html">Reading</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">General Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="empirical_research.html">Empirical Research</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="ethics.html">Ethics and Data Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cogneuro_lang.html">Cog. Neuro. of Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai.html">Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">Literature Search and Reference Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing.html">Scientific Writing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication.html">Scientific Communication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R &amp; Statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_wrangling_1.html">Data Wrangling 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Wrangling 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_vis_1.html">Data Visualisation 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_vis_2.html">Data Visualisation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_participate.html">Participate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_analyse.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_feedback.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/conducting.html">Conducting Experimental Sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/analysis.html">Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/posters.html">Posters</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cognitive Brain Imaging</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cbi/meeg.html">Introduction to EEG &amp; MEG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cbi/mri.html">Introduction to (f)MRI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/student-guide.html">ExPra Student Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/gen_ai.html">AI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/CoC.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise25/master?urlpath=tree/lecture/introduction/data_wrangling_2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/edit/master/lecture/introduction/data_wrangling_2.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/issues/new?title=Issue%20on%20page%20%2Fintroduction/data_wrangling_2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/introduction/data_wrangling_2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Wrangling 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipes">Pipes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a">a)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b">b)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#c">c)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#d">d)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-and-long-data-formatting">Wide and Long Data Formatting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-format-example">Wide Format Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#long-format-example">Long Format Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivot-wider"><code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your Knowledge!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivot-longer"><code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-discussion-of-tidyverse">Bonus: Discussion of Tidyverse</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data-wrangling-2">
+<h1>Data Wrangling 2<a class="headerlink" href="#data-wrangling-2" title="Link to this heading">#</a></h1>
+<p>Welcome to part 2! In this session, we will recap everything we covered in <a class="reference external" href="https://jackedtaylor.github.io/expra-wise24/introduction/data_wrangling_1.html">Part 1</a>, and we will cover:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#pipes"><span class="xref myst">Pipes</span></a>: <code class="docutils literal notranslate"><span class="pre">|&gt;</span></code></p></li>
+<li><p><a class="reference internal" href="#wide-and-long-data-formatting"><span class="xref myst">Reformatting into Wide / Long format</span></a>: <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> and <code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code></p></li>
+</ul>
+<p>We will use two main packages in this session: <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> and <code class="docutils literal notranslate"><span class="pre">tidyr</span></code>:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<hr class="docutils" />
+<section id="pipes">
+<h2>Pipes<a class="headerlink" href="#pipes" title="Link to this heading">#</a></h2>
+<p>The pipe operator looks like this: <code class="docutils literal notranslate"><span class="pre">|&gt;</span></code>. It takes the output of one function, and “pipes” it into the first argument of the next function.</p>
+<p>But why would such a thing be useful? Well, here’s some example code to hopefully demonstrate…</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">data_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">starwars</span>
+<span class="n">data_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">data_1</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">"Alderaan"</span><span class="p">)</span>
+<span class="n">data_3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">data_2</span><span class="p">,</span><span class="w"> </span><span class="n">height_inches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="m">2.54</span><span class="p">)</span>
+<span class="n">data_4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">data_3</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">height_inches</span><span class="p">)</span>
+<span class="n">data_5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">data_4</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+
+<span class="n">data_5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 74 × 3
+   name                  height height_inches
+   &lt;chr&gt;                  &lt;int&gt;         &lt;dbl&gt;
+ 1 Ratts Tyerel              79          31.1
+ 2 Wicket Systri Warrick     88          34.6
+ 3 Dud Bolt                  94          37.0
+ 4 R2-D2                     96          37.8
+ 5 R5-D4                     97          38.2
+ 6 Sebulba                  112          44.1
+ 7 Gasgano                  122          48.0
+ 8 Watto                    137          53.9
+ 9 Mon Mothma               150          59.1
+10 Cordé                    157          61.8
+# ℹ 64 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>What you can hopefully see is that we start with one dataframe, <code class="docutils literal notranslate"><span class="pre">starwars</span></code>. We then apply the <code class="docutils literal notranslate"><span class="pre">filter()</span></code>, <code class="docutils literal notranslate"><span class="pre">mutate()</span></code>, <code class="docutils literal notranslate"><span class="pre">select()</span></code>, and <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> functions. Each time, we take the result of the last output, apply the function, and store the result in a new variable.</p>
+<p>Rather than storing several variables that we are not interested in, another approach would be to nest the functions within each other’s parentheses. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># an example of nested data wrangling - difficult to read isn't it?</span>
+<span class="n">final_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span>
+<span class="w">        </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">            </span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">"Alderaan"</span><span class="p">),</span>
+<span class="w">            </span><span class="n">height_inches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="m">2.54</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">        </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">height_inches</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="n">height</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is really difficult to read, isn’t it!?</p>
+<p>What if we want code as readable as the first example, but without the unnecessary variables in between. Pipes are a perfect solution!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a clear, readable example using pipes</span>
+<span class="n">final_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">starwars</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">homeworld</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">"Alderaan"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">height_inches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="m">2.54</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">height_inches</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each line tells R what to do with the output of the last line. The output of the last line is always provided to the first input of the function on the next line.</p>
+<br>
+<section id="check-your-knowledge">
+<h3>Check your Knowledge!<a class="headerlink" href="#check-your-knowledge" title="Link to this heading">#</a></h3>
+<p>Rewrite the following snippets of code to use pipes (<code class="docutils literal notranslate"><span class="pre">|&gt;</span></code>). You should check that the output matches the value in the last variable to be assigned in the non-piped example.</p>
+<section id="a">
+<h4>a)<a class="headerlink" href="#a" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">filtered_naboo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="o">==</span><span class="s">"Naboo"</span><span class="p">)</span>
+<span class="n">naboo_characters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">filtered_naboo</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="b">
+<h4>b)<a class="headerlink" href="#b" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">hws</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="p">)</span>
+<span class="n">unique_worlds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sort</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">hws</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="c">
+<h4>c)<a class="headerlink" href="#c" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">sw_filt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">birth_year</span><span class="o">&gt;</span><span class="m">50</span><span class="p">)</span>
+<span class="n">sw_grp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sw_filt</span><span class="p">,</span><span class="w"> </span><span class="n">species</span><span class="p">)</span>
+<span class="n">mass_summ</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">summarise</span><span class="p">(</span><span class="n">sw_grp</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span><span class="w"> </span><span class="n">SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="d">
+<h4>d)<a class="headerlink" href="#d" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">height_summ</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">summarise</span><span class="p">(</span><span class="nf">group_by</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="p">),</span><span class="w"> </span><span class="n">mean_height</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="wide-and-long-data-formatting">
+<h2>Wide and Long Data Formatting<a class="headerlink" href="#wide-and-long-data-formatting" title="Link to this heading">#</a></h2>
+<p>Imagine we have response-time data from a within-participant experimental design where participants all took part in two conditions (“A” and “B”). There are two sensible ways we can organise these data in a table.</p>
+<section id="wide-format-example">
+<h3>Wide Format Example<a class="headerlink" href="#wide-format-example" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The two conditions are in separate columns (<code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>)</p></li>
+<li><p>Each row contains data from one participant (<code class="docutils literal notranslate"><span class="pre">id</span></code>)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">data.frame</span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"s01"</span><span class="p">,</span><span class="w"> </span><span class="s">"s02"</span><span class="p">,</span><span class="w"> </span><span class="s">"s03"</span><span class="p">,</span><span class="w"> </span><span class="s">"s04"</span><span class="p">),</span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">240</span><span class="p">,</span><span class="w"> </span><span class="m">300</span><span class="p">,</span><span class="w"> </span><span class="m">264</span><span class="p">,</span><span class="w"> </span><span class="m">312</span><span class="p">),</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">542</span><span class="p">,</span><span class="w"> </span><span class="m">366</span><span class="p">,</span><span class="w"> </span><span class="m">662</span><span class="p">,</span><span class="w"> </span><span class="m">430</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 4 × 3</caption>
+<thead>
+	<tr><th scope=col>id</th><th scope=col>A</th><th scope=col>B</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>s01</td><td>240</td><td>542</td></tr>
+	<tr><td>s02</td><td>300</td><td>366</td></tr>
+	<tr><td>s03</td><td>264</td><td>662</td></tr>
+	<tr><td>s04</td><td>312</td><td>430</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="long-format-example">
+<h3>Long Format Example<a class="headerlink" href="#long-format-example" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>One column now contains values from all conditions (<code class="docutils literal notranslate"><span class="pre">rt</span></code>)</p></li>
+<li><p>Another column tells us which condition each observation comes from (<code class="docutils literal notranslate"><span class="pre">condition</span></code>)</p></li>
+<li><p>Each participant now has two rows - one for each condition</p></li>
+</ul>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 8 × 3</caption>
+<thead>
+	<tr><th scope=col>id</th><th scope=col>condition</th><th scope=col>rt</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>s01</td><td>A</td><td>240</td></tr>
+	<tr><td>s01</td><td>B</td><td>542</td></tr>
+	<tr><td>s02</td><td>A</td><td>300</td></tr>
+	<tr><td>s02</td><td>B</td><td>366</td></tr>
+	<tr><td>s03</td><td>A</td><td>264</td></tr>
+	<tr><td>s03</td><td>B</td><td>662</td></tr>
+	<tr><td>s04</td><td>A</td><td>312</td></tr>
+	<tr><td>s04</td><td>B</td><td>430</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Wide and Long data formats are simply different ways of representing the data. It is often useful to switch between long and wide data formats. For example, long data format can make data visualisations easier with <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> (see <a class="reference external" href="https://jackedtaylor.github.io/expra-wise24/introduction/data_vis">Data Visualisation</a> session), or can make it easier to calculate difference scores.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tidyr</span></code> package has two very handy functions for switching between wide and long data formats: <a class="reference internal" href="#pivot_wider"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code></span></a> and <a class="reference internal" href="#pivot_longer"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code></span></a>.</p>
+<br>
+</section>
+<section id="pivot-wider">
+<h3><code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code><a class="headerlink" href="#pivot-wider" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> function lets us switch <em>from long to wide</em> data formats. As an example, let’s start with a summary of heights in the <code class="docutils literal notranslate"><span class="pre">starwars</span></code> dataset, split by sex and species.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">sex_summ</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">starwars</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">species</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">avg_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span>
+
+<span class="n">sex_summ</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 41 × 3
+# Groups:   sex [5]
+   sex            species    avg_height
+   &lt;chr&gt;          &lt;chr&gt;           &lt;dbl&gt;
+ 1 female         Clawdite         168 
+ 2 female         Human            164.
+ 3 female         Kaminoan         213 
+ 4 female         Mirialan         168 
+ 5 female         Tholothian       184 
+ 6 female         Togruta          178 
+ 7 female         Twi'lek          178 
+ 8 hermaphroditic Hutt             175 
+ 9 male           Aleena            79 
+10 male           Besalisk         198 
+# ℹ 31 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can reformat this to a wider format, with the average heights for each sex in separate columns. This will result in one species per row of the dataframe. There are two main parameters that we need to provide to <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code>. These are <code class="docutils literal notranslate"><span class="pre">names_from</span></code> (where the new column names should come from) and <code class="docutils literal notranslate"><span class="pre">values_from</span></code> (where the new columns’ values should come from).</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">sex_summ</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">avg_height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 38 × 6
+   species    female hermaphroditic  male  none  `NA`
+   &lt;chr&gt;       &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 Clawdite     168              <span class=" -Color -Color-Red">NA</span>   <span class=" -Color -Color-Red">NA</span>     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+ 2 Human        164.             <span class=" -Color -Color-Red">NA</span>  182.    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+ 3 Kaminoan     213              <span class=" -Color -Color-Red">NA</span>  229     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+ 4 Mirialan     168              <span class=" -Color -Color-Red">NA</span>   <span class=" -Color -Color-Red">NA</span>     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+ 5 Tholothian   184              <span class=" -Color -Color-Red">NA</span>   <span class=" -Color -Color-Red">NA</span>     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+ 6 Togruta      178              <span class=" -Color -Color-Red">NA</span>   <span class=" -Color -Color-Red">NA</span>     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+ 7 Twi'lek      178              <span class=" -Color -Color-Red">NA</span>  180     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+ 8 Hutt          <span class=" -Color -Color-Red">NA</span>             175   <span class=" -Color -Color-Red">NA</span>     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+ 9 Aleena        <span class=" -Color -Color-Red">NA</span>              <span class=" -Color -Color-Red">NA</span>   79     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+10 Besalisk      <span class=" -Color -Color-Red">NA</span>              <span class=" -Color -Color-Red">NA</span>  198     <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>
+# ℹ 28 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, this results in several <code class="docutils literal notranslate"><span class="pre">NA</span></code>s. This highlights an important behaviour of <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> - missing combinations of <code class="docutils literal notranslate"><span class="pre">species</span></code> and <code class="docutils literal notranslate"><span class="pre">sex</span></code> are still included in the table, but the values are stored as <code class="docutils literal notranslate"><span class="pre">NA</span></code>, because there are no observations for these groups.</p>
+<br>
+</section>
+<section id="id1">
+<h3>Check your Knowledge!<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Run the following code to generate the long-format data example from before. Then:</p>
+<ol class="arabic simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> to reformat the dataframe into the <a class="reference internal" href="#wide-format-example"><span class="xref myst">wide format example shown earlier</span></a>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> to calculate a difference score for each participant (as the response time in A minus the response time in B).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">rts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rep</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">"s01"</span><span class="p">,</span><span class="w"> </span><span class="s">"s02"</span><span class="p">,</span><span class="w"> </span><span class="s">"s03"</span><span class="p">,</span><span class="w"> </span><span class="s">"s04"</span><span class="p">),</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">),</span>
+<span class="w">    </span><span class="n">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rep</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="w"> </span><span class="s">"B"</span><span class="p">),</span><span class="w"> </span><span class="m">4</span><span class="p">),</span>
+<span class="w">    </span><span class="n">rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">240</span><span class="p">,</span><span class="w"> </span><span class="m">542</span><span class="p">,</span><span class="w"> </span><span class="m">300</span><span class="p">,</span><span class="w"> </span><span class="m">366</span><span class="p">,</span><span class="w"> </span><span class="m">264</span><span class="p">,</span><span class="w"> </span><span class="m">662</span><span class="p">,</span><span class="w"> </span><span class="m">312</span><span class="p">,</span><span class="w"> </span><span class="m">430</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+<section id="pivot-longer">
+<h3><code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code><a class="headerlink" href="#pivot-longer" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code> function lets us switch <em>from wide to long</em> data formats. As an example, we can start with these made-up data of means and medians from three conditions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">rt_summ</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span>
+<span class="w">    </span><span class="n">cond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="w"> </span><span class="s">"B"</span><span class="p">,</span><span class="w"> </span><span class="s">"C"</span><span class="p">),</span>
+<span class="w">    </span><span class="n">mean_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">470.9</span><span class="p">,</span><span class="w"> </span><span class="m">686.30</span><span class="p">,</span><span class="w"> </span><span class="m">347.37</span><span class="p">),</span>
+<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">422.32</span><span class="p">,</span><span class="w"> </span><span class="m">597.9</span><span class="p">,</span><span class="w"> </span><span class="m">314.89</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>These data show two different estimators of the average response time - the mean and median. Let’s imagine that we want all the averages in one column, <code class="docutils literal notranslate"><span class="pre">estimate</span></code>, while a new column (<code class="docutils literal notranslate"><span class="pre">type</span></code>) will tell us what kind of average we have. We can use <code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code> to do this.</p>
+<p>The main two parameters of <code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code> are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cols</span></code> - the columns to pivot into long format</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">names_to</span></code> - the name of the new column that should tell us what kind of average we have</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values_to</span></code> - the name of the new column that should give us the actual values</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">rt_summ</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">mean_rt</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="p">),</span><span class="w"> </span><span class="n">names_to</span><span class="o">=</span><span class="s">"type"</span><span class="p">,</span><span class="w"> </span><span class="n">values_to</span><span class="o">=</span><span class="s">"estimate"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>cond</th><th scope=col>type</th><th scope=col>estimate</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>A</td><td>mean_rt  </td><td>470.90</td></tr>
+	<tr><td>A</td><td>median_rt</td><td>422.32</td></tr>
+	<tr><td>B</td><td>mean_rt  </td><td>686.30</td></tr>
+	<tr><td>B</td><td>median_rt</td><td>597.90</td></tr>
+	<tr><td>C</td><td>mean_rt  </td><td>347.37</td></tr>
+	<tr><td>C</td><td>median_rt</td><td>314.89</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<br>
+</section>
+<section id="id2">
+<h3>Check your Knowledge!<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Starting with the dataframe below:</p>
+<ol class="arabic simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code> to reformat the dataframe into the <a class="reference internal" href="#long-format-example"><span class="xref myst">long format example shown earlier</span></a>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> to calculate each participant’s overall average (across both conditions).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">rt_wide</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"s01"</span><span class="p">,</span><span class="w"> </span><span class="s">"s02"</span><span class="p">,</span><span class="w"> </span><span class="s">"s03"</span><span class="p">,</span><span class="w"> </span><span class="s">"s04"</span><span class="p">),</span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">240</span><span class="p">,</span><span class="w"> </span><span class="m">300</span><span class="p">,</span><span class="w"> </span><span class="m">264</span><span class="p">,</span><span class="w"> </span><span class="m">312</span><span class="p">),</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">542</span><span class="p">,</span><span class="w"> </span><span class="m">366</span><span class="p">,</span><span class="w"> </span><span class="m">662</span><span class="p">,</span><span class="w"> </span><span class="m">430</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bonus-discussion-of-tidyverse">
+<h2>Bonus: Discussion of Tidyverse<a class="headerlink" href="#bonus-discussion-of-tidyverse" title="Link to this heading">#</a></h2>
+<p>One of the advantages of using <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> packages like <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> and <code class="docutils literal notranslate"><span class="pre">tidyr</span></code> is that they are arguably more readable. For instance, consider this example code using pipes from earlier in this chapter:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">final_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">starwars</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">homeworld</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">"Alderaan"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">height_inches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="m">2.54</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">height_inches</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is how we would have to write this in base R:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">final_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">starwars</span>
+<span class="n">final_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">final_data</span><span class="p">[</span><span class="n">final_data</span><span class="o">$</span><span class="n">homeworld</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">"Alderaan"</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
+<span class="n">final_data</span><span class="o">$</span><span class="n">height_inches</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">final_data</span><span class="o">$</span><span class="n">height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2.54</span>
+<span class="n">final_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">final_data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span><span class="w"> </span><span class="s">"height"</span><span class="p">,</span><span class="w"> </span><span class="s">"height_inches"</span><span class="p">)]</span>
+<span class="n">final_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">final_data</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">final_data</span><span class="o">$</span><span class="n">height</span><span class="p">),</span><span class="w"> </span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Despite the advantage in readability, the <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> approach is also often criticised for issues like ambiguity. For example, <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> code can be inherently ambiguous when read by a human. Should the values for the new column come from the variable we created called <code class="docutils literal notranslate"><span class="pre">height</span></code>, or from the existing column in the <code class="docutils literal notranslate"><span class="pre">starwars</span></code> dataframe, which is also called <code class="docutils literal notranslate"><span class="pre">height</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">height</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+<span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+<span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span>
+<span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span>
+<span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span>
+<span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+
+<span class="n">new_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">new_column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As it happens, <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> will check the current dataframe for variables first, and then check variables in the environment, so that the new column’s values will be identical to <code class="docutils literal notranslate"><span class="pre">starwars$height</span></code>. The base R example from earlier doesn’t suffer from this problem because whenever we refer to variables in the dataframe, we are explicit with <code class="docutils literal notranslate"><span class="pre">$</span></code> and <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
+<p>If you interested in reading more, Norman Matloff has shared a well considered criticism of the <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> approach here: <a class="reference external" href="https://github.com/matloff/TidyverseSkeptic/blob/master/READMEFull.md">TidyverseSkeptic</a></p>
+<p>You can always use personal preference when writing code. I would argue that <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> and <code class="docutils literal notranslate"><span class="pre">tidyr</span></code> provide convenient and readable code for data wrangling. However, it’s also important to recognise the shortcomings of the <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> approach. Learning base R, <em>as well</em> as the tidier approaches, can set you up with a much stronger understanding of R, and provide skills that transfer well to other programming languages that are becoming increasingly relevant in Psychology (e.g., <code class="docutils literal notranslate"><span class="pre">python</span></code>).</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "JackEdTaylor/expra-wise25",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data_wrangling_1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Wrangling 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data_vis_1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Visualisation 1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipes">Pipes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a">a)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b">b)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#c">c)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#d">d)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-and-long-data-formatting">Wide and Long Data Formatting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-format-example">Wide Format Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#long-format-example">Long Format Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivot-wider"><code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your Knowledge!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivot-longer"><code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-discussion-of-tidyverse">Bonus: Discussion of Tidyverse</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jack Taylor
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

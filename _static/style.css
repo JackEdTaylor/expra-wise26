@@ -1,0 +1,23 @@
+/* left-align logo */
+.navbar-brand {
+    align-items: start;
+}
+
+/* make logo smaller */
+.navbar-brand img {
+    max-width: 75%;
+}
+
+/* support sidebar that is smaller than the default cutoff */
+.bd-sidebar-primary {
+    flex-basis: 17%;
+}
+
+/* semantic colors used in the light and dark themes */
+html[data-theme="light"] {
+    --pst-color-table-row-hover-bg: #e0edff
+}
+html[data-theme="dark"] {
+    --pst-color-table-row-hover-bg: #281747
+}
+

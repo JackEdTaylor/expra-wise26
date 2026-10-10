@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ExPra Student Guide &#8212; ExPra Winter 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=bb6542e3" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'general/student-guide';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://jackedtaylor.github.io/expra-wise25/general/student-guide.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AI Tools" href="gen_ai.html" />
+    <link rel="prev" title="Assignments" href="assignments.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="ExPra Winter 2025 - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="ExPra Winter 2025 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schedule.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reading.html">Reading</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">General Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/empirical_research.html">Empirical Research</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../introduction/ethics.html">Ethics and Data Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/cogneuro_lang.html">Cog. Neuro. of Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/open_science.html">Open Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/ai.html">Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/literature.html">Literature Search and Reference Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/writing.html">Scientific Writing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/communication.html">Scientific Communication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/glm.html">The General Linear Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_wrangling_1.html">Data Wrangling 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_wrangling_2.html">Data Wrangling 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_vis_1.html">Data Visualisation 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/data_vis_2.html">Data Visualisation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_participate.html">Participate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_analyse.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_feedback.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/conducting.html">Conducting Experimental Sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/analysis.html">Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/posters.html">Posters</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cognitive Brain Imaging</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cbi/meeg.html">Introduction to EEG &amp; MEG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cbi/mri.html">Introduction to (f)MRI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="assignments.html">Assignments</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ExPra Student Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gen_ai.html">AI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CoC.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/edit/master/lecture/general/student-guide.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/issues/new?title=Issue%20on%20page%20%2Fgeneral/student-guide.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/general/student-guide.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ExPra Student Guide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-and-objectives">Overview and objectives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-expra">What is EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-goals-of-expra">What are the goals of EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#who-can-participate-in-expra">Who can participate in EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-credit-points-will-i-get-for-completing-the-expra">How many credit points will I get for completing the EXPRA?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-and-expectations">Requirements and Expectations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-i-have-to-do-to-pass-expra">What do I have to do to pass EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-knowledge-is-expected-of-me-in-the-expra">What knowledge is expected of me in the EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-use-ai-tools-to-write-code-and-reports-in-the-expra">Can I use AI tools to write code and reports in the EXPRA?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#written-assignments">Written assignments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-expra-report-and-how-is-it-supposed-to-look">What is the EXPRA report and how is it supposed to look?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-demo-report-and-how-is-it-supposed-to-look">What is the DEMO report and how is it supposed to look?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-difference-between-the-demo-and-the-final-expra-report">What is the difference between the DEMO and the final EXPRA report?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-resources-and-platforms">Technical resources and platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-i-get-software-required-for-the-expra">Where do I get software required for the EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-share-study-materials-via-lifos">How do I share study materials via LIFOS?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-participation">Study Participation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-i-find-expra-studies-to-participate-in">Where do I find EXPRA studies to participate in?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-collect-the-10-e">How do I collect the 10 E?</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="expra-student-guide">
+<h1>ExPra Student Guide<a class="headerlink" href="#expra-student-guide" title="Link to this heading">#</a></h1>
+<p>As EXPRA begins, we strongly recommend that you read the following information.</p>
+<section id="overview-and-objectives">
+<h2>Overview and objectives<a class="headerlink" href="#overview-and-objectives" title="Link to this heading">#</a></h2>
+<section id="what-is-expra">
+<h3>What is EXPRA?<a class="headerlink" href="#what-is-expra" title="Link to this heading">#</a></h3>
+<p>The “EXPRA” (German: Empirisch-experimentelles Praktikum) is a practical, hands-on seminar designed to teach you the theoretical and especially the practical aspects of psychological research. This includes (with varying emphasis in each group):</p>
+<ul class="simple">
+<li><p>coming-up with a research question,</p></li>
+<li><p>formulating hypotheses,</p></li>
+<li><p>designing (and programming) an experiment to test these hypotheses,</p></li>
+<li><p>collecting, working with, and analysing data,</p></li>
+<li><p>presenting and discussing your research, and</p></li>
+<li><p>writing a scientific report on your project.</p></li>
+</ul>
+<p>At the core of EXPRA is the idea that you work on a current research question in small groups under close supervision by a researcher of that field. Very often, the experiment you are carrying out will directly or indirectly feed into the work of the respective research unit. You will thus not only learn to use psychological research methods but also gain insights into the research currently carried out at your institute.</p>
+</section>
+<section id="what-are-the-goals-of-expra">
+<h3>What are the goals of EXPRA?<a class="headerlink" href="#what-are-the-goals-of-expra" title="Link to this heading">#</a></h3>
+<p>At the end of EXPRA, you should have learned how to</p>
+<ul class="simple">
+<li><p>critically read, search for and discuss scientific literature,</p></li>
+<li><p>design an experiment and “think like a scientist”,</p></li>
+<li><p>preregister your project,</p></li>
+<li><p>carry out psychological research,</p></li>
+<li><p>analyse and interpret data using R, and</p></li>
+<li><p>communicate your research projects in an oral presentation, scientific poster session, and experimental report</p></li>
+</ul>
+</section>
+<section id="who-can-participate-in-expra">
+<h3>Who can participate in EXPRA?<a class="headerlink" href="#who-can-participate-in-expra" title="Link to this heading">#</a></h3>
+<p>To be allowed to participate in EXPRA, you must be enrolled in a psychology bachelor’s programme and have passed modules 1, 2 and 7 (PsyBSc1: Einführung in die Psychologie als empirische Wissenschaft, PsyBSc2: Statistik I, PsyBSc7: Statistik II). <strong>Students who took the Statistik II exam (PsyBSc7) but haven’t received their grade yet may participate until the grades are officially announced by the examination office. However, once the grades are announced, those students who failed the exam cannot continue to participate in EXPRA.</strong></p>
+</section>
+<section id="how-many-credit-points-will-i-get-for-completing-the-expra">
+<h3>How many credit points will I get for completing the EXPRA?<a class="headerlink" href="#how-many-credit-points-will-i-get-for-completing-the-expra" title="Link to this heading">#</a></h3>
+<p>You will receive 8 credit points (CPs) for successfully completing the EXPRA and submitting an EXPRA report. Eight CPs equal 240 hours of work, meaning roughly 80 hours per month in a three-month semester. The EXPRA is therefore among the seminars requiring the most work in your bachelor, but you will get rewarded with a bunch of CPs and hands-on scientific experience.</p>
+</section>
+</section>
+<section id="requirements-and-expectations">
+<h2>Requirements and Expectations<a class="headerlink" href="#requirements-and-expectations" title="Link to this heading">#</a></h2>
+<section id="what-do-i-have-to-do-to-pass-expra">
+<h3>What do I have to do to pass EXPRA?<a class="headerlink" href="#what-do-i-have-to-do-to-pass-expra" title="Link to this heading">#</a></h3>
+<p>To pass EXPRA, you have to</p>
+<ul class="simple">
+<li><p>actively participate in the sessions and meetings with your instructors,</p></li>
+<li><p>carry out tasks required of you in time (e.g., reading literature, piloting the experiment,
+collecting stimuli),</p></li>
+<li><p>preregister your study and make study materials available on LIFOS (see below),</p></li>
+<li><p>submit a demo report as a group (not graded),</p></li>
+<li><p>participate in experiments of other EXPRA groups (“collect 10 E”, see below),</p></li>
+<li><p>collect data for your project from fellow students, friends, family, flat mates, etc.,</p></li>
+<li><p>analyse your data using R,</p></li>
+<li><p>present your research results in one of the sessions, and</p></li>
+<li><p>prepare a scientific poster and present it to other students in the poster session.</p></li>
+</ul>
+<p>Lastly, you’ll have to write a scientific report (the “<strong>EXPRA report</strong>”, see below) on your project. This report will be graded and will determine your grade for the entire EXPRA (module PsyBSc10).</p>
+</section>
+<section id="what-knowledge-is-expected-of-me-in-the-expra">
+<h3>What knowledge is expected of me in the EXPRA?<a class="headerlink" href="#what-knowledge-is-expected-of-me-in-the-expra" title="Link to this heading">#</a></h3>
+<p>Since passing statistics I (<a class="reference external" href="https://pandar.netlify.app/lehre/main/#statistik-i">PsyBSc2</a>) and II (<a class="reference external" href="https://pandar.netlify.app/lehre/main/#statistik-ii">PsyBSc7</a>) is a prerequisite for participating in the EXPRA, <strong>we assume that you have understood and can carry out basic statistical analyses in R</strong>. This includes (among other things) reading data into R, calculating descriptive statistics, aggregating data, correlation and regression analyses, dependent and independent sample t-tests, repeated-measure ANOVAs, and assumption tests for the different procedures.</p>
+<p>If you need a brush-up for these topics, have a look at the PsyBSc2 and PsyBSc7 course materials and work through them before the EXPRA begins. <strong>Important: The EXPRA will NOT include a repetition of basic statistics!</strong> However, if you run into troubles using R, Martin Schultze’s department is offering an “R Sprechstunde” for EXPRA students. More information on this will be shared at the beginning of the semester.</p>
+</section>
+<section id="can-i-use-ai-tools-to-write-code-and-reports-in-the-expra">
+<h3>Can I use AI tools to write code and reports in the EXPRA?<a class="headerlink" href="#can-i-use-ai-tools-to-write-code-and-reports-in-the-expra" title="Link to this heading">#</a></h3>
+<p>We generally allow the use of AI tools in the EXPRA to rephrase and review text (e.g., using DeepL Write, Grammarly), translate text (DeepL Translator), search for literature and summarize articles (e.g., Elicit), brainstorm on a topic (e.g., ChatGPT), writing code (e.g., GitHub Copilot) and image generation (e.g., DALL-E). Note, however, the following rules:</p>
+<ol class="arabic">
+<li><p>Your own contribution in writing the reports must exceed the contribution by AI (i.e.,
+having an AI tool write entire parts of your reports is not acceptable).</p></li>
+<li><p>You are responsible for the reports you submit – we strongly suggest that you double
+check any output (text, code, etc.) created and sources cited by AI. An unreflective
+use of AI is likely going to result in errors.</p></li>
+<li><p>AI tools cannot be used as a citable source (i.e., “According to ChatGPT (2024),
+priming is a psychological phenomenon…”). Any claims you make must be supported
+by citations of peer-reviewed publications.</p></li>
+<li><p>You must provide a list of AI tools you used at the end of your report (after the
+reference list). This list should include:</p>
+<ul class="simple">
+<li><p>Name, version and provider of the tool (company, organization or person that offers or programmed the tool)</p></li>
+<li><p>Purpose of using the tool (e.g., translation, rephrasing, grammar/spelling check)</p></li>
+<li><p>Affected text segments (e.g., “Discussion section” or “p. 14-15”)</p></li>
+<li><p>Date of content generation</p></li>
+<li><p>Address (URL of the tool)</p></li>
+</ul>
+</li>
+<li><p>In your declaration of originality (<em>Eigenständigkeitserklärung</em>), you must include the
+following:</p>
+<blockquote>
+<div><p><em>I am aware that the use of machine-generated texts does not guarantee the quality of content and text. I therefore declare that I have only used text-generating AI tools as an aid and that my creative influence predominates in this work. Furthermore, I declare that I have documented all text passages that were written with the aid of AI-supported programs accordingly and provided a reference to the AI-supported program used. I declare that I have not used any AI writing tools whose use the examiner has explicitly excluded in writing.</em></p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+<section id="written-assignments">
+<h2>Written assignments<a class="headerlink" href="#written-assignments" title="Link to this heading">#</a></h2>
+<section id="what-is-the-expra-report-and-how-is-it-supposed-to-look">
+<h3>What is the EXPRA report and how is it supposed to look?<a class="headerlink" href="#what-is-the-expra-report-and-how-is-it-supposed-to-look" title="Link to this heading">#</a></h3>
+<p>The EXPRA report is the final exam (“Prüfungsleistung”) you’ll have to write on your research project. This report will be graded and will determine your grade for the EXPRA (module
+PsyBSc10).</p>
+<p>Each student writes their own EXPRA report on the research topic they worked on during the EXPRA. Note that the EXPRA projects are usually carried out in groups, but each student must submit their own, individual EXPRA report (no group work in the final reports, no identical titles, figures, etc.)!</p>
+<p><strong>The EXPRA reports must</strong></p>
+<ul class="simple">
+<li><p>be written in English (unless stated otherwise),</p></li>
+<li><p>be ca. 15 pages long (excluding table of contents, appendix, but including references),</p></li>
+<li><p>be formatted in Times New Roman, size 12, double-spaced,</p></li>
+<li><p>follow <a class="reference external" href="https://apastyle.apa.org/">APA Style</a> (publication manual, 7th edition) if not stated otherwise,</p></li>
+<li><p>include a link to the preregistration (e.g., on <a class="reference external" href="https://aspredicted.org/">aspredicted</a>),</p></li>
+<li><p>include an R script containing code of all analyses you carried out (this can be
+submitted as a separate file along with the EXPRA report), and</p></li>
+<li><p>a signed (!) declaration of originality on the last page of the report (see below).</p></li>
+</ul>
+<p>To make grading of the EXPRA reports transparent, you will find the <a class="reference download internal" download="" href="../_downloads/cfbc7ae046ea8fe35ff07f7620e877bb/EXPRA_Grading_criteria.pdf"><span class="xref download myst">grading criteria here</span></a>.</p>
+<p><strong>The deadline for submitting the EXPRA reports is four weeks after the poster session.</strong>
+The exact date will be announced by your supervisor.</p>
+<p>Students must register their EXPRA reports with the examination office (Prüfungsanmeldung via QIS) and append a signed declaration of originality (Eigenständigkeitserklärung, for a template see <a class="reference external" href="https://www.uni-frankfurt.de/100361739/BSc_MSc_FAQ___April_2021.pdf?#page=4">FAQs by the examination office</a>).</p>
+</section>
+<section id="what-is-the-demo-report-and-how-is-it-supposed-to-look">
+<h3>What is the DEMO report and how is it supposed to look?<a class="headerlink" href="#what-is-the-demo-report-and-how-is-it-supposed-to-look" title="Link to this heading">#</a></h3>
+<p>As an exercise and preparation for the EXPRA reports, we ask groups of students (usually the same groups working on an EXPRA project together) to submit a “demo report” on a demo experiment carried out in class. This is usually a simple, well-established experiment in which all students participate. Your instructor will then show you how to analyse and interpret the data gathered in the demo experiment. Afterwards, you’re supposed to write a short scientific report on that experiment (usually up to 10 pages, for other requirements see EXPRA report above). This report is written as a group, and your instructor will then give you detailed feedback on this demo report to avoid common mistakes when you write your final reports.</p>
+</section>
+<section id="what-is-the-difference-between-the-demo-and-the-final-expra-report">
+<h3>What is the difference between the DEMO and the final EXPRA report?<a class="headerlink" href="#what-is-the-difference-between-the-demo-and-the-final-expra-report" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The demo reports are not graded, the EXPRA reports are.</p></li>
+<li><p>The demo reports are written as a group, whereas each of you must submit your own,
+individual work for the final EXPRA reports!</p></li>
+<li><p>All demo reports are written on the same demo experiment carried out in your class.
+The EXPRA reports will be written about the specific projects you are carrying out with
+your tutors.</p></li>
+<li><p>You will receive extensive feedback on your demo reports to avoid common mistakes
+when you’re writing your EXPRA reports. You will NOT receive feedback again on your
+final reports before they are graded!</p></li>
+</ul>
+</section>
+</section>
+<section id="technical-resources-and-platforms">
+<h2>Technical resources and platforms<a class="headerlink" href="#technical-resources-and-platforms" title="Link to this heading">#</a></h2>
+<section id="where-do-i-get-software-required-for-the-expra">
+<h3>Where do I get software required for the EXPRA?<a class="headerlink" href="#where-do-i-get-software-required-for-the-expra" title="Link to this heading">#</a></h3>
+<p>You’ll need to have a current version of R and <a class="reference external" href="https://posit.co/download/rstudio-desktop/#download">RStudio</a> installed on your laptops to analyse your data. See <a class="reference external" href="https://rstudio-education.github.io/hopr/starting.html">here</a> for an installation guide.</p>
+<p>You’ll also need a presentation software and a design program of your choice to create your scientific posters (PowerPoint does the job, but there are free alternatives like <a class="reference external" href="https://inkscape.org/">Inkscape</a>, <a class="reference external" href="https://www.scribus.net/">Scribus</a>, etc.).</p>
+<p>We further highly recommend using a reference management software such as <a class="reference external" href="https://www.zotero.org/">Zotero</a>, Citavi (<a class="reference external" href="https://www.ub.uni-frankfurt.de/literaturverwaltung/citavi.html">free as long as you are a student</a>) or Mendeley for your reports. Most of these tools have plugins for Microsoft Word which makes in-text citations and creating reference lists a matter of a few clicks. Ask your instructor which software they use to get help.</p>
+</section>
+<section id="how-do-i-share-study-materials-via-lifos">
+<h3>How do I share study materials via LIFOS?<a class="headerlink" href="#how-do-i-share-study-materials-via-lifos" title="Link to this heading">#</a></h3>
+<p>As an exercise in open science practices, you are required to share your study materials via <a class="reference external" href="https://lifos.uni-frankfurt.de/users/sign_in">LIFOS</a> (local infrastructure for open science for psychology students at Goethe University). For more info on LIFOS see <a class="reference external" href="https://lifos.uni-frankfurt.de/welcome-to-lifos/LIFOS">here</a>. Note that sharing materials is part of the <a class="reference download internal" download="" href="../_downloads/cfbc7ae046ea8fe35ff07f7620e877bb/EXPRA_Grading_criteria.pdf"><span class="xref download myst">grading criteria</span></a>. The deadline for uploading materials is the same as for submitting the EXPRA reports.</p>
+<p>Specifically, you should upload:</p>
+<ul class="simple">
+<li><p>Your preregistration (filling out the template provided by LIFOS as a group; <strong>mandatory</strong>)</p></li>
+<li><p>Materials (e.g., stimuli you collected; <strong>optional</strong>)</p></li>
+<li><p>Analysis scripts (each student should upload their own analysis script; <strong>mandatory</strong>)</p></li>
+<li><p>Data (<strong>anonymized</strong>; one data file for the whole group unless you worked with different datasets; <strong>mandatory</strong> except for data that may not be shared for legal reasons, see <a class="reference external" href="https://pandar.netlify.app/lifos/grundlagen/datenschutz-en/">here</a>)</p></li>
+<li><p>Manuscripts (you may upload your own manuscript <strong>after the EXPRA report submission deadline</strong>; voluntary, manuscript <strong>can be anonymized</strong>)</p></li>
+</ul>
+</section>
+</section>
+<section id="study-participation">
+<h2>Study Participation<a class="headerlink" href="#study-participation" title="Link to this heading">#</a></h2>
+<section id="where-do-i-find-expra-studies-to-participate-in">
+<h3>Where do I find EXPRA studies to participate in?<a class="headerlink" href="#where-do-i-find-expra-studies-to-participate-in" title="Link to this heading">#</a></h3>
+<p>All EXPRA studies will be advertised on <a class="reference external" href="https://uni-frankfurt.sona-systems.com/Default.aspx?ReturnUrl=%2f">SONA</a> and can be identified by the “[E]” tag at the end of the study name. You will need a student account to access SONA and sign-up for studies (contact <a class="reference external" href="mailto:sona-support&#37;&#52;&#48;dlist&#46;server&#46;uni-frankfurt&#46;de">sona-support<span>&#64;</span>dlist<span>&#46;</span>server<span>&#46;</span>uni-frankfurt<span>&#46;</span>de</a> in case you forgot your account details).</p>
+<p>You will receive credits (<a class="reference external" href="https://www.psychologie.uni-frankfurt.de/157444303/VPM?">Versuchspersonenminuten</a>) for all EXPRA experiments. This will automatically be taken care of by SONA.</p>
+</section>
+<section id="how-do-i-collect-the-10-e">
+<h3>How do I collect the 10 E?<a class="headerlink" href="#how-do-i-collect-the-10-e" title="Link to this heading">#</a></h3>
+<p>To ensure that all groups get the chance to collect enough data for their experiments, each student is required to participate in experiments from other EXPRA groups (“collect 10 E”). To do this, you will receive a 6-digit number code at the beginning of EXPRA. In each EXPRA experiment (those identified with the “[E]” tag on SONA), you will be asked to enter this code to count towards the 10 E. At the end of the semester, we check that all students participated in EXPRA experiments and collected 10 E. Note that longer experiments and experiments taking place on campus will be rewarded with more Es than shorter experiments and experiments carried out online.</p>
+<p>Note that you will of course still receive credits (Versuchspersonenminuten) in addition to the “E” when you participate in EXPRA experiments. You can also participate in more EXPRA experiments if you still need to collect VPM. Note, however, that you will also have to participate in EXPRA studies even if you already finished collecting your 1800 VPM.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "JackEdTaylor/expra-wise25",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./general"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="assignments.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Assignments</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="gen_ai.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">AI Tools</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-and-objectives">Overview and objectives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-expra">What is EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-goals-of-expra">What are the goals of EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#who-can-participate-in-expra">Who can participate in EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-credit-points-will-i-get-for-completing-the-expra">How many credit points will I get for completing the EXPRA?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-and-expectations">Requirements and Expectations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-i-have-to-do-to-pass-expra">What do I have to do to pass EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-knowledge-is-expected-of-me-in-the-expra">What knowledge is expected of me in the EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-use-ai-tools-to-write-code-and-reports-in-the-expra">Can I use AI tools to write code and reports in the EXPRA?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#written-assignments">Written assignments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-expra-report-and-how-is-it-supposed-to-look">What is the EXPRA report and how is it supposed to look?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-demo-report-and-how-is-it-supposed-to-look">What is the DEMO report and how is it supposed to look?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-difference-between-the-demo-and-the-final-expra-report">What is the difference between the DEMO and the final EXPRA report?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-resources-and-platforms">Technical resources and platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-i-get-software-required-for-the-expra">Where do I get software required for the EXPRA?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-share-study-materials-via-lifos">How do I share study materials via LIFOS?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-participation">Study Participation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-i-find-expra-studies-to-participate-in">Where do I find EXPRA studies to participate in?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-collect-the-10-e">How do I collect the 10 E?</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jack Taylor
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

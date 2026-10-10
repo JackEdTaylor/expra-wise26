@@ -1,0 +1,2102 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cog. Neuro. of Language &#8212; ExPra Winter 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=bb6542e3" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/cogneuro_lang';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://jackedtaylor.github.io/expra-wise25/introduction/cogneuro_lang.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Open Science" href="open_science.html" />
+    <link rel="prev" title="Ethics and Data Privacy" href="ethics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="ExPra Winter 2025 - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="ExPra Winter 2025 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/schedule.html">Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/reading.html">Reading</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">General Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="empirical_research.html">Empirical Research</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="ethics.html">Ethics and Data Privacy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cog. Neuro. of Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai.html">Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">Literature Search and Reference Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing.html">Scientific Writing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication.html">Scientific Communication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_wrangling_1.html">Data Wrangling 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_wrangling_2.html">Data Wrangling 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_vis_1.html">Data Visualisation 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_vis_2.html">Data Visualisation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_participate.html">Participate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_analyse.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_feedback.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/conducting.html">Conducting Experimental Sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/analysis.html">Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/posters.html">Posters</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cognitive Brain Imaging</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cbi/meeg.html">Introduction to EEG &amp; MEG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cbi/mri.html">Introduction to (f)MRI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/student-guide.html">ExPra Student Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/gen_ai.html">AI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/CoC.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise25/master?urlpath=tree/lecture/introduction/cogneuro_lang.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/edit/master/lecture/introduction/cogneuro_lang.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JackEdTaylor/expra-wise25/issues/new?title=Issue%20on%20page%20%2Fintroduction/cogneuro_lang.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/introduction/cogneuro_lang.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Cog. Neuro. of Language</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-knowledge">Test your Knowledge!</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cog-neuro-of-language">
+<h1>Cog. Neuro. of Language<a class="headerlink" href="#cog-neuro-of-language" title="Link to this heading">#</a></h1>
+<section id="slides">
+<h2>Slides<a class="headerlink" href="#slides" title="Link to this heading">#</a></h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQFrh2HmF_tI1SV-X1zGdRIjjwvUU68Zolhp_omaCLcY957gJRIco7X7QYQJAzghLsi7_ifsyGd-7lD/embed?start=false&loop=false" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<h5>
+<a href=https://docs.google.com/presentation/d/1zNBn8ERgpMAkzZiAgOS2pOw2YBESAo_mJfwDVj0Eo9g/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/1zNBn8ERgpMAkzZiAgOS2pOw2YBESAo_mJfwDVj0Eo9g/export/odp><i class="fa-solid fa-file"></i> Download .odp</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/1zNBn8ERgpMAkzZiAgOS2pOw2YBESAo_mJfwDVj0Eo9g/export/pptx><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</a>
+</h5></section>
+<section id="test-your-knowledge">
+<h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="hfGxWolMkgWQ" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
+#hfGxWolMkgWQ {
+   --jq-multiple-choice-bg: #392061;
+   --jq-mc-button-bg: #fafafa;
+   --jq-mc-button-border: #e0e0e0e0;
+   --jq-mc-button-inset-shadow: #555555;
+   --jq-many-choice-bg: #f75c03ff;
+   --jq-numeric-bg: #392061ff;
+   --jq-numeric-input-bg: #c0c0c0;
+   --jq-numeric-input-label: #101010;
+   --jq-numeric-input-shadow: #999999;
+   --jq-string-bg: #4c1a57;
+   --jq-incorrect-color: #c80202;
+   --jq-correct-color: #009113;
+   --jq-text-color: #fafafa;
+   --jq-link-color: #9abafa;
+}
+
+.Quiz {
+    max-width: 600px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+/*    margin-bottom: 15px;*/
+/*    padding-bottom: 4px;*/
+    padding-top: 4px;
+    line-height: 1.1;
+    font-size: 16pt;
+    border-radius: inherit;
+}
+
+.QuizCode {
+    font-size: 14pt;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.QuizCode>pre {
+    padding: 4px;
+}
+
+.Quiz code {
+    background-color: lightgray;
+    color: black;
+}
+
+.Quiz .QuizCode code {
+    background-color: inherit;
+    color: inherit;
+}
+
+
+.Quiz .MCButton code {
+    background-color: inherit;
+    color: inherit;
+}
+
+.MCButton .QuizCode {
+    text-align: left;
+}
+
+
+.Quiz .JQLink {
+    color: var(--jq-link-color) !important;
+    text-decoration: underline;
+}
+
+
+
+.Answer {
+    border-radius: inherit;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 0;
+}
+
+@media only screen and (max-width:480px) {
+    .Answer {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.Feedback {
+    font-size: 16pt;
+    text-align: center;
+/*    min-height: 2em;*/
+}
+
+.Input {
+    align: left;
+    font-size: 20pt;
+}
+
+.Input-text {
+    display: block;
+    margin: 10px;
+    color: inherit;
+    width: unset;
+    min-width: 140px;
+    max-width: 93%;
+    field-sizing: content;
+    background-color: var(--jq-numeric-input-bg);
+    color: var(--jq-text-color);
+    padding: 5px;
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: inherit;
+    line-height: 20pt;
+    border: none;
+    border-radius: 0.2rem;
+    transition: box-shadow 0.1s);
+}
+
+.Input-text:focus {
+    /*outline: none;*/
+    background-color: var(--jq-numeric-input-bg);
+    box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
+}
+
+.MCButton {
+    background: var(--jq-mc-button-bg);
+    border: 1px solid var(--jq-mc-button-border);
+    border-radius: inherit;
+    color: #333333;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MCButton p {
+    color: inherit;
+}
+
+.MultipleChoiceQn {
+    padding: 10px;
+    background: var(--jq-multiple-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.ManyChoiceQn {
+    padding: 10px;
+    background: var(--jq-many-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.NumericQn {
+    background: var(--jq-numeric-bg);
+    border-radius: inherit;
+    color: var(--jq-text-color);
+    padding: 10px;
+}
+
+.NumericQn p {
+    color: inherit;
+}
+
+.StringQn {
+    background: var(--jq-string-bg);
+    border-radius: inherit;
+    color: var(--jq-text-color);
+    padding: 10px;
+}
+
+.StringQn p {
+    color: inherit;
+}
+
+
+.InpLabel {
+    color: var(--jq-numeric-input-label);
+    float: left;
+    font-size: 15pt;
+    line-height: 34px;
+    margin-right: 10px;
+}
+
+.incorrect {
+    color: var(--jq-incorrect-color);
+}
+
+.correct {
+    color: var(--jq-correct-color);
+}
+
+.correctButton {
+    /*
+    background: var(--jq-correct-color);
+   */
+    animation: correct-anim 0.6s ease;
+    animation-fill-mode: forwards;
+    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
+    color: var(--jq-text-color);
+    /*outline: none;*/
+}
+
+.incorrectButton {
+    animation: incorrect-anim 0.8s ease;
+    animation-fill-mode: forwards;
+    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
+    color: var(--jq-text-color);
+    /*outline: none;*/
+}
+
+@keyframes incorrect-anim {
+    100% {
+        background-color: var(--jq-incorrect-color);
+    }
+}
+
+@keyframes correct-anim {
+    100% {
+        background-color: var(--jq-correct-color);
+    }
+}
+</style></div><script type="application/javascript">var questionshfGxWolMkgWQ=[
+    {
+        "question": "Which psychological approach focuses on observable relationships between the participant and their environment?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Cognitive Psychology",
+                "correct": false,
+                "feedback": "Incorrect: Cognitive psychology is more concerned with inferring how mental processes work."
+            },
+            {
+                "answer": "Behaviourism",
+                "correct": true,
+                "feedback": "Correct! Behaviourism focuses on behaviour as it is directly observable."
+            },
+            {
+                "answer": "Neuroscience",
+                "correct": false,
+                "feedback": "Incorrect: neuroscience is the study of neurons and neural circuits."
+            }
+        ]
+    },
+    {
+        "question": "Which side of the brain is language processing usually localised to?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Left",
+                "correct": true
+            },
+            {
+                "answer": "Right",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is true of language lateraliation and handedness?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Left-handed participants have a right-lateralised language network.",
+                "correct": false,
+                "feedback": "Most left-handed people have a left-lateralised language network."
+            },
+            {
+                "answer": "Regardless of handedness, most people have a left-lateralised language network",
+                "correct": true
+            },
+            {
+                "answer": "Left-handed participants are more likely to have a right- or ambi-lateralised language network.",
+                "correct": true
+            },
+            {
+                "answer": "Language processing is equally dominant between the left and right hemispheres.",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "In the classical Wernicke-Geschwind model, which brain area is associated with language production?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Broca's Area (LIFG)",
+                "correct": true
+            },
+            {
+                "answer": "Wernicke's Area",
+                "correct": false
+            },
+            {
+                "answer": "Arcuate Fasciculus",
+                "correct": false
+            },
+            {
+                "answer": "Visual Word Form Area",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "What is orthography?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "A script capable of representing natural language.",
+                "correct": true
+            },
+            {
+                "answer": "The visual representation of language.",
+                "correct": false,
+                "feedback": "Orthography is usually visual, but can also include scripts in non-visual modalities like Braille."
+            },
+            {
+                "answer": "The sound-based representation of language",
+                "correct": false,
+                "feedback": "This is closer to a definition of 'phonology'"
+            },
+            {
+                "answer": "The study of orthodontics.",
+                "correct": false
+            }
+        ]
+    }
+];
+
+if (typeof Question === 'undefined') {
+// Make a random ID
+function makeid(length) {
+    var result = [];
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+    }
+    return result.join('');
+}
+// Convert LaTeX delimiters and markdown links to HTML
+function jaxify(string) {
+    let mystring = string;
+    let count = 0, count2 = 0;
+    let loc = mystring.search(/([^\\]|^)(\$)/);
+    let loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+    while (loc >= 0 || loc2 >= 0) {
+        if (loc2 >= 0) {
+            mystring = mystring.replace(/([^\\]|^)(\$\$)/, count2 % 2 ? '$1\\]' : '$1\\[');
+            count2++;
+        } else {
+            mystring = mystring.replace(/([^\\]|^)(\$)/, count % 2 ? '$1\\)' : '$1\\(');
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+    }
+    // Replace markdown links
+    mystring = mystring.replace(/<http(.*?)>/g, '<a href="http$1" target="_blank" class="Quiz JQLink">http$1</a>');
+    mystring = mystring.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="Quiz JQLink">$1</a>');
+    return mystring;
+}
+
+// Base class for question types
+class Question {
+    static registry = {};
+    static register(type, cls) {
+        Question.registry[type] = cls;
+    }
+    static create(qa, id, index, options, rootDiv) {
+        const Cls = Question.registry[qa.type];
+        if (!Cls) {
+            console.error(`No question class registered for type "${qa.type}"`);
+            return;
+        }
+        const q = new Cls(qa, id, index, options, rootDiv);
+        q.render();
+    }
+
+    constructor(qa, id, index, options, rootDiv) {
+        this.qa = qa;
+        this.id = id;
+        this.index = index;
+        this.options = options;
+        this.rootDiv = rootDiv;
+        // wrapper
+        this.wrapper = document.createElement('div');
+        this.wrapper.id = `quizWrap${id}`;
+        this.wrapper.className = 'Quiz';
+        this.wrapper.dataset.qnum = index;
+        this.wrapper.style.maxWidth = `${options.maxWidth}px`;
+        rootDiv.appendChild(this.wrapper);
+        // question container
+        this.outerqDiv = document.createElement('div');
+        this.outerqDiv.id = `OuterquizQn${id}${index}`;
+        this.wrapper.appendChild(this.outerqDiv);
+        // question text
+        this.qDiv = document.createElement('div');
+        this.qDiv.id = `quizQn${id}${index}`;
+        if (qa.question) {
+            this.qDiv.innerHTML = jaxify(qa.question);
+            this.outerqDiv.appendChild(this.qDiv);
+        }
+        // code block
+        if (qa.code) {
+            const codeDiv = document.createElement('div');
+            codeDiv.id = `code${id}${index}`;
+            codeDiv.className = 'QuizCode';
+            const pre = document.createElement('pre');
+            const codeEl = document.createElement('code');
+            codeEl.innerHTML = qa.code;
+            pre.appendChild(codeEl);
+            codeDiv.appendChild(pre);
+            this.outerqDiv.appendChild(codeDiv);
+        }
+        // answer container
+        this.aDiv = document.createElement('div');
+        this.aDiv.id = `quizAns${id}${index}`;
+        this.aDiv.className = 'Answer';
+        this.wrapper.appendChild(this.aDiv);
+        // feedback container (append after answers)
+        this.fbDiv = document.createElement('div');
+        this.fbDiv.id = `fb${id}`;
+        this.fbDiv.className = 'Feedback';
+        this.fbDiv.dataset.answeredcorrect = 0;
+    }
+
+    render() {
+        throw new Error('render() not implemented');
+    }
+
+    preserveResponse(val) {
+        if (!this.options.preserveResponses) return;
+        const resp = document.getElementById(`responses${this.rootDiv.id}`);
+        if (!resp) return;
+        const arr = JSON.parse(resp.dataset.responses);
+        arr[this.index] = val;
+        resp.dataset.responses = JSON.stringify(arr);
+        printResponses(resp);
+    }
+
+    typeset(container) {
+        if (typeof MathJax !== 'undefined') {
+            const v = MathJax.version;
+            if (v[0] === '2') {
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+            } else {
+                MathJax.typeset([container]);
+            }
+        }
+    }
+}
+
+// Choose a random subset of an array. Can also be used to shuffle the array
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+}
+
+function printResponses(responsesContainer) {
+    var responses=JSON.parse(responsesContainer.dataset.responses);
+    var stringResponses='<B>IMPORTANT!</B>To preserve this answer sequence for submission, when you have finalized your answers: <ol> <li> Copy the text in this cell below "Answer String"</li> <li> Double click on the cell directly below the Answer String, labeled "Replace Me"</li> <li> Select the whole "Replace Me" text</li> <li> Paste in your answer string and press shift-Enter.</li><li>Save the notebook using the save icon or File->Save Notebook menu item</li></ul><br><br><br><b>Answer String:</b><br> ';
+    console.log(responses);
+    responses.forEach((response, index) => {
+        if (response) {
+            console.log(index + ': ' + response);
+            stringResponses+= index + ': ' + response +"<BR>";
+        }
+    });
+    responsesContainer.innerHTML=stringResponses;
+}
+/* Callback function to determine whether a selected multiple-choice
+   button corresponded to a correct answer and to provide feedback
+   based on the answer */
+function check_mc() {
+    var id = this.id.split('-')[0];
+    //var response = this.id.split('-')[1];
+    //console.log(response);
+    //console.log("In check_mc(), id="+id);
+    //console.log(event.srcElement.id)           
+    //console.log(event.srcElement.dataset.correct)   
+    //console.log(event.srcElement.dataset.feedback)
+
+    var label = event.srcElement;
+    //console.log(label, label.nodeName);
+    var depth = 0;
+    while ((label.nodeName != "LABEL") && (depth < 20)) {
+        label = label.parentElement;
+        console.log(depth, label);
+        depth++;
+    }
+
+
+
+    var answers = label.parentElement.children;
+    //console.log(answers);
+
+    // Split behavior based on multiple choice vs many choice:
+    var fb = document.getElementById("fb" + id);
+
+
+
+    /* Multiple choice (1 answer). Allow for 0 correct
+       answers as an edge case */
+    if (fb.dataset.numcorrect <= 1) {
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            responses[qnum]= response;
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+
+        for (var i = 0; i < answers.length; i++) {
+            var child = answers[i];
+            //console.log(child);
+            child.className = "MCButton";
+        }
+
+
+
+        if (label.dataset.correct == "true") {
+            // console.log("Correct action");
+            if ("feedback" in label.dataset) {
+                fb.innerHTML = jaxify(label.dataset.feedback);
+            } else {
+                fb.innerHTML = "Correct!";
+            }
+            label.classList.add("correctButton");
+
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+
+        } else {
+            if ("feedback" in label.dataset) {
+                fb.innerHTML = jaxify(label.dataset.feedback);
+            } else {
+                fb.innerHTML = "Incorrect -- try again.";
+            }
+            //console.log("Error action");
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+    }
+    else { /* Many choice (more than 1 correct answer) */
+        var reset = false;
+        var feedback;
+         if (label.dataset.correct == "true") {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Correct!";
+            }
+            if (label.dataset.answered <= 0) {
+                if (fb.dataset.answeredcorrect < 0) {
+                    fb.dataset.answeredcorrect = 1;
+                    reset = true;
+                } else {
+                    fb.dataset.answeredcorrect++;
+                }
+                if (reset) {
+                    for (var i = 0; i < answers.length; i++) {
+                        var child = answers[i];
+                        child.className = "MCButton";
+                        child.dataset.answered = 0;
+                    }
+                }
+                label.classList.add("correctButton");
+                label.dataset.answered = 1;
+                fb.className = "Feedback";
+                fb.classList.add("correct");
+
+            }
+        } else {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Incorrect -- try again.";
+            }
+            if (fb.dataset.answeredcorrect > 0) {
+                fb.dataset.answeredcorrect = -1;
+                reset = true;
+            } else {
+                fb.dataset.answeredcorrect--;
+            }
+
+            if (reset) {
+                for (var i = 0; i < answers.length; i++) {
+                    var child = answers[i];
+                    child.className = "MCButton";
+                    child.dataset.answered = 0;
+                }
+            }
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            if (label.dataset.correct == "true") {
+                if (typeof(responses[qnum]) == "object"){
+                    if (!responses[qnum].includes(response))
+                        responses[qnum].push(response);
+                } else{
+                    responses[qnum]= [ response ];
+                }
+            } else {
+                responses[qnum]= response;
+            }
+            console.log(responses);
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End save responses stuff
+
+
+
+        var numcorrect = fb.dataset.numcorrect;
+        var answeredcorrect = fb.dataset.answeredcorrect;
+        if (answeredcorrect >= 0) {
+            fb.innerHTML = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+        } else {
+            fb.innerHTML = feedback + " [" + 0 + "/" + numcorrect + "]";
+        }
+
+
+    }
+
+    if (typeof MathJax != 'undefined') {
+        var version = MathJax.version;
+        console.log('MathJax version', version);
+        if (version[0] == "2") {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        } else if (version[0] == "3") {
+            MathJax.typeset([fb]);
+        }
+    } else {
+        console.log('MathJax not detected');
+    }
+
+}
+
+
+/* Function to produce the HTML buttons for a multiple choice/
+   many choice question  and to update the CSS tags based on
+   the question type */
+function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
+
+    var shuffled;
+    if (shuffle_answers == true) {
+        //console.log(shuffle_answers+" read as true");
+        shuffled = getRandomSubarray(qa.answers, qa.answers.length);
+    } else {
+        //console.log(shuffle_answers+" read as false");
+        shuffled = qa.answers;
+    }
+
+
+    var num_correct = 0;
+
+    shuffled.forEach((item, index, ans_array) => {
+        //console.log(answer);
+
+        // Make label for input element
+        var lab = document.createElement("label");
+        lab.className = "MCButton";
+        lab.id = id + '-' + index;
+        lab.onclick = check_mc;
+
+        // Make input element
+        var inp = document.createElement("input");
+        inp.type = "radio";
+        inp.id = "quizo" + id + index;
+        inp.name = "mcgroup-" + id; // for grouping radios
+        inp.className = "sr-only"; // or "visually-hidden" or whatever you call it
+
+
+        lab.append(inp); // input is now inside the label
+
+        var aSpan = document.createElement('span');
+        if ("answer" in item) {
+            aSpan.innerHTML = jaxify(item.answer);
+        }
+        lab.append(aSpan);
+
+        // Create div for code inside question
+        if ("code" in item) {
+            var codeSpan = document.createElement('span');
+            codeSpan.id = "code" + id + index;
+            codeSpan.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeSpan.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = item.code;
+            lab.append(codeSpan);
+        }
+
+        // Set the data attributes for the answer
+        lab.setAttribute('data-correct', item.correct);
+        if (item.correct) {
+            num_correct++;
+        }
+        if ("feedback" in item) {
+            lab.setAttribute('data-feedback', item.feedback);
+        }
+        lab.setAttribute('data-answered', 0);
+
+        // Only append the label (input is inside)
+        aDiv.append(lab);
+
+
+    });
+
+    if (num_correct > 1) {
+        outerqDiv.className = "ManyChoiceQn";
+    } else {
+        outerqDiv.className = "MultipleChoiceQn";
+    }
+
+    return num_correct;
+
+}
+// Object-oriented wrapper for MC/MANY choice
+class MCQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) { super(qa, id, idx, opts, rootDiv); }
+    render() {
+        //console.log("options.shuffleAnswers " + this.options.shuffleAnswers);
+        const numCorrect = make_mc(
+            this.qa,
+            this.options.shuffleAnswers,
+            this.outerqDiv,
+            this.qDiv,
+            this.aDiv,
+            this.id
+        );
+        if ('answer_cols' in this.qa) {
+            this.aDiv.style.gridTemplateColumns =
+                'repeat(' + this.qa.answer_cols + ', 1fr)';
+        }
+        this.fbDiv.dataset.numcorrect = numCorrect;
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('multiple_choice', MCQuestion);
+Question.register('many_choice', MCQuestion);
+function check_numeric(ths, event) {
+
+    if (event.keyCode === 13) {
+        ths.blur();
+
+        var id = ths.id.split('-')[0];
+
+        var submission = ths.value;
+        if (submission.indexOf('/') != -1) {
+            var sub_parts = submission.split('/');
+            //console.log(sub_parts);
+            submission = sub_parts[0] / sub_parts[1];
+        }
+        //console.log("Reader entered", submission);
+
+        if (("precision" in ths.dataset) && (ths.dataset.precision > 0)) {
+            var precision = ths.dataset.precision;
+            submission = Number(Number(submission).toPrecision(precision));
+        }
+
+
+        //console.log("In check_numeric(), id="+id);
+        //console.log(event.srcElement.id)           
+        //console.log(event.srcElement.dataset.feedback)
+
+        var fb = document.getElementById("fb" + id);
+        fb.style.display = "none";
+        fb.innerHTML = "Incorrect -- try again.";
+
+        var answers = JSON.parse(ths.dataset.answers);
+        //console.log(answers);
+
+        var defaultFB = "Incorrect. Try again.";
+        var correct;
+        var done = false;
+        answers.every(answer => {
+            //console.log(answer.type);
+
+            correct = false;
+            // if (answer.type=="value"){
+            if ('value' in answer) {
+                var value;
+                if ("precision" in ths.dataset) {
+                    value = answer.value.toPrecision(ths.dataset.precision);
+                } else {
+                    value = answer.value;
+                }
+                if (submission == value) {
+                    if ("feedback" in answer) {
+                        fb.innerHTML = jaxify(answer.feedback);
+                    } else {
+                        fb.innerHTML = jaxify("Correct");
+                    }
+                    correct = answer.correct;
+                    //console.log(answer.correct);
+                    done = true;
+                }
+
+                // } else if (answer.type=="range") {
+            } else if ('range' in answer) {
+                console.log(answer.range);
+                console.log(submission, submission >=answer.range[0], submission < answer.range[1])
+                if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
+                    fb.innerHTML = jaxify(answer.feedback);
+                    correct = answer.correct;
+                    console.log(answer.correct);
+                    done = true;
+                }
+            } else if (answer.type == "default") {
+                if ("feedback" in answer) {
+                    defaultFB = answer.feedback;
+                } 
+            }
+            if (done) {
+                return false; // Break out of loop if this has been marked correct
+            } else {
+                return true; // Keep looking for case that includes this as a correct answer
+            }
+        });
+        console.log("done:", done);
+
+        if ((!done) && (defaultFB != "")) {
+            fb.innerHTML = jaxify(defaultFB);
+            //console.log("Default feedback", defaultFB);
+        }
+
+        fb.style.display = "block";
+        if (correct) {
+            ths.className = "Input-text";
+            ths.classList.add("correctButton");
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+        } else {
+            ths.className = "Input-text";
+            ths.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            console.log(submission);
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            //console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            if (submission == ths.value){
+                responses[qnum]= submission;
+            } else {
+                responses[qnum]= ths.value + "(" + submission +")";
+            }
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            console.log('MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([fb]);
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+        // After correct answer, if next JupyterQuiz question exists and has a text input, scroll by current question height
+        if (correct) {
+            // find the current question wrapper
+            var wrapper = ths.closest('.Quiz');
+            if (wrapper) {
+                var nextWrapper = wrapper.nextElementSibling;
+                if (nextWrapper && nextWrapper.classList.contains('Quiz')) {
+                    var nextInput = nextWrapper.querySelector('input.Input-text');
+                    if (nextInput) {
+                        var height = wrapper.getBoundingClientRect().height;
+                        console.log(height);
+                        nextInput.focus();
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+}
+// Object-oriented wrapper for numeric questions
+class NumericQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) {
+        super(qa, id, idx, opts, rootDiv);
+    }
+    render() {
+        make_numeric(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('numeric', NumericQuestion);
+
+function isValid(el, charC) {
+    //console.log("Input char: ", charC);
+    if (charC == 46) {
+        if (el.value.indexOf('.') === -1) {
+            return true;
+        } else if (el.value.indexOf('/') != -1) {
+            var parts = el.value.split('/');
+            if (parts[1].indexOf('.') === -1) {
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
+    } else if (charC == 47) {
+        if (el.value.indexOf('/') === -1) {
+            if ((el.value != "") && (el.value != ".")) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else if (charC == 45) {
+        var edex = el.value.indexOf('e');
+        if (edex == -1) {
+            edex = el.value.indexOf('E');
+        }
+
+        if (el.value == "") {
+            return true;
+        } else if (edex == (el.value.length - 1)) { // If just after e or E
+            return true;
+        } else {
+            return false;
+        }
+    } else if (charC == 101) { // "e"
+        if ((el.value.indexOf('e') === -1) && (el.value.indexOf('E') === -1) && (el.value.indexOf('/') == -1)) {
+            // Prev symbol must be digit or decimal point:
+            if (el.value.slice(-1).search(/\d/) >= 0) {
+                return true;
+            } else if (el.value.slice(-1).search(/\./) >= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else {
+        if (charC > 31 && (charC < 48 || charC > 57))
+            return false;
+    }
+    return true;
+}
+
+function numeric_keypress(evnt) {
+    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
+
+    if (charC == 13) {
+        check_numeric(this, evnt);
+    } else {
+        return isValid(this, charC);
+    }
+}
+
+
+
+
+
+function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
+
+
+
+    //console.log(answer);
+
+
+    outerqDiv.className = "NumericQn";
+    aDiv.style.display = 'block';
+
+    var lab = document.createElement("label");
+    lab.className = "InpLabel";
+    lab.innerHTML = "Type numeric answer here:";
+    aDiv.append(lab);
+
+    var inp = document.createElement("input");
+    inp.type = "text";
+    //inp.id="input-"+id;
+    inp.id = id + "-0";
+    inp.className = "Input-text";
+    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
+    if ("precision" in qa) {
+        inp.setAttribute('data-precision', qa.precision);
+    }
+    aDiv.append(inp);
+    //console.log(inp);
+
+    //inp.addEventListener("keypress", check_numeric);
+    //inp.addEventListener("keypress", numeric_keypress);
+    /*
+    inp.addEventListener("keypress", function(event) {
+        return numeric_keypress(this, event);
+    }
+                        );
+                        */
+    //inp.onkeypress="return numeric_keypress(this, event)";
+    inp.onkeypress = numeric_keypress;
+    inp.onpaste = event => false;
+
+    inp.addEventListener("focus", function (event) {
+        this.value = "";
+        return false;
+    }
+    );
+
+
+}
+// Override show_questions to use object-oriented Question API
+function show_questions(json, container) {
+    // Accept container element or element ID
+    if (typeof container === 'string') {
+        container = document.getElementById(container);
+    }
+    if (!container) {
+        console.error('show_questions: invalid container', container);
+        return;
+    }
+
+    const shuffleQuestions = container.dataset.shufflequestions === 'True';
+    const shuffleAnswers = container.dataset.shuffleanswers === 'True';
+    const preserveResponses = container.dataset.preserveresponses === 'true';
+    const maxWidth = parseInt(container.dataset.maxwidth, 10) || 0;
+    let numQuestions = parseInt(container.dataset.numquestions, 10) || json.length;
+    if (numQuestions > json.length) numQuestions = json.length;
+
+    let questions = json;
+    if (shuffleQuestions || numQuestions < json.length) {
+        questions = getRandomSubarray(json, numQuestions);
+    }
+
+    questions.forEach((qa, index) => {
+        const id = makeid(8);
+        const options = {
+            shuffleAnswers: shuffleAnswers,
+            preserveResponses: preserveResponses,
+            maxWidth: maxWidth
+        };
+        Question.create(qa, id, index, options, container);
+    });
+
+    if (preserveResponses) {
+        const respDiv = document.createElement('div');
+        respDiv.id = 'responses' + container.id;
+        respDiv.className = 'JCResponses';
+        respDiv.dataset.responses = JSON.stringify([]);
+        respDiv.innerHTML = '<b>Select your answers and then follow the directions that will appear here.</b>';
+        container.appendChild(respDiv);
+    }
+
+    // Trigger MathJax typesetting if available
+    if (typeof MathJax != 'undefined') {
+        console.log("MathJax version", MathJax.version);
+        var version = MathJax.version;
+        setTimeout(function(){
+            var version = MathJax.version;
+            console.log('After sleep, MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                if (MathJax.hasOwnProperty('typeset') ) {
+                    MathJax.typeset([container]);
+                } else {
+                    console.log('WARNING: Trying to force load MathJax 3');
+                    window.MathJax = {
+                        tex: {
+                            inlineMath: [['$', '$'], ['\\(', '\\)']]
+                        },
+                        svg: {
+                            fontCache: 'global'
+                        }
+                    };
+
+                    (function () {
+                        var script = document.createElement('script');
+                        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                        script.async = true;
+                        document.head.appendChild(script);
+                    })();
+                }
+            }
+        }, 500);
+if (typeof version == 'undefined') {
+        } else
+        {
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                if (MathJax.hasOwnProperty('typeset') ) {
+                    MathJax.typeset([container]);
+                } else {
+                    console.log('WARNING: Trying to force load MathJax 3');
+                    window.MathJax = {
+                        tex: {
+                            inlineMath: [['$', '$'], ['\\(', '\\)']]
+                        },
+                        svg: {
+                            fontCache: 'global'
+                        }
+                    };
+
+                    (function () {
+                        var script = document.createElement('script');
+                        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                        script.async = true;
+                        document.head.appendChild(script);
+                    })();
+                }
+            } else {
+                console.log("MathJax not found");
+            }
+        }
+    }
+    // if (typeof MathJax !== 'undefined') {
+    //     const v = MathJax.version;
+    //     if (v[0] === '2') {
+    //         MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+    //     } else if (v[0] === '3') {
+    //         MathJax.typeset([container]);
+    //     }
+    // }
+
+    // Prevent link clicks from bubbling up
+    Array.from(container.getElementsByClassName('Link')).forEach(link => {
+        link.addEventListener('click', e => e.stopPropagation());
+    });
+}
+function levenshteinDistance(a, b) {
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
+
+    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+
+    for (let i = 0; i <= a.length; i++) {
+        matrix[0][i] = i;
+    }
+
+    for (let j = 0; j <= b.length; j++) {
+        matrix[j][0] = j;
+    }
+
+    for (let j = 1; j <= b.length; j++) {
+        for (let i = 1; i <= a.length; i++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            matrix[j][i] = Math.min(
+                matrix[j - 1][i] + 1, // Deletion
+                matrix[j][i - 1] + 1, // Insertion
+                matrix[j - 1][i - 1] + cost // Substitution
+            );
+        }
+    }
+    return matrix[b.length][a.length];
+}
+// Object-oriented wrapper for string input questions
+class StringQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) {
+        super(qa, id, idx, opts, rootDiv);
+    }
+    render() {
+        make_string(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('string', StringQuestion);
+
+function check_string(ths, event) {
+    if (event.keyCode === 13) {
+        ths.blur();
+
+        var id = ths.id.split('-')[0];
+        var submission = ths.value.trim();
+        var fb = document.getElementById("fb" + id);
+        fb.style.display = "none";
+        fb.innerHTML = "Incorrect -- try again.";
+
+        var answers = JSON.parse(ths.dataset.answers);
+        var defaultFB = "Incorrect. Try again.";
+        var correct;
+        var done = false;
+
+        // Handle default answer pattern: filter out and capture default feedback
+        var filteredAnswers = [];
+        answers.forEach(answer => {
+            if (answer.type === "default") {
+                defaultFB = answer.feedback;
+            } else {
+                filteredAnswers.push(answer);
+            }
+        });
+        answers = filteredAnswers;
+
+        answers.every(answer => {
+            correct = false;
+
+            let match = false;
+            if (answer.match_case) {
+                match = submission === answer.answer;
+            } else {
+                match = submission.toLowerCase() === answer.answer.toLowerCase();
+            }
+            console.log(submission);
+            console.log(answer.answer);
+            console.log(match);
+
+            if (match) {
+                if ("feedback" in answer) {
+                    fb.innerHTML = jaxify(answer.feedback);
+                } else {
+                    fb.innerHTML = jaxify("Correct");
+                }
+                correct = answer.correct;
+                done = true;
+            } else if (answer.fuzzy_threshold) {
+                var max_length = Math.max(submission.length, answer.answer.length);
+                var ratio;
+                if (answer.match_case) {
+                    ratio = 1- (levenshteinDistance(submission, answer.answer) / max_length);
+                } else {
+                    ratio = 1- (levenshteinDistance(submission.toLowerCase(),
+                                                    answer.answer.toLowerCase()) / max_length);
+                }
+                if (ratio >= answer.fuzzy_threshold) {
+                    if ("feedback" in answer) {
+                        fb.innerHTML = jaxify("(Fuzzy) " + answer.feedback);
+                    } else {
+                        fb.innerHTML = jaxify("Correct");
+                    }
+                    correct = answer.correct;
+                    done = true;
+                }
+
+            }
+
+            if (done) {
+                return false;
+            } else {
+                return true;
+            }
+        });
+
+        if ((!done) && (defaultFB != "")) {
+            fb.innerHTML = jaxify(defaultFB);
+        }
+
+        fb.style.display = "block";
+        if (correct) {
+            ths.className = "Input-text";
+            ths.classList.add("correctButton");
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+        } else {
+            ths.className = "Input-text";
+            ths.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            var qnum = document.getElementById("quizWrap" + id).dataset.qnum;
+            var responses = JSON.parse(responsesContainer.dataset.responses);
+            responses[qnum] = submission;
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([fb]);
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+        // After correct answer, if next JupyterQuiz question exists and has a text input, scroll by current question height
+        if (correct) {
+            var wrapper = ths.closest('.Quiz');
+            if (wrapper) {
+                var nextWrapper = wrapper.nextElementSibling;
+                if (nextWrapper && nextWrapper.classList.contains('Quiz')) {
+                    var nextInput = nextWrapper.querySelector('input.Input-text');
+                    if (nextInput) {
+                        var height = wrapper.getBoundingClientRect().height;
+                        nextInput.focus();
+                    }
+                }
+            }
+        }
+        return false;
+    }
+}
+
+function string_keypress(evnt) {
+    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
+
+    if (charC == 13) {
+        check_string(this, evnt);
+    } 
+}
+
+
+function make_string(qa, outerqDiv, qDiv, aDiv, id) {
+    outerqDiv.className = "StringQn";
+    aDiv.style.display = 'block';
+
+    var lab = document.createElement("label");
+    lab.className = "InpLabel";
+    lab.innerHTML = "Type your answer here:";
+    aDiv.append(lab);
+
+    var inp = document.createElement("input");
+    inp.type = "text";
+    inp.id = id + "-0";
+    inp.className = "Input-text";
+    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
+    // Apply optional input width (approx. number of characters, in em units)
+    if (qa.input_width != null) {
+        inp.style['min-width'] = qa.input_width + 'em';
+    }
+    aDiv.append(inp);
+
+    inp.onkeypress = string_keypress;
+    inp.onpaste = event => false;
+
+    inp.addEventListener("focus", function (event) {
+        this.value = "";
+        return false;
+    });
+}
+/*
+ * Attempt to fetch questions JSON, with timeout and fallback to embedded data.
+ */
+{
+  const controller = new AbortController();
+  const signal = controller.signal;
+  // Abort fetch after 5 seconds
+  setTimeout(() => controller.abort(), 5000);
+  fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise25/master/lecture/introduction/cogneuro_lang_quiz.json", { signal })
+    .then(response => response.json())
+    .then(json => show_questions(json, hfGxWolMkgWQ))
+    .catch(err => {
+      console.log("Fetch error or timeout", err);
+      show_questions(questionshfGxWolMkgWQ, hfGxWolMkgWQ);
+    });
+}
+}
+</script></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "JackEdTaylor/expra-wise25",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ethics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ethics and Data Privacy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="open_science.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Open Science</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-knowledge">Test your Knowledge!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jack Taylor
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
