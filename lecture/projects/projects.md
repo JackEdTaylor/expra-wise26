@@ -28,4 +28,4 @@ Here are some brief slides introducing the four topics:
 <a href=https://docs.google.com/presentation/d/11DyOZiTMt7EAiGk_GJmvp-WVAXOHY6kcXI3GBRBmFcE/export/odp><i class="fa-solid fa-file"></i> Download .odp</a>
 </h5>
 
-Looking for suggested reading for your group? Find it here: [Suggested Reading for Each Project](https://jackedtaylor.github.io/expra-wise25/general/reading.html#suggested-reading-specific-to-each-project)
+Looking for suggested reading for your group? Find it here: [Suggested Reading for Each Project](https://jackedtaylor.github.io/expra-wise26/general/reading.html#suggested-reading-specific-to-each-project)

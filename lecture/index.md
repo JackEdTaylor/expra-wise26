@@ -26,7 +26,7 @@ A lot of the time, when learning about Psychology, we only focus on the end-prod
 
 ## I've got a question!
 
-In case you have any questions or difficulties with the lecture and its materials, please don’t hesitate a single second to get in touch with us. A great way to do this is to [open an issue on the GitHub site](https://github.com/JackEdTaylor/expra-wise25/issues/new) of the course. You can of course also contact us via Discord or email. Any feedback or ideas you might have will be appreciated!
+In case you have any questions or difficulties with the lecture and its materials, please don’t hesitate a single second to get in touch with us. A great way to do this is to [open an issue on the GitHub site](https://github.com/JackEdTaylor/expra-wise26/issues/new) of the course. You can of course also contact us via Discord or email. Any feedback or ideas you might have will be appreciated!
 
 
 ## Acknowledgements

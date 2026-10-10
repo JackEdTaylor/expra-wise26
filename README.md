@@ -8,4 +8,4 @@ Credit goes to the original G0RELLA template lectures.
 
 ## "I have some questions..."
 
-[Open an issue](https://github.com/JackEdTaylor/expra-wise25/issues/new) on this repository and someone will try and get back to you as soon as possible!
+[Open an issue](https://github.com/JackEdTaylor/expra-wise26/issues/new) on this repository and someone will try and get back to you as soon as possible!

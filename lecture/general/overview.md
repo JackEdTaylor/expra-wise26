@@ -2,7 +2,7 @@
 
 In this ExPra (Empirisch-Experimentelles Praktikum), you will get hands-on experience in Psychological research. We will progress through the stages of a research project, from theoretical background and methodological understanding, to experiment design, data collection, analysis, and presentation of results in a poster, presentation, and report.
 
-<b> <i class="fa-solid fa-book"></i> <a href="https://jackedtaylor.github.io/expra-wise25/general/student-guide.html">Read the ExPra Guide for Students</a>  </b>
+<b> <i class="fa-solid fa-book"></i> <a href="https://jackedtaylor.github.io/expra-wise26/general/student-guide.html">Read the ExPra Guide for Students</a>  </b>
 
 ## How to reach the folks in the front
 
@@ -32,23 +32,23 @@ The course will be held at 14:00 - 18:00 on Mondays, in PEG-Gebäude Westend - P
 
 ### Course Software
 
-Everything we will use is [open-source software](https://en.wikipedia.org/wiki/Open-source_software) or at minimum free of charge and publicly available. You can find details on how to set up software for the course in the [Setup](https://jackedtaylor.github.io/expra-wise25/introduction/setup.html) section of this book.
+Everything we will use is [open-source software](https://en.wikipedia.org/wiki/Open-source_software) or at minimum free of charge and publicly available. You can find details on how to set up software for the course in the [Setup](https://jackedtaylor.github.io/expra-wise26/introduction/setup.html) section of this book.
 
 ### Where is everything?
 
-All course materials (lecture slides, lecture demo notebooks, lab notebooks, homework assignments, etc.) will be available on the [course website](https://jackedtaylor.github.io/expra-wise25/), i.e. the one you're looking at right now. Everything will be completely open and free to use, as an [open educational resource](https://en.wikipedia.org/wiki/Open_educational_resources) you are free to explore, enhance and share. This website and all materials will also remain up for the entire duration of the course and beyond.
+All course materials (lecture slides, lecture demo notebooks, lab notebooks, homework assignments, etc.) will be available on the [course website](https://jackedtaylor.github.io/expra-wise26/), i.e. the one you're looking at right now. Everything will be completely open and free to use, as an [open educational resource](https://en.wikipedia.org/wiki/Open_educational_resources) you are free to explore, enhance and share. This website and all materials will also remain up for the entire duration of the course and beyond.
 
 
 ### Late Homework & Extension Policy
 
-*Homework assignments* will usually have a clearly stated deadline (see [Assignments](https://jackedtaylor.github.io/expra-wise25/general/assignments.html)), so as to manage course load clearly. Exceptions will be communicated.
+*Homework assignments* will usually have a clearly stated deadline (see [Assignments](https://jackedtaylor.github.io/expra-wise26/general/assignments.html)), so as to manage course load clearly. Exceptions will be communicated.
 
 
 ### Academic Honor Code
 
 We encourage you to discuss and work together with classmates on problems. However, the ExPra report must be your own, original work. Using online resources to help with programming or understanding is recommended, but any text from other written works should be put into your own words, as well as cited. If you really need to use the original text, quote the text in quotation marks, and cite the exact page in the original work. Similarly, any code copied from the internet must be clearly marked as such, with a link to the source.
 
-Please also check the specific rules and guidelines we have developed for the use of generative AI tools like ChatGPT during the ExPra: [AI Tools](https://jackedtaylor.github.io/expra-wise25/general/gen_ai.html).
+Please also check the specific rules and guidelines we have developed for the use of generative AI tools like ChatGPT during the ExPra: [AI Tools](https://jackedtaylor.github.io/expra-wise26/general/gen_ai.html).
 
 
 ### Missed work due to religious holy days
