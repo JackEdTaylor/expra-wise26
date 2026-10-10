@@ -77,13 +77,13 @@ If this is your first time on LIFOS, no groups will be displayed here yet.
 If your lecturer previously invited you to the correct EXPRA group, you can skip steps 2 and 3, and proceed with the section [Create your EXPRA Project](#Create-your-EXPRA-project). Otherwise, keep reading below.
 ```
 
-Now, find your EXPRA group for the current semester (*WiSe 2025-26*) by following these steps:
+Now, find your EXPRA group for the current semester (*WiSe 2026-27*) by following these steps:
 
 1. Click on *Explore Groups* to view all available groups. This should look like this: <br><br><img src ="../_static/choose-group.png" alt = "Screenshot of the Explore Groups page showing multiple groups such as Pädagogische Psychologie, Sozialpsychologie, and Klinische Psychologie. The Sozialpsychologie group is highlighted.">
 
 2. Select your department, e.g., if you take part in the Social Psychology EXPRA (*Sozialpsychologie*), click on this group.
 3. Select the module *PsyBsc10 Empirisch-experimentelles Praktikum (Expra)*. 
-4. Select the current semester, e.g., *WiSe 2025-26*.
+4. Select the current semester, e.g., *WiSe 2026-27*.
 
 This is the group that will be home to your EXPRA projects.
 
