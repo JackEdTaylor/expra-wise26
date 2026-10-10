@@ -1,0 +1,64 @@
+[
+    {
+        "question": "Which of the following is often used by scientists communicating with scientists?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Peer Reviewed Journals",
+                "correct": true,
+                "feedback": "Correct!"
+            },
+            {
+                "answer": "Blogs",
+                "correct": true,
+                "feedback": "Correct: blogs can be used for communicating with a general audience, or with scientists specifically"
+            },
+            {
+                "answer": "Science News Articles",
+                "correct": false,
+                "feedback": "Incorrect: scientists sometimes contribute such articles, but they are aimed at a public audience"
+            },
+            {
+                "answer": "Outreach Events",
+                "correct": false,
+                "feedback": "Incorrect: these are usually used for communicating science with a public audience"
+            }
+        ]
+    },
+    {
+        "question": "Can TikTok count as scientific outreach?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Yes",
+                "correct": true
+            },
+            {
+                "answer": "No",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "Which of the following peer-reviewed journals is the most general?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Behavior Research Methods",
+                "correct": false
+            },
+            {
+                "answer": "PLOS Medicine",
+                "correct": false
+            },
+            {
+                "answer": "The International Journal of Play Therapy",
+                "correct": false
+            },
+            {
+                "answer": "Science",
+                "correct": true
+            }
+        ]
+    }
+]

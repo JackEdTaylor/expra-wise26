@@ -1,0 +1,10 @@
+jupyter-book<2.0.0
+matplotlib
+numpy
+sphinx-inline-tabs
+pandas
+sphinx-book-theme
+myst-nb
+ghp-import
+jupytext
+jupyterquiz

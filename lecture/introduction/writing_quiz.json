@@ -1,0 +1,83 @@
+[
+    {
+        "question": "Which of the following fonts are recommended according to the APA guidelines?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Times New Roman",
+                "correct": true,
+                "feedback": "Correct: this is a permitted serif font"
+            },
+            {
+                "answer": "Impact",
+                "correct": false,
+                "feedback": "Incorrect: This font is reserved for memes from the 2010s"
+            },
+            {
+                "answer": "Calibri",
+                "correct": true,
+                "feedback": "Correct: this sans serif font is acceptable in APA format"
+            },
+            {
+                "answer": "Arial",
+                "correct": true,
+                "feedback": "Correct: this sans serif font is acceptable in APA format"
+            }
+        ]
+    },
+    {
+        "question": "According to the Context-Content-Conclusion scheme, which section should be the most specific?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The Introduction",
+                "correct": false
+            },
+            {
+                "answer": "The Discussion",
+                "correct": false
+            },
+            {
+                "answer": "The Supplementary Materials",
+                "correct": false
+            },
+            {
+                "answer": "The Results Section",
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "True or False: you should always write in the Passive Voice?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "true",
+                "correct": false,
+                "feedback": "The active voice is often appropriate (see slides for details)"
+            },
+            {
+                "answer": "false",
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "Which of the following sentences is the clearest description of the Methods?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Participants were presented with 50 random stimuli and were asked to rate them on emotional valence.",
+                "correct": false
+            },
+            {
+                "answer": "Participants rated 50 (25 from each condition) randomly selected stimuli on emotional valence.",
+                "correct": true
+            },
+            {
+                "answer": "Participants were presented with 50 stimuli, randomly selected from each condition, and were asked to rate each stimulus on the emotional dimension of valence, one after the other.",
+                "correct": false
+            }
+        ]
+    }
+]

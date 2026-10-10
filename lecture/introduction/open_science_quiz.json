@@ -1,0 +1,156 @@
+[
+    {
+        "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "traditional scientific journal articles",
+                "correct": true,
+                "feedback": "Correct: peer review occurs at the point of submission to a traditional journal"
+            },
+            {
+                "answer": "preregistrations",
+                "correct": false,
+                "feedback": "Preregistrations are not peer-reviewed"
+            },
+            {
+                "answer": "registered reports",
+                "correct": true,
+                "feedback": "Correct: Registered Reports are peer-reviewed prior to data collection"
+            },
+            {
+                "answer": "scientific grant proposals",
+                "correct": true,
+                "feedback": "Correct: Scientific grant proposals are typically reviewed by scientists in related fields"
+            }
+        ]
+    },
+    {
+        "question": "Select the best description of a 'Conceptual Replication'",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "a new study is run, conceptually similar to the original",
+                "correct": true
+            },
+            {
+                "answer": "the idea is rephrased, but no experiments are run",
+                "correct": false,
+                "feedback": "conceptual replications collect new data"
+            },
+            {
+                "answer": "the original analysis is reproduced by separate authors",
+                "correct": false,
+                "feedback": "this describes reproduction of findings, not replication"
+            },
+            {
+                "answer": "the exact same study is re-run, but on a new sample",
+                "correct": false,
+                "feedback": "this describes an *exact* replication"
+            }
+        ]
+    },
+    {
+        "question": "On average, are effect sizes larger or smaller in replications than in originally published findings?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "larger",
+                "correct": false,
+                "feedback": "findings are usually smaller in replications (e.g., see Nosek et al., 2022)"
+            },
+            {
+                "answer": "smaller",
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is *not* a Questionable Research Practice?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "adequately describing methodology",
+                "correct": true
+            },
+            {
+                "answer": "selective reporting of findings",
+                "correct": false,
+                "feedback": "this is an example of a QRP"
+            },
+            {
+                "answer": "forming hypotheses after data have been collected",
+                "correct": false,
+                "feedback": "this is an example of a QRP ('HARKing')"
+            }
+        ]
+    },
+    {
+        "question": "Which of the following statements about Publication Bias are true?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "publication bias can lead to an over-representation of negative findings",
+                "correct": false,
+                "feedback": "publication bias describes a phenomenon whereby *positive* findings may become over-represented"
+            },
+            {
+                "answer": "publication bias may impact literature reviews and meta-analyses",
+                "correct": true,
+                "feedback": "if negative findings are systematically missing from the publication record, reviews and meta-analyses may overestimate strength of evidence for effects"
+            },
+            {
+                "answer": "publication bias refers to the pre-existing biases researchers have towards different journals",
+                "correct": false
+            },
+            {
+                "answer": "publication bias may be one motivation for 'p-hacking'",
+                "correct": true,
+                "feedback": "if researchers believe negative findings are less likely to be published, they may be more likely to p-hack their results"
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is *not* a preprint server?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "arXiv",
+                "correct": false
+            },
+            {
+                "answer": "PsyArXiv",
+                "correct": false
+            },
+            {
+                "answer": "PNAS",
+                "correct": true,
+                "feedback": "Correct! PNAS is not a preprint server, but an open-access peer-reviewed journal"
+            },
+            {
+                "answer": "bioRxiv",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "What is the name of the internal system where you will preregister your studies and share materials/code?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "PsyArXiv",
+                "correct": false,
+                "feedback": "PsyArXiv is a preprint server for psychology research"
+            },
+            {
+                "answer": "LIFOS",
+                "correct": true
+            },
+            {
+                "answer": "OSF",
+                "correct": false,
+                "feedback": "OSF does support preregistrations and data sharing, but is not the internal University system we will be using"
+            }
+        ]
+    }
+]

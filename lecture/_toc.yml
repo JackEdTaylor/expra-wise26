@@ -1,0 +1,60 @@
+root: index
+format: jb-book
+
+parts:
+  - caption: General
+    chapters:
+    - file: general/overview
+    - file: general/schedule
+    - file: general/reading
+  
+  - caption: Introduction
+    chapters:
+      - file: introduction/intro
+      - file: introduction/setup
+      - file: introduction/empirical_research
+      - file: introduction/ethics
+      - file: introduction/cogneuro_lang
+      - file: introduction/open_science
+      - file: introduction/ai
+      - file: introduction/literature
+      - file: introduction/writing
+      - file: introduction/communication
+
+  - caption: R & Statistics
+    chapters:
+      - file: introduction/glm
+      - file: introduction/model_appropriateness
+      - file: introduction/data_wrangling_1
+      - file: introduction/data_wrangling_2
+      - file: introduction/data_vis_1
+      - file: introduction/data_vis_2
+
+  - caption: Demo Experiment
+    chapters:
+      - file: demo/demo_participate
+      - file: demo/demo_background
+      - file: demo/demo_analyse
+      - file: demo/demo_feedback
+
+  - caption: Research Projects
+    chapters:
+      - file: projects/projects
+      - file: projects/preregistration
+      - file: projects/lifos
+      - file: projects/conducting
+      - file: projects/analysis
+      - file: projects/presentations
+      - file: projects/posters
+
+  - caption: Cognitive Brain Imaging
+    chapters:
+      - file: cbi/meeg
+      - file: cbi/mri
+
+  - caption: Miscellaneous
+    chapters:
+    - file: general/assignments
+    - file: general/student-guide
+    - file: general/gen_ai
+    - file: general/CoC

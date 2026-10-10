@@ -1,0 +1,92 @@
+[
+    {
+        "question": "Which type of study generally has the most stringent control of variables?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "An observational study",
+                "correct": false
+            },
+            {
+                "answer": "A correlational study",
+                "correct": false
+            },
+            {
+                "answer": "An experimental study",
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "Which statement best describes 'Rationalism'?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Knowledge is formed based on experimental evidence",
+                "correct": false,
+                "feedback": "This more closely describes Empiricism"
+            },
+            {
+                "answer": "Intuition and deduction are the most valuable sources of knowledge",
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "What is a confounder?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "A confounder is a variable which modulates the causal association between the IV and DV - the association depends on the confounder's value",
+                "correct": false
+            },
+            {
+                "answer": "A confounder is variable that leads to a relationship between the IV and the DV, despite their being no true causal association",
+                "correct": true
+            },
+            {
+                "answer": "Rather than the IV affecting the DV directly, they are associated only indirectly, through the confounder",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "What is induction (in Philosophy)?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "A form of knowledge generation where you generalise from observations to unobserved datapoints",
+                "correct": true
+            },
+            {
+                "answer": "A form of knowledge generation where you use logic and reason to reach conclusions",
+                "correct": false,
+                "feedback": "this describes deduction"
+            }
+        ]
+    },
+    {
+        "question": "Which of the following are operationalised variables?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Autism-Spectrum Quotient",
+                "correct": true
+            },
+            {
+                "answer": "Depression",
+                "correct": false,
+                "feedback": "For this to be operationalised, we would need to know exactly how Depression is measured"
+            },
+            {
+                "answer": "Word-Reading Difficulty",
+                "correct": false,
+                "feedback": "For this to be operationalised, we would need to know exactly how word-reading difficulty is measured: e.g., response time in lexical decision?"
+            },
+            {
+                "answer": "Age in years",
+                "correct": true
+            }
+        ]
+    }
+]

@@ -1,0 +1,106 @@
+[
+    {
+        "question": "Which psychological approach focuses on observable relationships between the participant and their environment?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Cognitive Psychology",
+                "correct": false,
+                "feedback": "Incorrect: Cognitive psychology is more concerned with inferring how mental processes work."
+            },
+            {
+                "answer": "Behaviourism",
+                "correct": true,
+                "feedback": "Correct! Behaviourism focuses on behaviour as it is directly observable."
+            },
+            {
+                "answer": "Neuroscience",
+                "correct": false,
+                "feedback": "Incorrect: neuroscience is the study of neurons and neural circuits."
+            }
+        ]
+    },
+    {
+        "question": "Which side of the brain is language processing usually localised to?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Left",
+                "correct": true
+            },
+            {
+                "answer": "Right",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is true of language lateraliation and handedness?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Left-handed participants have a right-lateralised language network.",
+                "correct": false,
+                "feedback": "Most left-handed people have a left-lateralised language network."
+            },
+            {
+                "answer": "Regardless of handedness, most people have a left-lateralised language network",
+                "correct": true
+            },
+            {
+                "answer": "Left-handed participants are more likely to have a right- or ambi-lateralised language network.",
+                "correct": true
+            },
+            {
+                "answer": "Language processing is equally dominant between the left and right hemispheres.",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "In the classical Wernicke-Geschwind model, which brain area is associated with language production?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Broca's Area (LIFG)",
+                "correct": true
+            },
+            {
+                "answer": "Wernicke's Area",
+                "correct": false
+            },
+            {
+                "answer": "Arcuate Fasciculus",
+                "correct": false
+            },
+            {
+                "answer": "Visual Word Form Area",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "What is orthography?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "A script capable of representing natural language.",
+                "correct": true
+            },
+            {
+                "answer": "The visual representation of language.",
+                "correct": false,
+                "feedback": "Orthography is usually visual, but can also include scripts in non-visual modalities like Braille."
+            },
+            {
+                "answer": "The sound-based representation of language",
+                "correct": false,
+                "feedback": "This is closer to a definition of 'phonology'"
+            },
+            {
+                "answer": "The study of orthodontics.",
+                "correct": false
+            }
+        ]
+    }
+]

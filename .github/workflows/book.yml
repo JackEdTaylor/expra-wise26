@@ -1,0 +1,78 @@
+name: deploy-book
+
+# Only run this when the main branch changes
+on:
+  push:
+    branches:
+    - main
+    # If your git repository has the Jupyter Book within some-subfolder next to
+    # unrelated files, you can make this run only if a file within that specific
+    # folder has been modified.
+    #
+    # paths:
+    - lecture/**
+
+# This job installs dependencies, build the book, and pushes it to `gh-pages`
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Update packages list
+      run: |
+         sudo apt-get update
+
+    # Install dependencies
+    - name: Install libcurl
+      run: |
+         sudo apt-get install libcurl4-openssl-dev
+
+    - name: Install libmagick
+      run: |
+        sudo apt-get install libmagick++-dev
+
+    - name: Install Python 3.13
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.13' 
+    
+    - name: Install R
+      uses: r-lib/actions/setup-r@v2
+      with:
+        r-version: "4.4.1"
+
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Install R dependencies and setup graphics
+      run: |
+        Rscript install.R
+    
+    # - name: Set up graphics settings in Rprofile at admin level
+    #   run: |
+    #     opt <- c(
+    #       "",
+    #       "options(repr.plot.width=3.5, repr.plot.height=3)",
+    #       "",
+    #       ".First <- function() {",
+    #       "  require(Cairo)",
+    #       "  Cairo::CairoPNG()",
+    #       "}"
+    #     )
+    #     profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
+    #     writeLines(opt, profile_loc)
+    #   shell: sudo Rscript {0}
+
+    # Build the book
+    - name: Build the book
+      run: |
+        jupyter-book build --all lecture/
+    
+    # Push the book's HTML to github-pages
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./lecture/_build/html

@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2024.2.3">
+  <Settings>
+    <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
+    <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
+    <Param val="" valType="str" updates="None" name="Completed URL"/>
+    <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
+    <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
+    <Param val="Thank you for your participating!" valType="str" updates="None" name="End Message"/>
+    <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'age': '18', 'gender': &quot;['male', 'female', 'non-binary', 'not listed / prefer not to say']&quot;, 'dominant hand': &quot;['right','left']&quot;, 'first language': &quot;['german', 'other']&quot;}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="True" valType="bool" updates="None" name="Force stereo"/>
+    <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
+    <Param val="" valType="str" updates="None" name="HTML path"/>
+    <Param val="" valType="str" updates="None" name="Incomplete URL"/>
+    <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
+    <Param val="[]" valType="list" updates="None" name="Resources"/>
+    <Param val="False" valType="bool" updates="None" name="Save csv file"/>
+    <Param val="False" valType="bool" updates="None" name="Save excel file"/>
+    <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
+    <Param val="True" valType="bool" updates="None" name="Save log file"/>
+    <Param val="True" valType="bool" updates="None" name="Save psydat file"/>
+    <Param val="True" valType="bool" updates="None" name="Save wide csv file"/>
+    <Param val="1" valType="num" updates="None" name="Screen"/>
+    <Param val="True" valType="bool" updates="None" name="Show info dlg"/>
+    <Param val="False" valType="bool" updates="None" name="Show mouse"/>
+    <Param val="height" valType="str" updates="None" name="Units"/>
+    <Param val="" valType="str" updates="None" name="Use version"/>
+    <Param val="[1920, 1200]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+    <Param val="" valType="str" updates="None" name="backgroundImg"/>
+    <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="float" valType="str" updates="None" name="clockFormat"/>
+    <Param val="{'thisRow.t': 'priority.CRITICAL', 'expName': 'priority.LOW'}" valType="dict" updates="None" name="colPriority"/>
+    <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+    <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="warning" valType="code" updates="None" name="consoleLoggingLevel"/>
+    <Param val="default" valType="str" updates="None" name="ecSampleRate"/>
+    <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
+    <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
+    <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
+    <Param val="EYELINK 1000 DESKTOP" valType="str" updates="None" name="elModel"/>
+    <Param val="ELLIPSE_FIT" valType="str" updates="None" name="elPupilAlgorithm"/>
+    <Param val="PUPIL_AREA" valType="str" updates="None" name="elPupilMeasure"/>
+    <Param val="1000" valType="num" updates="None" name="elSampleRate"/>
+    <Param val="False" valType="bool" updates="None" name="elSimMode"/>
+    <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
+    <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
+    <Param val="demo_experiment" valType="str" updates="None" name="expName"/>
+    <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
+    <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="" valType="code" updates="None" name="frameRate"/>
+    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
+    <Param val="4242" valType="num" updates="None" name="gpPort"/>
+    <Param val="ioHub" valType="str" updates="None" name="keyboardBackend"/>
+    <Param val="info" valType="code" updates="None" name="logging level"/>
+    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
+    <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
+    <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
+    <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
+    <Param val="neon.local" valType="str" updates="None" name="plCompanionAddress"/>
+    <Param val="8080" valType="num" updates="None" name="plCompanionPort"/>
+    <Param val="True" valType="bool" updates="None" name="plCompanionRecordingEnabled"/>
+    <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
+    <Param val="True" valType="bool" updates="None" name="plPupilCaptureRecordingEnabled"/>
+    <Param val="" valType="str" updates="None" name="plPupilCaptureRecordingLocation"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="plPupilRemoteAddress"/>
+    <Param val="50020" valType="num" updates="None" name="plPupilRemotePort"/>
+    <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
+    <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
+    <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="False" valType="bool" updates="None" name="rush"/>
+    <Param val="time" valType="str" updates="None" name="sortColumns"/>
+    <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
+    <Param val="" valType="str" updates="None" name="tbModel"/>
+    <Param val="60" valType="num" updates="None" name="tbSampleRate"/>
+    <Param val="" valType="str" updates="None" name="tbSerialNo"/>
+    <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
+  </Settings>
+  <Routines>
+    <Routine name="intro">
+      <RoutineSettingsComponent name="intro" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="intro" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="intro_welcome" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="intro_welcome" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Welcome to the Demo Experiment!&amp;#10;&amp;#10;In this experiment, you will be asked to identify words.&amp;#10;&amp;#10;For each line of text that you see, press:&amp;#10;- Right Alt Key if you see a real word&amp;#10;- Left Alt Key if you do not see a real word&amp;#10;&amp;#10;When you are ready, press SPACE (Leertaste) to begin..." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="intro_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="intro_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="3" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="nothing" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="trial">
+      <RoutineSettingsComponent name="trial" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="trial" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="fix" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="fix" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.25" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="+" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="stimulus" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="stimulus" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="1" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$text" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="stim_resp" plugin="None">
+        <Param val="'lalt', 'ralt'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="$corr_ans" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="stim_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="1" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="first key" valType="str" updates="constant" name="store"/>
+        <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="end">
+      <RoutineSettingsComponent name="end" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="end" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="end_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="end_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Thank you for taking part!&amp;#10;&amp;#10;Now please follow the instructions on the&amp;#10;ExPra website to upload your data.&amp;#10;&amp;#10;When you are ready, please press SPACE to exit..." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="end_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="end_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="2" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="nothing" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="False" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="feedback">
+      <RoutineSettingsComponent name="feedback" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="feedback" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((stim_resp.corr === 1)) {&amp;#10;    feedback_text = new visual.TextStim({&quot;win&quot;: psychoJS.window, &quot;height&quot;: 0.05, &quot;units&quot;: &quot;height&quot;, &quot;text&quot;: `Correct!`, &quot;color&quot;: &quot;chartreuse&quot;});&amp;#10;} else {&amp;#10;    feedback_text = new visual.TextStim({&quot;win&quot;: psychoJS.window, &quot;height&quot;: 0.05, &quot;units&quot;: &quot;height&quot;, &quot;text&quot;: `Incorrect!`, &quot;color&quot;: &quot;red&quot;});&amp;#10;}&amp;#10;psychoJS.window.flip();&amp;#10;feedback_text.draw();&amp;#10;psychoJS.window.flip();&amp;#10;core.wait(0.5);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if stim_resp.corr==1:&amp;#10;    feedback_text = visual.TextStim(win=win, height=0.05, units='height', text=f'Correct!', color='chartreuse')&amp;#10;else:&amp;#10;    feedback_text = visual.TextStim(win=win, height=0.05, units='height', text=f'Incorrect!', color='red')&amp;#10;&amp;#10;win.flip()&amp;#10;feedback_text.draw()&amp;#10;win.flip()&amp;#10;core.wait(0.5)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="feedback_prep">
+      <RoutineSettingsComponent name="feedback_prep" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="feedback_prep" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="feedback_prep_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="feedback_prep_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="The first 10 trials will be practice trials, during which you will receive feedback.&amp;#10;&amp;#10;Remember:&amp;#10;&amp;#10;If a Word: press Right Alt&amp;#10;If not a Word: press Left Alt&amp;#10;&amp;#10;Press SPACE to begin the practice trials..." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="feedback_prep_key_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="feedback_prep_key_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="nothing" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="proper_trials_prep">
+      <RoutineSettingsComponent name="proper_trials_prep" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="proper_trials_prep" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="proper_trials_prep_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="proper_trials_prep_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="From now on, you will not get any feedback on your responses.&amp;#10;&amp;#10;Good luck!&amp;#10;&amp;#10;Here is a reminder of the task instructions:&amp;#10;If a Word: press Right Alt&amp;#10;If not a Word: press Left Alt&amp;#10;&amp;#10;Press SPACE to begin..." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="proper_trials_prep_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="proper_trials_prep_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="1" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="nothing" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="store_resp_and_break">
+      <RoutineSettingsComponent name="store_resp_and_break" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="store_resp_and_break" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="break_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="break_every = 50&amp;#10;rt_list = []&amp;#10;acc_list = []&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if (((((trials.thisN % 50) === 0) &amp;&amp; (trials.thisN &lt; trials.trialList.length)) &amp;&amp; (trials.thisN &gt; 0))) {&amp;#10;    console.log(&quot;STARTING BREAK&quot;);&amp;#10;    break_progress = `You have completed ${trials.thisN} of ${trials.trialList.length} trials!`;&amp;#10;    break_text = new visual.TextStim({&quot;win&quot;: psychoJS.window, &quot;height&quot;: 0.05, &quot;units&quot;: &quot;height&quot;, &quot;text&quot;: `${break_progress}&amp;#10;&amp;#10;Please take a short break...&amp;#10;&amp;#10;When you are ready to continue, press SPACE`&amp;#10;});&amp;#10;    psychoJS.window.flip();&amp;#10;    break_text.draw();&amp;#10;    psychoJS.window.flip();&amp;#10;    core.wait(2);&amp;#10;    psychoJS.eventManager.waitKeys({&quot;keyList&quot;: [&quot;Space&quot;]});&amp;#10;    console.log(&quot;BREAK ENDED&quot;);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="rt_list.append(stim_resp.rt)&amp;#10;acc_list.append(stim_resp.corr)&amp;#10;&amp;#10;if trials.thisN % break_every == 0 and trials.thisN &lt; len(trials.trialList) and trials.thisN &gt; 0:&amp;#10;    print('STARTING BREAK')&amp;#10;    break_progress = f'You have completed {trials.thisN} / {len(trials.trialList)} trials - great job!'&amp;#10;    #median_rt = int(np.round(np.median(rt_list)*1000))&amp;#10;    #perc_corr = int(np.round(np.mean(acc_list)*100))&amp;#10;    #performance_summ = f'Your median response time in the last {break_every} trials: {median_rt} ms\nYour accuracy in the last {break_every} trials: {perc_corr}%'&amp;#10;    performance_summ = ''&amp;#10;    break_text = visual.TextStim(win=win, height=0.05, units='height', text=f'{break_progress}\n\n{performance_summ}\n\nPlease take a short break...\n\nWhen you are ready to continue, press SPACE')&amp;#10;    win.flip()&amp;#10;    break_text.draw()&amp;#10;    win.flip()&amp;#10;    core.wait(2)&amp;#10;    event.waitKeys(keyList=['space'])&amp;#10;    rt_list = []&amp;#10;    acc_list = []&amp;#10;    print('BREAK ENDED')" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="break_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="intro"/>
+    <Routine name="feedback_prep"/>
+    <LoopInitiator loopType="TrialHandler" name="practice_trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('item_nr', 1), ('condition', 'word'), ('text', 'Haie')]), OrderedDict([('item_nr', 1), ('condition', 'pseudoword'), ('text', 'Taße')]), OrderedDict([('item_nr', 2), ('condition', 'word'), ('text', 'Mannes')]), OrderedDict([('item_nr', 2), ('condition', 'pseudoword'), ('text', 'sanzes')]), OrderedDict([('item_nr', 3), ('condition', 'word'), ('text', 'korrekt')]), OrderedDict([('item_nr', 3), ('condition', 'pseudoword'), ('text', 'Torrenk')]), OrderedDict([('item_nr', 4), ('condition', 'word'), ('text', 'sagt')]), OrderedDict([('item_nr', 4), ('condition', 'pseudoword'), ('text', 'fagt')]), OrderedDict([('item_nr', 5), ('condition', 'word'), ('text', 'sicheren')]), OrderedDict([('item_nr', 5), ('condition', 'pseudoword'), ('text', 'tofreren')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="stimuli/practice_stim_long.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="practice_trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
+    <Routine name="feedback"/>
+    <LoopTerminator name="practice_trials"/>
+    <Routine name="proper_trials_prep"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('item_nr', 1), ('condition', 'word'), ('text', 'Akzente')]), OrderedDict([('item_nr', 1), ('condition', 'pseudoword'), ('text', 'luxante')]), OrderedDict([('item_nr', 2), ('condition', 'word'), ('text', 'Drücker')]), OrderedDict([('item_nr', 2), ('condition', 'pseudoword'), ('text', 'zwökker')]), OrderedDict([('item_nr', 3), ('condition', 'word'), ('text', 'Erwachsener')]), OrderedDict([('item_nr', 3), ('condition', 'pseudoword'), ('text', 'Muzingsener')]), OrderedDict([('item_nr', 4), ('condition', 'word'), ('text', 'Exorzisten')]), OrderedDict([('item_nr', 4), ('condition', 'pseudoword'), ('text', 'uxalbisten')]), OrderedDict([('item_nr', 5), ('condition', 'word'), ('text', 'Fabel')]), OrderedDict([('item_nr', 5), ('condition', 'pseudoword'), ('text', 'Gafel')]), OrderedDict([('item_nr', 6), ('condition', 'word'), ('text', 'Faulpelze')]), OrderedDict([('item_nr', 6), ('condition', 'pseudoword'), ('text', 'Paulzenze')]), OrderedDict([('item_nr', 7), ('condition', 'word'), ('text', 'Figuren')]), OrderedDict([('item_nr', 7), ('condition', 'pseudoword'), ('text', 'pomuren')]), OrderedDict([('item_nr', 8), ('condition', 'word'), ('text', 'Filigrane')]), OrderedDict([('item_nr', 8), ('condition', 'pseudoword'), ('text', 'Disiphase')]), OrderedDict([('item_nr', 9), ('condition', 'word'), ('text', 'Geschicke')]), OrderedDict([('item_nr', 9), ('condition', 'pseudoword'), ('text', 'mepfrokke')]), OrderedDict([('item_nr', 10), ('condition', 'word'), ('text', 'Gondel')]), OrderedDict([('item_nr', 10), ('condition', 'pseudoword'), ('text', 'Vändel')]), OrderedDict([('item_nr', 11), ('condition', 'word'), ('text', 'Grabens')]), OrderedDict([('item_nr', 11), ('condition', 'pseudoword'), ('text', 'Skabert')]), OrderedDict([('item_nr', 12), ('condition', 'word'), ('text', 'Jugendfreund')]), OrderedDict([('item_nr', 12), ('condition', 'pseudoword'), ('text', 'jugendfrombt')]), OrderedDict([('item_nr', 13), ('condition', 'word'), ('text', 'Kanaille')]), OrderedDict([('item_nr', 13), ('condition', 'pseudoword'), ('text', 'Kahählle')]), OrderedDict([('item_nr', 14), ('condition', 'word'), ('text', 'Kanäle')]), OrderedDict([('item_nr', 14), ('condition', 'pseudoword'), ('text', 'Hafäse')]), OrderedDict([('item_nr', 15), ('condition', 'word'), ('text', 'Kollegium')]), OrderedDict([('item_nr', 15), ('condition', 'pseudoword'), ('text', 'ziffegium')]), OrderedDict([('item_nr', 16), ('condition', 'word'), ('text', 'Konstitution')]), OrderedDict([('item_nr', 16), ('condition', 'pseudoword'), ('text', 'Zarfriuntion')]), OrderedDict([('item_nr', 17), ('condition', 'word'), ('text', 'Kontoauszug')]), OrderedDict([('item_nr', 17), ('condition', 'pseudoword'), ('text', 'Vontoaantut')]), OrderedDict([('item_nr', 18), ('condition', 'word'), ('text', 'Kreuzzug')]), OrderedDict([('item_nr', 18), ('condition', 'pseudoword'), ('text', 'Krelzfuß')]), OrderedDict([('item_nr', 19), ('condition', 'word'), ('text', 'Lobpreisung')]), OrderedDict([('item_nr', 19), ('condition', 'pseudoword'), ('text', 'Lobgliezung')]), OrderedDict([('item_nr', 20), ('condition', 'word'), ('text', 'Maulwurf')]), OrderedDict([('item_nr', 20), ('condition', 'pseudoword'), ('text', 'Saullust')]), OrderedDict([('item_nr', 21), ('condition', 'word'), ('text', 'Media')]), OrderedDict([('item_nr', 21), ('condition', 'pseudoword'), ('text', 'Hebio')]), OrderedDict([('item_nr', 22), ('condition', 'word'), ('text', 'Miene')]), OrderedDict([('item_nr', 22), ('condition', 'pseudoword'), ('text', 'Bieme')]), OrderedDict([('item_nr', 23), ('condition', 'word'), ('text', 'Modepuppe')]), OrderedDict([('item_nr', 23), ('condition', 'pseudoword'), ('text', 'pidestuve')]), OrderedDict([('item_nr', 24), ('condition', 'word'), ('text', 'Mühle')]), OrderedDict([('item_nr', 24), ('condition', 'pseudoword'), ('text', 'Mörle')]), OrderedDict([('item_nr', 25), ('condition', 'word'), ('text', 'Nachmittagen')]), OrderedDict([('item_nr', 25), ('condition', 'pseudoword'), ('text', 'Nentmissagen')]), OrderedDict([('item_nr', 26), ('condition', 'word'), ('text', 'Parzellen')]), OrderedDict([('item_nr', 26), ('condition', 'pseudoword'), ('text', 'Ponhellen')]), OrderedDict([('item_nr', 27), ('condition', 'word'), ('text', 'Pocken')]), OrderedDict([('item_nr', 27), ('condition', 'pseudoword'), ('text', 'dikken')]), OrderedDict([('item_nr', 28), ('condition', 'word'), ('text', 'Rasters')]), OrderedDict([('item_nr', 28), ('condition', 'pseudoword'), ('text', 'lasteln')]), OrderedDict([('item_nr', 29), ('condition', 'word'), ('text', 'Rechtswissenschaft')]), OrderedDict([('item_nr', 29), ('condition', 'pseudoword'), ('text', 'Rechtsbissenstrent')]), OrderedDict([('item_nr', 30), ('condition', 'word'), ('text', 'Röntgen')]), OrderedDict([('item_nr', 30), ('condition', 'pseudoword'), ('text', 'Rädtgen')]), OrderedDict([('item_nr', 31), ('condition', 'word'), ('text', 'Satz')]), OrderedDict([('item_nr', 31), ('condition', 'pseudoword'), ('text', 'Sann')]), OrderedDict([('item_nr', 32), ('condition', 'word'), ('text', 'Schwiegertochter')]), OrderedDict([('item_nr', 32), ('condition', 'pseudoword'), ('text', 'schleigerböchter')]), OrderedDict([('item_nr', 33), ('condition', 'word'), ('text', 'Skonto')]), OrderedDict([('item_nr', 33), ('condition', 'pseudoword'), ('text', 'Plolto')]), OrderedDict([('item_nr', 34), ('condition', 'word'), ('text', 'Sorge')]), OrderedDict([('item_nr', 34), ('condition', 'pseudoword'), ('text', 'Morke')]), OrderedDict([('item_nr', 35), ('condition', 'word'), ('text', 'Sowjetbürger')]), OrderedDict([('item_nr', 35), ('condition', 'pseudoword'), ('text', 'fotsetwärger')]), OrderedDict([('item_nr', 36), ('condition', 'word'), ('text', 'Staubwolke')]), OrderedDict([('item_nr', 36), ('condition', 'pseudoword'), ('text', 'stienwolke')]), OrderedDict([('item_nr', 37), ('condition', 'word'), ('text', 'Straßenmädchen')]), OrderedDict([('item_nr', 37), ('condition', 'pseudoword'), ('text', 'thraxenwäbchen')]), OrderedDict([('item_nr', 38), ('condition', 'word'), ('text', 'Symptom')]), OrderedDict([('item_nr', 38), ('condition', 'pseudoword'), ('text', 'Sölftom')]), OrderedDict([('item_nr', 39), ('condition', 'word'), ('text', 'Sägewerk')]), OrderedDict([('item_nr', 39), ('condition', 'pseudoword'), ('text', 'Vägeverz')]), OrderedDict([('item_nr', 40), ('condition', 'word'), ('text', 'Tonabnehmer')]), OrderedDict([('item_nr', 40), ('condition', 'pseudoword'), ('text', 'Bonaglesmer')]), OrderedDict([('item_nr', 41), ('condition', 'word'), ('text', 'Touristen')]), OrderedDict([('item_nr', 41), ('condition', 'pseudoword'), ('text', 'tahristen')]), OrderedDict([('item_nr', 42), ('condition', 'word'), ('text', 'Treter')]), OrderedDict([('item_nr', 42), ('condition', 'pseudoword'), ('text', 'Kretes')]), OrderedDict([('item_nr', 43), ('condition', 'word'), ('text', 'Ungetüme')]), OrderedDict([('item_nr', 43), ('condition', 'pseudoword'), ('text', 'Ingelöbe')]), OrderedDict([('item_nr', 44), ('condition', 'word'), ('text', 'Vereinfachung')]), OrderedDict([('item_nr', 44), ('condition', 'pseudoword'), ('text', 'Verauswafunks')]), OrderedDict([('item_nr', 45), ('condition', 'word'), ('text', 'Vertragsabschlüssen')]), OrderedDict([('item_nr', 45), ('condition', 'pseudoword'), ('text', 'Verstersasschnüssen')]), OrderedDict([('item_nr', 46), ('condition', 'word'), ('text', 'Vollbesitz')]), OrderedDict([('item_nr', 46), ('condition', 'pseudoword'), ('text', 'kortbesilz')]), OrderedDict([('item_nr', 47), ('condition', 'word'), ('text', 'Vorbereitungen')]), OrderedDict([('item_nr', 47), ('condition', 'pseudoword'), ('text', 'Nonbetiegungen')]), OrderedDict([('item_nr', 48), ('condition', 'word'), ('text', 'Wasserbetten')]), OrderedDict([('item_nr', 48), ('condition', 'pseudoword'), ('text', 'Sürserbitten')]), OrderedDict([('item_nr', 49), ('condition', 'word'), ('text', 'Wäscheklammer')]), OrderedDict([('item_nr', 49), ('condition', 'pseudoword'), ('text', 'täschefrirmer')]), OrderedDict([('item_nr', 50), ('condition', 'word'), ('text', 'Würstchen')]), OrderedDict([('item_nr', 50), ('condition', 'pseudoword'), ('text', 'Büchtchen')]), OrderedDict([('item_nr', 51), ('condition', 'word'), ('text', 'Zinnsoldat')]), OrderedDict([('item_nr', 51), ('condition', 'pseudoword'), ('text', 'Pennfoldat')]), OrderedDict([('item_nr', 52), ('condition', 'word'), ('text', 'absichtlichen')]), OrderedDict([('item_nr', 52), ('condition', 'pseudoword'), ('text', 'anlourslichen')]), OrderedDict([('item_nr', 53), ('condition', 'word'), ('text', 'addierst')]), OrderedDict([('item_nr', 53), ('condition', 'pseudoword'), ('text', 'airierst')]), OrderedDict([('item_nr', 54), ('condition', 'word'), ('text', 'allwissend')]), OrderedDict([('item_nr', 54), ('condition', 'pseudoword'), ('text', 'ahlkossend')]), OrderedDict([('item_nr', 55), ('condition', 'word'), ('text', 'angegriffen')]), OrderedDict([('item_nr', 55), ('condition', 'pseudoword'), ('text', 'angetregken')]), OrderedDict([('item_nr', 56), ('condition', 'word'), ('text', 'angezogen')]), OrderedDict([('item_nr', 56), ('condition', 'pseudoword'), ('text', 'arbenügen')]), OrderedDict([('item_nr', 57), ('condition', 'word'), ('text', 'ansehen')]), OrderedDict([('item_nr', 57), ('condition', 'pseudoword'), ('text', 'ableßen')]), OrderedDict([('item_nr', 58), ('condition', 'word'), ('text', 'antaten')]), OrderedDict([('item_nr', 58), ('condition', 'pseudoword'), ('text', 'abniten')]), OrderedDict([('item_nr', 59), ('condition', 'word'), ('text', 'armes')]), OrderedDict([('item_nr', 59), ('condition', 'pseudoword'), ('text', 'alfes')]), OrderedDict([('item_nr', 60), ('condition', 'word'), ('text', 'auf')]), OrderedDict([('item_nr', 60), ('condition', 'pseudoword'), ('text', 'aun')]), OrderedDict([('item_nr', 61), ('condition', 'word'), ('text', 'aufeinanderprallen')]), OrderedDict([('item_nr', 61), ('condition', 'pseudoword'), ('text', 'auneinantensteglen')]), OrderedDict([('item_nr', 62), ('condition', 'word'), ('text', 'auffälliges')]), OrderedDict([('item_nr', 62), ('condition', 'pseudoword'), ('text', 'ausrürliges')]), OrderedDict([('item_nr', 63), ('condition', 'word'), ('text', 'auflasen')]), OrderedDict([('item_nr', 63), ('condition', 'pseudoword'), ('text', 'ausbalen')]), OrderedDict([('item_nr', 64), ('condition', 'word'), ('text', 'aufschrecken')]), OrderedDict([('item_nr', 64), ('condition', 'pseudoword'), ('text', 'ausschlükken')]), OrderedDict([('item_nr', 65), ('condition', 'word'), ('text', 'aufspielt')]), OrderedDict([('item_nr', 65), ('condition', 'pseudoword'), ('text', 'aufgreilt')]), OrderedDict([('item_nr', 66), ('condition', 'word'), ('text', 'aufwendig')]), OrderedDict([('item_nr', 66), ('condition', 'pseudoword'), ('text', 'aufnellig')]), OrderedDict([('item_nr', 67), ('condition', 'word'), ('text', 'ausdenkt')]), OrderedDict([('item_nr', 67), ('condition', 'pseudoword'), ('text', 'aufdengt')]), OrderedDict([('item_nr', 68), ('condition', 'word'), ('text', 'baufälliges')]), OrderedDict([('item_nr', 68), ('condition', 'pseudoword'), ('text', 'hauwörliges')]), OrderedDict([('item_nr', 69), ('condition', 'word'), ('text', 'befolgen')]), OrderedDict([('item_nr', 69), ('condition', 'pseudoword'), ('text', 'benürgen')]), OrderedDict([('item_nr', 70), ('condition', 'word'), ('text', 'behinderten')]), OrderedDict([('item_nr', 70), ('condition', 'pseudoword'), ('text', 'befärmerten')]), OrderedDict([('item_nr', 71), ('condition', 'word'), ('text', 'beliebteren')]), OrderedDict([('item_nr', 71), ('condition', 'pseudoword'), ('text', 'beseilgeren')]), OrderedDict([('item_nr', 72), ('condition', 'word'), ('text', 'berauschten')]), OrderedDict([('item_nr', 72), ('condition', 'pseudoword'), ('text', 'beseichsten')]), OrderedDict([('item_nr', 73), ('condition', 'word'), ('text', 'beschämen')]), OrderedDict([('item_nr', 73), ('condition', 'pseudoword'), ('text', 'bestrozen')]), OrderedDict([('item_nr', 74), ('condition', 'word'), ('text', 'bewachten')]), OrderedDict([('item_nr', 74), ('condition', 'pseudoword'), ('text', 'bekickten')]), OrderedDict([('item_nr', 75), ('condition', 'word'), ('text', 'deinem')]), OrderedDict([('item_nr', 75), ('condition', 'pseudoword'), ('text', 'Neimem')]), OrderedDict([('item_nr', 76), ('condition', 'word'), ('text', 'doch')]), OrderedDict([('item_nr', 76), ('condition', 'pseudoword'), ('text', 'dogt')]), OrderedDict([('item_nr', 77), ('condition', 'word'), ('text', 'dunkle')]), OrderedDict([('item_nr', 77), ('condition', 'pseudoword'), ('text', 'Struge')]), OrderedDict([('item_nr', 78), ('condition', 'word'), ('text', 'durchquerten')]), OrderedDict([('item_nr', 78), ('condition', 'pseudoword'), ('text', 'Schußplelten')]), OrderedDict([('item_nr', 79), ('condition', 'word'), ('text', 'einfachsten')]), OrderedDict([('item_nr', 79), ('condition', 'pseudoword'), ('text', 'einzendsten')]), OrderedDict([('item_nr', 80), ('condition', 'word'), ('text', 'eintreffe')]), OrderedDict([('item_nr', 80), ('condition', 'pseudoword'), ('text', 'einkräpfe')]), OrderedDict([('item_nr', 81), ('condition', 'word'), ('text', 'endgültig')]), OrderedDict([('item_nr', 81), ('condition', 'pseudoword'), ('text', 'etzmöltig')]), OrderedDict([('item_nr', 82), ('condition', 'word'), ('text', 'entgegenkommende')]), OrderedDict([('item_nr', 82), ('condition', 'pseudoword'), ('text', 'ertbegerlösmende')]), OrderedDict([('item_nr', 83), ('condition', 'word'), ('text', 'entschärft')]), OrderedDict([('item_nr', 83), ('condition', 'pseudoword'), ('text', 'entschötts')]), OrderedDict([('item_nr', 84), ('condition', 'word'), ('text', 'ergiebigen')]), OrderedDict([('item_nr', 84), ('condition', 'pseudoword'), ('text', 'erveavegen')]), OrderedDict([('item_nr', 85), ('condition', 'word'), ('text', 'erschrickt')]), OrderedDict([('item_nr', 85), ('condition', 'pseudoword'), ('text', 'erschmeckt')]), OrderedDict([('item_nr', 86), ('condition', 'word'), ('text', 'erziehst')]), OrderedDict([('item_nr', 86), ('condition', 'pseudoword'), ('text', 'erhauhst')]), OrderedDict([('item_nr', 87), ('condition', 'word'), ('text', 'ferneren')]), OrderedDict([('item_nr', 87), ('condition', 'pseudoword'), ('text', 'Ferpeden')]), OrderedDict([('item_nr', 88), ('condition', 'word'), ('text', 'festzumachen')]), OrderedDict([('item_nr', 88), ('condition', 'pseudoword'), ('text', 'kähnzusachen')]), OrderedDict([('item_nr', 89), ('condition', 'word'), ('text', 'fickst')]), OrderedDict([('item_nr', 89), ('condition', 'pseudoword'), ('text', 'feckst')]), OrderedDict([('item_nr', 90), ('condition', 'word'), ('text', 'fixiert')]), OrderedDict([('item_nr', 90), ('condition', 'pseudoword'), ('text', 'riviert')]), OrderedDict([('item_nr', 91), ('condition', 'word'), ('text', 'fortbleiben')]), OrderedDict([('item_nr', 91), ('condition', 'pseudoword'), ('text', 'lortgrieben')]), OrderedDict([('item_nr', 92), ('condition', 'word'), ('text', 'füttere')]), OrderedDict([('item_nr', 92), ('condition', 'pseudoword'), ('text', 'lärtere')]), OrderedDict([('item_nr', 93), ('condition', 'word'), ('text', 'garstiges')]), OrderedDict([('item_nr', 93), ('condition', 'pseudoword'), ('text', 'gosbriges')]), OrderedDict([('item_nr', 94), ('condition', 'word'), ('text', 'gefallen')]), OrderedDict([('item_nr', 94), ('condition', 'pseudoword'), ('text', 'zefehlen')]), OrderedDict([('item_nr', 95), ('condition', 'word'), ('text', 'gesprochen')]), OrderedDict([('item_nr', 95), ('condition', 'pseudoword'), ('text', 'Kestrüchen')]), OrderedDict([('item_nr', 96), ('condition', 'word'), ('text', 'gleichwertig')]), OrderedDict([('item_nr', 96), ('condition', 'pseudoword'), ('text', 'brauchkertig')]), OrderedDict([('item_nr', 97), ('condition', 'word'), ('text', 'haltmachen')]), OrderedDict([('item_nr', 97), ('condition', 'pseudoword'), ('text', 'hostbachen')]), OrderedDict([('item_nr', 98), ('condition', 'word'), ('text', 'hinlege')]), OrderedDict([('item_nr', 98), ('condition', 'pseudoword'), ('text', 'worlege')]), OrderedDict([('item_nr', 99), ('condition', 'word'), ('text', 'hört')]), OrderedDict([('item_nr', 99), ('condition', 'pseudoword'), ('text', 'rört')]), OrderedDict([('item_nr', 100), ('condition', 'word'), ('text', 'interpretiert')]), OrderedDict([('item_nr', 100), ('condition', 'pseudoword'), ('text', 'inderchetauft')]), OrderedDict([('item_nr', 101), ('condition', 'word'), ('text', 'jahrelanges')]), OrderedDict([('item_nr', 101), ('condition', 'pseudoword'), ('text', 'Jespelanges')]), OrderedDict([('item_nr', 102), ('condition', 'word'), ('text', 'kaufte')]), OrderedDict([('item_nr', 102), ('condition', 'pseudoword'), ('text', 'Fauste')]), OrderedDict([('item_nr', 103), ('condition', 'word'), ('text', 'konsolidieren')]), OrderedDict([('item_nr', 103), ('condition', 'pseudoword'), ('text', 'pardolifieren')]), OrderedDict([('item_nr', 104), ('condition', 'word'), ('text', 'kreiere')]), OrderedDict([('item_nr', 104), ('condition', 'pseudoword'), ('text', 'Pseeile')]), OrderedDict([('item_nr', 105), ('condition', 'word'), ('text', 'lateinamerikanischer')]), OrderedDict([('item_nr', 105), ('condition', 'pseudoword'), ('text', 'heteinavelepenischem')]), OrderedDict([('item_nr', 106), ('condition', 'word'), ('text', 'lebenslänglich')]), OrderedDict([('item_nr', 106), ('condition', 'pseudoword'), ('text', 'lebensrommtich')]), OrderedDict([('item_nr', 107), ('condition', 'word'), ('text', 'lediglich')]), OrderedDict([('item_nr', 107), ('condition', 'pseudoword'), ('text', 'ledighens')]), OrderedDict([('item_nr', 108), ('condition', 'word'), ('text', 'letzten')]), OrderedDict([('item_nr', 108), ('condition', 'pseudoword'), ('text', 'lankten')]), OrderedDict([('item_nr', 109), ('condition', 'word'), ('text', 'naturalistischen')]), OrderedDict([('item_nr', 109), ('condition', 'pseudoword'), ('text', 'Tamudotiplischen')]), OrderedDict([('item_nr', 110), ('condition', 'word'), ('text', 'niedergezwungen')]), OrderedDict([('item_nr', 110), ('condition', 'pseudoword'), ('text', 'quaterbesprugen')]), OrderedDict([('item_nr', 111), ('condition', 'word'), ('text', 'niederzuhalten')]), OrderedDict([('item_nr', 111), ('condition', 'pseudoword'), ('text', 'keiderzuminten')]), OrderedDict([('item_nr', 112), ('condition', 'word'), ('text', 'offiziellem')]), OrderedDict([('item_nr', 112), ('condition', 'pseudoword'), ('text', 'önvivierlem')]), OrderedDict([('item_nr', 113), ('condition', 'word'), ('text', 'parfümiert')]), OrderedDict([('item_nr', 113), ('condition', 'pseudoword'), ('text', 'Fonfümiert')]), OrderedDict([('item_nr', 114), ('condition', 'word'), ('text', 'rasselt')]), OrderedDict([('item_nr', 114), ('condition', 'pseudoword'), ('text', 'rüssert')]), OrderedDict([('item_nr', 115), ('condition', 'word'), ('text', 'reparierten')]), OrderedDict([('item_nr', 115), ('condition', 'pseudoword'), ('text', 'Mecolierten')]), OrderedDict([('item_nr', 116), ('condition', 'word'), ('text', 'schlaksigen')]), OrderedDict([('item_nr', 116), ('condition', 'pseudoword'), ('text', 'schwißsigen')]), OrderedDict([('item_nr', 117), ('condition', 'word'), ('text', 'schwindelte')]), OrderedDict([('item_nr', 117), ('condition', 'pseudoword'), ('text', 'Schrordelte')]), OrderedDict([('item_nr', 118), ('condition', 'word'), ('text', 'schönste')]), OrderedDict([('item_nr', 118), ('condition', 'pseudoword'), ('text', 'schüfste')]), OrderedDict([('item_nr', 119), ('condition', 'word'), ('text', 'schüchternste')]), OrderedDict([('item_nr', 119), ('condition', 'pseudoword'), ('text', 'Schächteckste')]), OrderedDict([('item_nr', 120), ('condition', 'word'), ('text', 'siegle')]), OrderedDict([('item_nr', 120), ('condition', 'pseudoword'), ('text', 'Weigle')]), OrderedDict([('item_nr', 121), ('condition', 'word'), ('text', 'sogleich')]), OrderedDict([('item_nr', 121), ('condition', 'pseudoword'), ('text', 'Bogleibt')]), OrderedDict([('item_nr', 122), ('condition', 'word'), ('text', 'spuckten')]), OrderedDict([('item_nr', 122), ('condition', 'pseudoword'), ('text', 'Trunktet')]), OrderedDict([('item_nr', 123), ('condition', 'word'), ('text', 'strammen')]), OrderedDict([('item_nr', 123), ('condition', 'pseudoword'), ('text', 'Strämmen')]), OrderedDict([('item_nr', 124), ('condition', 'word'), ('text', 'sympathisierst')]), OrderedDict([('item_nr', 124), ('condition', 'pseudoword'), ('text', 'nippaknisierst')]), OrderedDict([('item_nr', 125), ('condition', 'word'), ('text', 'telepathischen')]), OrderedDict([('item_nr', 125), ('condition', 'pseudoword'), ('text', 'Mevevogrischen')]), OrderedDict([('item_nr', 126), ('condition', 'word'), ('text', 'undurchdringbar')]), OrderedDict([('item_nr', 126), ('condition', 'pseudoword'), ('text', 'unsungsspaltbar')]), OrderedDict([('item_nr', 127), ('condition', 'word'), ('text', 'ungesetzlich')]), OrderedDict([('item_nr', 127), ('condition', 'pseudoword'), ('text', 'ungeserthehn')]), OrderedDict([('item_nr', 128), ('condition', 'word'), ('text', 'verantwortungsvollen')]), OrderedDict([('item_nr', 128), ('condition', 'pseudoword'), ('text', 'vereckheugungsvollen')]), OrderedDict([('item_nr', 129), ('condition', 'word'), ('text', 'vergeltet')]), OrderedDict([('item_nr', 129), ('condition', 'pseudoword'), ('text', 'verligtet')]), OrderedDict([('item_nr', 130), ('condition', 'word'), ('text', 'verkürzen')]), OrderedDict([('item_nr', 130), ('condition', 'pseudoword'), ('text', 'verdolzen')]), OrderedDict([('item_nr', 131), ('condition', 'word'), ('text', 'verschmutzen')]), OrderedDict([('item_nr', 131), ('condition', 'pseudoword'), ('text', 'berschluscen')]), OrderedDict([('item_nr', 132), ('condition', 'word'), ('text', 'versteigere')]), OrderedDict([('item_nr', 132), ('condition', 'pseudoword'), ('text', 'berdrietere')]), OrderedDict([('item_nr', 133), ('condition', 'word'), ('text', 'verzeichnet')]), OrderedDict([('item_nr', 133), ('condition', 'pseudoword'), ('text', 'vertiertnet')]), OrderedDict([('item_nr', 134), ('condition', 'word'), ('text', 'verzieren')]), OrderedDict([('item_nr', 134), ('condition', 'pseudoword'), ('text', 'verjaulen')]), OrderedDict([('item_nr', 135), ('condition', 'word'), ('text', 'vorschriftswidrig')]), OrderedDict([('item_nr', 135), ('condition', 'pseudoword'), ('text', 'vorschrenntgadrig')]), OrderedDict([('item_nr', 136), ('condition', 'word'), ('text', 'wahnsinnig')]), OrderedDict([('item_nr', 136), ('condition', 'pseudoword'), ('text', 'wirtrinnig')]), OrderedDict([('item_nr', 137), ('condition', 'word'), ('text', 'wegkomme')]), OrderedDict([('item_nr', 137), ('condition', 'pseudoword'), ('text', 'weuhemme')]), OrderedDict([('item_nr', 138), ('condition', 'word'), ('text', 'wissenschaftlicheren')]), OrderedDict([('item_nr', 138), ('condition', 'pseudoword'), ('text', 'sempenspralllicheren')]), OrderedDict([('item_nr', 139), ('condition', 'word'), ('text', 'wunderbaren')]), OrderedDict([('item_nr', 139), ('condition', 'pseudoword'), ('text', 'vulterwagen')]), OrderedDict([('item_nr', 140), ('condition', 'word'), ('text', 'wundersamer')]), OrderedDict([('item_nr', 140), ('condition', 'pseudoword'), ('text', 'Stuterfazer')]), OrderedDict([('item_nr', 141), ('condition', 'word'), ('text', 'wunderschöne')]), OrderedDict([('item_nr', 141), ('condition', 'pseudoword'), ('text', 'pupderstrüse')]), OrderedDict([('item_nr', 142), ('condition', 'word'), ('text', 'zackiger')]), OrderedDict([('item_nr', 142), ('condition', 'pseudoword'), ('text', 'Rürkiger')]), OrderedDict([('item_nr', 143), ('condition', 'word'), ('text', 'zerrinnen')]), OrderedDict([('item_nr', 143), ('condition', 'pseudoword'), ('text', 'zersanken')]), OrderedDict([('item_nr', 144), ('condition', 'word'), ('text', 'zeugt')]), OrderedDict([('item_nr', 144), ('condition', 'pseudoword'), ('text', 'zelfs')]), OrderedDict([('item_nr', 145), ('condition', 'word'), ('text', 'zuflüstern')]), OrderedDict([('item_nr', 145), ('condition', 'pseudoword'), ('text', 'umfröstern')]), OrderedDict([('item_nr', 146), ('condition', 'word'), ('text', 'zurechtgebogen')]), OrderedDict([('item_nr', 146), ('condition', 'pseudoword'), ('text', 'zusärtsgekägen')]), OrderedDict([('item_nr', 147), ('condition', 'word'), ('text', 'zurückgeschreckt')]), OrderedDict([('item_nr', 147), ('condition', 'pseudoword'), ('text', 'zurichgeschrance')]), OrderedDict([('item_nr', 148), ('condition', 'word'), ('text', 'überbelegt')]), OrderedDict([('item_nr', 148), ('condition', 'pseudoword'), ('text', 'iberfenerk')]), OrderedDict([('item_nr', 149), ('condition', 'word'), ('text', 'überlebensgroße')]), OrderedDict([('item_nr', 149), ('condition', 'pseudoword'), ('text', 'ütersimensstohe')]), OrderedDict([('item_nr', 150), ('condition', 'word'), ('text', 'überlisten')]), OrderedDict([('item_nr', 150), ('condition', 'pseudoword'), ('text', 'igergesten')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="stimuli/stim_long.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
+    <Routine name="store_resp_and_break"/>
+    <LoopTerminator name="trials"/>
+    <Routine name="end"/>
+  </Flow>
+</PsychoPy2experiment>

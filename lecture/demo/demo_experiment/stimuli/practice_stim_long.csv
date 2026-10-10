@@ -1,0 +1,11 @@
+item_nr,condition,text,corr_ans,is_practice_trial
+1,word,Haie,ralt,TRUE
+1,pseudoword,Bage,lalt,TRUE
+2,word,Mannes,ralt,TRUE
+2,pseudoword,sanzes,lalt,TRUE
+3,word,korrekt,ralt,TRUE
+3,pseudoword,Torrerk,lalt,TRUE
+4,word,sagt,ralt,TRUE
+4,pseudoword,segt,lalt,TRUE
+5,word,sicheren,ralt,TRUE
+5,pseudoword,tobreren,lalt,TRUE
