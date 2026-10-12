@@ -8,12 +8,11 @@ The following course requirements have specific deadlines:
 
 | ExPra Requirement | Deadline (dd/mm/yyyy) 🗓 |
 |-------------------|--------------------------|
-| Present your assigned reading with your group | Varies by group: see [Reading](https://jackedtaylor.github.io/expra-wise24/general/reading.html) |
-| Submit the Demo Report as a group (not graded, but you will receive feedback) | 17/11/2025 |
-| Preregister your experiment on LIFOS as a group | 24/11/2025 |
-| Present your research findings as a group | 26/01/2026 |
-| Submit your poster as a group (*to ensure we have time to print it!*) | 02/02/2026 |
-| Submit your ExPra Report individually (more details [below](#the-expra-report)) | 09/03/2026 |
+| Submit the Demo Report as a group (not graded, but you will receive feedback) | 16/11/2026 |
+| Preregister your experiment on LIFOS as a group | 30/11/2026 |
+| Present your findings as a group | 25/01/2027 |
+| Submit your poster as a group (*to ensure we have time to print it!*) | 01/02/2027 |
+| Submit your ExPra Report individually (more details [below](#the-expra-report)) | 08/03/2027 |
 
 ## Requirements with no Specific Deadline
 
@@ -39,13 +38,11 @@ The ExPra report is the final exam for the research project. The report is grade
 
 ### What should the report look like?
 
-See the example ExPra Report, to see how the report should look:
-
-<b> <i class="fa-solid fa-file-pdf"></i> <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise26/master/lecture/_static/EXPRA_Example_Report.pdf">Download the Example ExPra Report</a>  </b>
-
 For full details on the requirements for the report, see the ExPra student guide:
 
 <b> <i class="fa-solid fa-book"></i> <a href="https://jackedtaylor.github.io/expra-wise26/general/student-guide.html">Read the ExPra Guide for Students</a>  </b>
+
+The idea of the ExPra report is that it should give you some practice in reporting research, similar to how experimental research is reported in journal articles. In terms of writing style, visualisation, and structure, real journal articles should also be very useful in getting an idea for what the ExPra report should look like.
 
 ### How is it graded?
 

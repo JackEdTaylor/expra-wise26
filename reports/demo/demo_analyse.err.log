@@ -1,0 +1,139 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/asyncio/base_events.py", line 726, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+demog <- read_csv("demo_demog.csv")
+------------------
+
+
+[1m[33mError[39m:[22m
+[1m[22m[33m![39m [34mdemo_demog.csv[39m does not exist in current working directory:
+  [34m/home/runner/work/expra-wise26/expra-wise26/lecture/demo[39m.
+Traceback:
+
+1. vroom::vroom(file, delim = ",", col_names = col_names, col_types = col_types, 
+ .     col_select = {
+ .         {
+ .             col_select
+ .         }
+ .     }, id = id, .name_repair = name_repair, skip = skip, n_max = n_max, 
+ .     na = na, quote = quote, comment = comment, skip_empty_rows = skip_empty_rows, 
+ .     trim_ws = trim_ws, escape_double = TRUE, escape_backslash = FALSE, 
+ .     locale = locale, guess_max = guess_max, show_col_types = show_col_types, 
+ .     progress = progress, altrep = lazy, num_threads = num_threads)
+2. vroom_(file, delim = delim %||% col_types$delim, col_names = col_names, 
+ .     col_types = col_types, id = id, skip = skip, col_select = col_select, 
+ .     name_repair = .name_repair, na = na, quote = quote, trim_ws = trim_ws, 
+ .     escape_double = escape_double, escape_backslash = escape_backslash, 
+ .     comment = comment, skip_empty_rows = skip_empty_rows, locale = locale, 
+ .     guess_max = guess_max, n_max = n_max, altrep = vroom_altrep(altrep), 
+ .     num_threads = num_threads, progress = progress)
+3. (function (path, write = FALSE, call = caller_env()) 
+ . {
+ .     if (is.raw(path)) {
+ .         return(rawConnection(path, "rb"))
+ .     }
+ .     if (!is.character(path)) {
+ .         return(path)
+ .     }
+ .     if (is_url(path)) {
+ .         ext <- tolower(tools::file_ext(path))
+ .         if (ext %in% c("gz", "bz2", "xz", "zip")) {
+ .             cli::cli_abort("Remote compressed files must be handled upstream of this function.", 
+ .                 .internal = TRUE)
+ .         }
+ .         if (requireNamespace("curl", quietly = TRUE)) {
+ .             con <- curl::curl(path)
+ .         }
+ .         else {
+ .             inform("`curl` package not installed, falling back to using `url()`")
+ .             con <- url(path)
+ .         }
+ .         return(con)
+ .     }
+ .     path <- enc2utf8(path)
+ .     if (write) {
+ .         path <- normalizePath_utf8(path, mustWork = FALSE)
+ .     }
+ .     else {
+ .         path <- check_path(path)
+ .     }
+ .     p <- split_path_ext(basename_utf8(path))
+ .     extension <- p$extension
+ .     formats <- archive_formats(extension)
+ .     while (is.null(formats) && nzchar(extension)) {
+ .         extension <- split_path_ext(extension)$extension
+ .         formats <- archive_formats(extension)
+ .     }
+ .     needs_archive <- !is.null(formats) && (write || extension != 
+ .         "zip")
+ .     if (needs_archive) {
+ .         reason <- glue("to {if (write) 'write' else 'read'} `.{p$extension}` files.")
+ .         rlang::check_installed("archive", reason = reason, call = call)
+ .         if (write) {
+ .             if (is.null(formats[[1]])) {
+ .                 return(archive::file_write(path, filter = formats[[2]]))
+ .             }
+ .             return(archive::archive_write(path, p$path, format = formats[[1]], 
+ .                 filter = formats[[2]]))
+ .         }
+ .         if (is.null(formats[[1]])) {
+ .             return(archive::file_read(path, filter = formats[[2]]))
+ .         }
+ .         return(archive::archive_read(path, format = formats[[1]], 
+ .             filter = formats[[2]]))
+ .     }
+ .     if (!write) {
+ .         compression <- detect_compression(path)
+ .     }
+ .     else {
+ .         compression <- NA
+ .     }
+ .     if (is.na(compression)) {
+ .         compression <- tools::file_ext(path)
+ .     }
+ .     if (write && compression == "zip") {
+ .         cli::cli_abort(c("Can only read from, not write to, {.val .zip} files.", 
+ .             i = "Install the {.pkg archive} package to write {.val .zip} files."), 
+ .             call = call)
+ .     }
+ .     switch(compression, gz = gzfile(path), bz2 = bzfile(path), 
+ .         xz = xzfile(path), zip = zipfile(path), if (!has_trailing_newline(path)) {
+ .             file(path)
+ .         } else {
+ .             path
+ .         })
+ . })("demo_demog.csv")
+4. check_path(path)
+5. cli::cli_abort(msg, call = call)
+6. rlang::abort(message, ..., call = call, use_cli_format = TRUE, 
+ .     .frame = .frame)
+7. signal_abort(cnd, .file)
+8. signalCondition(cnd)
+

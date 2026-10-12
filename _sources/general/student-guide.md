@@ -145,7 +145,7 @@ Specifically, you should upload:
 - Your preregistration (filling out the template provided by LIFOS as a group; **mandatory**)
 - Materials (e.g., stimuli you collected; **optional**)
 - Analysis scripts (each student should upload their own analysis script; **mandatory**)
-- Data (**anonymized**; one data file for the whole group unless you worked with different datasets; **mandatory** except for data that may not be shared for legal reasons, see [here](https://pandar.netlify.app/lifos/grundlagen/datenschutz-en/))
+- Data (**anonymized**; one data file for the whole group unless you worked with different datasets; **mandatory** except for data that may not be shared for legal reasons, see [here](https://lifos.uni-frankfurt.de/welcome-to-lifos/LIFOS))
 - Manuscripts (you may upload your own manuscript **after the EXPRA report submission deadline**; voluntary, manuscript **can be anonymized**)
 
 
