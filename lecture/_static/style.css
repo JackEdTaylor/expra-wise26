@@ -22,7 +22,7 @@ html[data-theme="dark"] {
 }
 
 /* font for code */
-/*  */
+/* in particular, remove cascadia-code, as this makes |> look like a single triangle character */
 html{
     --pst-font-family-monospace-system: "Menlo","Consolas","DejaVu Sans Mono","Source Code Pro",monospace,ui-monospace
 }
