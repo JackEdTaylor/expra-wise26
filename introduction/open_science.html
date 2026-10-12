@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=e0f3d248" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=f14c9e1d" />
   
   <!-- So that users can add custom icons -->
   <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -558,8 +558,8 @@
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="xEPIMiyHoQAO" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#xEPIMiyHoQAO {
+<div class="output text_html"><div id="AHAvAjJclLao" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
+#AHAvAjJclLao {
    --jq-multiple-choice-bg: #392061;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -782,7 +782,7 @@
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsxEPIMiyHoQAO=[
+</style></div><script type="application/javascript">var questionsAHAvAjJclLao=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -2004,10 +2004,10 @@ function make_string(qa, outerqDiv, qDiv, aDiv, id) {
   setTimeout(() => controller.abort(), 5000);
   fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise26/master/lecture/introduction/open_science_quiz.json", { signal })
     .then(response => response.json())
-    .then(json => show_questions(json, xEPIMiyHoQAO))
+    .then(json => show_questions(json, AHAvAjJclLao))
     .catch(err => {
       console.log("Fetch error or timeout", err);
-      show_questions(questionsxEPIMiyHoQAO, xEPIMiyHoQAO);
+      show_questions(questionsAHAvAjJclLao, AHAvAjJclLao);
     });
 }
 }
