@@ -30,12 +30,12 @@ parts:
       - file: introduction/data_vis_1
       - file: introduction/data_vis_2
 
-  - caption: Demo Experiment
-    chapters:
-      - file: demo/demo_participate
-      - file: demo/demo_background
-      - file: demo/demo_analyse
-      - file: demo/demo_feedback
+  # - caption: Demo Experiment
+    # chapters:
+      # - file: demo/demo_participate
+      # - file: demo/demo_background
+      # - file: demo/demo_analyse
+      # - file: demo/demo_feedback
 
   - caption: Research Projects
     chapters:
