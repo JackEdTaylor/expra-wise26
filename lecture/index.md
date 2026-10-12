@@ -33,7 +33,7 @@ In case you have any questions or difficulties with the lecture and its material
 
 This site takes some content from the following templates and pages:
 
-* [ExPra Content](https://github.com/luciebinder/expra) contributed to by instructors for the 2026 course.
+* [ExPra Content](https://github.com/luciebinder/expra) contributed to by multiple ExPra instructors.
 
 * [The DiLER template](https://github.com/DiLER-Digitell/Course-template) developed by Michael Ernst and Felix Körber
 
