@@ -21,3 +21,8 @@ html[data-theme="dark"] {
     --pst-color-table-row-hover-bg: #281747
 }
 
+/* font for code */
+/*  */
+html{
+    --pst-font-family-monospace-system: "Menlo","Consolas","DejaVu Sans Mono","Cascadia Code","Source Code Pro",monospace,ui-monospace
+}
