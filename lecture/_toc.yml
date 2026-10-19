@@ -45,7 +45,7 @@ parts:
       - file: projects/conducting
       - file: projects/analysis
       #- file: projects/presentations
-      #- file: projects/posters
+      - file: projects/posters
 
   - caption: Cognitive Brain Imaging
     chapters:
