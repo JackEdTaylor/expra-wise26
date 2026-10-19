@@ -1,6 +1,6 @@
 # Projects
 
-There are 4 groups in this ExPra, and each group has a different topic. 
+There will be 4 groups in this ExPra, and each group will have a different topic. 
 
 Once the groups are assigned, we will list the project for each group here:
 
