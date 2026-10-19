@@ -559,8 +559,8 @@
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="OfOUuXhmpuUf" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#OfOUuXhmpuUf {
+<div class="output text_html"><div id="dmtYmgLUsEtN" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
+#dmtYmgLUsEtN {
    --jq-multiple-choice-bg: #392061;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -783,7 +783,7 @@
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsOfOUuXhmpuUf=[
+</style></div><script type="application/javascript">var questionsdmtYmgLUsEtN=[
     {
         "question": "Which of the following is often used by scientists communicating with scientists?",
         "type": "many_choice",
@@ -1913,10 +1913,10 @@ function make_string(qa, outerqDiv, qDiv, aDiv, id) {
   setTimeout(() => controller.abort(), 5000);
   fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise26/master/lecture/introduction/communication_quiz.json", { signal })
     .then(response => response.json())
-    .then(json => show_questions(json, OfOUuXhmpuUf))
+    .then(json => show_questions(json, dmtYmgLUsEtN))
     .catch(err => {
       console.log("Fetch error or timeout", err);
-      show_questions(questionsOfOUuXhmpuUf, OfOUuXhmpuUf);
+      show_questions(questionsdmtYmgLUsEtN, dmtYmgLUsEtN);
     });
 }
 }
