@@ -39,13 +39,13 @@ parts:
 
   - caption: Research Projects
     chapters:
-      #- file: projects/projects
+      - file: projects/projects
       - file: projects/preregistration
       - file: projects/lifos
       - file: projects/conducting
       - file: projects/analysis
       #- file: projects/presentations
-      - file: projects/posters
+      #- file: projects/posters
 
   - caption: Cognitive Brain Imaging
     chapters:
