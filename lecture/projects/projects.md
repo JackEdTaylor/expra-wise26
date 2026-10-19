@@ -1,16 +1,16 @@
 # Projects
 
-There will be 4 groups in this ExPra, and each group will have a different topic. 
+There are 4 groups in this ExPra, and each group has a different topic. 
 
-Once the groups are assigned, we will list the project for each group here:
+Now that the groups are assigned, here is a list of the groups:
 
-**Group A**: 
+**Group A**: Size Congruity: Digits/Words
 
-**Group B**: 
+**Group B**: Effect of Fixation Target in Lexical Decision
 
-**Group C**: 
+**Group C**: The Self, a Friend, a Stranger, and ChatGPT
 
-**Group D**: 
+**Group D**: Do Fixation Targets mask Letters in Words
 
 ## Slides
 
