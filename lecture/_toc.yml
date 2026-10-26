@@ -6,7 +6,6 @@ parts:
     chapters:
     - file: general/overview
     - file: general/schedule
-    - file: general/reading
   
   - caption: Introduction
     chapters:
@@ -40,6 +39,7 @@ parts:
   - caption: Research Projects
     chapters:
       - file: projects/projects
+      - file: projects/reading
       - file: projects/preregistration
       - file: projects/lifos
       - file: projects/conducting

@@ -10,7 +10,7 @@ Now that the groups are assigned, here is a list of the groups:
 
 **Group C**: The Self, a Friend, a Stranger, and ChatGPT
 
-**Group D**: Do Fixation Targets mask Letters in Words
+**Group D**: Do Fixation Targets mask Letters in Words?
 
 ## Slides
 
@@ -26,4 +26,4 @@ Here are some brief slides introducing the topics:
 <a href=https://docs.google.com/presentation/d/1o6ozr58lNlItzgnRFXBcE63_8J2SA2d-Fp2G_WFJijw/export/odp><i class="fa-solid fa-file"></i> Download .odp</a>
 </h5>
 
-Looking for suggested reading for your group? Find it here: [Suggested Reading for Each Project](https://jackedtaylor.github.io/expra-wise26/general/reading.html#suggested-reading-specific-to-each-project)
+Looking for suggested reading for your group? Find it here: [Suggested Reading for Each Project](https://jackedtaylor.github.io/expra-wise26/projects/reading.html#suggested-reading-specific-to-each-project)
