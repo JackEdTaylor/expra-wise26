@@ -541,6 +541,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-tests">1. t-tests</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anovas">2. ANOVAs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">3. Test your Understanding!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">4. Solutions</a></li>
 </ul>
 </li>
 </ul>
@@ -785,12 +786,135 @@ F-statistic: 277.3 on 3 and 116 DF,  p-value: &lt; 2.2e-16
 <p><strong>1)</strong> Change the first visualisation to show the linear model being fit to the two groups, A and B. (See slides 27-30 for an example plot).</p>
 <p><strong>2)</strong> Use the <code class="docutils literal notranslate"><span class="pre">pt()</span></code> function to replicate the <em>p</em> values in the <code class="docutils literal notranslate"><span class="pre">mod1</span></code> and <code class="docutils literal notranslate"><span class="pre">mod2</span></code> summaries. (See slide 40 for an example).</p>
 <p><strong>3) Possibly tricky:</strong> Try to calculate the simple effect of age in the high and low reading groups separately. Slides 60-65 may help you.</p>
-<div class="cell docutils container">
+</section>
+<section id="solutions">
+<h3>4. Solutions<a class="headerlink" href="#solutions" title="Link to this heading">#</a></h3>
+<p><strong>1)</strong></p>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here...</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a numeric variable to plot instead</span>
+<span class="n">dat1</span><span class="o">$</span><span class="n">group_num</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">dat1</span><span class="o">$</span><span class="n">group</span><span class="o">==</span><span class="s">"A"</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">dat1</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">group_num</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="c1"># plot the observations</span>
+<span class="w">    </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="c1"># plot a line with the intercept and slope from the linear model</span>
+<span class="w">    </span><span class="nf">geom_abline</span><span class="p">(</span>
+<span class="w">        </span><span class="n">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">180.528</span><span class="p">,</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-4.678</span><span class="p">,</span>
+<span class="w">        </span><span class="n">colour</span><span class="o">=</span><span class="s">"red"</span>
+<span class="w">    </span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/a0e0aa034871734e7e4f4b2dd7750d0745d68ab49ac1360609683ae79835701d.png"><img alt="../_images/a0e0aa034871734e7e4f4b2dd7750d0745d68ab49ac1360609683ae79835701d.png" src="../_images/a0e0aa034871734e7e4f4b2dd7750d0745d68ab49ac1360609683ae79835701d.png" style="width: 300px; height: 180px;" />
+</a>
+</div>
+</div>
+<p><strong>2)</strong></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># mod1</span>
+<span class="c1"># (note that we set lower.tail=TRUE because the value is negative; i.e., on the lower tail)</span>
+<span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">pt</span><span class="p">(</span><span class="m">-3.284</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="o">=</span><span class="m">58</span><span class="p">,</span><span class="w"> </span><span class="n">lower.tail</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="c1"># example from mod2: effect of the interaction</span>
+<span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">pt</span><span class="p">(</span><span class="m">6.439</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="o">=</span><span class="m">116</span><span class="p">,</span><span class="w"> </span><span class="n">lower.tail</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_html">0.00173801725251609</div><div class="output text_html">2.82721600957394e-09</div></div>
+</details>
+</div>
+<p><strong>3)</strong></p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># add 0.5 to shift the low reading group to be at zero</span>
+<span class="n">mod2_low</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">age_num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">reading_num</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="nf">mutate</span><span class="p">(</span><span class="n">dat2</span><span class="p">,</span><span class="w"> </span><span class="n">reading_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reading_num</span><span class="m">+0.5</span><span class="p">))</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">mod2_low</span><span class="p">)</span>
+
+<span class="c1"># minus 0.5 to shift the high reading group to be at zero</span>
+<span class="n">mod2_high</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">age_num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">reading_num</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="nf">mutate</span><span class="p">(</span><span class="n">dat2</span><span class="p">,</span><span class="w"> </span><span class="n">reading_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reading_num</span><span class="m">-0.5</span><span class="p">))</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">mod2_high</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = score ~ age_num * reading_num, data = mutate(dat2, 
+    reading_num = reading_num + 0.5))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.0855 -3.0319 -0.1937  2.9974 11.9266 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)          84.3167     0.6104 138.128  &lt; 2e-16 ***
+age_num             -28.5121     1.2208 -23.354  &lt; 2e-16 ***
+reading_num           7.8903     0.8633   9.140 2.45e-15 ***
+age_num:reading_num  11.1165     1.7265   6.439 2.83e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.728 on 116 degrees of freedom
+Multiple R-squared:  0.8776,	Adjusted R-squared:  0.8745 
+F-statistic: 277.3 on 3 and 116 DF,  p-value: &lt; 2.2e-16
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = score ~ age_num * reading_num, data = mutate(dat2, 
+    reading_num = reading_num - 0.5))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.0855 -3.0319 -0.1937  2.9974 11.9266 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)          92.2070     0.6104 151.054  &lt; 2e-16 ***
+age_num             -17.3955     1.2208 -14.249  &lt; 2e-16 ***
+reading_num           7.8903     0.8633   9.140 2.45e-15 ***
+age_num:reading_num  11.1165     1.7265   6.439 2.83e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.728 on 116 degrees of freedom
+Multiple R-squared:  0.8776,	Adjusted R-squared:  0.8745 
+F-statistic: 277.3 on 3 and 116 DF,  p-value: &lt; 2.2e-16
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 </section>
 </section>
@@ -867,6 +991,7 @@ F-statistic: 277.3 on 3 and 116 DF,  p-value: &lt; 2.2e-16
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-tests">1. t-tests</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anovas">2. ANOVAs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">3. Test your Understanding!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">4. Solutions</a></li>
 </ul>
 </li>
 </ul>
