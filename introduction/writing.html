@@ -1019,8 +1019,8 @@ This section includes content contributed by <a class="reference external" href=
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="yZRNXUSEfZQs" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#yZRNXUSEfZQs {
+<div class="output text_html"><div id="PeTPJTeqkfax" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
+#PeTPJTeqkfax {
    --jq-multiple-choice-bg: #392061;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1243,7 +1243,7 @@ This section includes content contributed by <a class="reference external" href=
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsyZRNXUSEfZQs=[
+</style></div><script type="application/javascript">var questionsPeTPJTeqkfax=[
     {
         "question": "Which of the following fonts are recommended according to the APA guidelines?",
         "type": "many_choice",
@@ -2392,10 +2392,10 @@ function make_string(qa, outerqDiv, qDiv, aDiv, id) {
   setTimeout(() => controller.abort(), 5000);
   fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise26/master/lecture/introduction/writing_quiz.json", { signal })
     .then(response => response.json())
-    .then(json => show_questions(json, yZRNXUSEfZQs))
+    .then(json => show_questions(json, PeTPJTeqkfax))
     .catch(err => {
       console.log("Fetch error or timeout", err);
-      show_questions(questionsyZRNXUSEfZQs, yZRNXUSEfZQs);
+      show_questions(questionsPeTPJTeqkfax, PeTPJTeqkfax);
     });
 }
 }
