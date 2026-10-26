@@ -563,8 +563,8 @@
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="HXaUYQrMtNtA" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#HXaUYQrMtNtA {
+<div class="output text_html"><div id="RjifrkGotoUo" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
+#RjifrkGotoUo {
    --jq-multiple-choice-bg: #392061;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -787,7 +787,7 @@
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsHXaUYQrMtNtA=[
+</style></div><script type="application/javascript">var questionsRjifrkGotoUo=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -2009,10 +2009,10 @@ function make_string(qa, outerqDiv, qDiv, aDiv, id) {
   setTimeout(() => controller.abort(), 5000);
   fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise26/master/lecture/introduction/open_science_quiz.json", { signal })
     .then(response => response.json())
-    .then(json => show_questions(json, HXaUYQrMtNtA))
+    .then(json => show_questions(json, RjifrkGotoUo))
     .catch(err => {
       console.log("Fetch error or timeout", err);
-      show_questions(questionsHXaUYQrMtNtA, HXaUYQrMtNtA);
+      show_questions(questionsRjifrkGotoUo, RjifrkGotoUo);
     });
 }
 }
