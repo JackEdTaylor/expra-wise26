@@ -29,8 +29,8 @@ parts:
       - file: introduction/data_vis_1
       - file: introduction/data_vis_2
 
-  # - caption: Demo Experiment
-    # chapters:
+  - caption: Demo Experiment
+    chapters:
       # - file: demo/demo_participate
       - file: demo/demo_background
       # - file: demo/demo_analyse
