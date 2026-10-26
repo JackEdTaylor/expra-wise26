@@ -30,6 +30,8 @@ On this page, you can find the suggested reading, to help you get started with r
 
 **Suggested Reading**
 
+* Ellis, A. W. (2004). Length, formats, neighbours, hemispheres, and the processing of words presented laterally or at fixation. *Brain and Language, Two Hemispheres, One Reading System: Early Cortical Representations of Print during Reading*, *88*(3), 355–366. https://doi.org/10.1016/S0093-934X(03)00166-4
+
 * New, B., Ferrand, L., Pallier, C., & Brysbaert, M. (2006). Reexamining the word length effect in visual word recognition: New evidence from the English Lexicon Project. *Psychonomic Bulletin & Review*, *13*(1), 45–52. https://doi.org/10.3758/BF03193811
 
 * Summers, R. J., & Meese, T. S. (2009). The influence of fixation points on contrast detection and discrimination of patches of grating: Masking and facilitation. *Vision Research*, *49*(14), 1894–1900. https://doi.org/10.1016/j.visres.2009.04.027
