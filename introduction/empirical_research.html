@@ -251,6 +251,7 @@
 <li class="toctree-l1"><a class="reference internal" href="data_wrangling_2.html">Data Wrangling 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_vis_1.html">Data Visualisation 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_vis_2.html">Data Visualisation 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_background.html">Background</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
 <ul class="nav bd-sidenav">
@@ -650,8 +651,8 @@ In this session, we will cover:</p>
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="JSuTrPFfnWai" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
-#JSuTrPFfnWai {
+<div class="output text_html"><div id="roAfmZgULCmf" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
+#roAfmZgULCmf {
    --jq-multiple-choice-bg: #392061;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -874,7 +875,7 @@ In this session, we will cover:</p>
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsJSuTrPFfnWai=[
+</style></div><script type="application/javascript">var questionsroAfmZgULCmf=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -2032,10 +2033,10 @@ function make_string(qa, outerqDiv, qDiv, aDiv, id) {
   setTimeout(() => controller.abort(), 5000);
   fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise26/master/lecture/introduction/empirical_research_quiz.json", { signal })
     .then(response => response.json())
-    .then(json => show_questions(json, JSuTrPFfnWai))
+    .then(json => show_questions(json, roAfmZgULCmf))
     .catch(err => {
       console.log("Fetch error or timeout", err);
-      show_questions(questionsJSuTrPFfnWai, JSuTrPFfnWai);
+      show_questions(questionsroAfmZgULCmf, roAfmZgULCmf);
     });
 }
 }
