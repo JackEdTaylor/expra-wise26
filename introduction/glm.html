@@ -617,7 +617,7 @@
 </a>
 </div>
 </div>
-<p>If we were to perform a <em>t</em>-test on these data, we would get <em>t</em>(58)=4, <em>p</em>&lt;.001</p>
+<p>If we were to perform a <em>t</em>-test on these data, we would get <em>t</em>(58)=3.28, <em>p</em>=.002</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">t.test</span><span class="p">(</span><span class="n">height</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">dat1</span><span class="p">,</span><span class="w"> </span><span class="n">var.equal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
@@ -641,7 +641,7 @@ mean in group A mean in group B
 </div>
 </div>
 <p>(side note: we have to set <code class="docutils literal notranslate"><span class="pre">var.equal=TRUE</span></code>, as R will by default use a Welch’s <em>t</em>-test unless we tell it not to)</p>
-<p>Another way of representing the same information would be as a simple linear model (the <code class="docutils literal notranslate"><span class="pre">lm()</span></code> function in R). This gives us the result of a mean difference of <span class="math notranslate nohighlight">\(B_1\)</span>=-4.68 (<em>SE</em>=1.43, <em>p</em>&lt;.001). Note that the <em>t</em> and <em>p</em> values are identical to those in the <em>t</em>-test above!</p>
+<p>Another way of representing the same information would be as a simple linear model (the <code class="docutils literal notranslate"><span class="pre">lm()</span></code> function in R). This gives us the result of a mean difference of <span class="math notranslate nohighlight">\(B_1\)</span>=-4.68 (<em>SE</em>=1.43, <em>p</em>=.002). Note that the <em>t</em> and <em>p</em> values are identical to those in the <em>t</em>-test above!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">mod1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">height</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">dat1</span><span class="p">)</span>
@@ -709,7 +709,7 @@ F-statistic: 10.78 on 1 and 58 DF,  p-value: 0.00174
 </div>
 </div>
 <p>We could analyse this with an ANOVA. We might report the main effects and interaction as:</p>
-<p><em>There was a main effect of age (F(1, 116)=688.02, p&lt;.001), with scores higher in the old age group than in the young age group. There was also a main effect of reading group, with scores higher in the high reading group (F(1, 116)=77.79, p&lt;.001). Finally, there was an interaction between age group and reading group, where the effect of reading group was smaller in the older age group than in the younger age group (F(1, 116)=33.92, p&lt;.001).</em></p>
+<p><em>There was a main effect of age (F(1, 116)=707, p&lt;.001), with scores higher in the old age group than in the young age group. There was also a main effect of reading group, with scores higher in the high reading group (F(1, 116)=83.54, p&lt;.001). Finally, there was an interaction between age group and reading group, where the effect of reading group was smaller in the older age group than in the younger age group (F(1, 116)=41.46, p&lt;.001).</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">anova2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aov</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">age_group</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">reading_group</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">dat2</span><span class="p">)</span>
