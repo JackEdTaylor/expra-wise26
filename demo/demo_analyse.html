@@ -552,11 +552,13 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-hemifield-lexicality-interaction">Analysis - Hemifield-Lexicality Interaction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-times">Response Times</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-participant-averages">1: Calculate Participant Averages</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-and-test-the-lexicality-hemifield-interaction">3: Estimate and Test the Lexicality-Hemifield Interaction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-participant-averages">1: Calculate Participant Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-and-test-the-lexicality-hemifield-interaction">2: Estimate and Test the Lexicality-Hemifield Interaction</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-hemifield-frequency-interaction">Analysis - Hemifield-Frequency Interaction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-item-averages">1: Calculate Item Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-interaction">2: Estimating the Interaction</a></li>
 </ul>
 </li>
 </ul>
@@ -852,7 +854,7 @@
 </section>
 <section id="summarise-participants">
 <h3>2: Summarise Participants<a class="headerlink" href="#summarise-participants" title="Link to this heading">#</a></h3>
-<p>Now, we want to calculate per average accuracy for each participant.</p>
+<p>Now, we want to calculate average accuracy for each participant.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">participant_avg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all_dat</span><span class="w"> </span><span class="o">|&gt;</span>
@@ -958,18 +960,14 @@
 <section id="analysis-hemifield-lexicality-interaction">
 <h2>Analysis - Hemifield-Lexicality Interaction<a class="headerlink" href="#analysis-hemifield-lexicality-interaction" title="Link to this heading">#</a></h2>
 <p>Can we replicate the hemifield-lexicality interaction, with a larger effect of lexicality in the right visual field?</p>
-<section id="response-times">
-<h3>Response Times<a class="headerlink" href="#response-times" title="Link to this heading">#</a></h3>
 <section id="calculate-participant-averages">
-<h4>1: Calculate Participant Averages<a class="headerlink" href="#calculate-participant-averages" title="Link to this heading">#</a></h4>
+<h3>1: Calculate Participant Averages<a class="headerlink" href="#calculate-participant-averages" title="Link to this heading">#</a></h3>
 <p>Here, we calculate the average RT and accuracy for each participant, in each condition. There are 4 conditions here: LVF Words, LVF Pseudowords, RVF Words, RVF Pseudowords.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">participant_avgs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trials_clean</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="w"> </span><span class="n">side</span><span class="p">,</span><span class="w"> </span><span class="n">lexicality</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span>
-<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">)</span>
-<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span>
 
 <span class="n">participant_avgs</span>
@@ -999,10 +997,11 @@
 </div>
 </section>
 <section id="estimate-and-test-the-lexicality-hemifield-interaction">
-<h4>3: Estimate and Test the Lexicality-Hemifield Interaction<a class="headerlink" href="#estimate-and-test-the-lexicality-hemifield-interaction" title="Link to this heading">#</a></h4>
+<h3>2: Estimate and Test the Lexicality-Hemifield Interaction<a class="headerlink" href="#estimate-and-test-the-lexicality-hemifield-interaction" title="Link to this heading">#</a></h3>
 <p>Here, we estimate a repeated measures ANOVA using <code class="docutils literal notranslate"><span class="pre">afex::aov_4()</span></code>.</p>
-<div class="highlight-tipg}In notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In case you need a refresher, here is a reminder of this in Statistik II: <a class="reference external" href="https://pandar.netlify.app/lehre/statistik-ii/anova-iii/">https://pandar.netlify.app/lehre/statistik-ii/anova-iii/</a>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1101,6 +1100,111 @@ Confidence level used: 0.95
 </div>
 </section>
 </section>
+<section id="analysis-hemifield-frequency-interaction">
+<h2>Analysis - Hemifield-Frequency Interaction<a class="headerlink" href="#analysis-hemifield-frequency-interaction" title="Link to this heading">#</a></h2>
+<p>Can we replicate the hemifield-frequency interaction, with a larger effect of frequency in the left visual field than the right?</p>
+<section id="calculate-item-averages">
+<h3>1: Calculate Item Averages<a class="headerlink" href="#calculate-item-averages" title="Link to this heading">#</a></h3>
+<p>Because word frequency is an item-level variable, we need to get the average RTs for each <em>item</em>, instead of for each participant. In addition, we make sure that we only keep the words, since the pseudowords do not have frequencies.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">item_avgs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trials_clean</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># keep only words, then...</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">lexicality</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"word"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># ...calculate average response times</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">side</span><span class="p">,</span><span class="w"> </span><span class="n">freq_zipf</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span>
+
+<span class="n">item_avgs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 297 × 4
+   text  side  freq_zipf median_rt
+   &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Alarm left       4.43      361 
+ 2 Alarm right      4.43      368.
+ 3 Alpha left       3.96      449 
+ 4 Alpha right      3.96      425 
+ 5 Ampel left       3.77      401 
+ 6 Ampel right      3.77      344.
+ 7 Anzug left       4.54      484 
+ 8 Anzug right      4.54      346.
+ 9 Arche left       3.48      583 
+10 Arche right      3.48      768 
+# ℹ 287 more rows
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="estimating-the-interaction">
+<h3>2: Estimating the Interaction<a class="headerlink" href="#estimating-the-interaction" title="Link to this heading">#</a></h3>
+<p>To estimate the interaction, we will fit a linear model instead of an ANOVA, since our frequency variable is continuous rather than categorical.</p>
+<p>The first step is to code the variable. We covered the logic behind this when discussing the <a class="reference external" href="https://jackedtaylor.github.io/expra-wise26/introduction/glm.html">General Linear Model</a> a few weeks ago. We will mean-centre and scale Zipf (<code class="docutils literal notranslate"><span class="pre">freq_zipf</span></code>), and “deviation-code” hemifield (<code class="docutils literal notranslate"><span class="pre">side</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">item_avgs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">item_avgs</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">    </span><span class="c1"># first, a binary variable with 0 when on the left, and 1 when on the right</span>
+<span class="w">    </span><span class="n">side_is_left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">side</span><span class="o">==</span><span class="s">"left"</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<span class="w">    </span><span class="c1"># now, centre the predictor (so that -0.5 is at left, and +0.5 is at right)</span>
+<span class="w">    </span><span class="n">side_dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">side_is_left</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">side_is_left</span><span class="p">),</span>
+<span class="w">    </span><span class="c1"># for frequency, just mean-centre and SD-scale Zipf</span>
+<span class="w">    </span><span class="n">zipf_sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">scale</span><span class="p">(</span><span class="n">freq_zipf</span><span class="p">,</span><span class="w"> </span><span class="n">center</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Unlike a repeated-measures ANOVA, this linear model doesn’t include any information on which observations come from the same items. It also ignores all of the variability between participants. It’s a bit beyond our current stage, but an ideal approach would actually be to fit a mixed-effects model. If this is something you are interested in learning more about, see the <a class="reference external" href="https://pandar.netlify.app/workshops/kiju/lmm-intro/">Introduction to Mixed Models in lme4</a> on pandar.</p>
+</div>
+</aside>
+<p>We can now fit a linear model estimating the effect of the interaction on the response times.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">lm_hemi_freq</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span>
+<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">side_dev</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">zipf_sc</span><span class="p">,</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item_avgs</span>
+<span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">lm_hemi_freq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = median_rt ~ 1 + side_dev * zipf_sc, data = item_avgs)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-186.32  -52.13  -10.13   36.13  342.23 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      432.2510     4.8027  90.002  &lt; 2e-16 ***
+side_dev         -36.5950     9.6054  -3.810 0.000169 ***
+zipf_sc          -37.3503     4.8109  -7.764 1.39e-13 ***
+side_dev:zipf_sc   0.8576     9.6216   0.089 0.929038    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 82.77 on 293 degrees of freedom
+Multiple R-squared:  0.2033,	Adjusted R-squared:  0.1952 
+F-statistic: 24.93 on 3 and 293 DF,  p-value: 2.153e-14
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1168,11 +1272,13 @@ Confidence level used: 0.95
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-hemifield-lexicality-interaction">Analysis - Hemifield-Lexicality Interaction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-times">Response Times</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-participant-averages">1: Calculate Participant Averages</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-and-test-the-lexicality-hemifield-interaction">3: Estimate and Test the Lexicality-Hemifield Interaction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-participant-averages">1: Calculate Participant Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-and-test-the-lexicality-hemifield-interaction">2: Estimate and Test the Lexicality-Hemifield Interaction</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-hemifield-frequency-interaction">Analysis - Hemifield-Frequency Interaction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-item-averages">1: Calculate Item Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-interaction">2: Estimating the Interaction</a></li>
 </ul>
 </li>
 </ul>
