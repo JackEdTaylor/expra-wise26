@@ -9,14 +9,15 @@ packages <- c(
   "readr",
   "tidyr",
   "purrr",
-  "ordinal",
+  "afex",
   "lme4",
   "patchwork",
   "magick",
   "colorBlindness",
   "svglite",
   "cocor",
-  "faux"
+  "faux",
+  "emmeans"
 )
 
 install.packages(packages, repos="https://cloud.r-project.org/")
