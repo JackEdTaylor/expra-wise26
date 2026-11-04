@@ -32,7 +32,7 @@ parts:
   - caption: Demo Experiment
     chapters:
       - file: demo/demo_background
-      # - file: demo/demo_analyse
+      - file: demo/demo_analyse
       # - file: demo/demo_feedback
 
   - caption: Research Projects
