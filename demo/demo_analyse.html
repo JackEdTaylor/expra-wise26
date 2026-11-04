@@ -540,7 +540,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relevant-libraries">1: Load the Relevant Libraries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-demographic-data">2. Import the Demographic Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-stimuli">3: Import the Stimuli</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-raw-data">4: Import the Raw Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-raw-trials-data">4: Import the Raw Trials Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-data-together">5: Join the Data Together</a></li>
 </ul>
 </li>
@@ -551,18 +551,14 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-data">4: Clean Data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-frequency-effect">Analysis - Frequency Effect</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-word-averages">1: Calculate Word Averages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-the-frequency-variable">2: Code the Frequency Variable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-frequency-effect">3: Estimate the Frequency Effect</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-hemifield-lexicality-interaction">Analysis - Hemifield-Lexicality Interaction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-times">Response Times</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-participant-averages">1: Calculate Participant Averages</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-and-test-the-lexicality-hemifield-interaction">3: Estimate and Test the Lexicality-Hemifield Interaction</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-snd-effects">Analysis - SND Effects</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-item-averages">1: Calculate Item Averages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-variables">2: Code Variables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-lexicality-snd-interaction">3: Estimate the Lexicality × SND Interaction</a></li>
 </ul>
             </nav>
         </div>
@@ -578,16 +574,16 @@
 <h1>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h1>
 <p>The main thing we’ll go through today is analysis of the Demo Experiment data. We have data from 8 participants who completed the experiment.</p>
 <p><strong>Before we can start:</strong></p>
-<p><strong>a</strong>) <a class="reference internal" href="#demo_demog.csv"><span class="xref myst">Download the demographics data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file, and place it in a directory that makes sense for you (e.g., called “demo_analysis”).</p>
-<p><strong>b</strong>) <a class="reference internal" href="#demo_stimuli.csv"><span class="xref myst">Download the stimuli</span></a> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file, and place it in the same demo analysis folder.</p>
-<p><strong>c</strong>) <a class="reference internal" href="#demo_data.zip"><span class="xref myst">Download the raw trials data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p>
-<p><strong>d</strong>) Extract the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file and put it in your demo analysis folder.</p>
+<p><strong>a</strong>) <a class="reference download internal" download="" href="../_downloads/daf706072d40687984ec3fb4396e9315/demo_demog.csv"><span class="xref download myst">Download the demographics data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file, and place it in a directory that makes sense for you (e.g., called “demo_analysis”).</p>
+<p><strong>b</strong>) <a class="reference download internal" download="" href="../_downloads/69790babfb823cc32182d23a72f6612a/demo_stimuli.csv"><span class="xref download myst">Download the stimuli</span></a> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file, and place it in the same demo analysis folder.</p>
+<p><strong>c</strong>) <a class="reference download internal" download="" href="../_downloads/a97351f4d21e86e80a933f3d866fc487/demo_trials.zip"><span class="xref download myst">Download the raw trials data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p>
+<p><strong>d</strong>) Extract the <code class="docutils literal notranslate"><span class="pre">trials</span></code> folder from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file and put it in your demo analysis folder.</p>
 <p><strong>e</strong>) Start a new R script in RStudio, and save the <code class="docutils literal notranslate"><span class="pre">.R</span></code> file to the demo analysis folder.</p>
 <p>After following these instructions, you should have a directory structure that looks something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>demo_analysis
-├─ data
-│  ├─ trials_p171220.csv
-│  ├─ trials_p203530.csv
+├─ trials
+│  ├─ trials_p03085.csv
+│  ├─ trials_p05336.csv
 │  └─ ...
 ├─ analysis.R
 └─ demo_demog.csv
@@ -607,6 +603,8 @@
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for reading the data into R</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">purrr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for easily importing multiple files</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for wrangling data (e.g., adding/renaming columns)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">afex</span><span class="p">)</span><span class="w">     </span><span class="c1"># for fitting a repeated measures anova</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">emmeans</span><span class="p">)</span><span class="w">  </span><span class="c1"># for summarising factorial cells</span>
 
 <span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">  </span><span class="c1"># for visualising data</span>
 </pre></div>
@@ -624,115 +622,22 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">Error</span>:
-<span class="o">!</span><span class="w"> </span>demo_demog.csv<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist<span class="w"> </span><span class="k">in</span><span class="w"> </span>current<span class="w"> </span>working<span class="w"> </span>directory:
-  <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">expra</span><span class="o">-</span><span class="n">wise26</span><span class="o">/</span><span class="n">expra</span><span class="o">-</span><span class="n">wise26</span><span class="o">/</span><span class="n">lecture</span><span class="o">/</span><span class="n">demo</span><span class="o">.</span>
-<span class="ne">Traceback</span>:
-
-<span class="mi">1</span><span class="o">.</span> <span class="n">vroom</span><span class="p">::</span><span class="n">vroom</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">delim</span> <span class="o">=</span> <span class="s2">","</span><span class="p">,</span> <span class="n">col_names</span> <span class="o">=</span> <span class="n">col_names</span><span class="p">,</span> <span class="n">col_types</span> <span class="o">=</span> <span class="n">col_types</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">col_select</span> <span class="o">=</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="p">{</span>
- <span class="o">.</span>             <span class="n">col_select</span>
- <span class="o">.</span>         <span class="p">}</span>
- <span class="o">.</span>     <span class="p">},</span> <span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span><span class="p">,</span> <span class="o">.</span><span class="n">name_repair</span> <span class="o">=</span> <span class="n">name_repair</span><span class="p">,</span> <span class="n">skip</span> <span class="o">=</span> <span class="n">skip</span><span class="p">,</span> <span class="n">n_max</span> <span class="o">=</span> <span class="n">n_max</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">na</span> <span class="o">=</span> <span class="n">na</span><span class="p">,</span> <span class="n">quote</span> <span class="o">=</span> <span class="n">quote</span><span class="p">,</span> <span class="n">comment</span> <span class="o">=</span> <span class="n">comment</span><span class="p">,</span> <span class="n">skip_empty_rows</span> <span class="o">=</span> <span class="n">skip_empty_rows</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">trim_ws</span> <span class="o">=</span> <span class="n">trim_ws</span><span class="p">,</span> <span class="n">escape_double</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">escape_backslash</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">locale</span> <span class="o">=</span> <span class="n">locale</span><span class="p">,</span> <span class="n">guess_max</span> <span class="o">=</span> <span class="n">guess_max</span><span class="p">,</span> <span class="n">show_col_types</span> <span class="o">=</span> <span class="n">show_col_types</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">progress</span> <span class="o">=</span> <span class="n">progress</span><span class="p">,</span> <span class="n">altrep</span> <span class="o">=</span> <span class="n">lazy</span><span class="p">,</span> <span class="n">num_threads</span> <span class="o">=</span> <span class="n">num_threads</span><span class="p">)</span>
-<span class="mi">2</span><span class="o">.</span> <span class="n">vroom_</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">delim</span> <span class="o">=</span> <span class="n">delim</span> <span class="o">%||%</span> <span class="n">col_types</span><span class="err">$</span><span class="n">delim</span><span class="p">,</span> <span class="n">col_names</span> <span class="o">=</span> <span class="n">col_names</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">col_types</span> <span class="o">=</span> <span class="n">col_types</span><span class="p">,</span> <span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span><span class="p">,</span> <span class="n">skip</span> <span class="o">=</span> <span class="n">skip</span><span class="p">,</span> <span class="n">col_select</span> <span class="o">=</span> <span class="n">col_select</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">name_repair</span> <span class="o">=</span> <span class="o">.</span><span class="n">name_repair</span><span class="p">,</span> <span class="n">na</span> <span class="o">=</span> <span class="n">na</span><span class="p">,</span> <span class="n">quote</span> <span class="o">=</span> <span class="n">quote</span><span class="p">,</span> <span class="n">trim_ws</span> <span class="o">=</span> <span class="n">trim_ws</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">escape_double</span> <span class="o">=</span> <span class="n">escape_double</span><span class="p">,</span> <span class="n">escape_backslash</span> <span class="o">=</span> <span class="n">escape_backslash</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">comment</span> <span class="o">=</span> <span class="n">comment</span><span class="p">,</span> <span class="n">skip_empty_rows</span> <span class="o">=</span> <span class="n">skip_empty_rows</span><span class="p">,</span> <span class="n">locale</span> <span class="o">=</span> <span class="n">locale</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">guess_max</span> <span class="o">=</span> <span class="n">guess_max</span><span class="p">,</span> <span class="n">n_max</span> <span class="o">=</span> <span class="n">n_max</span><span class="p">,</span> <span class="n">altrep</span> <span class="o">=</span> <span class="n">vroom_altrep</span><span class="p">(</span><span class="n">altrep</span><span class="p">),</span> 
- <span class="o">.</span>     <span class="n">num_threads</span> <span class="o">=</span> <span class="n">num_threads</span><span class="p">,</span> <span class="n">progress</span> <span class="o">=</span> <span class="n">progress</span><span class="p">)</span>
-<span class="mi">3</span><span class="o">.</span> <span class="p">(</span><span class="n">function</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">write</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">call</span> <span class="o">=</span> <span class="n">caller_env</span><span class="p">())</span> 
- <span class="o">.</span> <span class="p">{</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">raw</span><span class="p">(</span><span class="n">path</span><span class="p">))</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="k">return</span><span class="p">(</span><span class="n">rawConnection</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">))</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span>is.character<span class="o">(</span>path<span class="o">))</span><span class="w"> </span><span class="o">{</span>
- <span class="o">.</span>         <span class="k">return</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="n">is_url</span><span class="p">(</span><span class="n">path</span><span class="p">))</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="n">ext</span> <span class="o">&lt;-</span> <span class="n">tolower</span><span class="p">(</span><span class="n">tools</span><span class="p">::</span><span class="n">file_ext</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
- <span class="o">.</span>         <span class="k">if</span> <span class="p">(</span><span class="n">ext</span> <span class="o">%</span><span class="k">in</span>% c("gz", "bz2", "xz", "zip")) {
- <span class="o">.</span>             <span class="n">cli</span><span class="p">::</span><span class="n">cli_abort</span><span class="p">(</span><span class="s2">"Remote compressed files must be handled upstream of this function."</span><span class="p">,</span> 
- <span class="o">.</span>                 <span class="o">.</span><span class="n">internal</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
- <span class="o">.</span>         <span class="p">}</span>
- <span class="o">.</span>         <span class="k">if</span> <span class="p">(</span><span class="n">requireNamespace</span><span class="p">(</span><span class="s2">"curl"</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">))</span> <span class="p">{</span>
- <span class="o">.</span>             <span class="n">con</span> <span class="o">&lt;-</span> <span class="n">curl</span><span class="p">::</span><span class="n">curl</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
- <span class="o">.</span>         <span class="p">}</span>
- <span class="o">.</span>         <span class="k">else</span> <span class="p">{</span>
- <span class="o">.</span>             <span class="n">inform</span><span class="p">(</span><span class="s2">"`curl` package not installed, falling back to using `url()`"</span><span class="p">)</span>
- <span class="o">.</span>             <span class="n">con</span> <span class="o">&lt;-</span> <span class="n">url</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
- <span class="o">.</span>         <span class="p">}</span>
- <span class="o">.</span>         <span class="k">return</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="n">path</span> <span class="o">&lt;-</span> <span class="n">enc2utf8</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="n">write</span><span class="p">)</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="n">path</span> <span class="o">&lt;-</span> <span class="n">normalizePath_utf8</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mustWork</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="k">else</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="n">path</span> <span class="o">&lt;-</span> <span class="n">check_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="n">p</span> <span class="o">&lt;-</span> <span class="n">split_path_ext</span><span class="p">(</span><span class="n">basename_utf8</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
- <span class="o">.</span>     <span class="n">extension</span> <span class="o">&lt;-</span> <span class="n">p</span><span class="err">$</span><span class="n">extension</span>
- <span class="o">.</span>     <span class="n">formats</span> <span class="o">&lt;-</span> <span class="n">archive_formats</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span>
- <span class="o">.</span>     <span class="k">while</span> <span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">null</span><span class="p">(</span><span class="n">formats</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">nzchar</span><span class="p">(</span><span class="n">extension</span><span class="p">))</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="n">extension</span> <span class="o">&lt;-</span> <span class="n">split_path_ext</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span><span class="err">$</span><span class="n">extension</span>
- <span class="o">.</span>         <span class="n">formats</span> <span class="o">&lt;-</span> <span class="n">archive_formats</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="n">needs_archive</span> <span class="o">&lt;-</span> <span class="o">!</span>is.null<span class="o">(</span>formats<span class="o">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">(</span>write<span class="w"> </span><span class="o">||</span><span class="w"> </span>extension<span class="w"> </span>!<span class="o">=</span><span class="w"> </span>
- <span class="o">.</span>         <span class="s2">"zip"</span><span class="p">)</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="n">needs_archive</span><span class="p">)</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="n">reason</span> <span class="o">&lt;-</span> <span class="n">glue</span><span class="p">(</span><span class="s2">"to {if (write) 'write' else 'read'} `.{p$extension}` files."</span><span class="p">)</span>
- <span class="o">.</span>         <span class="n">rlang</span><span class="p">::</span><span class="n">check_installed</span><span class="p">(</span><span class="s2">"archive"</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="n">reason</span><span class="p">,</span> <span class="n">call</span> <span class="o">=</span> <span class="n">call</span><span class="p">)</span>
- <span class="o">.</span>         <span class="k">if</span> <span class="p">(</span><span class="n">write</span><span class="p">)</span> <span class="p">{</span>
- <span class="o">.</span>             <span class="k">if</span> <span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">null</span><span class="p">(</span><span class="n">formats</span><span class="p">[[</span><span class="mi">1</span><span class="p">]]))</span> <span class="p">{</span>
- <span class="o">.</span>                 <span class="k">return</span><span class="p">(</span><span class="n">archive</span><span class="p">::</span><span class="n">file_write</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">filter</span> <span class="o">=</span> <span class="n">formats</span><span class="p">[[</span><span class="mi">2</span><span class="p">]]))</span>
- <span class="o">.</span>             <span class="p">}</span>
- <span class="o">.</span>             <span class="k">return</span><span class="p">(</span><span class="n">archive</span><span class="p">::</span><span class="n">archive_write</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">p</span><span class="err">$</span><span class="n">path</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="n">formats</span><span class="p">[[</span><span class="mi">1</span><span class="p">]],</span> 
- <span class="o">.</span>                 <span class="nb">filter</span> <span class="o">=</span> <span class="n">formats</span><span class="p">[[</span><span class="mi">2</span><span class="p">]]))</span>
- <span class="o">.</span>         <span class="p">}</span>
- <span class="o">.</span>         <span class="k">if</span> <span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">null</span><span class="p">(</span><span class="n">formats</span><span class="p">[[</span><span class="mi">1</span><span class="p">]]))</span> <span class="p">{</span>
- <span class="o">.</span>             <span class="k">return</span><span class="p">(</span><span class="n">archive</span><span class="p">::</span><span class="n">file_read</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">filter</span> <span class="o">=</span> <span class="n">formats</span><span class="p">[[</span><span class="mi">2</span><span class="p">]]))</span>
- <span class="o">.</span>         <span class="p">}</span>
- <span class="o">.</span>         <span class="k">return</span><span class="p">(</span><span class="n">archive</span><span class="p">::</span><span class="n">archive_read</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="n">formats</span><span class="p">[[</span><span class="mi">1</span><span class="p">]],</span> 
- <span class="o">.</span>             <span class="nb">filter</span> <span class="o">=</span> <span class="n">formats</span><span class="p">[[</span><span class="mi">2</span><span class="p">]]))</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span>write<span class="o">)</span><span class="w"> </span><span class="o">{</span>
- <span class="o">.</span>         <span class="n">compression</span> <span class="o">&lt;-</span> <span class="n">detect_compression</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="k">else</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="n">compression</span> <span class="o">&lt;-</span> <span class="n">NA</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">na</span><span class="p">(</span><span class="n">compression</span><span class="p">))</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="n">compression</span> <span class="o">&lt;-</span> <span class="n">tools</span><span class="p">::</span><span class="n">file_ext</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="n">write</span> <span class="o">&amp;&amp;</span> <span class="n">compression</span> <span class="o">==</span> <span class="s2">"zip"</span><span class="p">)</span> <span class="p">{</span>
- <span class="o">.</span>         <span class="n">cli</span><span class="p">::</span><span class="n">cli_abort</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="s2">"Can only read from, not write to, {.val .zip} files."</span><span class="p">,</span> 
- <span class="o">.</span>             <span class="n">i</span> <span class="o">=</span> <span class="s2">"Install the {.pkg archive} package to write {.val .zip} files."</span><span class="p">),</span> 
- <span class="o">.</span>             <span class="n">call</span> <span class="o">=</span> <span class="n">call</span><span class="p">)</span>
- <span class="o">.</span>     <span class="p">}</span>
- <span class="o">.</span>     <span class="n">switch</span><span class="p">(</span><span class="n">compression</span><span class="p">,</span> <span class="n">gz</span> <span class="o">=</span> <span class="n">gzfile</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">bz2</span> <span class="o">=</span> <span class="n">bzfile</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> 
- <span class="o">.</span>         <span class="n">xz</span> <span class="o">=</span> <span class="n">xzfile</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="nb">zip</span> <span class="o">=</span> <span class="n">zipfile</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span>has_trailing_newline<span class="o">(</span>path<span class="o">))</span><span class="w"> </span><span class="o">{</span>
- <span class="o">.</span>             <span class="n">file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
- <span class="o">.</span>         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
- <span class="o">.</span>             <span class="n">path</span>
- <span class="o">.</span>         <span class="p">})</span>
- <span class="o">.</span> <span class="p">})(</span><span class="s2">"demo_demog.csv"</span><span class="p">)</span>
-<span class="mi">4</span><span class="o">.</span> <span class="n">check_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="mi">5</span><span class="o">.</span> <span class="n">cli</span><span class="p">::</span><span class="n">cli_abort</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">call</span> <span class="o">=</span> <span class="n">call</span><span class="p">)</span>
-<span class="mi">6</span><span class="o">.</span> <span class="n">rlang</span><span class="p">::</span><span class="n">abort</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">call</span> <span class="o">=</span> <span class="n">call</span><span class="p">,</span> <span class="n">use_cli_format</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="o">.</span><span class="n">frame</span><span class="p">)</span>
-<span class="mi">7</span><span class="o">.</span> <span class="n">signal_abort</span><span class="p">(</span><span class="n">cnd</span><span class="p">,</span> <span class="o">.</span><span class="n">file</span><span class="p">)</span>
-<span class="mi">8</span><span class="o">.</span> <span class="n">signalCondition</span><span class="p">(</span><span class="n">cnd</span><span class="p">)</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">17</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">9</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> ","
+<span class=" -Color -Color-Red">chr</span> (2): participant_id, participant_gender
+<span class=" -Color -Color-Green">dbl</span> (7): participant_age, calibration_card_width_px, calibration_pixels_per_...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </pre></div>
 </div>
 </div>
 </div>
-<p>This will print some details about the columns imported. Let’s have a look at the data we imported. We have some missing data, but enough information to report age and gender information.</p>
+<p>This will print some details about the columns imported. Let’s have a look at the data we imported. The <code class="docutils literal notranslate"><span class="pre">demog</span></code> dataframe contains details on participants’ ages, genders, results from the virtual chinrest calibration, and the total time taken to complete the experimental session.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">demog</span>
@@ -742,27 +647,29 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 17 x 7
-   participant_id   age gender dominant_hand first_language frame_rate_Hz
-   &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;                  &lt;dbl&gt;
- 1 p015270           21 male   right         german                  59.6
- 2 p063288           20 female right         german                  60.1
- 3 p072235           34 male   right         german                 119. 
- 4 p110412           24 female right         german                  <span class=" -Color -Color-Red">NA</span>  
- 5 p153023           21 female right         german                  59.3
- 6 p241074           22 female right         german                  60.1
- 7 p255886           22 female right         german                  60.1
- 8 p389724           20 female right         german                  60.0
- 9 p445631           21 female right         german                  <span class=" -Color -Color-Red">NA</span>  
-10 p506691           21 female left          german                  60.0
-11 p532670           22 female right         german                  59.9
-12 p539652           22 male   right         german                  <span class=" -Color -Color-Red">NA</span>  
-13 p551117           21 female right         german                  60.0
-14 p555715           21 female right         german                  60.1
-15 p596865           19 female right         german                 119. 
-16 p697533           25 female right         german                  60.0
-17 p813475           22 female right         german                 117. 
-# i 1 more variable: total_time_secs &lt;dbl&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 17 × 9
+   participant_id participant_age participant_gender calibration_card_width_px
+   &lt;chr&gt;                    &lt;dbl&gt; &lt;chr&gt;                                  &lt;dbl&gt;
+ 1 p18996                      22 weiblich                                 432
+ 2 p58497                      20 weiblich                                 436
+ 3 p89293                      20 weiblich                                 438
+ 4 p90463                      21 weiblich                                 444
+ 5 p56164                      22 weiblich                                 433
+ 6 p90313                      23 weiblich                                 446
+ 7 p89845                      42 weiblich                                 427
+ 8 p65557                      20 weiblich                                 388
+ 9 p39888                      18 weiblich                                 360
+10 p45600                      22 weiblich                                 401
+11 p03085                      21 männlich                                 431
+12 p05336                      23 weiblich                                 373
+13 p10714                      22 weiblich                                 440
+14 p89041                      20 weiblich                                 432
+15 p09815                      23 weiblich                                 375
+16 p58863                      22 weiblich                                 381
+17 p83490                      21 weiblich                                 414
+# ℹ 5 more variables: calibration_pixels_per_mm &lt;dbl&gt;,
+#   blindspot_position_mean_px &lt;dbl&gt;, blindspot_position_sd_px &lt;dbl&gt;,
+#   viewing_distance_mm &lt;dbl&gt;, total_time_s &lt;dbl&gt;
 </pre></div>
 </div>
 </div>
@@ -782,45 +689,47 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 x 8
-   item_nr condition text  corr_ans is_practice_trial   snd ZipfSUBTLEX word_len
-     &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;    &lt;lgl&gt;             &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt;
- 1       1 word      Akze~ ralt     FALSE             0.716        2.71        7
- 2       1 pseudowo~ Unwa~ lalt     FALSE             0.534       <span class=" -Color -Color-Red">NA</span>           7
- 3       2 word      Drüc~ ralt     FALSE             0.573        3.01        7
- 4       2 pseudowo~ quok~ lalt     FALSE             0.551       <span class=" -Color -Color-Red">NA</span>           7
- 5       3 word      Erwa~ ralt     FALSE             0.681        3.95       11
- 6       3 pseudowo~ Exzi~ lalt     FALSE             0.532       <span class=" -Color -Color-Red">NA</span>          11
- 7       4 word      Exor~ ralt     FALSE             0.624        2.64       10
- 8       4 pseudowo~ ucin~ lalt     FALSE             0.417       <span class=" -Color -Color-Red">NA</span>          10
- 9       5 word      Fabel ralt     FALSE             0.634        2.6         5
-10       5 pseudowo~ Pafel lalt     FALSE             0.552       <span class=" -Color -Color-Red">NA</span>           5
-# i 290 more rows
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 × 5
+   match_nr text  lexicality correct_response freq_zipf
+      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;                &lt;dbl&gt;
+ 1        1 Block word       m                     4.09
+ 2        1 Blobt pseudoword x                    <span class=" -Color -Color-Red">NA</span>   
+ 3        2 Pause word       m                     4.67
+ 4        2 Dauge pseudoword x                    <span class=" -Color -Color-Red">NA</span>   
+ 5        3 Tutor word       m                     2.55
+ 6        3 Abtar pseudoword x                    <span class=" -Color -Color-Red">NA</span>   
+ 7        4 Hecht word       m                     3.09
+ 8        4 Hocht pseudoword x                    <span class=" -Color -Color-Red">NA</span>   
+ 9        5 empor word       m                     3.13
+10        5 ebsor pseudoword x                    <span class=" -Color -Color-Red">NA</span>   
+# ℹ 290 more rows
 </pre></div>
 </div>
 </div>
 </div>
 <p>This has 8 columns:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">item_nr</span></code> - an ID for each matched pair of words and pseudowords</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> - whether each item is a <code class="docutils literal notranslate"><span class="pre">&quot;word&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;pseudoword&quot;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - the text shown to the participant</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">corr_ans</span></code> - whether the correct answer was to press the left alt key (<code class="docutils literal notranslate"><span class="pre">&quot;lalt&quot;</span></code>) or the right alt key (<code class="docutils literal notranslate"><span class="pre">&quot;ralt&quot;</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">snd</span></code> - semantic neighbourhood density, calculated using the fastText model, using the method described by Hendrix &amp; Sun (<a class="reference external" href="https://doi.org/10.1037/xlm0000819">2020</a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ZipfSUBTLEX</span></code> - a measure of word frequency from a german subtitle corpus: SUBTLEX-DE (Bysbaert et al., <a class="reference external" href="https://doi.org/10.1027/1618-3169/a000123">2011</a>). For more info on the “Zipf” measure, see Brysbaert et al. (<a class="reference external" href="https://doi.org/10.1177/096372141772752">2017</a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">word_len</span></code> - number of letters in the word / pseudoword</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match_nr</span></code> - an ID for each matched pair of words and pseudowords</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - the text to be presented for each stimulus</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lexicality</span></code> - whether each item is a <code class="docutils literal notranslate"><span class="pre">&quot;word&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;pseudoword&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">correct_response</span></code> - whether the correct answer was to press the <code class="docutils literal notranslate"><span class="pre">&quot;m&quot;</span></code> or the <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code> key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">freq_zipf</span></code> - a measure of word frequency from a german subtitle corpus: SUBTLEX-DE (Bysbaert et al., <a class="reference external" href="https://doi.org/10.1027/1618-3169/a000123">2011</a>). For more info on the “Zipf” measure, see Brysbaert et al. (<a class="reference external" href="https://doi.org/10.1177/096372141772752">2017</a>)</p></li>
 </ul>
 </section>
-<section id="import-the-raw-data">
-<h3>4: Import the Raw Data<a class="headerlink" href="#import-the-raw-data" title="Link to this heading">#</a></h3>
-<p>Let’s import the experiment data from the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder:</p>
+<section id="import-the-raw-trials-data">
+<h3>4: Import the Raw Trials Data<a class="headerlink" href="#import-the-raw-trials-data" title="Link to this heading">#</a></h3>
+<p>Let’s import the experiment data from the <code class="docutils literal notranslate"><span class="pre">trials</span></code> folder:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, get a list of all .csv data files</span>
-<span class="n">data_paths</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="s">"data"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="s">".*\\.csv$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">data_paths</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="s">"trials"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="s">".*\\.csv$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1"># now, iterate over these with `read_csv()` to import each</span>
-<span class="n">raw_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">map_df</span><span class="p">(</span><span class="n">data_paths</span><span class="p">,</span><span class="w"> </span><span class="n">read_csv</span><span class="p">)</span>
+<span class="c1"># (this will create a list - one dataframe per participant)</span>
+<span class="n">raw_data_separate</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">data_paths</span><span class="p">,</span><span class="w"> </span><span class="n">read_csv</span><span class="p">)</span>
+
+<span class="c1"># finally, join the dataframes by binding their rows together</span>
+<span class="n">raw_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list_rbind</span><span class="p">(</span><span class="n">raw_data_separate</span><span class="p">)</span>
 
 <span class="c1"># print the contents</span>
 <span class="n">raw_data</span>
@@ -830,42 +739,43 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5,270 x 8
-   participant_id item_nr condition  text     is_practice_trial resp  rt_ms
-   &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;lgl&gt;             &lt;chr&gt; &lt;dbl&gt;
- 1 p015270              3 pseudoword Torrerk  TRUE              ralt   949.
- 2 p015270              3 word       korrekt  TRUE              ralt   714.
- 3 p015270              5 pseudoword tobreren TRUE              lalt  1017.
- 4 p015270              2 word       Mannes   TRUE              lalt   630.
- 5 p015270              4 word       sagt     TRUE              lalt   711.
- 6 p015270              1 word       Haie     TRUE              ralt   905.
- 7 p015270              4 pseudoword segt     TRUE              lalt  1308.
- 8 p015270              2 pseudoword sanzes   TRUE              lalt   643.
- 9 p015270              5 word       sicheren TRUE              ralt   703.
-10 p015270              1 pseudoword Bage     TRUE              lalt   762.
-# i 5,260 more rows
-# i 1 more variable: time_so_far_secs &lt;dbl&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5,270 × 12
+   participant_id phase    trial_nr match_nr text  stimulus_duration_ms side 
+   &lt;chr&gt;          &lt;chr&gt;       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;                &lt;dbl&gt; &lt;chr&gt;
+ 1 p03085         practice        1        2 Chatz                  250 right
+ 2 p03085         practice        2        4 Kaggt                  250 left 
+ 3 p03085         practice        3        3 Reise                  250 right
+ 4 p03085         practice        4        3 Heige                  250 right
+ 5 p03085         practice        5        5 guker                  250 left 
+ 6 p03085         practice        6        2 Platz                  250 left 
+ 7 p03085         practice        7        4 Kampf                  250 right
+ 8 p03085         practice        8        5 super                  250 right
+ 9 p03085         practice        9        1 genau                  250 left 
+10 p03085         practice       10        1 gefee                  250 left 
+# ℹ 5,260 more rows
+# ℹ 5 more variables: stimulus_offset_degrees &lt;dbl&gt;, stimulus_offset_px &lt;dbl&gt;,
+#   response &lt;chr&gt;, rt_ms &lt;dbl&gt;, rt_from_stimulus_onset &lt;dbl&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <p>This gives us one data frame with all trials in the experiment.</p>
-<p>There are 8 columns of data:</p>
+<p>We are most interested in the following columns:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">participant_id</span></code> - a unique ID for each paricipant</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">item_nr</span></code>- the same item ID as in <code class="docutils literal notranslate"><span class="pre">stim</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> - whether the trial showed a <code class="docutils literal notranslate"><span class="pre">&quot;word&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;pseudoword&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phase</span></code> - whether the trial was in the <code class="docutils literal notranslate"><span class="pre">&quot;practice&quot;</span></code> or the <code class="docutils literal notranslate"><span class="pre">&quot;main&quot;</span></code> phase of the experiment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trial_nr</span></code> - the order of trials, from 1 to 300</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match_nr</span></code>- the same ID as <code class="docutils literal notranslate"><span class="pre">match_nr</span></code> in <code class="docutils literal notranslate"><span class="pre">stim</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - the text that the participant saw</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">is_practice_trial</span></code> - whether each trial was a practice trial. The first 10 trials for each participant will be practice trials.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resp</span></code> - left alt key (<code class="docutils literal notranslate"><span class="pre">&quot;lalt&quot;</span></code>) or the right alt key (<code class="docutils literal notranslate"><span class="pre">&quot;ralt&quot;</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rt_ms</span></code> - the response time in milliseconds</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">time_so_far_secs</span></code>  - amount of time, in seconds, that has passed from the start of the experiment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">side</span></code> - whether each stimulus was presented on the <code class="docutils literal notranslate"><span class="pre">&quot;left&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;right&quot;</span></code> side of the fixation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> - whether the participant responded with the <code class="docutils literal notranslate"><span class="pre">&quot;m&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code> key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rt_ms</span></code> - the response time (in milliseconds)</p></li>
 </ul>
 </section>
 <section id="join-the-data-together">
 <h3>5: Join the Data Together<a class="headerlink" href="#join-the-data-together" title="Link to this heading">#</a></h3>
 <p>The easiest way to work with small datasets like this is to just join the dataframes together. This will create some redundancy (e.g., participant ages will be repeated 300 times), but can make things easier to work with.</p>
-<p>Here we use <code class="docutils literal notranslate"><span class="pre">left_join()</span></code> to find add information about participant demographics and features of the stimuli. This identifies columns that the dataframes have in common, and joins them togeher. Notice that we now have one big dataframe with all of the information about every trial.</p>
+<p>Here we use <code class="docutils literal notranslate"><span class="pre">left_join()</span></code> to find add information about participant demographics and features of the stimuli. This identifies columns that the dataframes have in common, and joins them together. Notice that we now have one big dataframe with all of the information about every trial. This is really useful when we want to do things like calculate accuracy, because we need to join the participants’ responses in <code class="docutils literal notranslate"><span class="pre">raw_data$response</span></code> with the correct answers in <code class="docutils literal notranslate"><span class="pre">stim$correct_response</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raw_data</span><span class="w"> </span><span class="o">|&gt;</span>
@@ -876,7 +786,9 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(participant_id)`
-Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(match_nr, text)`
 </pre></div>
 </div>
 </div>
@@ -890,24 +802,26 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5,270 x 18
-   participant_id item_nr condition  text     is_practice_trial resp  rt_ms
-   &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;lgl&gt;             &lt;chr&gt; &lt;dbl&gt;
- 1 p015270              3 pseudoword Torrerk  TRUE              ralt   949.
- 2 p015270              3 word       korrekt  TRUE              ralt   714.
- 3 p015270              5 pseudoword tobreren TRUE              lalt  1017.
- 4 p015270              2 word       Mannes   TRUE              lalt   630.
- 5 p015270              4 word       sagt     TRUE              lalt   711.
- 6 p015270              1 word       Haie     TRUE              ralt   905.
- 7 p015270              4 pseudoword segt     TRUE              lalt  1308.
- 8 p015270              2 pseudoword sanzes   TRUE              lalt   643.
- 9 p015270              5 word       sicheren TRUE              ralt   703.
-10 p015270              1 pseudoword Bage     TRUE              lalt   762.
-# i 5,260 more rows
-# i 11 more variables: time_so_far_secs &lt;dbl&gt;, age &lt;dbl&gt;, gender &lt;chr&gt;,
-#   dominant_hand &lt;chr&gt;, first_language &lt;chr&gt;, frame_rate_Hz &lt;dbl&gt;,
-#   total_time_secs &lt;dbl&gt;, corr_ans &lt;chr&gt;, snd &lt;dbl&gt;, ZipfSUBTLEX &lt;dbl&gt;,
-#   word_len &lt;dbl&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5,270 × 23
+   participant_id phase    trial_nr match_nr text  stimulus_duration_ms side 
+   &lt;chr&gt;          &lt;chr&gt;       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;                &lt;dbl&gt; &lt;chr&gt;
+ 1 p03085         practice        1        2 Chatz                  250 right
+ 2 p03085         practice        2        4 Kaggt                  250 left 
+ 3 p03085         practice        3        3 Reise                  250 right
+ 4 p03085         practice        4        3 Heige                  250 right
+ 5 p03085         practice        5        5 guker                  250 left 
+ 6 p03085         practice        6        2 Platz                  250 left 
+ 7 p03085         practice        7        4 Kampf                  250 right
+ 8 p03085         practice        8        5 super                  250 right
+ 9 p03085         practice        9        1 genau                  250 left 
+10 p03085         practice       10        1 gefee                  250 left 
+# ℹ 5,260 more rows
+# ℹ 16 more variables: stimulus_offset_degrees &lt;dbl&gt;, stimulus_offset_px &lt;dbl&gt;,
+#   response &lt;chr&gt;, rt_ms &lt;dbl&gt;, rt_from_stimulus_onset &lt;dbl&gt;,
+#   participant_age &lt;dbl&gt;, participant_gender &lt;chr&gt;,
+#   calibration_card_width_px &lt;dbl&gt;, calibration_pixels_per_mm &lt;dbl&gt;,
+#   blindspot_position_mean_px &lt;dbl&gt;, blindspot_position_sd_px &lt;dbl&gt;,
+#   viewing_distance_mm &lt;dbl&gt;, total_time_s &lt;dbl&gt;, lexicality &lt;chr&gt;, …
 </pre></div>
 </div>
 </div>
@@ -920,18 +834,17 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 <p>Before the experiment, I decided to exclude:</p>
 <ul class="simple">
 <li><p>participants who had average accuracies &lt;= 75% (too inaccurate)</p></li>
-<li><p>participants who had median response times &lt;250 ms (too fast)</p></li>
-<li><p>participants who had median response times &gt;1500 ms (too slow)</p></li>
-<li><p>participants whose first language is not German</p></li>
 <li><p>practice trials</p></li>
 <li><p>trials responded to incorrectly (as we are interested in response times only in our analysis)</p></li>
+<li><p>trials responded to with response times &lt; 100 ms</p></li>
+<li><p>trials responded to with response times &gt; 2500 ms</p></li>
 </ul>
 <section id="calculate-accuracies">
 <h3>1: Calculate Accuracies<a class="headerlink" href="#calculate-accuracies" title="Link to this heading">#</a></h3>
-<p>First, let’s create a column of participant accuracies. Wherever the <code class="docutils literal notranslate"><span class="pre">resp</span></code> column is equal to the <code class="docutils literal notranslate"><span class="pre">corr_ans</span></code> column, we will put a 1. Otherwise, we will put a zero.</p>
+<p>First, let’s create a column of participant accuracies. Wherever the <code class="docutils literal notranslate"><span class="pre">response</span></code> column is equal to the <code class="docutils literal notranslate"><span class="pre">correct_response</span></code> column, we will put a 1. Otherwise, we will put a zero.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">all_dat</span><span class="p">,</span><span class="w"> </span><span class="n">accuracy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">corr_ans</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">resp</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">all_dat</span><span class="p">,</span><span class="w"> </span><span class="n">accuracy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">response</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">correct_response</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -939,22 +852,16 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 </section>
 <section id="summarise-participants">
 <h3>2: Summarise Participants<a class="headerlink" href="#summarise-participants" title="Link to this heading">#</a></h3>
-<p>Now, we want to calculate per average response time and accuracy for each participant. Since response time is such a skewed distribution, we will calculate the median for response times.</p>
-<blockquote>
-<div><p>Note: We include <code class="docutils literal notranslate"><span class="pre">first_language</span></code> in <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> so that this is included in the per-participant summary, even though each participant has only one value.</p>
-</div></blockquote>
+<p>Now, we want to calculate per average accuracy for each participant.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">participant_avg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all_dat</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="c1"># exclude practice trials</span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="n">is_practice_trial</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># then, for each participant, record their first language, and</span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="w"> </span><span class="n">first_language</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># get their average RT and accuracy</span>
-<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span>
-<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">),</span>
-<span class="w">    </span><span class="n">mean_acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
-<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">phase</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"main"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># then, for each participant...</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">participant_id</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># ...get their average accuracy</span>
+<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">mean_acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">accuracy</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="c1"># (often good practice to ungroup)</span>
 <span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span>
 
@@ -965,26 +872,26 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 17 x 4
-   participant_id first_language median_rt mean_acc
-   &lt;chr&gt;          &lt;chr&gt;              &lt;dbl&gt;    &lt;dbl&gt;
- 1 p015270        german              666.    0.903
- 2 p063288        german              701.    0.95 
- 3 p072235        german              581.    0.887
- 4 p110412        german              533.    0.927
- 5 p153023        german              669.    0.96 
- 6 p241074        german              757.    0.913
- 7 p255886        german              841.    0.947
- 8 p389724        german              768.    0.893
- 9 p445631        german              781.    0.94 
-10 p506691        german              698.    0.92 
-11 p532670        german              593.    0.92 
-12 p539652        german              697.    0.98 
-13 p551117        german              993.    0.953
-14 p555715        german              712.    0.907
-15 p596865        german              807.    0.947
-16 p697533        german              661.    0.9  
-17 p813475        german              629.    0.937
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 17 × 2
+   participant_id mean_acc
+   &lt;chr&gt;             &lt;dbl&gt;
+ 1 p03085            0.907
+ 2 p05336            0.953
+ 3 p09815            0.907
+ 4 p10714            0.833
+ 5 p18996            0.88 
+ 6 p39888            0.827
+ 7 p45600            0.8  
+ 8 p56164            0.873
+ 9 p58497            0.783
+10 p58863            0.89 
+11 p65557            0.787
+12 p83490            0.853
+13 p89041            0.817
+14 p89293            0.903
+15 p89845            0.88 
+16 p90313            0.897
+17 p90463            0.913
 </pre></div>
 </div>
 </div>
@@ -992,19 +899,15 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 </section>
 <section id="identify-good-participants">
 <h3>3: Identify Good Participants<a class="headerlink" href="#identify-good-participants" title="Link to this heading">#</a></h3>
-<p>Now, we can identify participants which are suitable for our hypotheses. When I originally designed the experiment, I decided to include:</p>
-<ul class="simple">
-<li><p>only participants who had accuracies and response times within our cutoffs</p></li>
-<li><p>only participants whose first language is German</p></li>
-</ul>
-<p>Here, we filter the dataframe of participant averages, and then make not of all the participants who meet our criteria. We store the list of good participants in <code class="docutils literal notranslate"><span class="pre">okay_participants</span></code>.</p>
+<p>Now, we can identify participants which are suitable for our hypotheses. When I originally designed the experiment, I decided to include only participants whose average accuracies  are &gt;75%.</p>
+<p>Here, we filter the dataframe of participant averages, and then make a note of all the participants who meet our criteria. We store the list of good participants in <code class="docutils literal notranslate"><span class="pre">okay_participants</span></code>. (As it turns out, you are all great participants, and all scored &gt;75%).</p>
 <blockquote>
 <div><p>Note: the <code class="docutils literal notranslate"><span class="pre">pull()</span></code> function extracts data from a column, and puts it in a vector for us</p>
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">okay_participants</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">participant_avg</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">mean_acc</span><span class="o">&gt;</span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="o">&gt;=</span><span class="m">250</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="o">&lt;</span><span class="m">1500</span><span class="p">,</span><span class="w"> </span><span class="n">first_language</span><span class="o">==</span><span class="s">"german"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">mean_acc</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.75</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">participant_id</span><span class="p">)</span>
 
 <span class="n">okay_participants</span>
@@ -1017,7 +920,7 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
-<ol class=list-inline><li>'p015270'</li><li>'p063288'</li><li>'p072235'</li><li>'p110412'</li><li>'p153023'</li><li>'p241074'</li><li>'p255886'</li><li>'p389724'</li><li>'p445631'</li><li>'p506691'</li><li>'p532670'</li><li>'p539652'</li><li>'p551117'</li><li>'p555715'</li><li>'p596865'</li><li>'p697533'</li><li>'p813475'</li></ol>
+<ol class=list-inline><li>'p03085'</li><li>'p05336'</li><li>'p09815'</li><li>'p10714'</li><li>'p18996'</li><li>'p39888'</li><li>'p45600'</li><li>'p56164'</li><li>'p58497'</li><li>'p58863'</li><li>'p65557'</li><li>'p83490'</li><li>'p89041'</li><li>'p89293'</li><li>'p89845'</li><li>'p90313'</li><li>'p90463'</li></ol>
 </div></div>
 </div>
 </section>
@@ -1028,6 +931,7 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 <li><p>apply our participant exclusions</p></li>
 <li><p>exclude trials that were responded to incorrectly</p></li>
 <li><p>exclude practice trials</p></li>
+<li><p>exclude incorrect responses</p></li>
 </ul>
 <p>We store the trials which we will use in the analysis in <code class="docutils literal notranslate"><span class="pre">trials_clean</span></code></p>
 <div class="cell docutils container">
@@ -1036,11 +940,14 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 <span class="w">  </span><span class="nf">filter</span><span class="p">(</span>
 <span class="w">    </span><span class="c1"># only keep participants that meet inclusion criteria</span>
 <span class="w">    </span><span class="n">participant_id</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">okay_participants</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># remove fast responses</span>
+<span class="w">    </span><span class="n">rt_ms</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># remove slow responses</span>
+<span class="w">    </span><span class="n">rt_ms</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">2500</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># remove practice trials</span>
+<span class="w">    </span><span class="n">phase</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"main"</span><span class="p">,</span>
 <span class="w">    </span><span class="c1"># only keep correct trials</span>
 <span class="w">    </span><span class="n">accuracy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
-<span class="w">    </span><span class="c1"># remove practice trials</span>
-<span class="w">    </span><span class="c1"># (note: the exclamation mark ! can be read as "is not")</span>
-<span class="w">    </span><span class="o">!</span><span class="n">is_practice_trial</span>
 <span class="w">  </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1048,242 +955,152 @@ Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 </div>
 </section>
 </section>
-<section id="analysis-frequency-effect">
-<h2>Analysis - Frequency Effect<a class="headerlink" href="#analysis-frequency-effect" title="Link to this heading">#</a></h2>
-<p>Can we replicate the effect of frequency? Let’s see what the effect of Zipf is on lexical decision response times!</p>
-<section id="calculate-word-averages">
-<h3>1: Calculate Word Averages<a class="headerlink" href="#calculate-word-averages" title="Link to this heading">#</a></h3>
-<p>Here, we calculate the average RT and accuracy for each word. We also make sure that the Zipf values are brought through by including them in the <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> function.</p>
+<section id="analysis-hemifield-lexicality-interaction">
+<h2>Analysis - Hemifield-Lexicality Interaction<a class="headerlink" href="#analysis-hemifield-lexicality-interaction" title="Link to this heading">#</a></h2>
+<p>Can we replicate the hemifield-lexicality interaction, with a larger effect of lexicality in the right visual field?</p>
+<section id="response-times">
+<h3>Response Times<a class="headerlink" href="#response-times" title="Link to this heading">#</a></h3>
+<section id="calculate-participant-averages">
+<h4>1: Calculate Participant Averages<a class="headerlink" href="#calculate-participant-averages" title="Link to this heading">#</a></h4>
+<p>Here, we calculate the average RT and accuracy for each participant, in each condition. There are 4 conditions here: LVF Words, LVF Pseudowords, RVF Words, RVF Pseudowords.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">word_averages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trials_clean</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"word"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">ZipfSUBTLEX</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">participant_avgs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trials_clean</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="w"> </span><span class="n">side</span><span class="p">,</span><span class="w"> </span><span class="n">lexicality</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="nf">summarise</span><span class="p">(</span>
-<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">),</span>
-<span class="w">    </span><span class="n">mean_acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
+<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">)</span>
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span>
 
-<span class="n">word_averages</span>
+<span class="n">participant_avgs</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 150 x 4
-   text        ZipfSUBTLEX median_rt mean_acc
-   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
- 1 Akzente            2.71      607.        1
- 2 Drücker            3.01      588.        1
- 3 Erwachsener        3.95      579.        1
- 4 Exorzisten         2.64      767.        1
- 5 Fabel              2.6       588.        1
- 6 Faulpelze          2.74      636.        1
- 7 Figuren            4.38      534.        1
- 8 Filigrane          1.9       806.        1
- 9 Geschicke          2.07      687.        1
-10 Gondel             3.11      751.        1
-# i 140 more rows
-</pre></div>
-</div>
-</div>
-</div>
-<p>Clearly, accuracy is overall very high, but we have some variability in the response times.</p>
-</section>
-<section id="code-the-frequency-variable">
-<h3>2: Code the Frequency Variable<a class="headerlink" href="#code-the-frequency-variable" title="Link to this heading">#</a></h3>
-<p>Word frequency (<code class="docutils literal notranslate"><span class="pre">ZipfSUBTLEX</span></code>) is stored as a continuous variable. We can fit our model without doing any coding, but then it will be harder to interpret our model intercept. It is often useful to mean-centre variables, so that the model intercept can be interpreted as the grand average (e.g., the average RT overall).</p>
-<p>Let’s calculate mean-centred Zipf frequency, and store in <code class="docutils literal notranslate"><span class="pre">ZipfSUBTLEX_cent</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">word_averages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">word_averages</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">ZipfSUBTLEX_cent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ZipfSUBTLEX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">ZipfSUBTLEX</span><span class="p">))</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 68 × 4
+   participant_id side  lexicality median_rt
+   &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt;
+ 1 p03085         left  pseudoword      514.
+ 2 p03085         left  word            535 
+ 3 p03085         right pseudoword      536 
+ 4 p03085         right word            511 
+ 5 p05336         left  pseudoword      403 
+ 6 p05336         left  word            387 
+ 7 p05336         right pseudoword      409 
+ 8 p05336         right word            352 
+ 9 p09815         left  pseudoword      512.
+10 p09815         left  word            384 
+# ℹ 58 more rows
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="estimate-the-frequency-effect">
-<h3>3: Estimate the Frequency Effect<a class="headerlink" href="#estimate-the-frequency-effect" title="Link to this heading">#</a></h3>
-<p>Now we can fit a linear model to predict average item response times as a function of mean-centred word frequency.</p>
+<section id="estimate-and-test-the-lexicality-hemifield-interaction">
+<h4>3: Estimate and Test the Lexicality-Hemifield Interaction<a class="headerlink" href="#estimate-and-test-the-lexicality-hemifield-interaction" title="Link to this heading">#</a></h4>
+<p>Here, we estimate a repeated measures ANOVA using <code class="docutils literal notranslate"><span class="pre">afex::aov_4()</span></code>.</p>
+<div class="highlight-tipg}In notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">freq_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">ZipfSUBTLEX_cent</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">word_averages</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">anova_hemi_lex</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aov_4</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">lexicality</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">side</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">participant_id</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">participant_avgs</span><span class="p">)</span>
 
-<span class="nf">summary</span><span class="p">(</span><span class="n">freq_mod</span><span class="p">)</span>
+<span class="n">anova_hemi_lex</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
-lm(formula = median_rt ~ ZipfSUBTLEX_cent, data = word_averages)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anova Table (Type 3 tests)
 
-Residuals:
-    Min      1Q  Median      3Q     Max 
--258.26  -82.43  -20.00   54.58  440.96 
-
-Coefficients:
-                 Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)       704.978      9.516  74.087  &lt; 2e-16 ***
-ZipfSUBTLEX_cent  -74.860      9.611  -7.789 1.09e-12 ***
+Response: median_rt
+           Effect    df     MSE        F  ges p.value
+1      lexicality 1, 16 2007.00 10.98 ** .076    .004
+2            side 1, 16  558.78 12.31 ** .025    .003
+3 lexicality:side 1, 16  646.20   7.55 * .018    .014
 ---
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 116.5 on 148 degrees of freedom
-Multiple R-squared:  0.2907,	Adjusted R-squared:  0.2859 
-F-statistic: 60.66 on 1 and 148 DF,  p-value: 1.091e-12
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
 </pre></div>
 </div>
 </div>
 </div>
-<p>This tells us that the average RT overall was 704.98 ms (<em>SE</em> = 9.5). The <em>t</em> value of 74.09 just reflects that this number is much larger than zero. We would report the overall average RT, but we probably wouldn’t report the <em>t</em> and <em>p</em> values for this, since RT is almost by definition larger than zero.</p>
-<p>The second coefficient is more interesting. The <span class="math notranslate nohighlight">\(\Beta\)</span> = -74.86 (<em>SE</em> = 9.61) tells us that for every one unit of Zipf, RT becomes 74.86 ms faster on average. This effect is significantly different from zero (<em>t</em>(148) = -7.79, <em>p</em> &lt; .001).</p>
-<p>We might also want to report the R<span class="math notranslate nohighlight">\(^2\)</span> value of .29, which means that our model is accounting for an estimated 29% of variance in the data.</p>
-<p>Finally, we might want to make a nice plot of the effect. We will be spending more time on this in a future session, but here is an example, showing the effect of frequency on response time.</p>
+<p>This tells us that there is a significant main effect of hemifield (<em>F</em>(1, 16)=12.31, <span class="math notranslate nohighlight">\(\eta^2_G\)</span>=.03, <em>p</em>=.003), a significant main effect of lexicality (<em>F</em>(1, 16)=10.98, <span class="math notranslate nohighlight">\(\eta^2_G\)</span>=.08, <em>p</em>=.004), and a significant interaction (<em>F</em>(1, 16)=7.55, <span class="math notranslate nohighlight">\(\eta^2_G\)</span>=.02, <em>p</em>=.014). We can use <code class="docutils literal notranslate"><span class="pre">emmeans::emmeans()</span></code> to get the estimates of the marginal averages from the model (i.e., the average in eaxch factorial cell). First, let’s see which hemifield had faster responses:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">word_averages</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">ZipfSUBTLEX</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"lm"</span><span class="p">,</span><span class="w"> </span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Frequency (Zipf in SUBTLEX-DE)"</span><span class="p">,</span>
-<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Median Response Time (ms)"</span>
-<span class="w">  </span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">emmeans</span><span class="p">(</span><span class="n">anova_hemi_lex</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">side</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/a8d5a7ae0d8e16535e39cf56466e33f2bb29f7799a2a3f5ae71045cb9e549f33.png"><img alt="../_images/a8d5a7ae0d8e16535e39cf56466e33f2bb29f7799a2a3f5ae71045cb9e549f33.png" src="../_images/a8d5a7ae0d8e16535e39cf56466e33f2bb29f7799a2a3f5ae71045cb9e549f33.png" style="width: 210px; height: 180px;" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> side  emmean   SE df lower.CL upper.CL
+ left     438 15.1 16      406      470
+ right    418 13.6 16      389      447
+
+Results are averaged over the levels of: lexicality 
+Confidence level used: 0.95 
+</pre></div>
+</div>
+</div>
+</div>
+<p>The estimated marginal means (EMMs) tells us that median response times were on average 20 ms faster for items presented in the right hemifield (EMM = 418 ms, 95% CI [389, 447]) than for items in the left hemifield (EMM = 438 ms, 95% CI [406, 470]).</p>
+<p>We can estimate similar EMMs for the effect of lexicality:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">emmeans</span><span class="p">(</span><span class="n">anova_hemi_lex</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">lexicality</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> lexicality emmean   SE df lower.CL upper.CL
+ pseudoword    446 15.5 16      413      479
+ word          410 14.6 16      379      441
+
+Results are averaged over the levels of: side 
+Confidence level used: 0.95 
+</pre></div>
+</div>
+</div>
+</div>
+<p>This shows that median response times were on average 36 ms faster for words (EMM = 410 ms, 95% CI [379, 441]) than for pseudowords (EMM = 446 ms, 95% CI [413, 479]).</p>
+<p>If we get the EMMs for the interaction, we can see that the effect of lexicality was larger in the right visual field than in the left:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">emmeans</span><span class="p">(</span><span class="n">anova_hemi_lex</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">lexicality</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">side</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> lexicality side  emmean   SE df lower.CL upper.CL
+ pseudoword left     447 16.2 16      413      482
+ word       left     428 16.8 16      393      464
+ pseudoword right    444 15.6 16      411      477
+ word       right    391 13.8 16      362      420
+
+Confidence level used: 0.95 
+</pre></div>
+</div>
+</div>
+</div>
+<p>One way to visualise this could be to plot the distributions of median RTs for each condition:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">participant_avgs</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">side</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="n">lexicality</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_violin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="m">0.9</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hemifield"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Median Response Time (ms)"</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Lexicality"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/d917af996ee26e01a19fc3b75aff8aee0148c4e85341ba2e09d1b3d2c86a3de2.png"><img alt="../_images/d917af996ee26e01a19fc3b75aff8aee0148c4e85341ba2e09d1b3d2c86a3de2.png" src="../_images/d917af996ee26e01a19fc3b75aff8aee0148c4e85341ba2e09d1b3d2c86a3de2.png" style="width: 210px; height: 180px;" />
 </a>
 </div>
 </div>
 </section>
 </section>
-<section id="analysis-snd-effects">
-<h2>Analysis - SND Effects<a class="headerlink" href="#analysis-snd-effects" title="Link to this heading">#</a></h2>
-<p>The main reason we ran this experiment, though, was to see whether we could replicate the interaction between Lexicality (word / pseudoword) and SND (semantic neighbourhood density).</p>
-<section id="calculate-item-averages">
-<h3>1: Calculate Item Averages<a class="headerlink" href="#calculate-item-averages" title="Link to this heading">#</a></h3>
-<p>As before, we want to calculate average response times for each item. However, we also now want to include the pseudowords, as well as the words.</p>
-<p>We also want to include a step reported by Hendrix and Sun, who excluded items with an average accuracy of 66% or less.</p>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim_averages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trials_clean</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># for every unique stimulus (text shown to the participant),</span>
-<span class="w">  </span><span class="c1"># while also storing condition (lexicality) and SND,</span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">condition</span><span class="p">,</span><span class="w"> </span><span class="n">snd</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># get the average RT and accuracy</span>
-<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span>
-<span class="w">    </span><span class="n">median_rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">rt_ms</span><span class="p">),</span>
-<span class="w">    </span><span class="n">mean_acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
-<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># remove items with an average accuracy of &lt;=.66</span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">mean_acc</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">.</span><span class="m">66</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="code-variables">
-<h3>2: Code Variables<a class="headerlink" href="#code-variables" title="Link to this heading">#</a></h3>
-<p>Again, we now want to code the variables.</p>
-<p>SND is a continuous variable, so we will mean-centre it (<code class="docutils literal notranslate"><span class="pre">snd_cent</span></code>). (We could also scale it if we wanted stardised coefficients.)</p>
-<p>Lexicality is a categorical variable, which we will deviation-code (<code class="docutils literal notranslate"><span class="pre">dev_lex</span></code>). If we had perfectly equal numbers of words and pseudowords in the data, we could just set this to <code class="docutils literal notranslate"><span class="pre">-0.5</span></code> and <code class="docutils literal notranslate"><span class="pre">0.5</span></code>. However, since we <em>might</em> have unequal numbers, to make sure that the variable is centred on zero, we first dummy code to 0 and 1, and then mean-centre it. As we happen to have equal numbers of stimuli, the values end up being <code class="docutils literal notranslate"><span class="pre">-0.5</span></code> and <code class="docutils literal notranslate"><span class="pre">0.5</span></code> anyway.</p>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim_averages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stim_averages</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span>
-<span class="w">    </span><span class="n">snd_cent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">snd</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">snd</span><span class="p">),</span>
-<span class="w">    </span><span class="n">dum_lex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"word"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">dev_lex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dum_lex</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">dum_lex</span><span class="p">)</span>
-<span class="w">  </span><span class="p">)</span>
-
-<span class="n">stim_averages</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 x 8
-   text         condition    snd median_rt mean_acc snd_cent dum_lex dev_lex
-   &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
- 1 Abgegöbe     pseudoword 0.614      841.        1   0.0104       0    -<span class=" -Color -Color-Red">0.5</span>
- 2 Akzente      word       0.716      607.        1   0.113        1     0.5
- 3 Austerbafer  pseudoword 0.616      809.        1   0.0129       0    -<span class=" -Color -Color-Red">0.5</span>
- 4 Bünktchen    pseudoword 0.585      995.        1  -<span class=" -Color -Color-Red">0.0180</span>       0    -<span class=" -Color -Color-Red">0.5</span>
- 5 Cermelen     pseudoword 0.548      673.        1  -<span class=" -Color -Color-Red">0.0556</span>       0    -<span class=" -Color -Color-Red">0.5</span>
- 6 Drücker      word       0.573      588.        1  -<span class=" -Color -Color-Red">0.0303</span>       1     0.5
- 7 Durchszelten pseudoword 0.567     1171.        1  -<span class=" -Color -Color-Red">0.0362</span>       0    -<span class=" -Color -Color-Red">0.5</span>
- 8 Erwachsener  word       0.681      579.        1   0.0776       1     0.5
- 9 Exorzisten   word       0.624      767.        1   0.0201       1     0.5
-10 Exzingsener  pseudoword 0.532      832.        1  -<span class=" -Color -Color-Red">0.0709</span>       0    -<span class=" -Color -Color-Red">0.5</span>
-# i 290 more rows
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="estimate-the-lexicality-snd-interaction">
-<h2>3: Estimate the Lexicality × SND Interaction<a class="headerlink" href="#estimate-the-lexicality-snd-interaction" title="Link to this heading">#</a></h2>
-<p>Here we fit the model. Note that, unlike with frequency, it’s up to you to interpret this one!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">main_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">dev_lex</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">snd_cent</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stim_averages</span><span class="p">)</span>
-
-<span class="nf">summary</span><span class="p">(</span><span class="n">main_mod</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
-lm(formula = median_rt ~ dev_lex * snd_cent, data = stim_averages)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--227.98 -104.34  -41.63   74.04  505.62 
-
-Coefficients:
-                 Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)        763.02      13.31  57.310  &lt; 2e-16 ***
-dev_lex            -73.46      26.63  -2.759  0.00616 ** 
-snd_cent            93.35     134.25   0.695  0.48741    
-dev_lex:snd_cent  -735.12     268.50  -2.738  0.00656 ** 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 143.2 on 296 degrees of freedom
-Multiple R-squared:  0.06398,	Adjusted R-squared:  0.05449 
-F-statistic: 6.744 on 3 and 296 DF,  p-value: 0.000205
-</pre></div>
-</div>
-</div>
-</div>
-<p>Finally, here is a plot showing the effect of SND for each lexicality condition.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim_averages</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">snd</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">condition</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.33</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="c1"># alpha sets point transparency</span>
-<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"lm"</span><span class="p">,</span><span class="w"> </span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Semantic Neighbourhood Density"</span><span class="p">,</span>
-<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Median Response Time (ms)"</span><span class="p">,</span>
-<span class="w">    </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Lexicality"</span>
-<span class="w">  </span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ed7d863b04ee0ad1a9624cba1825a501eee0a28fcbbe47cfe19a05b64e0cbe79.png"><img alt="../_images/ed7d863b04ee0ad1a9624cba1825a501eee0a28fcbbe47cfe19a05b64e0cbe79.png" src="../_images/ed7d863b04ee0ad1a9624cba1825a501eee0a28fcbbe47cfe19a05b64e0cbe79.png" style="width: 210px; height: 180px;" />
-</a>
-</div>
-</div>
 </section>
 </section>
 
@@ -1339,7 +1156,7 @@ F-statistic: 6.744 on 3 and 296 DF,  p-value: 0.000205
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relevant-libraries">1: Load the Relevant Libraries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-demographic-data">2. Import the Demographic Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-stimuli">3: Import the Stimuli</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-raw-data">4: Import the Raw Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-raw-trials-data">4: Import the Raw Trials Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-data-together">5: Join the Data Together</a></li>
 </ul>
 </li>
@@ -1350,18 +1167,14 @@ F-statistic: 6.744 on 3 and 296 DF,  p-value: 0.000205
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-data">4: Clean Data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-frequency-effect">Analysis - Frequency Effect</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-word-averages">1: Calculate Word Averages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-the-frequency-variable">2: Code the Frequency Variable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-frequency-effect">3: Estimate the Frequency Effect</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-hemifield-lexicality-interaction">Analysis - Hemifield-Lexicality Interaction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-times">Response Times</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-participant-averages">1: Calculate Participant Averages</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-and-test-the-lexicality-hemifield-interaction">3: Estimate and Test the Lexicality-Hemifield Interaction</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-snd-effects">Analysis - SND Effects</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-item-averages">1: Calculate Item Averages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-variables">2: Code Variables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-lexicality-snd-interaction">3: Estimate the Lexicality × SND Interaction</a></li>
 </ul>
   </nav></div>
 
