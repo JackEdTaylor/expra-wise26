@@ -999,10 +999,13 @@
 <section id="estimate-and-test-the-lexicality-hemifield-interaction">
 <h3>2: Estimate and Test the Lexicality-Hemifield Interaction<a class="headerlink" href="#estimate-and-test-the-lexicality-hemifield-interaction" title="Link to this heading">#</a></h3>
 <p>Here, we estimate a repeated measures ANOVA using <code class="docutils literal notranslate"><span class="pre">afex::aov_4()</span></code>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>In case you need a refresher, here is a reminder of this in Statistik II: <a class="reference external" href="https://pandar.netlify.app/lehre/statistik-ii/anova-iii/">https://pandar.netlify.app/lehre/statistik-ii/anova-iii/</a>.</p>
+<p>In case you need a refresher on repeated-measures ANOVAs, here is a reminder of this in Statistik II: <a class="reference external" href="https://pandar.netlify.app/lehre/statistik-ii/anova-iii/">https://pandar.netlify.app/lehre/statistik-ii/anova-iii/</a>.</p>
 </div>
+</aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">anova_hemi_lex</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aov_4</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">lexicality</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">side</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">participant_id</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">participant_avgs</span><span class="p">)</span>
@@ -1203,6 +1206,38 @@ F-statistic: 24.93 on 3 and 293 DF,  p-value: 2.153e-14
 </pre></div>
 </div>
 </div>
+</div>
+<p>Since we centred both the hemifield and frequency variables, the model intercept of 432.25 (<em>SE</em>=4.8) reflects the overall average response time across conditions.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Had the interaction been significant, we could have decomposed it by switching the coding of hemifield (<code class="docutils literal notranslate"><span class="pre">side</span></code>) to set 0 to be either at <code class="docutils literal notranslate"><span class="pre">&quot;left&quot;</span></code> or at <code class="docutils literal notranslate"><span class="pre">&quot;right&quot;</span></code>. See the session on <a class="reference external" href="https://jackedtaylor.github.io/expra-wise26/introduction/glm.html">the General Linear Model</a> for examples.</p>
+</div>
+</aside>
+<p>The model’s slopes indicate that there was a main effect of side (which we already know from the ANOVA above), and that there was a main effect of word frequency (<span class="math notranslate nohighlight">\(\beta\)</span>=-37.35, <em>SE</em>=9.62, <em>t</em>(293)=-7.76, <em>p</em>&lt;.001). Because we scaled Zipf by standard deviation, this means that every 1 <em>SD</em> of Zipf is associated with a 37.35 ms faster response. The interaction between hemifield and word frequency (in the output, <code class="docutils literal notranslate"><span class="pre">side_dev:zipf_sc</span></code>) was small (<span class="math notranslate nohighlight">\(\beta\)</span>=.86, <em>SE</em>=9.62) and was not statistically significant (<em>t</em>(293)=.09, <em>p</em>=.93).</p>
+<p>Finally, we can plot the relationship between word frequency and response time, for words presented on both the left and right hemifields. We can use <code class="docutils literal notranslate"><span class="pre">geom_smooth()</span></code> from <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> to visualise the linear relationships.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">item_avgs</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">freq_zipf</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">side</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"lm"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">"Word Frequency (Zipf)"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">"Median Response Time (ms)"</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">"Hemifield"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = 'y ~ x'
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/5591dc04a7ee61f8780cbc4dbcad958fd8ab1b9d649269f4a1f7ca429c8743e2.png"><img alt="../_images/5591dc04a7ee61f8780cbc4dbcad958fd8ab1b9d649269f4a1f7ca429c8743e2.png" src="../_images/5591dc04a7ee61f8780cbc4dbcad958fd8ab1b9d649269f4a1f7ca429c8743e2.png" style="width: 210px; height: 180px;" />
+</a>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We’ll be spending some more time on visualising data in a future session. If you really can’t wait, you can see a preview at <a class="reference external" href="https://jackedtaylor.github.io/expra-wise26/introduction/data_vis_1.html">Data Visualisation 1</a>.</p>
 </div>
 </section>
 </section>
