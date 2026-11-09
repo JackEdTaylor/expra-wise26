@@ -46,7 +46,9 @@ In each trial:
 
 2. The stimulus was presented immediately afterwards, in either the left or right visual field, for a duration of 250 ms.
 
-3. If participants did not respond by 2500 ms after stimulus presentation, then a reminder of the task was presented in the centre of the screen. 
+3. If participants did not respond by 2500 ms after stimulus presentation, then a reminder of the task was presented in the centre of the screen (the same text as the general instructions):
+
+> Press M for a word and X for a pseudoword. Respond as quickly and accurately as you can.
 
 **Practice Trials**
 
