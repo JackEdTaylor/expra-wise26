@@ -552,6 +552,12 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-data">4: Clean Data</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demographics">Demographics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-bad-participants">1: Remove Bad Participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise-n-per-sex-gender">2: Summarise N per Sex/Gender</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise-mean-sd-of-age">3: Summarise Mean &amp; SD of Age</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-hemifield-lexicality-interaction">Analysis - Hemifield-Lexicality Interaction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-participant-averages">1: Calculate Participant Averages</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-and-test-the-lexicality-hemifield-interaction">2: Estimate and Test the Lexicality-Hemifield Interaction</a></li>
@@ -903,7 +909,7 @@
 <section id="identify-good-participants">
 <h3>3: Identify Good Participants<a class="headerlink" href="#identify-good-participants" title="Link to this heading">#</a></h3>
 <p>Now, we can identify participants which are suitable for our hypotheses. When I originally designed the experiment, I decided to include only participants whose average accuracies  are &gt;75%.</p>
-<p>Here, we filter the dataframe of participant averages, and then make a note of all the participants who meet our criteria. We store the list of good participants in <code class="docutils literal notranslate"><span class="pre">okay_participants</span></code>. (As it turns out, you are all great participants, and all scored &gt;75%).</p>
+<p>Here, we filter the dataframe of participant averages, and then make a note of all the participants who meet our criteria. We store the list of good participants in <code class="docutils literal notranslate"><span class="pre">okay_participants</span></code>. (As it turns out, you are all great participants, and all scored &gt;75%, so zero participants are excluded).</p>
 <blockquote>
 <div><p>Note: the <code class="docutils literal notranslate"><span class="pre">pull()</span></code> function extracts data from a column, and puts it in a vector for us</p>
 </div></blockquote>
@@ -958,6 +964,192 @@
 </div>
 </section>
 </section>
+<section id="demographics">
+<h2>Demographics<a class="headerlink" href="#demographics" title="Link to this heading">#</a></h2>
+<p>When reporting a summary of the participants who took part in the study, the usual summaries are of the ages and genders. We can get all of this information from our demographics data in <code class="docutils literal notranslate"><span class="pre">demog</span></code>.</p>
+<section id="remove-bad-participants">
+<h3>1: Remove Bad Participants<a class="headerlink" href="#remove-bad-participants" title="Link to this heading">#</a></h3>
+<p>If there are any bad participants, we should remove these before getting the summaries:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">demog_clean</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">demog</span><span class="p">,</span><span class="w"> </span><span class="n">participant_id</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">okay_participants</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If any participants were excluded, we would also want to accurately report how many participants were removed. In our case, the demographics data have one row per participant, so we could just calculate the difference in the number of rows between <code class="docutils literal notranslate"><span class="pre">demog</span></code> and <code class="docutils literal notranslate"><span class="pre">demog_clean</span></code>. This confirms that zero participants were removed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">nrow</span><span class="p">(</span><span class="n">demog</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">demog_clean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">0</div></div>
+</div>
+</section>
+<section id="summarise-n-per-sex-gender">
+<h3>2: Summarise N per Sex/Gender<a class="headerlink" href="#summarise-n-per-sex-gender" title="Link to this heading">#</a></h3>
+<p>An easy way to summarise the number of observations (or in this case, people) per group is with the <code class="docutils literal notranslate"><span class="pre">count()</span></code> function from <code class="docutils literal notranslate"><span class="pre">dplyr</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">count</span><span class="p">(</span><span class="n">demog_clean</span><span class="p">,</span><span class="w"> </span><span class="n">participant_gender</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A spec_tbl_df: 2 × 2</caption>
+<thead>
+	<tr><th scope=col>participant_gender</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>männlich</td><td> 1</td></tr>
+	<tr><td>weiblich</td><td>16</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="summarise-mean-sd-of-age">
+<h3>3: Summarise Mean &amp; SD of Age<a class="headerlink" href="#summarise-mean-sd-of-age" title="Link to this heading">#</a></h3>
+<p>It is also standard to report the mean and standard deviation of ages. One easy way to do this is with the <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> function from <code class="docutils literal notranslate"><span class="pre">dplyr</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summarise</span><span class="p">(</span>
+<span class="w">  </span><span class="n">demog_clean</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mean_age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">age</span><span class="p">),</span>
+<span class="w">  </span><span class="n">sd_age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="err">`</span><span class="n">summarise</span><span class="p">()</span><span class="err">`</span><span class="p">:</span>
+<span class="n">ℹ</span> <span class="n">In</span> <span class="n">argument</span><span class="p">:</span> <span class="err">`</span><span class="n">mean_age</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">Caused</span> <span class="n">by</span> <span class="n">error</span> <span class="ow">in</span> <span class="err">`</span><span class="n">h</span><span class="p">()</span><span class="err">`</span><span class="p">:</span>
+<span class="o">!</span><span class="w"> </span>error<span class="w"> </span><span class="k">in</span><span class="w"> </span>evaluating<span class="w"> </span>the<span class="w"> </span>argument<span class="w"> </span><span class="s1">'x'</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>selecting<span class="w"> </span>a<span class="w"> </span>method<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="s1">'mean'</span>:<span class="w"> </span>object<span class="w"> </span><span class="s1">'age'</span><span class="w"> </span>not<span class="w"> </span>found
+<span class="ne">Traceback</span>:
+
+<span class="mi">1</span><span class="o">.</span> <span class="n">summarise</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">demog_clean</span><span class="p">,</span> <span class="n">mean_age</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">age</span><span class="p">),</span> <span class="n">sd_age</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">summarise_cols</span><span class="p">(</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">dplyr_quosures</span><span class="p">(</span><span class="o">...</span><span class="p">),</span> <span class="n">by</span><span class="p">,</span> <span class="s2">"summarise"</span><span class="p">)</span>
+<span class="mi">3</span><span class="o">.</span> <span class="n">withCallingHandlers</span><span class="p">({</span>
+ <span class="o">.</span>     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">seq_along</span><span class="p">(</span><span class="n">dots</span><span class="p">))</span> <span class="p">{</span>
+ <span class="o">.</span>         <span class="n">poke_error_context</span><span class="p">(</span><span class="n">dots</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">)</span>
+ <span class="o">.</span>         <span class="n">context_poke</span><span class="p">(</span><span class="s2">"column"</span><span class="p">,</span> <span class="n">old_current_column</span><span class="p">)</span>
+ <span class="o">.</span>         <span class="n">dot</span> <span class="o">&lt;-</span> <span class="n">dots</span><span class="p">[[</span><span class="n">i</span><span class="p">]]</span>
+ <span class="o">.</span>         <span class="n">dot</span> <span class="o">&lt;-</span> <span class="n">expand_pick</span><span class="p">(</span><span class="n">dot</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
+ <span class="o">.</span>         <span class="n">quosures</span> <span class="o">&lt;-</span> <span class="n">expand_across</span><span class="p">(</span><span class="n">dot</span><span class="p">)</span>
+ <span class="o">.</span>         <span class="n">quosures_results</span> <span class="o">&lt;-</span> <span class="nb">map</span><span class="p">(</span><span class="n">quosures</span><span class="p">,</span> <span class="n">summarise_eval_one</span><span class="p">,</span> 
+ <span class="o">.</span>             <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">)</span>
+ <span class="o">.</span>         <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="ow">in</span> <span class="n">seq_along</span><span class="p">(</span><span class="n">quosures</span><span class="p">))</span> <span class="p">{</span>
+ <span class="o">.</span>             <span class="n">quo</span> <span class="o">&lt;-</span> <span class="n">quosures</span><span class="p">[[</span><span class="n">k</span><span class="p">]]</span>
+ <span class="o">.</span>             <span class="n">quo_data</span> <span class="o">&lt;-</span> <span class="n">attr</span><span class="p">(</span><span class="n">quo</span><span class="p">,</span> <span class="s2">"dplyr:::data"</span><span class="p">)</span>
+ <span class="o">.</span>             <span class="n">quo_result</span> <span class="o">&lt;-</span> <span class="n">quosures_results</span><span class="p">[[</span><span class="n">k</span><span class="p">]]</span>
+ <span class="o">.</span>             <span class="k">if</span> <span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">null</span><span class="p">(</span><span class="n">quo_result</span><span class="p">))</span> <span class="p">{</span>
+ <span class="o">.</span>                 <span class="nb">next</span>
+ <span class="o">.</span>             <span class="p">}</span>
+ <span class="o">.</span>             <span class="n">types_k</span> <span class="o">&lt;-</span> <span class="n">quo_result</span><span class="err">$</span><span class="n">types</span>
+ <span class="o">.</span>             <span class="n">chunks_k</span> <span class="o">&lt;-</span> <span class="n">quo_result</span><span class="err">$</span><span class="n">chunks</span>
+ <span class="o">.</span>             <span class="n">results_k</span> <span class="o">&lt;-</span> <span class="n">quo_result</span><span class="err">$</span><span class="n">results</span>
+ <span class="o">.</span>             <span class="k">if</span> <span class="p">(</span><span class="o">!</span>quo_data<span class="nv">$is_named</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>is.data.frame<span class="o">(</span>types_k<span class="o">))</span><span class="w"> </span><span class="o">{</span>
+ <span class="o">.</span>                 <span class="n">chunks_extracted</span> <span class="o">&lt;-</span> <span class="o">.</span><span class="n">Call</span><span class="p">(</span><span class="n">dplyr_extract_chunks</span><span class="p">,</span> 
+ <span class="o">.</span>                   <span class="n">chunks_k</span><span class="p">,</span> <span class="n">types_k</span><span class="p">)</span>
+ <span class="o">.</span>                 <span class="n">types_k_names</span> <span class="o">&lt;-</span> <span class="n">names</span><span class="p">(</span><span class="n">types_k</span><span class="p">)</span>
+ <span class="o">.</span>                 <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="ow">in</span> <span class="n">seq_along</span><span class="p">(</span><span class="n">chunks_extracted</span><span class="p">))</span> <span class="p">{</span>
+ <span class="o">.</span>                   <span class="n">mask</span><span class="err">$</span><span class="n">add_one</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="n">types_k_names</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">chunks</span> <span class="o">=</span> <span class="n">chunks_extracted</span><span class="p">[[</span><span class="n">j</span><span class="p">]],</span> 
+ <span class="o">.</span>                     <span class="n">result</span> <span class="o">=</span> <span class="n">results_k</span><span class="p">[[</span><span class="n">j</span><span class="p">]])</span>
+ <span class="o">.</span>                 <span class="p">}</span>
+ <span class="o">.</span>                 <span class="n">chunks</span> <span class="o">&lt;-</span> <span class="n">append</span><span class="p">(</span><span class="n">chunks</span><span class="p">,</span> <span class="n">chunks_extracted</span><span class="p">)</span>
+ <span class="o">.</span>                 <span class="n">types</span> <span class="o">&lt;-</span> <span class="n">append</span><span class="p">(</span><span class="n">types</span><span class="p">,</span> <span class="k">as</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">types_k</span><span class="p">))</span>
+ <span class="o">.</span>                 <span class="n">results</span> <span class="o">&lt;-</span> <span class="n">append</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">results_k</span><span class="p">)</span>
+ <span class="o">.</span>                 <span class="n">out_names</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="n">out_names</span><span class="p">,</span> <span class="n">types_k_names</span><span class="p">)</span>
+ <span class="o">.</span>             <span class="p">}</span>
+ <span class="o">.</span>             <span class="k">else</span> <span class="p">{</span>
+ <span class="o">.</span>                 <span class="n">name</span> <span class="o">&lt;-</span> <span class="n">dplyr_quosure_name</span><span class="p">(</span><span class="n">quo_data</span><span class="p">)</span>
+ <span class="o">.</span>                 <span class="n">mask</span><span class="err">$</span><span class="n">add_one</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span> <span class="n">chunks</span> <span class="o">=</span> <span class="n">chunks_k</span><span class="p">,</span> 
+ <span class="o">.</span>                   <span class="n">result</span> <span class="o">=</span> <span class="n">results_k</span><span class="p">)</span>
+ <span class="o">.</span>                 <span class="n">chunks</span> <span class="o">&lt;-</span> <span class="n">append</span><span class="p">(</span><span class="n">chunks</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">chunks_k</span><span class="p">))</span>
+ <span class="o">.</span>                 <span class="n">types</span> <span class="o">&lt;-</span> <span class="n">append</span><span class="p">(</span><span class="n">types</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">types_k</span><span class="p">))</span>
+ <span class="o">.</span>                 <span class="n">results</span> <span class="o">&lt;-</span> <span class="n">append</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">results_k</span><span class="p">))</span>
+ <span class="o">.</span>                 <span class="n">out_names</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="n">out_names</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+ <span class="o">.</span>             <span class="p">}</span>
+ <span class="o">.</span>         <span class="p">}</span>
+ <span class="o">.</span>     <span class="p">}</span>
+ <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="n">verb</span> <span class="o">==</span> <span class="s2">"summarise"</span><span class="p">)</span> <span class="p">{</span>
+ <span class="o">.</span>         <span class="o">.</span><span class="n">Call</span><span class="p">(</span><span class="n">dplyr_summarise_check_all_size_one</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">n_groups</span><span class="p">)</span>
+ <span class="o">.</span>         <span class="n">group_sizes</span> <span class="o">&lt;-</span> <span class="n">NULL</span>
+ <span class="o">.</span>     <span class="p">}</span>
+ <span class="o">.</span>     <span class="k">else</span> <span class="p">{</span>
+ <span class="o">.</span>         <span class="n">group_sizes</span> <span class="o">&lt;-</span> <span class="o">.</span><span class="n">Call</span><span class="p">(</span><span class="n">dplyr_reframe_recycle_horizontally_in_place</span><span class="p">,</span> 
+ <span class="o">.</span>             <span class="n">chunks</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">n_groups</span><span class="p">)</span>
+ <span class="o">.</span>         <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">seq_along</span><span class="p">(</span><span class="n">chunks</span><span class="p">))</span> <span class="p">{</span>
+ <span class="o">.</span>             <span class="k">if</span> <span class="p">(</span><span class="ow">is</span><span class="o">.</span><span class="n">null</span><span class="p">(</span><span class="n">results</span><span class="p">[[</span><span class="n">i</span><span class="p">]]))</span> <span class="p">{</span>
+ <span class="o">.</span>                 <span class="n">results</span><span class="p">[[</span><span class="n">i</span><span class="p">]]</span> <span class="o">&lt;-</span> <span class="n">vec_c</span><span class="p">(</span><span class="o">!</span>!!chunks<span class="o">[[</span>i<span class="o">]]</span>,<span class="w"> </span>.ptype<span class="w"> </span><span class="o">=</span><span class="w"> </span>types<span class="o">[[</span>i<span class="o">]])</span>
+ <span class="o">.</span>             <span class="p">}</span>
+ <span class="o">.</span>         <span class="p">}</span>
+ <span class="o">.</span>     <span class="p">}</span>
+ <span class="o">.</span> <span class="p">},</span> <span class="n">error</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">cnd</span><span class="p">)</span> <span class="p">{</span>
+ <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="n">inherits</span><span class="p">(</span><span class="n">cnd</span><span class="p">,</span> <span class="s2">"dplyr:::reframe_incompatible_size"</span><span class="p">))</span> <span class="p">{</span>
+ <span class="o">.</span>         <span class="n">action</span> <span class="o">&lt;-</span> <span class="s2">"recycle"</span>
+ <span class="o">.</span>         <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">cnd</span><span class="err">$</span><span class="n">dplyr_error_data</span><span class="err">$</span><span class="n">index_expression</span>
+ <span class="o">.</span>     <span class="p">}</span>
+ <span class="o">.</span>     <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inherits</span><span class="p">(</span><span class="n">cnd</span><span class="p">,</span> <span class="s2">"dplyr:::summarise_incompatible_size"</span><span class="p">))</span> <span class="p">{</span>
+ <span class="o">.</span>         <span class="n">action</span> <span class="o">&lt;-</span> <span class="s2">"compute"</span>
+ <span class="o">.</span>         <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">cnd</span><span class="err">$</span><span class="n">dplyr_error_data</span><span class="err">$</span><span class="n">index_expression</span>
+ <span class="o">.</span>     <span class="p">}</span>
+ <span class="o">.</span>     <span class="k">else</span> <span class="p">{</span>
+ <span class="o">.</span>         <span class="n">action</span> <span class="o">&lt;-</span> <span class="s2">"compute"</span>
+ <span class="o">.</span>         <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span>
+ <span class="o">.</span>     <span class="p">}</span>
+ <span class="o">.</span>     <span class="n">handler</span> <span class="o">&lt;-</span> <span class="n">dplyr_error_handler</span><span class="p">(</span><span class="n">dots</span> <span class="o">=</span> <span class="n">dots</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">,</span> 
+ <span class="o">.</span>         <span class="n">bullets</span> <span class="o">=</span> <span class="n">summarise_bullets</span><span class="p">,</span> <span class="n">error_call</span> <span class="o">=</span> <span class="n">error_call</span><span class="p">,</span> 
+ <span class="o">.</span>         <span class="n">action</span> <span class="o">=</span> <span class="n">action</span><span class="p">)</span>
+ <span class="o">.</span>     <span class="n">handler</span><span class="p">(</span><span class="n">cnd</span><span class="p">)</span>
+ <span class="o">.</span> <span class="p">},</span> <span class="n">warning</span> <span class="o">=</span> <span class="n">dplyr_warning_handler</span><span class="p">(</span><span class="n">state</span> <span class="o">=</span> <span class="n">warnings_state</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">,</span> 
+ <span class="o">.</span>     <span class="n">error_call</span> <span class="o">=</span> <span class="n">error_call</span><span class="p">))</span>
+<span class="mi">4</span><span class="o">.</span> <span class="nb">map</span><span class="p">(</span><span class="n">quosures</span><span class="p">,</span> <span class="n">summarise_eval_one</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">)</span>
+<span class="mi">5</span><span class="o">.</span> <span class="n">lapply</span><span class="p">(</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="mi">6</span><span class="o">.</span> <span class="n">FUN</span><span class="p">(</span><span class="n">X</span><span class="p">[[</span><span class="n">i</span><span class="p">]],</span> <span class="o">...</span><span class="p">)</span>
+<span class="mi">7</span><span class="o">.</span> <span class="n">mask</span><span class="err">$</span><span class="n">eval_all_summarise</span><span class="p">(</span><span class="n">quo</span><span class="p">)</span>
+<span class="mi">8</span><span class="o">.</span> <span class="nb">eval</span><span class="p">()</span>
+<span class="mi">9</span><span class="o">.</span> <span class="n">mean</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="mi">10</span><span class="o">.</span> <span class="o">.</span><span class="n">handleSimpleError</span><span class="p">(</span><span class="n">function</span> <span class="p">(</span><span class="n">cond</span><span class="p">)</span> 
+  <span class="o">.</span> <span class="o">.</span><span class="n">Internal</span><span class="p">(</span><span class="n">C_tryCatchHelper</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="mi">1</span><span class="n">L</span><span class="p">,</span> <span class="n">cond</span><span class="p">)),</span> <span class="s2">"object 'age' not found"</span><span class="p">,</span> 
+  <span class="o">.</span>     <span class="n">base</span><span class="p">::</span><span class="n">quote</span><span class="p">(</span><span class="n">NULL</span><span class="p">))</span>
+<span class="mi">11</span><span class="o">.</span> <span class="n">h</span><span class="p">(</span><span class="n">simpleError</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">call</span><span class="p">))</span>
+<span class="mi">12</span><span class="o">.</span> <span class="o">.</span><span class="n">handleSimpleError</span><span class="p">(</span><span class="n">function</span> <span class="p">(</span><span class="n">cnd</span><span class="p">)</span> 
+  <span class="o">.</span> <span class="p">{</span>
+  <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="n">inherits</span><span class="p">(</span><span class="n">cnd</span><span class="p">,</span> <span class="s2">"dplyr:::reframe_incompatible_size"</span><span class="p">))</span> <span class="p">{</span>
+  <span class="o">.</span>         <span class="n">action</span> <span class="o">&lt;-</span> <span class="s2">"recycle"</span>
+  <span class="o">.</span>         <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">cnd</span><span class="err">$</span><span class="n">dplyr_error_data</span><span class="err">$</span><span class="n">index_expression</span>
+  <span class="o">.</span>     <span class="p">}</span>
+  <span class="o">.</span>     <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inherits</span><span class="p">(</span><span class="n">cnd</span><span class="p">,</span> <span class="s2">"dplyr:::summarise_incompatible_size"</span><span class="p">))</span> <span class="p">{</span>
+  <span class="o">.</span>         <span class="n">action</span> <span class="o">&lt;-</span> <span class="s2">"compute"</span>
+  <span class="o">.</span>         <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">cnd</span><span class="err">$</span><span class="n">dplyr_error_data</span><span class="err">$</span><span class="n">index_expression</span>
+  <span class="o">.</span>     <span class="p">}</span>
+  <span class="o">.</span>     <span class="k">else</span> <span class="p">{</span>
+  <span class="o">.</span>         <span class="n">action</span> <span class="o">&lt;-</span> <span class="s2">"compute"</span>
+  <span class="o">.</span>         <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span>
+  <span class="o">.</span>     <span class="p">}</span>
+  <span class="o">.</span>     <span class="n">handler</span> <span class="o">&lt;-</span> <span class="n">dplyr_error_handler</span><span class="p">(</span><span class="n">dots</span> <span class="o">=</span> <span class="n">dots</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">,</span> 
+  <span class="o">.</span>         <span class="n">bullets</span> <span class="o">=</span> <span class="n">summarise_bullets</span><span class="p">,</span> <span class="n">error_call</span> <span class="o">=</span> <span class="n">error_call</span><span class="p">,</span> 
+  <span class="o">.</span>         <span class="n">action</span> <span class="o">=</span> <span class="n">action</span><span class="p">)</span>
+  <span class="o">.</span>     <span class="n">handler</span><span class="p">(</span><span class="n">cnd</span><span class="p">)</span>
+  <span class="o">.</span> <span class="p">},</span> <span class="s2">"error in evaluating the argument 'x' in selecting a method for function 'mean': object 'age' not found"</span><span class="p">,</span> 
+  <span class="o">.</span>     <span class="n">base</span><span class="p">::</span><span class="n">quote</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">simpleError</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">call</span><span class="p">))))</span>
+<span class="mi">13</span><span class="o">.</span> <span class="n">h</span><span class="p">(</span><span class="n">simpleError</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">call</span><span class="p">))</span>
+<span class="mi">14</span><span class="o">.</span> <span class="n">handler</span><span class="p">(</span><span class="n">cnd</span><span class="p">)</span>
+<span class="mi">15</span><span class="o">.</span> <span class="n">abort</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="k">class</span><span class="w"> </span><span class="err">= </span><span class="nc">error_class</span><span class="p">,</span> <span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span><span class="p">,</span> <span class="n">call</span> <span class="o">=</span> <span class="n">error_call</span><span class="p">)</span>
+<span class="mi">16</span><span class="o">.</span> <span class="n">signal_abort</span><span class="p">(</span><span class="n">cnd</span><span class="p">,</span> <span class="o">.</span><span class="n">file</span><span class="p">)</span>
+<span class="mi">17</span><span class="o">.</span> <span class="n">signalCondition</span><span class="p">(</span><span class="n">cnd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 <section id="analysis-hemifield-lexicality-interaction">
 <h2>Analysis - Hemifield-Lexicality Interaction<a class="headerlink" href="#analysis-hemifield-lexicality-interaction" title="Link to this heading">#</a></h2>
 <p>Can we replicate the hemifield-lexicality interaction, with a larger effect of lexicality in the right visual field?</p>
@@ -977,24 +1169,6 @@
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 68 × 4
-   participant_id side  lexicality median_rt
-   &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt;
- 1 p03085         left  pseudoword      514.
- 2 p03085         left  word            535 
- 3 p03085         right pseudoword      536 
- 4 p03085         right word            511 
- 5 p05336         left  pseudoword      403 
- 6 p05336         left  word            387 
- 7 p05336         right pseudoword      409 
- 8 p05336         right word            352 
- 9 p09815         left  pseudoword      512.
-10 p09815         left  word            384 
-# ℹ 58 more rows
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="estimate-and-test-the-lexicality-hemifield-interaction">
@@ -1015,34 +1189,11 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anova Table (Type 3 tests)
-
-Response: median_rt
-           Effect    df     MSE        F  ges p.value
-1      lexicality 1, 16 2007.00 10.98 ** .076    .004
-2            side 1, 16  558.78 12.31 ** .025    .003
-3 lexicality:side 1, 16  646.20   7.55 * .018    .014
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
-</pre></div>
-</div>
-</div>
 </div>
 <p>This tells us that there is a significant main effect of hemifield (<em>F</em>(1, 16)=12.31, <span class="math notranslate nohighlight">\(\eta^2_G\)</span>=.03, <em>p</em>=.003), a significant main effect of lexicality (<em>F</em>(1, 16)=10.98, <span class="math notranslate nohighlight">\(\eta^2_G\)</span>=.08, <em>p</em>=.004), and a significant interaction (<em>F</em>(1, 16)=7.55, <span class="math notranslate nohighlight">\(\eta^2_G\)</span>=.02, <em>p</em>=.014). We can use <code class="docutils literal notranslate"><span class="pre">emmeans::emmeans()</span></code> to get the estimates of the marginal averages from the model (i.e., the average in eaxch factorial cell). First, let’s see which hemifield had faster responses:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">emmeans</span><span class="p">(</span><span class="n">anova_hemi_lex</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">side</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> side  emmean   SE df lower.CL upper.CL
- left     438 15.1 16      406      470
- right    418 13.6 16      389      447
-
-Results are averaged over the levels of: lexicality 
-Confidence level used: 0.95 
 </pre></div>
 </div>
 </div>
@@ -1055,33 +1206,12 @@ Confidence level used: 0.95
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> lexicality emmean   SE df lower.CL upper.CL
- pseudoword    446 15.5 16      413      479
- word          410 14.6 16      379      441
-
-Results are averaged over the levels of: side 
-Confidence level used: 0.95 
-</pre></div>
-</div>
-</div>
 </div>
 <p>This shows that median response times were on average 36 ms faster for words (EMM = 410 ms, 95% CI [379, 441]) than for pseudowords (EMM = 446 ms, 95% CI [413, 479]).</p>
 <p>If we get the EMMs for the interaction, we can see that the effect of lexicality was larger in the right visual field than in the left:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">emmeans</span><span class="p">(</span><span class="n">anova_hemi_lex</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">lexicality</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">side</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> lexicality side  emmean   SE df lower.CL upper.CL
- pseudoword left     447 16.2 16      413      482
- word       left     428 16.8 16      393      464
- pseudoword right    444 15.6 16      411      477
- word       right    391 13.8 16      362      420
-
-Confidence level used: 0.95 
 </pre></div>
 </div>
 </div>
@@ -1096,10 +1226,6 @@ Confidence level used: 0.95
 <span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hemifield"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Median Response Time (ms)"</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Lexicality"</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/d917af996ee26e01a19fc3b75aff8aee0148c4e85341ba2e09d1b3d2c86a3de2.png"><img alt="../_images/d917af996ee26e01a19fc3b75aff8aee0148c4e85341ba2e09d1b3d2c86a3de2.png" src="../_images/d917af996ee26e01a19fc3b75aff8aee0148c4e85341ba2e09d1b3d2c86a3de2.png" style="width: 210px; height: 180px;" />
-</a>
 </div>
 </div>
 </section>
@@ -1126,24 +1252,6 @@ Confidence level used: 0.95
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 297 × 4
-   text  side  freq_zipf median_rt
-   &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt;
- 1 Alarm left       4.43      361 
- 2 Alarm right      4.43      368.
- 3 Alpha left       3.96      449 
- 4 Alpha right      3.96      425 
- 5 Ampel left       3.77      401 
- 6 Ampel right      3.77      344.
- 7 Anzug left       4.54      484 
- 8 Anzug right      4.54      346.
- 9 Arche left       3.48      583 
-10 Arche right      3.48      768 
-# ℹ 287 more rows
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="estimating-the-interaction">
@@ -1184,29 +1292,6 @@ Confidence level used: 0.95
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
-lm(formula = median_rt ~ 1 + side_dev * zipf_sc, data = item_avgs)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--186.32  -52.13  -10.13   36.13  342.23 
-
-Coefficients:
-                 Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)      432.2510     4.8027  90.002  &lt; 2e-16 ***
-side_dev         -36.5950     9.6054  -3.810 0.000169 ***
-zipf_sc          -37.3503     4.8109  -7.764 1.39e-13 ***
-side_dev:zipf_sc   0.8576     9.6216   0.089 0.929038    
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-Residual standard error: 82.77 on 293 degrees of freedom
-Multiple R-squared:  0.2033,	Adjusted R-squared:  0.1952 
-F-statistic: 24.93 on 3 and 293 DF,  p-value: 2.153e-14
-</pre></div>
-</div>
-</div>
 </div>
 <p>Since we centred both the hemifield and frequency variables, the model intercept of 432.25 (<em>SE</em>=4.8) reflects the overall average response time across conditions.</p>
 <aside class="margin sidebar">
@@ -1227,13 +1312,6 @@ F-statistic: 24.93 on 3 and 293 DF,  p-value: 2.153e-14
 <span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">"Word Frequency (Zipf)"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">"Median Response Time (ms)"</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">"Hemifield"</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = 'y ~ x'
-</pre></div>
-</div>
-<a class="reference internal image-reference" href="../_images/5591dc04a7ee61f8780cbc4dbcad958fd8ab1b9d649269f4a1f7ca429c8743e2.png"><img alt="../_images/5591dc04a7ee61f8780cbc4dbcad958fd8ab1b9d649269f4a1f7ca429c8743e2.png" src="../_images/5591dc04a7ee61f8780cbc4dbcad958fd8ab1b9d649269f4a1f7ca429c8743e2.png" style="width: 210px; height: 180px;" />
-</a>
 </div>
 </div>
 <div class="admonition tip">
@@ -1323,6 +1401,12 @@ F-statistic: 24.93 on 3 and 293 DF,  p-value: 2.153e-14
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise-participants">2: Summarise Participants</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identify-good-participants">3: Identify Good Participants</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-data">4: Clean Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demographics">Demographics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-bad-participants">1: Remove Bad Participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise-n-per-sex-gender">2: Summarise N per Sex/Gender</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise-mean-sd-of-age">3: Summarise Mean &amp; SD of Age</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-hemifield-lexicality-interaction">Analysis - Hemifield-Lexicality Interaction</a><ul class="nav section-nav flex-column">
