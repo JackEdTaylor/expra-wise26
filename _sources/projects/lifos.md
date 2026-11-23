@@ -1,5 +1,7 @@
 # LIFOS
 
+Link to our LIFOS group: https://lifos.uni-frankfurt.de/neurokogni-psych/expra/wise-2026-27 
+
 **LIFOS** - that's short for **L**ocal **I**nfrastructure **f**or **O**pen **S**cience Practices - is a platform created at the Department of Psychology at Goethe University, which we will use in the course of our EXPRA.  
 [Open Science](open-science) practices help you to make the research process transparent and reproducible - both for yourself and for others. 
 
